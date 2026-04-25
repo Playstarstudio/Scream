@@ -494,7 +494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &763418187
 Transform:
   m_ObjectHideFlags: 0
@@ -737,6 +737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648005515}
   - component: {fileID: 1648005516}
+  - component: {fileID: 1648005517}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -817,6 +818,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1648005517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648005514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8deb1c54a8ee4bc29c5405e4798e4462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomLayout.KeyItem
+  itemId: 0
 --- !u!1 &1719285696
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1719285697
 Transform:
   m_ObjectHideFlags: 0
@@ -880,7 +894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20186852463cac94e919826f2ac1c46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomLayoutSwitcher
-  currentLayoutIndex: 0
+  currentLayoutIndex: 2
 --- !u!4 &1816426043
 Transform:
   m_ObjectHideFlags: 0
