@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/ui_sfx.bank
   Name: ui_sfx
   StudioPath: bank:/ui_sfx
-  lastModified: 639096971834510170
+  lastModified: 639128148494240365
   FileSizes:
   - Name: Desktop
     Value: 506
@@ -75,7 +75,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8998263865723236680}
   cacheVersion: 131859
-  cacheTime: 639128031338152011
+  cacheTime: 639128148494240365
   SerializableEventsDict:
   - key: event:/testOneShotSpatialized
     index: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/gameplay_sfx.bank
   Name: gameplay_sfx
   StudioPath: bank:/gameplay_sfx
-  lastModified: 639096971834332829
+  lastModified: 639128148494240365
   FileSizes:
   - Name: Desktop
     Value: 506
@@ -172,7 +172,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639128031338030637
+  lastModified: 639128148494215250
   FileSizes:
   - Name: Desktop
     Value: 24896
@@ -192,7 +192,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/music.bank
   Name: music
   StudioPath: bank:/music
-  lastModified: 639128031338152011
+  lastModified: 639128148494240365
   FileSizes:
   - Name: Desktop
     Value: 506
@@ -212,7 +212,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639128031338050385
+  lastModified: 639128148494230298
   FileSizes:
   - Name: Desktop
     Value: 1500
