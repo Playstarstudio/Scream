@@ -73,7 +73,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1.3
+  m_PointLightOuterRadius: 1.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 655263722904032442}
   - component: {fileID: 3520042281473015079}
+  - component: {fileID: 4843259808955254472}
   m_Layer: 0
   m_Name: Lantern
   m_TagString: Untagged
@@ -260,6 +261,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4843259808955254472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3456606403861373387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9841dd4662677409fbdde652625c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LanternLight
+  initialLanternSetting: 3
+  transitionDuration: 0.5
+  lanternSettings:
+  - directionalLightRange: 1.5
+    ambientLightRadius: 0.7
+    lightIntensity: 0.5
+    lightColor: {r: 1, g: 0.84, b: 0.09, a: 1}
+    directionalLightAngle:
+      minValue: 43.309303
+      maxValue: 100
+  - directionalLightRange: 1.8
+    ambientLightRadius: 1
+    lightIntensity: 0.5
+    lightColor: {r: 1, g: 0.84, b: 0.09, a: 1}
+    directionalLightAngle:
+      minValue: 52.74574
+      maxValue: 100
+  - directionalLightRange: 3
+    ambientLightRadius: 1.5
+    lightIntensity: 0.5
+    lightColor: {r: 1, g: 0.84, b: 0.09, a: 1}
+    directionalLightAngle:
+      minValue: 62.182175
+      maxValue: 100
+  flickerSettings:
+    enabled: 1
+    flickerIntensity: 0.925
+    flickerLayers:
+    - speed: 3
+      strength: 1
+      noiseOffset: 0
+    - speed: 0.7
+      strength: 0.4
+      noiseOffset: 10
+    radiusFlickerStrength: 0.099
+    colorFlickerStrength: 0.08
+    warmTint: {r: 1, g: 0, b: 0, a: 1}
+    suddenDimChance: 0.3
+    suddenDimDepth: 0.4
+    suddenDimDuration:
+      minValue: 0.04
+      maxValue: 0.15
+  directionalConfig:
+    falloff: 0.5
+    outerRadiusRatio: 1
+    innerRadiusRatio: 0.5
+    intensityRatio: 1
+  pointConfig:
+    falloff: 0.75
+    outerRadiusRatio: 1
+    innerRadiusRatio: 0
+    intensityRatio: 1
 --- !u!1 &5267711643803512093
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,10 +336,10 @@ GameObject:
   - component: {fileID: 4414159769752107192}
   - component: {fileID: 9024293755646628324}
   - component: {fileID: 724567804525229653}
-  - component: {fileID: 6095546093181327719}
   - component: {fileID: 3969400800060925910}
   - component: {fileID: 6584715470015806783}
   - component: {fileID: 5837338240542759749}
+  - component: {fileID: 3722028154376286166}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -408,70 +473,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
---- !u!114 &6095546093181327719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5267711643803512093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9841dd4662677409fbdde652625c1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LanternLight
-  initialLanternSetting: 3
-  transitionDuration: 0.5
-  lanternSettings:
-  - directionalLightRange: 1.5
-    ambientLightRadius: 0.7
-    lightIntensity: 0.5
-    lightColor: {r: 1, g: 0.84, b: 0.09, a: 1}
-    directionalLightAngle:
-      minValue: 43.309303
-      maxValue: 100
-  - directionalLightRange: 1.8
-    ambientLightRadius: 1
-    lightIntensity: 0.5
-    lightColor: {r: 1, g: 0.84, b: 0.09, a: 1}
-    directionalLightAngle:
-      minValue: 52.74574
-      maxValue: 100
-  - directionalLightRange: 3
-    ambientLightRadius: 1.3
-    lightIntensity: 0.5
-    lightColor: {r: 1, g: 0.84, b: 0.09, a: 1}
-    directionalLightAngle:
-      minValue: 62.182175
-      maxValue: 100
-  flickerSettings:
-    enabled: 1
-    flickerIntensity: 0.925
-    flickerLayers:
-    - speed: 3
-      strength: 1
-      noiseOffset: 0
-    - speed: 0.7
-      strength: 0.4
-      noiseOffset: 10
-    radiusFlickerStrength: 0.099
-    colorFlickerStrength: 0.08
-    warmTint: {r: 1, g: 0, b: 0, a: 1}
-    suddenDimChance: 0.3
-    suddenDimDepth: 0.4
-    suddenDimDuration:
-      minValue: 0.04
-      maxValue: 0.15
-  directionalConfig:
-    falloff: 0.5
-    outerRadiusRatio: 1
-    innerRadiusRatio: 0.5
-    intensityRatio: 1
-  pointConfig:
-    falloff: 0.75
-    outerRadiusRatio: 1
-    innerRadiusRatio: 0
-    intensityRatio: 1
 --- !u!114 &3969400800060925910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,10 +580,37 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.375, y: 1}
   m_Direction: 0
+--- !u!50 &3722028154376286166
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267711643803512093}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

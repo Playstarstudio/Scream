@@ -226,11 +226,10 @@ public class LanternLight : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private void FindLights()
     {
-        Transform parent = transform.Find("Lantern");
         if (_directionalLight == null)
         {
             
-            Transform directionLightTransform = parent.Find("LanternDirectionalLight");
+            Transform directionLightTransform = transform.Find("LanternDirectionalLight");
             if (directionLightTransform != null)
             {
                 _directionalLight = directionLightTransform.GetComponent<Light2D>();
@@ -242,7 +241,7 @@ public class LanternLight : MonoBehaviour
         }
         if (_pointLight == null)
         {
-            Transform pointLightTransform = parent.Find("LanternPointLight");
+            Transform pointLightTransform = transform.Find("LanternPointLight");
             if (pointLightTransform != null)
             {
                 _pointLight = pointLightTransform.GetComponent<Light2D>();
