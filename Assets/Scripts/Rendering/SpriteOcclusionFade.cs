@@ -91,7 +91,6 @@ public class SpriteOcclusionFade : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("collsion");
         if (other.CompareTag(playerTag))
         {
             _playerBehind = false;
