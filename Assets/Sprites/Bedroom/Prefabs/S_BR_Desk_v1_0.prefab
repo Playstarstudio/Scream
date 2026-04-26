@@ -113,21 +113,16 @@ MonoBehaviour:
   m_AlphaCutoff: 0.1
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -0.354671, y: -0.94289327, z: 0}
-  - {x: -1.0430322, y: -0.61320686, z: 0}
-  - {x: -1.0366659, y: 0.23570228, z: 0}
-  - {x: 0.3940382, y: 0.9396864, z: 0}
-  - {x: 0.4621272, y: 0.95049965, z: 0}
-  - {x: 0.59775734, y: 0.80518174, z: 0}
-  - {x: 0.6042156, y: 0.5177754, z: 0}
-  - {x: 1.0401692, y: 0.30464256, z: 0}
-  - {x: 1.0433984, y: -0.2637117, z: 0}
-  - {x: 0.6720309, y: -0.42840528, z: 0}
-  - {x: 0.37170696, y: -0.2507944, z: 0}
-  - {x: 0.23221397, y: -0.27330828, z: 0}
-  - {x: 0.025867939, y: -0.40939188, z: 0}
-  - {x: 0.039720535, y: -0.75865126, z: 0}
-  m_ShapePathHash: 589877929
+  - {x: -1.0502596, y: -0.62295735, z: 0}
+  - {x: -1.0502596, y: -0.4664428, z: 0}
+  - {x: 1.0006566, y: 0.2907107, z: 0}
+  - {x: 1.0067768, y: -0.23562866, z: 0}
+  - {x: 0.6983466, y: -0.42360115, z: 0}
+  - {x: 0.36109328, y: -0.20808762, z: 0}
+  - {x: 0.05202198, y: -0.3978146, z: 0}
+  - {x: 0.021420717, y: -0.74054724, z: 0}
+  - {x: -0.35127187, y: -0.9350888, z: 0}
+  m_ShapePathHash: -530992797
   m_InstanceId: 0
   m_ShadowShape2DComponent: {fileID: 0}
   m_ShadowShape2DProvider:
@@ -136,13 +131,13 @@ MonoBehaviour:
   m_ShadowMesh:
     m_Mesh: {fileID: 0}
     m_LocalBounds:
-      m_Center: {x: 0.00018310547, y: 0.0038031936, z: 0}
-      m_Extent: {x: 1.0432153, y: 0.94669646, z: 0}
+      m_Center: {x: -0.02174139, y: -0.32218903, z: 0}
+      m_Extent: {x: 1.0285182, y: 0.6128998, z: 0}
     m_EdgeProcessing: 1
     m_TrimEdge: 0.09
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0
+    m_InitialTrim: 0.09
   m_CastingOption: 1
   m_PreviousTrimEdge: 0.09
   m_PreviousEdgeProcessing: 1
