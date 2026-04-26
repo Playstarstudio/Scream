@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using System;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -15,44 +16,56 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private float _lerpSpeed = .75f;
 
-    [Tooltip("Gets rotated when the player moves, should be the directional light")]
-    [SerializeField]
-    private Transform _lanternTransform;
-
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
 
     [Header("Player Sprites")]
 
     [SerializeField]
-    private Sprite upSprite;
+    private DirectionInfo upDirectionInfo;
 
     [SerializeField]
-    private Sprite upRightSprite;
+    private DirectionInfo upRightDirectionInfo;
 
     [SerializeField]
-    private Sprite rightSprite;
+    private DirectionInfo rightDirectionInfo;
 
     [SerializeField]
-    private Sprite downRightSprite;
+    private DirectionInfo downRightDirectionInfo;
 
     [SerializeField]
-    private Sprite downSprite;
+    private DirectionInfo downDirectionInfo;
 
     [SerializeField]
-    private Sprite downLeftSprite;
+    private DirectionInfo downLeftDirectionInfo;
 
     [SerializeField]
-    private Sprite leftSprite;
+    private DirectionInfo leftDirectionInfo;
 
     [SerializeField]
-    private Sprite upLeftSprite;
+    private DirectionInfo upLeftDirectionInfo;
 
 
-
+    private Transform _lanternLightTransform;
+    private Transform _lanternTransform;
     private Vector2 _movementInput;
     private Transform _transform;
 
+    [Serializable]
+    struct DirectionInfo
+    {
+        public float lookRotation;
+        public Sprite rotSprite;
+        public Vector2 relativePosition;
+
+        public DirectionInfo(float rot, Sprite spr, Vector2 pos)
+        {
+            lookRotation = rot;
+            rotSprite = spr;
+            relativePosition = pos;
+        }
+
+    };
 
     Dictionary<Vector2, DirectionInfo> looks;
 
@@ -60,47 +73,38 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         _transform = GetComponent<Transform>();
+        _lanternTransform = transform.Find("Lantern");
+        _lanternLightTransform = _lanternTransform.Find("LanternDirectionalLight");
 
 
         looks = new Dictionary<Vector2, DirectionInfo>()
         {
             // left
-            { new Vector2(-1, 0), new DirectionInfo(90, leftSprite) },
+            { new Vector2(-1, 0), leftDirectionInfo },
 
             // right
-            { new Vector2(1, 0), new DirectionInfo(-90, rightSprite) },
+            { new Vector2(1, 0), rightDirectionInfo },
 
             // up
-            { new Vector2(0, 1), new DirectionInfo(0, upSprite) },
+            { new Vector2(0, 1), upDirectionInfo },
 
             // down
-            { new Vector2(0, -1), new DirectionInfo(180, downSprite) },
+            { new Vector2(0, -1), downDirectionInfo },
 
             // up left
-            { new Vector2(-.71f, .71f), new DirectionInfo(45, upLeftSprite) },
+            { new Vector2(-.71f, .71f), upLeftDirectionInfo },
 
             // up right
-            { new Vector2(.71f, .71f), new DirectionInfo(-45, upRightSprite) },
+            { new Vector2(.71f, .71f), upRightDirectionInfo },
 
             // down left
-            { new Vector2(-.71f, -.71f), new DirectionInfo(135, downLeftSprite) },
+            { new Vector2(-.71f, -.71f), downLeftDirectionInfo },
             
             // down right
-            { new Vector2(.71f, -.71f), new DirectionInfo(-135, downRightSprite) },
+            { new Vector2(.71f, -.71f), downRightDirectionInfo },
         };
     }
 
-    struct DirectionInfo
-    {
-        public float lookRotation;
-        public Sprite rotSprite;
-
-        public DirectionInfo(float rot, Sprite spr)
-        {
-            lookRotation = rot;
-            rotSprite = spr;
-        }
-    };
 
     private void Update()
     {
@@ -122,7 +126,8 @@ public class CharacterMovement : MonoBehaviour
 
             if (Mathf.Approximately(lookX, movX) && Mathf.Approximately(lookY, movY))
             {
-                _lanternTransform.rotation = Quaternion.Euler(0, 0, look.Value.lookRotation);
+                _lanternLightTransform.rotation = Quaternion.Euler(0, 0, look.Value.lookRotation);
+                _lanternTransform.localPosition = look.Value.relativePosition;
                 _spriteRenderer.sprite = look.Value.rotSprite;
             }
 
