@@ -516,3 +516,12 @@ MonoBehaviour:
   _speed: 2
   _lerpSpeed: 0.75
   _lanternTransform: {fileID: 3104307560095290311}
+  _spriteRenderer: {fileID: 9024293755646628324}
+  upSprite: {fileID: -7363023246067738206, guid: bc621e359c5913747afe94ea8d8a34eb, type: 3}
+  upRightSprite: {fileID: 8924023422986047319, guid: 463d5aeccb429f5499dfe372f105806a, type: 3}
+  rightSprite: {fileID: -4519587348513953690, guid: e35be44344e76d14a825d4b9b59660c1, type: 3}
+  downRightSprite: {fileID: 1814247627795204476, guid: 9b46c09f4f442f04292c77967415b281, type: 3}
+  downSprite: {fileID: -740082002468633296, guid: b2c238d0fa651b543923df726e058d25, type: 3}
+  downLeftSprite: {fileID: 299690299336724192, guid: e846a92d381f9c94b959583a89f0be8f, type: 3}
+  leftSprite: {fileID: -9027515781407968161, guid: 3767b96f70e21b64fa5ae2ec8ba180e3, type: 3}
+  upLeftSprite: {fileID: -5275571619157480706, guid: d74d02009a67c9549b1c63499abf495b, type: 3}

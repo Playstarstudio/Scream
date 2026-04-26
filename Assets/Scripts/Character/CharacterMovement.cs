@@ -19,41 +19,89 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private Transform _lanternTransform;
 
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
+
+    [Header("Player Sprites")]
+
+    [SerializeField]
+    private Sprite upSprite;
+
+    [SerializeField]
+    private Sprite upRightSprite;
+
+    [SerializeField]
+    private Sprite rightSprite;
+
+    [SerializeField]
+    private Sprite downRightSprite;
+
+    [SerializeField]
+    private Sprite downSprite;
+
+    [SerializeField]
+    private Sprite downLeftSprite;
+
+    [SerializeField]
+    private Sprite leftSprite;
+
+    [SerializeField]
+    private Sprite upLeftSprite;
+
+
+
     private Vector2 _movementInput;
     private Transform _transform;
+
+
+    Dictionary<Vector2, DirectionInfo> looks;
 
 
     private void Awake()
     {
         _transform = GetComponent<Transform>();
-    }
 
-    private Dictionary<Vector2, float> looks = new Dictionary<Vector2, float>()
+
+        looks = new Dictionary<Vector2, DirectionInfo>()
         {
             // left
-            { new Vector2(-1, 0), 90 },
+            { new Vector2(-1, 0), new DirectionInfo(90, leftSprite) },
 
             // right
-            { new Vector2(1, 0), -90 },
+            { new Vector2(1, 0), new DirectionInfo(-90, rightSprite) },
 
             // up
-            { new Vector2(0, 1), 0 },
+            { new Vector2(0, 1), new DirectionInfo(0, upSprite) },
 
             // down
-            { new Vector2(0, -1), 180 },
+            { new Vector2(0, -1), new DirectionInfo(180, downSprite) },
 
             // up left
-            { new Vector2(-.71f, .71f), 45 },
+            { new Vector2(-.71f, .71f), new DirectionInfo(45, upLeftSprite) },
 
             // up right
-            { new Vector2(.71f, .71f), -45 },
+            { new Vector2(.71f, .71f), new DirectionInfo(-45, upRightSprite) },
 
             // down left
-            { new Vector2(-.71f, -.71f), 135 },
+            { new Vector2(-.71f, -.71f), new DirectionInfo(135, downLeftSprite) },
             
             // down right
-            { new Vector2(.71f, -.71f), -135 },
+            { new Vector2(.71f, -.71f), new DirectionInfo(-135, downRightSprite) },
         };
+    }
+
+    struct DirectionInfo
+    {
+        public float lookRotation;
+        public Sprite rotSprite;
+
+        public DirectionInfo(float rot, Sprite spr)
+        {
+            lookRotation = rot;
+            rotSprite = spr;
+        }
+    };
+
     private void Update()
     {
         Vector3 input3D = (Vector3)_movementInput;
@@ -74,9 +122,9 @@ public class CharacterMovement : MonoBehaviour
 
             if (Mathf.Approximately(lookX, movX) && Mathf.Approximately(lookY, movY))
             {
-                _lanternTransform.rotation = Quaternion.Euler(0, 0, look.Value);
+                _lanternTransform.rotation = Quaternion.Euler(0, 0, look.Value.lookRotation);
+                _spriteRenderer.sprite = look.Value.rotSprite;
             }
-
 
         }
 
