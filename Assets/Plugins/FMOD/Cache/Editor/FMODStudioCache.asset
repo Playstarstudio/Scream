@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7195355490265042238
+--- !u!114 &-5655146475082544128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,9 +10,88 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/testOneShotSpatialized
+  m_Name: event:/tests/testOneShot
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/testOneShotSpatialized
+  Path: event:/tests/testOneShot
+  Guid:
+    Data1: 1158942672
+    Data2: 1265572899
+    Data3: 729476271
+    Data4: 1391834606
+  Banks:
+  - {fileID: 2550760468472630972}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3015115290947298541}
+  - {fileID: 2315401888891885150}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 761
+--- !u!114 &-3044057942638009256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/testParamFloatGlobal
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: testParamFloatGlobal
+  StudioPath: parameter:/tests/testParamFloatGlobal
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1615927319
+    data2: 3386815931
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-3015115290947298541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/testOneShot/testParamStringOneShot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: testParamStringOneShot
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2963929487
+    data2: 331659343
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - false
+  - true
+  Exists: 1
+--- !u!114 &-2722067135594075212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/tests/testOneShotSpatialized
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/tests/testOneShotSpatialized
   Guid:
     Data1: -1757740878
     Data2: 1188877735
@@ -47,6 +126,82 @@ MonoBehaviour:
   - Name: Desktop
     Value: 506
   Exists: 1
+--- !u!114 &-2065794879014541676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/testLoop/testParamStringLoop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: testParamStringLoop
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 180585119
+    data2: 3612246781
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - false
+  - true
+  Exists: 1
+--- !u!114 &-539984091158487121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/testLoop/testParamFloatLoop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: testParamFloatLoop
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 271373262
+    data2: 2162168445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-44037623067171752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/testParamStringGlobal
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: testParamStringGlobal
+  StudioPath: parameter:/tests/testParamStringGlobal
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3408103620
+    data2: 2468747246
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - false
+  - true
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,50 +221,25 @@ MonoBehaviour:
   - {fileID: 8146474209469976447}
   - {fileID: -2599089428252749436}
   EditorEvents:
-  - {fileID: -7195355490265042238}
-  - {fileID: 2295080463119595893}
-  - {fileID: 947806670834995379}
-  EditorParameters: []
+  - {fileID: -2722067135594075212}
+  - {fileID: 3189185141489782899}
+  - {fileID: -5655146475082544128}
+  EditorParameters:
+  - {fileID: -3044057942638009256}
+  - {fileID: -44037623067171752}
   MasterBanks:
   - {fileID: 2550760468472630972}
   StringsBanks:
   - {fileID: 8998263865723236680}
   cacheVersion: 131859
-  cacheTime: 639128031338152011
+  cacheTime: 639128108892927563
   SerializableEventsDict:
-  - key: event:/testOneShotSpatialized
+  - key: event:/tests/testOneShotSpatialized
     index: 0
-  - key: event:/testOneShot
+  - key: event:/tests/testLoop
     index: 1
-  - key: event:/testLoop
+  - key: event:/tests/testOneShot
     index: 2
---- !u!114 &947806670834995379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/testLoop
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/testLoop
-  Guid:
-    Data1: -1185678895
-    Data2: 1128368286
-    Data3: 1526964134
-    Data4: 538148171
-  Banks:
-  - {fileID: 2550760468472630972}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 761
 --- !u!114 &1584089914778722688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +260,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 506
   Exists: 1
---- !u!114 &2295080463119595893
+--- !u!114 &2315401888891885150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,24 +269,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/testOneShot
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/testOneShot
-  Guid:
-    Data1: 1158942672
-    Data2: 1265572899
-    Data3: 729476271
-    Data4: 1391834606
-  Banks:
-  - {fileID: 2550760468472630972}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 761
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/testOneShot/testParamFloatOneShot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: testParamFloatOneShot
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1863610368
+    data2: 1065561687
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2550760468472630972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,11 +299,40 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639128031338030637
+  lastModified: 639128108892907566
   FileSizes:
   - Name: Desktop
-    Value: 24896
+    Value: 28320
   Exists: 1
+--- !u!114 &3189185141489782899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/tests/testLoop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/tests/testLoop
+  Guid:
+    Data1: 1645687247
+    Data2: 1224608913
+    Data3: -1377736540
+    Data4: -1412844153
+  Banks:
+  - {fileID: 2550760468472630972}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -539984091158487121}
+  - {fileID: -2065794879014541676}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 562
 --- !u!114 &8146474209469976447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,8 +368,8 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639128031338050385
+  lastModified: 639128108892927563
   FileSizes:
   - Name: Desktop
-    Value: 1500
+    Value: 1800
   Exists: 1

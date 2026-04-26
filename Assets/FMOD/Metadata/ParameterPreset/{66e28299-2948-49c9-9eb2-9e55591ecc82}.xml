@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{66e28299-2948-49c9-9eb2-9e55591ecc82}">
+		<property name="name">
+			<value>testParamStringOneShot</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bbe85ac1-9fb5-4b4d-91e5-a06f7f26b959}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{dd9eaf03-8be6-4880-8219-5d8347856c6f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{dd9eaf03-8be6-4880-8219-5d8347856c6f}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>false</value>
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
