@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3102b4f439a063b47a53e33655b0eef0
+guid: e35be44344e76d14a825d4b9b59660c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7452843642557938845
-    second: ScreamKnowledgeJam Prototype floor wood tile v1_0
+      213: -4519587348513953690
+    second: ScreamKnowledgeJam Prototype base character east v1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10016
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ScreamKnowledgeJam Prototype floor wood tile v1_0
+      name: ScreamKnowledgeJam Prototype base character east v1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 5
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9cb1395ec1dd6760800000000000000
-      internalID: 7452843642557938845
+      spriteID: 668e97890433741c0800000000000000
+      internalID: -4519587348513953690
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ScreamKnowledgeJam Prototype floor wood tile v1_0: 7452843642557938845
+      ScreamKnowledgeJam Prototype base character east v1_0: -4519587348513953690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
