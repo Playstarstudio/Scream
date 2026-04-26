@@ -228,7 +228,8 @@ public class LanternLight : MonoBehaviour
     {
         if (_directionalLight == null)
         {
-            Transform directionLightTransform = transform.Find("LaternDirectionalLight");
+            
+            Transform directionLightTransform = transform.Find("LanternDirectionalLight");
             if (directionLightTransform != null)
             {
                 _directionalLight = directionLightTransform.GetComponent<Light2D>();
@@ -240,7 +241,7 @@ public class LanternLight : MonoBehaviour
         }
         if (_pointLight == null)
         {
-            Transform pointLightTransform = transform.Find("LaternPointLight");
+            Transform pointLightTransform = transform.Find("LanternPointLight");
             if (pointLightTransform != null)
             {
                 _pointLight = pointLightTransform.GetComponent<Light2D>();
@@ -254,17 +255,17 @@ public class LanternLight : MonoBehaviour
 
     private void Reset()
     {
-        if (transform.Find("LaternDirectionalLight") == null)
+        if (transform.Find("LanternDirectionalLight") == null)
         {
-            GameObject directionalLightObject = new GameObject("LaternDirectionalLight");
+            GameObject directionalLightObject = new GameObject("LanternDirectionalLight");
             directionalLightObject.transform.SetParent(transform, false);
             _directionalLight = directionalLightObject.AddComponent<Light2D>();
             _directionalLight.lightType = Light2D.LightType.Point;
         }
 
-        if (transform.Find("LaternPointLight") == null)
+        if (transform.Find("LanternPointLight") == null)
         {
-            GameObject pointLightObject = new GameObject("LaternPointLight");
+            GameObject pointLightObject = new GameObject("LanternPointLight");
             pointLightObject.transform.SetParent(transform, false);
             _pointLight = pointLightObject.AddComponent<Light2D>();
             _pointLight.lightType = Light2D.LightType.Point;
