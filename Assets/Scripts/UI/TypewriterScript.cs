@@ -10,7 +10,6 @@ public class TypewriterScript : MonoBehaviour
     private TMP_Text textBox;
     private int currentVisibleCharacterIndex;
     private Coroutine typewriterCoroutine;
-
     private WaitForSeconds simpleDelay;
     private WaitForSeconds interpunctuationDelay;
 
@@ -40,8 +39,20 @@ public class TypewriterScript : MonoBehaviour
         currentVisibleCharacterIndex = 0;
 
         typewriterCoroutine = StartCoroutine(routine: Typewriter());
-
     }
+
+    public void SetTEventText(int charPerSecond, string Text)
+    {
+        if (typewriterCoroutine != null)
+            StopCoroutine(typewriterCoroutine);
+
+        textBox.text = Text;
+        textBox.maxVisibleCharacters = 0;
+        currentVisibleCharacterIndex = 0;
+
+        typewriterCoroutine = StartCoroutine(routine: EventTypewriter(charPerSecond));
+    }
+
 
     private IEnumerator Typewriter()
     {
@@ -68,4 +79,36 @@ public class TypewriterScript : MonoBehaviour
         }
     }
 
+    private IEnumerator EventTypewriter(int charPerSecondMod)
+    {
+        TMP_TextInfo textInfo = textBox.textInfo;
+
+        while (currentVisibleCharacterIndex < textInfo.characterCount + 1)
+        {
+
+            char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
+
+            textBox.maxVisibleCharacters++;
+
+            if (character == '?' || character == '!' || character == ',' || character == '.' || character == ';' || character == ':' || character == '-')
+            {
+                yield return interpunctuationDelay;
+            }
+            else
+            {
+                if (charPerSecondMod > 0)
+                {
+                    simpleDelay = new WaitForSeconds(1 / characterPerSecond);
+                }
+                else
+                {
+                    simpleDelay = new WaitForSeconds(1 / charPerSecondMod);
+                }
+                    yield return simpleDelay;
+            }
+
+            currentVisibleCharacterIndex++;
+
+        }
+    }
 }
