@@ -17,6 +17,16 @@ namespace RoomLayout.Editor
             _ownedItems = ownedItems;
         }
 
+        public void AddToInventory(int itemID)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool HasItem(int itemId) => _ownedItems.Contains(itemId);
+
+        public void RemoveFromInventory(int itemID)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

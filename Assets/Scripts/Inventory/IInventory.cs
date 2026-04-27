@@ -2,7 +2,12 @@
 {
     public interface IInventory
     {
-        bool HasItem(int itemId);
+        public bool HasItem(int itemId);
+
+        public void AddToInventory(int itemID);
+
+        public void RemoveFromInventory(int itemID);
+
     }
 }
 
