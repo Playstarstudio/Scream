@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 5248112237590586643}
   - component: {fileID: 2650654564336580140}
   - component: {fileID: 3596970244359845234}
+  - component: {fileID: 6045463652365876692}
   m_Layer: 5
   m_Name: BackpackCanvas
   m_TagString: Untagged
@@ -283,6 +284,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6045463652365876692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519040602206182077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e068f7bab2758844bbfc86992900e872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.BackpackInventoryScript
+  inventory: {fileID: 1739522925635518731}
+  hiddenOffset: {x: 0, y: -340}
 --- !u!1 &751444839659819458
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +384,7 @@ GameObject:
   - component: {fileID: 1840252415493725820}
   - component: {fileID: 8391858139436675752}
   - component: {fileID: 6365301353979273107}
+  - component: {fileID: 1504984132466134572}
   m_Layer: 5
   m_Name: ClosedBackpackImage
   m_TagString: Untagged
@@ -390,10 +406,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6391920421103821036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 164, y: 180}
-  m_SizeDelta: {x: 286.1775, y: 326.7863}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 286.1775, y: 326.78625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8391858139436675752
 CanvasRenderer:
@@ -433,6 +449,35 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1504984132466134572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108767078712371848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6045463652365876692}
+          m_TargetAssemblyTypeName: UI.BackpackInventoryScript, Assembly-CSharp
+          m_MethodName: OnGesture
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1365256403662319092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,10 +2133,10 @@ RectTransform:
   m_Father: {fileID: 4608512859809472123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 286.1775, y: 326.7863}
+  m_Pivot: {x: 0, y: 0}
 --- !u!223 &4696828871093990421
 Canvas:
   m_ObjectHideFlags: 0
