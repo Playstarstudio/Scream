@@ -158,9 +158,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnInteract(InputValue inputValue)
     {
-        //if (inputValue.isPressed)
-        OnInteractPressed(null);
-        Debug.Log("in char move");
+        if (inputValue.isPressed) OnInteractPressed(null);
     }
 
     // TODO: Implement footsteps

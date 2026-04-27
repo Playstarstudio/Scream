@@ -5,11 +5,12 @@ namespace Inventory
 
     public class Inventory : MonoBehaviour, IInventory
     {
-        HashSet<int> items = new HashSet<int>();
+        public HashSet<int> items = new HashSet<int>();
 
         public void AddToInventory(int itemID)
         {
             items.Add(itemID);
+            Debug.Log("Added item with ID " +  itemID + " to inventory");
         }
 
         public bool HasItem(int itemId)

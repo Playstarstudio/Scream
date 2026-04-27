@@ -22,7 +22,6 @@ public class KeyItem : MonoBehaviour
 
     private void Interacted(object sender, EventArgs e)
     {
-        Debug.Log("interacted");
         if (inTrigger)
         {
             _inventory.AddToInventory(itemId);
@@ -32,12 +31,12 @@ public class KeyItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) inTrigger = true; Debug.Log("in trigger");
+        if (collision.CompareTag("Player")) inTrigger = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) inTrigger = false; Debug.Log("out trigger");
+        if (collision.CompareTag("Player")) inTrigger = false;
     }
 
 }
