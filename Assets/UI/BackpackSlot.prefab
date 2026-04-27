@@ -293,7 +293,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2520577756819050647, guid: 7369f7aca4d41954291f91daf330d083, type: 3}
       propertyPath: m_Name
-      value: Test Particle System
+      value: UIFuzzyParticleSystem
       objectReference: {fileID: 0}
     - target: {fileID: 4366941445079763718, guid: 7369f7aca4d41954291f91daf330d083, type: 3}
       propertyPath: m_Pivot.x
