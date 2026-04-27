@@ -44,8 +44,15 @@ public class CharacterMovement : MonoBehaviour
 
     [SerializeField]
     private DirectionInfo upLeftDirectionInfo;
+    
+    [Header("Player Sounds")]
+    
+    [SerializeField]
+    private float stepInterval = 0.3f;
+    private float _stepTimer = 0f;
 
-
+    private AudioManager audioManager;
+    
     private Transform _lanternLightTransform;
     private Transform _lanternTransform;
     private Vector2 _movementInput;
@@ -139,5 +146,16 @@ public class CharacterMovement : MonoBehaviour
     {
         _movementInput = inputValue.Get<Vector2>();
     }
+    
+    // TODO: Implement footsteps
+    // private void HandleFootstepSound()
+    // {
+    //     if (Time.timeScale > 0 && isGrounded && characterVelocity.magnitude > 0 && _stepTimer <= 0)
+    //     {
+    //         audioManager.PlayOneShot(AudioID.SFX.Player.Movement.footsteps, new string[] {"surfaceType"}, new string[] {"Sand"}, null);
+    //         _stepTimer = stepInterval;
+    //     }
+    //     _stepTimer -= Time.deltaTime;
+    // }
 }
 

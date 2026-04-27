@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EventFolder" id="{9369184b-e8ff-44df-a823-b597b882fd95}">
+		<property name="name">
+			<value>amulet</value>
+		</property>
+		<relationship name="folder">
+			<destination>{514ce663-d2a4-4c07-8bc7-fb335354dfab}</destination>
+		</relationship>
+	</object>
+</objects>

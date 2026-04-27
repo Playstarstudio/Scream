@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EventFolder" id="{4d6144c4-c7fd-49e6-97e3-f07a1c9d4dcc}">
+		<property name="name">
+			<value>ritual_circle</value>
+		</property>
+		<relationship name="folder">
+			<destination>{514ce663-d2a4-4c07-8bc7-fb335354dfab}</destination>
+		</relationship>
+	</object>
+</objects>
