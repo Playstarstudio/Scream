@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7988755779294032974}
   - component: {fileID: 8823654898581300387}
+  - component: {fileID: -8971919465836674382}
+  - component: {fileID: 806036559013615981}
   m_Layer: 0
   m_Name: S_K_Island_v1_0
   m_TagString: Untagged
@@ -90,3 +92,121 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8971919465836674382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411893500165884397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
+  m_ShadowGroup: 0
+  m_Priority: 1
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.94123495, y: -0.38359308, z: 0}
+  - {x: -0.9443277, y: -0.21024442, z: 0}
+  - {x: 0.4113561, y: 0.52270067, z: 0}
+  - {x: 0.94952124, y: 0.26598963, z: 0}
+  - {x: 0.9566997, y: 0.0031659603, z: 0}
+  - {x: 0.8814778, y: -0.021650314, z: 0}
+  - {x: 0.8660129, y: 0.13608778, z: 0}
+  - {x: 0.34640503, y: -0.12680912, z: 0}
+  - {x: 0.3340333, y: -0.27526832, z: 0}
+  - {x: 0.296919, y: -0.28763998, z: 0}
+  - {x: 0.28145415, y: -0.16083086, z: 0}
+  - {x: -0.2876402, y: -0.47940004, z: 0}
+  - {x: -0.29691887, y: -0.6123949, z: 0}
+  - {x: -0.3825277, y: -0.6062821, z: 0}
+  - {x: -0.386613, y: -0.513422, z: 0}
+  - {x: -0.8536414, y: -0.27836132, z: 0}
+  - {x: -0.86910594, y: -0.37424135, z: 0}
+  m_ShapePathHash: -789401580
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 0}
+  m_ShadowShape2DProvider:
+    rid: -2
+  m_ShadowCastingSource: 1
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0.0061860085, y: -0.04484713, z: 0}
+      m_Extent: {x: 0.9505137, y: 0.5675478, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.06
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.06
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 1
+  m_PreviousShadowShape2DSource: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+--- !u!60 &806036559013615981
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411893500165884397}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.21875}
+    newSize: {x: 4, y: 2.4375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.95293564, y: 0.009351671}
+      - {x: 0.9654427, y: 0.2622344}
+      - {x: 0.43820012, y: 0.45545924}
+      - {x: -0.96742237, y: -0.21022809}
+      - {x: -0.9350488, y: -0.38913703}
+      - {x: -0.33490896, y: -0.6310253}
+  m_UseDelaunayMesh: 0

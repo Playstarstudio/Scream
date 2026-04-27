@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7633555712189779319}
   - component: {fileID: 7120957080462486157}
+  - component: {fileID: -1908104369779722121}
+  - component: {fileID: -161001903396926202}
   m_Layer: 0
   m_Name: S_K_Cabinets_Countertops_v1
   m_TagString: Untagged
@@ -90,3 +92,119 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1908104369779722121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818517610663809848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
+  m_ShadowGroup: 0
+  m_Priority: 1
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -1.6796645, y: -1.4529852, z: 0}
+  - {x: -2.0625, y: -1.2738774, z: 0}
+  - {x: -2.048505, y: -0.77910376, z: 0}
+  - {x: 0.21548788, y: 0.35149407, z: 0}
+  - {x: 2.0149236, y: -0.57761145, z: 0}
+  - {x: 2.0490673, y: -1.1104482, z: 0}
+  - {x: 1.6522375, y: -1.2761178, z: 0}
+  - {x: 0.24179159, y: -0.537313, z: 0}
+  - {x: -0.18134306, y: -0.7455214, z: 0}
+  - {x: -0.52387995, y: -0.51716375, z: 0}
+  - {x: -0.9201481, y: -0.71193945, z: 0}
+  - {x: -0.9402974, y: -1.1417896, z: 0}
+  m_ShapePathHash: 1416454739
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 0}
+  m_ShadowShape2DProvider:
+    rid: -2
+  m_ShadowCastingSource: 1
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: -0.0067162514, y: -0.55074555, z: 0}
+      m_Extent: {x: 2.0557837, y: 0.9022396, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.1
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.1
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 1
+  m_PreviousShadowShape2DSource: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+--- !u!60 &-161001903396926202
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818517610663809848}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.125, y: 3}
+    newSize: {x: 4.125, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.18768597, y: 0.36492682}
+      - {x: -2.0423508, y: -0.75298285}
+      - {x: -2.0557835, y: -1.3052242}
+      - {x: -1.7126845, y: -1.4597014}
+      - {x: -0.98003435, y: -1.1507467}
+      - {x: 0.19513035, y: -0.5813887}
+      - {x: 1.678108, y: -1.2969505}
+      - {x: 2.0692163, y: -1.1358182}
+      - {x: 2.068842, y: -0.5485048}
+  m_UseDelaunayMesh: 0
