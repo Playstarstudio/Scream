@@ -44,19 +44,28 @@ public class CharacterMovement : MonoBehaviour
 
     [SerializeField]
     private DirectionInfo upLeftDirectionInfo;
-    
+
     [Header("Player Sounds")]
-    
+
     [SerializeField]
     private float stepInterval = 0.3f;
     private float _stepTimer = 0f;
 
     private AudioManager audioManager;
-    
+
     private Transform _lanternLightTransform;
     private Transform _lanternTransform;
     private Vector2 _movementInput;
     private Transform _transform;
+
+    public event EventHandler<EventArgs> InteractPressed;
+    public void OnInteractPressed(EventArgs e)
+    {
+        if (InteractPressed != null)
+        {
+            InteractPressed(this, e);
+        }
+    }
 
     [Serializable]
     struct DirectionInfo
@@ -146,7 +155,14 @@ public class CharacterMovement : MonoBehaviour
     {
         _movementInput = inputValue.Get<Vector2>();
     }
-    
+
+    private void OnInteract(InputValue inputValue)
+    {
+        //if (inputValue.isPressed)
+        OnInteractPressed(null);
+        Debug.Log("in char move");
+    }
+
     // TODO: Implement footsteps
     // private void HandleFootstepSound()
     // {
