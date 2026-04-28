@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!43 &253559229
+--- !u!43 &240609772
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -559,7 +559,7 @@ Transform:
   m_GameObject: {fileID: 425904613}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.072730005, y: 0.29153, z: 0}
+  m_LocalPosition: {x: 0.0625, y: 0.28125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1356,11 +1356,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864233106003091370, guid: c4d868606e8346d4490704d696687e49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1455512
+      value: -3.1800513
       objectReference: {fileID: 0}
     - target: {fileID: 3864233106003091370, guid: c4d868606e8346d4490704d696687e49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.237443
+      value: -3.247693
       objectReference: {fileID: 0}
     - target: {fileID: 3864233106003091370, guid: c4d868606e8346d4490704d696687e49, type: 3}
       propertyPath: m_LocalPosition.z
