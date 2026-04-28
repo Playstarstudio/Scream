@@ -9,9 +9,10 @@ namespace UI
 {
     public class BackpackInventoryScript : MonoBehaviour
     {
-        public DragGesture dragGesture;
+        public DragGesture openDragGesture;
+        public DragGesture closeDragGesture;
         public RectTransform inventory;
-        
+
         private float _animationDuration = 0.4f;
      
         [Tooltip("The easing curve for the animation")]
@@ -30,12 +31,14 @@ namespace UI
 
         private void OnEnable()
         {
-            dragGesture.OnGestureEnd += OnGesture;
+            openDragGesture.OnGestureEnd += OnGesture;
+            closeDragGesture.OnGestureEnd += OnGesture;
         }
 
         private void OnDisable()
         {
-            dragGesture.OnGestureEnd -= OnGesture;
+            openDragGesture.OnGestureEnd -= OnGesture;
+            closeDragGesture.OnGestureEnd -= OnGesture;
         }
 
 

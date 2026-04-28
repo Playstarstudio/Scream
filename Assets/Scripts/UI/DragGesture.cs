@@ -25,6 +25,7 @@ namespace UI
     {
         public event  OnGestureEnd OnGestureEnd;
         [SerializeField] private bool moveTransformWithGesture;
+        [SerializeField] private bool persistTransformWithGesture;
         [SerializeField] private float dragDistance = 100f;
         [SerializeField] private DragDirection enabledDragDirections = DragDirection.Everything;
         [SerializeField] private DragDirection startingDragDirection = DragDirection.Nothing;
@@ -90,10 +91,15 @@ namespace UI
             {
                 // SUCCESSFUL GESTURE
                 OnGestureEnd?.Invoke(dragDirection);
-                _lastAnchoredPosition = _rectTransform.anchoredPosition; // snap to new anchored position
-                Debug.Log("123 Last anchored position:" + _lastAnchoredPosition);
-                _lastSuccessfulDragDirection = dragDirection;
-                Debug.Log("123 Last Successful Direction: " + _lastSuccessfulDragDirection);
+                if (persistTransformWithGesture)
+                {
+                    _lastAnchoredPosition = _rectTransform.anchoredPosition; // snap to new anchored position
+                    _lastSuccessfulDragDirection = dragDirection;
+                }
+                else
+                {
+                    _rectTransform.anchoredPosition = _lastAnchoredPosition;
+                }
             }
             else
             {
