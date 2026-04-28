@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
-using System;
 using Services;
 
 
 [RequireComponent(typeof(Collider2D))]
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour, IInteractable
 {
     [Header("Connection")]
     [Tooltip("The name of the scene this door leads to.")]
@@ -20,8 +19,6 @@ public class Door : MonoBehaviour
     [Tooltip("Item ID the player must have to use this door. Set to -1 for no requirement.")]
     [SerializeField] private int requiredItemId = -1;
 
-    // The scene this door leads to. Used by SceneTransitionManager to find
-    // the arrival door (the one whose target points back to where we came from)
     public string TargetSceneName => targetSceneName;
     
     public Vector3 SpawnPosition => transform.position + ScaleLocal(spawnOffset);
@@ -33,26 +30,18 @@ public class Door : MonoBehaviour
         Vector3 s = transform.lossyScale;
         return new Vector3(local.x * s.x, local.y * s.y, 0f);
     }
+    
+    public int InteractionPriority => 0; // Low priority — items should be picked up before doors are used
 
-    private bool _inTrigger;
-    private Inventory.IInventory _inventory;
+    public bool CanInteract => !string.IsNullOrEmpty(targetSceneName);
 
-    private void Start()
+    public void Interact()
     {
-        _inventory = FindFirstObjectByType<Inventory.Inventory>();
-        CharacterMovement chmov = FindFirstObjectByType<CharacterMovement>();
-        if (chmov != null)
-            chmov.InteractPressed += OnInteractPressed;
-    }
-
-    private void OnInteractPressed(object sender, EventArgs e)
-    {
-        if (!_inTrigger) return;
-
         // Optional key / item check
         if (requiredItemId >= 0)
         {
-            if (_inventory == null || !_inventory.HasItem(requiredItemId))
+            var inventory = FindFirstObjectByType<Inventory.Inventory>() as Inventory.IInventory;
+            if (inventory == null || !inventory.HasItem(requiredItemId))
             {
                 Debug.Log($"[Door] Player does not have required item {requiredItemId}.");
                 return;
@@ -60,16 +49,6 @@ public class Door : MonoBehaviour
         }
 
         ServiceLocator.Instance.Get<SceneTransitionManager>().TransitionToScene(targetSceneName);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) _inTrigger = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) _inTrigger = false;
     }
 
 #if UNITY_EDITOR

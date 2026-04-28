@@ -1,44 +1,27 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Inventory;
-using System;
 
-public class KeyItem : MonoBehaviour
+[RequireComponent(typeof(Collider2D))]
+public class KeyItem : MonoBehaviour, IInteractable
 {
     public int itemId;
 
-    private bool inTrigger;
-
     private IInventory _inventory;
 
-    void Start()
+    private void Start()
     {
-        inTrigger = false;
         _inventory = FindFirstObjectByType<Inventory.Inventory>();
-        CharacterMovement chmov = FindFirstObjectByType<CharacterMovement>();
-        chmov.InteractPressed += Interacted;
     }
 
+    public int InteractionPriority => 10;
 
-    private void Interacted(object sender, EventArgs e)
+    public bool CanInteract => true;
+
+    public void Interact()
     {
-        if (inTrigger)
+        if (_inventory != null && _inventory.AddToInventory(itemId))
         {
-            if (_inventory.AddToInventory(itemId))
-            {
-                Destroy(this.gameObject);
-            }
+            Destroy(gameObject);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) inTrigger = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) inTrigger = false;
-    }
-
 }
