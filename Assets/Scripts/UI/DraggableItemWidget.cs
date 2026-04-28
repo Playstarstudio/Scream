@@ -11,10 +11,11 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     public Image image;
     public Transform parentAfterDrag;
     Transform rootTransform;
+    public GameObject canvasParent;
 
     private void Awake()
     {
-        GameObject canvasParent = GameObject.Find("OpenBackpackCanvas");
+        canvasParent = GameObject.Find("OpenBackpackCanvas");
         rootTransform = canvasParent.GetComponent<Transform>();
         image = transform.GetComponent<Image>();
     }

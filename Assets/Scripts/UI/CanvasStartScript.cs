@@ -8,7 +8,7 @@ public class CanvasStartScript : MonoBehaviour
     {
         Canvas canvas = GetComponent<Canvas>();
 
-        Camera mainCamera = Camera.main;
+        Camera mainCamera = GameObject.Find("UI Camera").GetComponent<Camera>();
         canvas.worldCamera = mainCamera;
     }
 

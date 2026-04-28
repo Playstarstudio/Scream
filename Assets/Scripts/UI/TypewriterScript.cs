@@ -43,7 +43,7 @@ public class TypewriterScript : MonoBehaviour
         typewriterCoroutine = StartCoroutine(routine: Typewriter());
     }
 
-    public void SetTEventText(int charPerSecond, string Text)
+    public void SetEventText(int charPerSecond, string Text)
     {
         if (typewriterCoroutine != null)
             StopCoroutine(typewriterCoroutine);
@@ -58,14 +58,17 @@ public class TypewriterScript : MonoBehaviour
 
     private IEnumerator Typewriter()
     {
+        textBox.ForceMeshUpdate();
         TMP_TextInfo textInfo = textBox.textInfo;
-
-        while (currentVisibleCharacterIndex < textInfo.characterCount + 1)
+        textBox.maxVisibleCharacters++;
+        foreach (var charText in textInfo.characterInfo)
+        //while (currentVisibleCharacterIndex < textInfo.characterCount + 1)
         {
-
-            char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
-
             textBox.maxVisibleCharacters++;
+            Debug.Log(currentVisibleCharacterIndex + " " + textInfo.characterCount);
+            char character = charText.character;
+            //char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
+
 
             if (character == '?' || character == '!' || character == ',' || character == '.' || character == ';' || character == ':' || character == '-')
             {
@@ -77,40 +80,64 @@ public class TypewriterScript : MonoBehaviour
             }
 
             currentVisibleCharacterIndex++;
-
         }
     }
 
     private IEnumerator EventTypewriter(int charPerSecondMod)
     {
+        textBox.ForceMeshUpdate();
         TMP_TextInfo textInfo = textBox.textInfo;
-
-        while (currentVisibleCharacterIndex < textInfo.characterCount + 1)
+        textBox.maxVisibleCharacters++;
+        foreach (var charText in textInfo.characterInfo)
         {
-
-            char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
-
             textBox.maxVisibleCharacters++;
+            //while (currentVisibleCharacterIndex < textInfo.characterCount + 1)
+            {
 
-            if (character == '?' || character == '!' || character == ',' || character == '.' || character == ';' || character == ':' || character == '-')
-            {
-                yield return interpunctuationDelay;
-            }
-            else
-            {
-                if (charPerSecondMod > 0)
+                char character = charText.character;
+                textBox.maxVisibleCharacters++;
+
+                if (character == '?' || character == '!' || character == ',' || character == '.' || character == ';' || character == ':' || character == '-')
                 {
-                    simpleDelay = new WaitForSeconds(1 / characterPerSecond);
+                    yield return interpunctuationDelay;
                 }
                 else
                 {
-                    simpleDelay = new WaitForSeconds(1 / charPerSecondMod);
-                }
+                    if (charPerSecondMod > 0)
+                    {
+                        simpleDelay = new WaitForSeconds(1 / characterPerSecond);
+                    }
+                    else
+                    {
+                        simpleDelay = new WaitForSeconds(1 / charPerSecondMod);
+                    }
                     yield return simpleDelay;
-            }
+                }
 
-            currentVisibleCharacterIndex++;
+                currentVisibleCharacterIndex++;
+
+            }
+        }
+
+       
+    }
+
+    bool IsValidIndex(int index, TMP_TextInfo textInfo)
+    {
+        if (index < 0 || index >= textInfo.characterInfo.Length)
+        {
+            Debug.Log("1");
+            return false;
 
         }
+        if (index >= textInfo.characterCount)
+        {
+            Debug.Log("2");
+
+            return false;
+        }
+        Debug.Log("3");
+
+        return textInfo.characterInfo[index].character != 0;
     }
 }
