@@ -57,6 +57,7 @@ public class CharacterMovement : MonoBehaviour
     private Transform _lanternTransform;
     private Vector2 _movementInput;
     private Transform _transform;
+    private Rigidbody2D _rb;
 
     public event EventHandler<EventArgs> InteractPressed;
     public void OnInteractPressed(EventArgs e)
@@ -89,6 +90,7 @@ public class CharacterMovement : MonoBehaviour
     private void Awake()
     {
         _transform = GetComponent<Transform>();
+        _rb = GetComponent<Rigidbody2D>();
         _lanternTransform = transform.Find("Lantern");
         _lanternLightTransform = _lanternTransform.Find("LanternDirectionalLight");
 

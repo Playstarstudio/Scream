@@ -24,8 +24,10 @@ public class KeyItem : MonoBehaviour
     {
         if (inTrigger)
         {
-            _inventory.AddToInventory(itemId);
-            Destroy(this.gameObject);
+            if (_inventory.AddToInventory(itemId))
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 

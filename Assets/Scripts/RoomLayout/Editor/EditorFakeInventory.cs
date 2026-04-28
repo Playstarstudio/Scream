@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Inventory;
 
 namespace RoomLayout.Editor
@@ -17,7 +18,9 @@ namespace RoomLayout.Editor
             _ownedItems = ownedItems;
         }
 
-        public void AddToInventory(int itemID)
+        public event EventHandler<EventArgs> InventoryFull;
+
+        public bool AddToInventory(int itemID)
         {
             throw new System.NotImplementedException();
         }
