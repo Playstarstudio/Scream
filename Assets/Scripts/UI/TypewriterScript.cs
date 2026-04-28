@@ -83,7 +83,9 @@ public class TypewriterScript : MonoBehaviour
 
     private IEnumerator EventTypewriter(int charPerSecondMod)
     {
+        textBox.ForceMeshUpdate();
         TMP_TextInfo textInfo = textBox.textInfo;
+        textBox.maxVisibleCharacters++;
         foreach (var charText in textInfo.characterInfo)
         {
             textBox.maxVisibleCharacters++;
