@@ -23,7 +23,7 @@ public class InventoryLanternHighlight : MonoBehaviour
         for (int i = 0; i < _particleTransforms.Length; i++)
         {
             var distanceToLantern = Vector2.Distance(_particleTransforms[i].position, lantern.position);
-            Debug.Log("DistanceToLantern: " + distanceToLantern);
+            //Debug.Log("DistanceToLantern: " + distanceToLantern);
             if (distanceToLantern <= lanternDistance)
             {
                 inventoryParticles[i].Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);

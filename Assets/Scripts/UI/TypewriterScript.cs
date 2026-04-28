@@ -65,7 +65,7 @@ public class TypewriterScript : MonoBehaviour
         //while (currentVisibleCharacterIndex < textInfo.characterCount + 1)
         {
             textBox.maxVisibleCharacters++;
-            Debug.Log(currentVisibleCharacterIndex + " " + textInfo.characterCount);
+            //Debug.Log(currentVisibleCharacterIndex + " " + textInfo.characterCount);
             char character = charText.character;
             //char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
 

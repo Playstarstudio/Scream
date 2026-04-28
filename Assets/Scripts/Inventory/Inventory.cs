@@ -8,7 +8,8 @@ namespace Inventory
     public class Inventory : MonoBehaviour, IInventory
     {
         //public List<int> items = new List<int>() { -1, -1, -1, -1, -1, -1, -1, -1 };
-        public List<int> items = new List<int>() { -1 };
+        public List<GameObject> invItems = new List<GameObject>();
+        public List<DraggableItemWidget> draggableItems = new List<DraggableItemWidget>();
 
         public event EventHandler<EventArgs> InventoryFull;
         public void OnInventoryFull(EventArgs e)
@@ -24,35 +25,78 @@ namespace Inventory
         private int _size;
         private void Start()
         {
-            _size = items.Count;
+            _size = invItems.Count;
         }
 
-        public bool AddToInventory(int itemID)
+        public bool AddToInventory(KeyItem itemID)
         {
             // no empty slots 
-            if (!items.Contains(-1))
+            if (IsInventoryFull())
             {
                 OnInventoryFull(null);
                 return false;
             }
-
-            // add to first empty slot
-            items[items.IndexOf(-1)] = itemID;
-            Debug.Log("Added item with ID " + itemID + " to inventory");
+            foreach (var item in invItems.ToList())
+            {
+                if (item != null)
+                {
+                    continue;
+                }
+                // add to first empty slot
+                else
+                {
+                    int index = invItems.IndexOf(item);
+                    invItems[index] = Instantiate(itemID.gameObject);
+                    draggableItems[index].AddItem(invItems[index], index);
+                    break;
+                }
+            }
             return true;
+        }
+        public bool IsInventoryFull()
+        {
+            int itemCount = 0;
+            bool isFull = false;
+            foreach (var item in invItems.ToList())
+            {
+                if (item != null)
+                {
+                    itemCount++;
+                }
+            }
 
+            if (itemCount >= _size)
+            {
+                isFull = true;
+            }
+            else if (itemCount < _size)
+            {
+                isFull = false;
+            }
+            return isFull;
         }
 
         public bool HasItem(int itemId)
         {
-            return items.Contains(itemId);
+            bool foundItem = false;
+            foreach (var item in invItems.ToList())
+            {
+                if (item == null)
+                    continue;
+                else
+                {
+                    if (item.GetComponentInChildren<KeyItem>().itemId == itemId)
+                        foundItem = true;
+                }
+            }
+            return foundItem;
         }
 
-        public void RemoveFromInventory(int itemID)
+        public void RemoveFromInventory(int itemId)
         {
-            items[items.IndexOf(itemID)] = -1;
-            Debug.Log("Removed item with ID " + itemID + " from inventory");
+            Debug.Log("Removed item with ID " + invItems[itemId].name + " from inventory");
+            draggableItems[itemId].RemoveItem(invItems[itemId].gameObject);
+            invItems[itemId] = null;
         }
-
     }
 }
