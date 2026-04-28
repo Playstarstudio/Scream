@@ -5,9 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Bedroom.unity
+    guid: e565c058c879ea842bd23b780596017c
+  - enabled: 1
+    path: Assets/Scenes/AltarRoom.unity
+    guid: 2ffd600a6e095f04b94f866fbdfae4e2
+  - enabled: 1
+    path: Assets/Scenes/Foyer.unity
+    guid: 01ef80178532d0c42b74fadd2d56f74a
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: a7e7eed61dbe117438e585cfaacc1bba
+  - enabled: 1
+    path: Assets/Scenes/TentacleRoom.unity
+    guid: 82002b633ea60f44084e5d71246ffaa8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
