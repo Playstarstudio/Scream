@@ -47,7 +47,7 @@ namespace Inventory
                 {
                     int index = invItems.IndexOf(item);
                     invItems[index] = Instantiate(itemID.gameObject);
-                    draggableItems[index].image.sprite = invItems[index].GetComponent<SpriteRenderer>().sprite;
+                    draggableItems[index].AddItem(invItems[index], index);
                     break;
                 }
             }
@@ -95,6 +95,7 @@ namespace Inventory
         public void RemoveFromInventory(int itemId)
         {
             Debug.Log("Removed item with ID " + invItems[itemId].name + " from inventory");
+            draggableItems[itemId].RemoveItem(invItems[itemId].gameObject);
             invItems[itemId] = null;
         }
     }

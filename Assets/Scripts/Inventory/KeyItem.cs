@@ -10,11 +10,16 @@ public class KeyItem : MonoBehaviour, IInteractable
     [SerializeField] public Sprite sprite;
     private IInventory _inventory;
 
+    private void Awake()
+    {
+        sr = this.gameObject.GetComponent<SpriteRenderer>();
+        if (sr == null ) sr = this.gameObject.AddComponent<SpriteRenderer>();
+        if ( sprite != null ) sr.sprite = sprite;
+        _inventory = FindFirstObjectByType<Inventory.Inventory>();
+    }
+
     private void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
-        sr.sprite = sprite;
-        _inventory = FindFirstObjectByType<Inventory.Inventory>();
     }
 
     public int InteractionPriority => 10;
