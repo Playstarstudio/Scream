@@ -24,10 +24,17 @@ namespace UI
         private bool _isAnimating = false;
         private Coroutine _activeCoroutine;
 
+        public GameObject closedCanvas;
+        public GameObject openCanvas;
+
+
         private void Awake()
         {
             _openPosition = inventory.anchoredPosition;
             _closedPosition = _openPosition + hiddenOffset;
+
+            closedCanvas.SetActive(true);
+            openCanvas.SetActive(false);
 
             inventory.anchoredPosition = _closedPosition;
             inventory.gameObject.SetActive(false);
@@ -47,6 +54,8 @@ namespace UI
         private void SlideUp()
         {
             _isOpen = true;
+            openCanvas.SetActive(true);
+            closedCanvas.SetActive(false);
             inventory.gameObject.SetActive(true);
             if (_activeCoroutine != null) StopCoroutine(_activeCoroutine);
             _activeCoroutine = StartCoroutine(AnimateBackpack(_closedPosition, _openPosition));
@@ -55,6 +64,8 @@ namespace UI
         private void SlideDown()
         {
             _isOpen = false;
+            openCanvas.SetActive(false);
+            closedCanvas.SetActive(true);
             if (_activeCoroutine != null) StopCoroutine(_activeCoroutine);
             _activeCoroutine = StartCoroutine(AnimateBackpack(_openPosition, _closedPosition));
         }
