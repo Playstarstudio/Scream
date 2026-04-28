@@ -24,6 +24,7 @@ public sealed class AudioID
         public static class GameplaySFX
         {
             public static readonly AudioID ambience = new("bus:/gameplay_sfx/ambience");
+            public static readonly AudioID stinger = new("bus:/gameplay_sfx/stinger");
             public static readonly AudioID objects = new("bus:/gameplay_sfx/objects");
             public static readonly AudioID player = new("bus:/gameplay_sfx/player");
         }
@@ -39,7 +40,10 @@ public sealed class AudioID
     #region Snapshots
     public static class Snapshot // various mixer states for environmental changes and pausing
     {
-        public static readonly AudioID x = new("snapshot:/x");
+        public static readonly AudioID domestic_room_verb = new("snapshot:/domestic_room_verb");
+        public static readonly AudioID altar_room_verb = new("snapshot:/altar_room_verb");
+        public static readonly AudioID tentacle_room_verb = new("snapshot:/tentacle_room_verb");
+        public static readonly AudioID outdoors_verb = new("snapshot:/outdoors_verb");
     }
     #endregion
 
@@ -47,8 +51,8 @@ public sealed class AudioID
     public static class SFX
     {
         public static class Environment // spatial environment sfx
-        {
-            public static class Ambience
+        {            
+            public static class Stinger
             {
                 public static readonly AudioID cabin_shaking = new("event:/environment/ambience/cabin_shaking");
                 public static readonly AudioID flash = new("event:/environment/ambience/flash");
@@ -68,6 +72,13 @@ public sealed class AudioID
                     public static readonly AudioID idle = new("event:/environment/objects/tentacle/slithering");
                 }
             }
+        }
+        
+        public static class Ambience
+        {
+            public static readonly AudioID general = new("event:/ambience/general");
+            public static readonly AudioID foyer = new("event:/ambience/foyer");
+            public static readonly AudioID outdoors = new("event:/ambience/outdoors");
         }
         
         public static class Interface // non-spatial interface sfx

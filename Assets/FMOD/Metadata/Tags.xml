@@ -6,11 +6,29 @@
 		</property>
 		<relationship name="items">
 			<destination>{5cf1edc2-4c4f-457e-8732-fc630fe3ce8f}</destination>
+			<destination>{e0252fdd-2004-4bb7-bc56-5ec8963ede11}</destination>
+			<destination>{40b81434-30e1-46bb-8bed-dfdc0925f2df}</destination>
+			<destination>{47fac0f1-923f-43e0-8258-690bd58dfbe6}</destination>
 		</relationship>
 	</object>
 	<object class="Tag" id="{5cf1edc2-4c4f-457e-8732-fc630fe3ce8f}">
 		<property name="name">
 			<value>spatial</value>
+		</property>
+	</object>
+	<object class="Tag" id="{e0252fdd-2004-4bb7-bc56-5ec8963ede11}">
+		<property name="name">
+			<value>completed</value>
+		</property>
+	</object>
+	<object class="Tag" id="{40b81434-30e1-46bb-8bed-dfdc0925f2df}">
+		<property name="name">
+			<value>com</value>
+		</property>
+	</object>
+	<object class="Tag" id="{47fac0f1-923f-43e0-8258-690bd58dfbe6}">
+		<property name="name">
+			<value>complete</value>
 		</property>
 	</object>
 </objects>

@@ -29,6 +29,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 761
+--- !u!114 &-5492044263035002420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/environment/ambience/cabin_shaking
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/environment/ambience/cabin_shaking
+  Guid:
+    Data1: -371785328
+    Data2: 1329832802
+    Data3: -13959759
+    Data4: -926788307
+  Banks:
+  - {fileID: 1584089914778722688}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3959
 --- !u!114 &-3044057942638009256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +148,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/ui_sfx.bank
   Name: ui_sfx
   StudioPath: bank:/ui_sfx
-  lastModified: 639128148494240365
+  lastModified: 639096971834510170
   FileSizes:
   - Name: Desktop
     Value: 506
@@ -251,7 +278,12 @@ MonoBehaviour:
   - {fileID: -2722067135594075212}
   - {fileID: 3189185141489782899}
   - {fileID: -5655146475082544128}
+<<<<<<< Updated upstream
   - {fileID: -1562848559943105711}
+=======
+  - {fileID: -5492044263035002420}
+  - {fileID: 5244569481246032606}
+>>>>>>> Stashed changes
   EditorParameters:
   - {fileID: -3044057942638009256}
   - {fileID: -44037623067171752}
@@ -260,7 +292,11 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8998263865723236680}
   cacheVersion: 131859
+<<<<<<< Updated upstream
   cacheTime: 639129127117947500
+=======
+  cacheTime: 639129048698090456
+>>>>>>> Stashed changes
   SerializableEventsDict:
   - key: event:/tests/testOneShotSpatialized
     index: 0
@@ -270,6 +306,11 @@ MonoBehaviour:
     index: 2
   - key: event:/environment/ambience/cabin_shaking
     index: 3
+<<<<<<< Updated upstream
+=======
+  - key: event:/music/title
+    index: 4
+>>>>>>> Stashed changes
 --- !u!114 &1584089914778722688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +326,11 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/gameplay_sfx.bank
   Name: gameplay_sfx
   StudioPath: bank:/gameplay_sfx
+<<<<<<< Updated upstream
   lastModified: 639129127117947500
+=======
+  lastModified: 639129014061235849
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 67488
@@ -329,7 +374,11 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< Updated upstream
   lastModified: 639129127117790128
+=======
+  lastModified: 639129048697807323
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 29056
@@ -363,6 +412,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 562
+--- !u!114 &5244569481246032606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/title
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/music/title
+  Guid:
+    Data1: 333914357
+    Data2: 1288219706
+    Data3: 1615749287
+    Data4: 1407279691
+  Banks:
+  - {fileID: 8146474209469976447}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 48473
 --- !u!114 &8146474209469976447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,10 +454,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/music.bank
   Name: music
   StudioPath: bank:/music
-  lastModified: 639128148494240365
+  lastModified: 639129048698090456
   FileSizes:
   - Name: Desktop
-    Value: 506
+    Value: 486912
   Exists: 1
 --- !u!114 &8998263865723236680
 MonoBehaviour:
@@ -398,8 +474,15 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< Updated upstream
   lastModified: 639129127117932449
   FileSizes:
   - Name: Desktop
     Value: 2030
+=======
+  lastModified: 639129048697837721
+  FileSizes:
+  - Name: Desktop
+    Value: 2072
+>>>>>>> Stashed changes
   Exists: 1

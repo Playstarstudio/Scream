@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{c27cd3e9-ad30-4434-9848-dc66b0c5e6b3}">
 		<property name="assetPath">
-			<value>Ice Under Pressure - Ice Cube Crushed 03.wav</value>
+			<value>player/movement/Ice Under Pressure - Ice Cube Crushed 03.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>

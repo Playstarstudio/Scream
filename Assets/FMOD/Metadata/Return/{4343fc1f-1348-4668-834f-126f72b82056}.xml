@@ -8,7 +8,7 @@
 			<value>2</value>
 		</property>
 		<property name="name">
-			<value>interior verb</value>
+			<value>env verb</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{7a38e3dc-12ac-48a1-a70c-b6570287a7fb}</destination>
@@ -22,32 +22,32 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{7a38e3dc-12ac-48a1-a70c-b6570287a7fb}">
 		<relationship name="effects">
-			<destination>{24f18258-f38d-4082-8ec5-c2c17517a4f0}</destination>
+			<destination>{aa56567c-faeb-47f5-a9d9-f55919096974}</destination>
 			<destination>{54241aed-3255-4ce7-8e69-b09ed03060f6}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{22691e1d-f30c-4c13-b962-d90b5c705ca6}" />
-	<object class="SFXReverbEffect" id="{24f18258-f38d-4082-8ec5-c2c17517a4f0}">
+	<object class="SFXReverbEffect" id="{aa56567c-faeb-47f5-a9d9-f55919096974}">
 		<property name="earlyDelay">
-			<value>7</value>
+			<value>162</value>
 		</property>
 		<property name="lateDelay">
-			<value>11</value>
+			<value>88</value>
 		</property>
 		<property name="HFDecayRatio">
 			<value>54</value>
 		</property>
-		<property name="density">
-			<value>60</value>
+		<property name="diffusion">
+			<value>79</value>
 		</property>
 		<property name="highCut">
-			<value>2900</value>
+			<value>760</value>
 		</property>
 		<property name="earlyLateMix">
-			<value>83</value>
+			<value>94</value>
 		</property>
 		<property name="wetLevel">
-			<value>0.5</value>
+			<value>-80</value>
 		</property>
 		<property name="dryLevel">
 			<value>-80</value>
