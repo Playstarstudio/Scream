@@ -6,7 +6,7 @@ namespace Inventory
     {
         public bool HasItem(int itemId);
 
-        public bool AddToInventory(int itemID);
+        public bool AddToInventory(KeyItem itemID);
 
         public void RemoveFromInventory(int itemID);
 

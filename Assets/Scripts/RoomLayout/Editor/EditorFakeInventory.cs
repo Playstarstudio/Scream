@@ -20,7 +20,7 @@ namespace RoomLayout.Editor
 
         public event EventHandler<EventArgs> InventoryFull;
 
-        public bool AddToInventory(int itemID)
+        public bool AddToInventory(KeyItem itemID)
         {
             throw new System.NotImplementedException();
         }
