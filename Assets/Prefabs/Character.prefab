@@ -73,7 +73,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
+  m_PointLightOuterRadius: 1.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 2565848453035731359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.42400026, y: -0.31428564, z: 0}
+  m_LocalPosition: {x: 4.79, y: -4.8, z: 0}
   m_LocalScale: {x: 2, y: 2.3809524, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -146,18 +146,18 @@ MonoBehaviour:
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
-  m_ShadowIntensity: 1
-  m_ShadowSoftness: 0.3
-  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowIntensity: 0.894
+  m_ShadowSoftness: 0.741
+  m_ShadowSoftnessFalloffIntensity: 0.359
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 14.606453
-  m_PointLightOuterAngle: 80.12879
-  m_PointLightInnerRadius: 1.2
-  m_PointLightOuterRadius: 2.4
+  m_PointLightInnerAngle: 32.874535
+  m_PointLightOuterAngle: 100
+  m_PointLightInnerRadius: 2.045
+  m_PointLightOuterRadius: 4.09
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9841dd4662677409fbdde652625c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LanternLight
-  initialLanternSetting: 0
+  initialLanternSetting: 1
   transitionDuration: 0.5
   lanternSettings:
   - directionalLightRange: 2.4
