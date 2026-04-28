@@ -9,6 +9,7 @@ namespace UI
 {
     public class BackpackInventoryScript : MonoBehaviour
     {
+        public DragGesture dragGesture;
         public RectTransform inventory;
         
         private float _animationDuration = 0.4f;
@@ -24,6 +25,16 @@ namespace UI
         private bool _isAnimating = false;
         private Coroutine _activeCoroutine;
 
+        private void OnEnable()
+        {
+            dragGesture.OnGestureEnd += OnGesture;
+        }
+
+        private void OnDisable()
+        {
+            dragGesture.OnGestureEnd -= OnGesture;
+        }
+
         private void Awake()
         {
             _openPosition = inventory.anchoredPosition;
@@ -32,15 +43,15 @@ namespace UI
             inventory.anchoredPosition = _closedPosition;
             inventory.gameObject.SetActive(false);
         }
-        
-        public void OnGesture()
+
+        private void OnGesture(DragDirection dragDirection)
         {
-            Debug.Log("On Click");
+            Debug.Log("OnGesture: " + dragDirection);
             if (_isAnimating) return;
      
-            if (_isOpen)
+            if (_isOpen && dragDirection == DragDirection.Down)
                 SlideDown();
-            else
+            else if (dragDirection == DragDirection.Up)
                 SlideUp();
         }
 
