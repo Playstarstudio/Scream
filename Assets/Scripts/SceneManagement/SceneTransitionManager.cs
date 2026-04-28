@@ -21,9 +21,7 @@ public class SceneTransitionManager : IService
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    /// <summary>
-    /// Called by Door. Records the current scene as the origin, then loads the target scene.
-    /// </summary>
+    // Called by Door. Records the current scene as the origin, then loads the target scene.
     public void TransitionToScene(string targetSceneName)
     {
         if (_isTransitioning) return;
@@ -51,7 +49,7 @@ public class SceneTransitionManager : IService
         {
             if (door.TargetSceneName == _originSceneName)
             {
-                TeleportPlayer(door.SpawnPosition);
+                TeleportPlayer(door.SpawnPosition, door.FacingDirection);
                 break;
             }
         }
@@ -60,12 +58,18 @@ public class SceneTransitionManager : IService
         _originSceneName = null;
     }
 
-    private static void TeleportPlayer(Vector3 position)
+    private static void TeleportPlayer(Vector3 position, Vector2 facingDirection)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             player.transform.position = position;
+
+            var movement = player.GetComponent<CharacterMovement>();
+            if (movement != null)
+            {
+                movement.SetFacingDirection(facingDirection);
+            }
         }
         else
         {

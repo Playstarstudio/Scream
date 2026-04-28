@@ -85,7 +85,36 @@ public class CharacterMovement : MonoBehaviour
     };
 
     Dictionary<Vector2, DirectionInfo> looks;
+    
+    // used when teleporting to a new scene to set the player facing the correct direction
+    public void SetFacingDirection(Vector2 direction)
+    {
+        ApplyDirection(direction);
+    }
 
+    private void ApplyDirection(Vector2 direction)
+    {
+        if (looks == null || direction.sqrMagnitude < 0.01f) return;
+
+        Vector2 normalized = direction.normalized;
+        float bestDot = float.MinValue;
+        Vector2 bestKey = Vector2.down;
+
+        foreach (var key in looks.Keys)
+        {
+            float dot = Vector2.Dot(normalized, key.normalized);
+            if (dot > bestDot)
+            {
+                bestDot = dot;
+                bestKey = key;
+            }
+        }
+
+        var info = looks[bestKey];
+        _lanternLightTransform.rotation = Quaternion.Euler(0, 0, info.lookRotation);
+        _lanternTransform.localPosition = info.relativePosition;
+        _spriteRenderer.sprite = info.rotSprite;
+    }
 
     private void Awake()
     {
@@ -129,28 +158,7 @@ public class CharacterMovement : MonoBehaviour
         Vector3 input3D = (Vector3)_movementInput;
         _transform.position = Vector3.Lerp(_transform.position, _transform.position + input3D * _speed, _lerpSpeed * Time.deltaTime);
 
-        // left = -1, 0, rot should be z = 90
-        // right = 1, 0, rot should be z = -90
-        // up = 0, 1, rot should be 0
-        // down = 0, -1, rot should be 180
-        // diags are .71 for each
-
-        float movX = Mathf.Round(_movementInput.x * 100.0f) / 100.0f;
-        float movY = Mathf.Round(_movementInput.y * 100.0f) / 100.0f;
-        foreach (var look in looks)
-        {
-            float lookX = look.Key.x;
-            float lookY = look.Key.y;
-
-            if (Mathf.Approximately(lookX, movX) && Mathf.Approximately(lookY, movY))
-            {
-                _lanternLightTransform.rotation = Quaternion.Euler(0, 0, look.Value.lookRotation);
-                _lanternTransform.localPosition = look.Value.relativePosition;
-                _spriteRenderer.sprite = look.Value.rotSprite;
-            }
-
-        }
-
+        ApplyDirection(_movementInput);
     }
 
     private void OnMove(InputValue inputValue)
@@ -174,4 +182,3 @@ public class CharacterMovement : MonoBehaviour
     //     _stepTimer -= Time.deltaTime;
     // }
 }
-
