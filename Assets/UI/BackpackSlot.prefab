@@ -291,6 +291,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8147064500471829882}
     m_Modifications:
+    - target: {fileID: 743035800561864319, guid: 7369f7aca4d41954291f91daf330d083, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2520577756819050647, guid: 7369f7aca4d41954291f91daf330d083, type: 3}
       propertyPath: m_Name
       value: UIFuzzyParticleSystem
@@ -379,6 +383,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6300408520963266477, guid: 7369f7aca4d41954291f91daf330d083, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0cce85fa4979ddf4599b1f87353094ac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

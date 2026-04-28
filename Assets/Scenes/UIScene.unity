@@ -293,6 +293,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1998009742083891781, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998009742083891781, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998009742083891781, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2008410254475466086, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -328,6 +340,18 @@ PrefabInstance:
     - target: {fileID: 2742765666250342975, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102347384479336873, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102347384479336873, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102347384479336873, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3102347384479336873, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
       propertyPath: m_Maskable
@@ -509,6 +533,18 @@ PrefabInstance:
       propertyPath: closeDragGesture
       value: 
       objectReference: {fileID: 1763694904}
+    - target: {fileID: 6365301353979273107, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365301353979273107, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365301353979273107, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6391920421103821036, guid: d357e07e6b5a41d468e2dfb0333e3745, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -100
