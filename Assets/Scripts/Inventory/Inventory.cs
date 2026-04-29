@@ -2,14 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Object = UnityEngine.Object;
+
 namespace Inventory
 {
     
     public class Inventory : MonoBehaviour, IInventory
     {
         //public List<int> items = new List<int>() { -1, -1, -1, -1, -1, -1, -1, -1 };
-        public List<GameObject> invItems = new List<GameObject>();
-        public List<DraggableItemWidget> draggableItems = new List<DraggableItemWidget>();
+        public GameObject[] currentItems;
+        public DraggableItemWidget[] draggableItems;
 
         public event EventHandler<EventArgs> InventoryFull;
         public void OnInventoryFull(EventArgs e)
@@ -27,10 +29,8 @@ namespace Inventory
         private void Awake()
         {
             DontDestroyOnLoad(gameObject);
-        }
-        private void Start()
-        {
-            _size = invItems.Count;
+            _size = draggableItems.Length;
+            currentItems = new GameObject[_size];
         }
 
         public bool AddToInventory(KeyItem itemID)
@@ -41,18 +41,14 @@ namespace Inventory
                 OnInventoryFull(null);
                 return false;
             }
-            foreach (var item in invItems.ToList())
+
+            for (int i = 0; i < currentItems.Length; i++)
             {
-                if (item != null)
+                if (currentItems[i] == null)
                 {
-                    continue;
-                }
-                // add to first empty slot
-                else
-                {
-                    int index = invItems.IndexOf(item);
-                    invItems[index] = Instantiate(itemID.gameObject);
-                    //draggableItems[index].AddItem(invItems[index], index);
+                    currentItems[i] = Instantiate(itemID.gameObject);
+                    currentItems[i].transform.parent = gameObject.transform;
+                    draggableItems[i].AddItem(currentItems[i], i);
                     break;
                 }
             }
@@ -60,31 +56,22 @@ namespace Inventory
         }
         public bool IsInventoryFull()
         {
-            int itemCount = 0;
-            bool isFull = false;
-            foreach (var item in invItems.ToList())
+            for (int i = 0; i < currentItems.Length; i++)
             {
-                if (item != null)
+                if (currentItems[i] == null)
                 {
-                    itemCount++;
+                    // if there's an empty slot, we got room
+                    return false;
                 }
             }
-
-            if (itemCount >= _size)
-            {
-                isFull = true;
-            }
-            else if (itemCount < _size)
-            {
-                isFull = false;
-            }
-            return isFull;
+            
+            return true;
         }
 
         public bool HasItem(int itemId)
         {
             bool foundItem = false;
-            foreach (var item in invItems.ToList())
+            foreach (var item in currentItems.ToList())
             {
                 if (item == null)
                     continue;
@@ -99,9 +86,9 @@ namespace Inventory
 
         public void RemoveFromInventory(int itemId)
         {
-            Debug.Log("Removed item with ID " + invItems[itemId].name + " from inventory");
-            draggableItems[itemId].RemoveItem(invItems[itemId].gameObject);
-            invItems[itemId] = null;
+            Debug.Log("Removed item with ID " + currentItems[itemId].name + " from inventory");
+            draggableItems[itemId].RemoveItem(currentItems[itemId].gameObject);
+            currentItems[itemId] = null;
         }
     }
 }
