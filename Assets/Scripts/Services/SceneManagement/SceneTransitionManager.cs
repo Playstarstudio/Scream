@@ -56,6 +56,12 @@ namespace Services
                 }
             }
 
+            SceneText sceneText = GameObject.FindFirstObjectByType<SceneText>();
+            if (sceneText != null)
+            {
+                GameObject.FindFirstObjectByType<TypewriterScript>().SetEventText(sceneText.charPerSecond, sceneText.sceneText);
+            }
+
             _originSceneName = null;
         }
 
