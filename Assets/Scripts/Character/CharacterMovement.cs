@@ -120,6 +120,7 @@ public class CharacterMovement : MonoBehaviour
     {
         _transform = GetComponent<Transform>();
         _rb = GetComponent<Rigidbody2D>();
+        _rb.gravityScale = 0f;
         _lanternTransform = transform.Find("Lantern");
         _lanternLightTransform = _lanternTransform.Find("LanternDirectionalLight");
 
@@ -155,10 +156,13 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 input3D = (Vector3)_movementInput;
-        _transform.position = Vector3.Lerp(_transform.position, _transform.position + input3D * _speed, _lerpSpeed * Time.deltaTime);
-
         ApplyDirection(_movementInput);
+    }
+
+    private void FixedUpdate()
+    {
+        Vector2 targetPosition = _rb.position + _movementInput * (_speed * Time.fixedDeltaTime);
+        _rb.MovePosition(targetPosition);
     }
 
     private void OnMove(InputValue inputValue)
