@@ -21,6 +21,9 @@ public class SceneText : MonoBehaviour
     
     public string kitchenLayout3SceneText = "My brain pounds against my skull...";
 
+
+    public string frontDoorGoneSceneText = "Something lurks after all. The door--it vanished the front door.";
+
     private void Awake()
     {
         SceneManager.sceneLoaded += DoSceneText;
@@ -50,6 +53,10 @@ public class SceneText : MonoBehaviour
         else if (GameObject.Find("BedroomLayout2") != null && GameObject.Find("BedroomLayout2").activeInHierarchy)
         {
             textToShow = bedroomChangeSceneText;
+        }
+        else if (GameObject.Find("FoyerNoFront") != null && GameObject.Find("FoyerNoFront").activeInHierarchy)
+        {
+            textToShow = frontDoorGoneSceneText;
         }
 
         GameObject.Find("BillboardText").GetComponent<TypewriterScript>().SetText(textToShow);
