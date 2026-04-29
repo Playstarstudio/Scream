@@ -1,4 +1,5 @@
 using UnityEngine;
+using Services;
 
 namespace UI
 {
@@ -11,6 +12,9 @@ namespace UI
         public GameObject panel;
         public GameObject closedMatches;
         public GameObject openMatches;
+
+        [Header("Game State")]
+        public GameStateKey matchesLitStateKey;
 
         private void OnEnable()
         {
@@ -46,6 +50,11 @@ namespace UI
         {
             Debug.Log("success!");
             panel.SetActive(false);
+
+            if (matchesLitStateKey != null)
+            {
+                ServiceLocator.Instance.Get<GameStateManager>().SetState(matchesLitStateKey, true);
+            }
         }
 
 

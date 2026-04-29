@@ -216,6 +216,7 @@ MonoBehaviour:
   panel: {fileID: 30993599}
   closedMatches: {fileID: 1849097049}
   openMatches: {fileID: 974950668}
+  matchesLitStateKey: {fileID: 11400000, guid: 0031ce4e6edd9a747aacdf495ddb10cf, type: 2}
 --- !u!1001 &282214497
 PrefabInstance:
   m_ObjectHideFlags: 0
