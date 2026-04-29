@@ -101,6 +101,7 @@
 	<object class="MixerBusPanner" id="{565d61fd-e3e7-45d4-b059-95b21302ef11}" />
 	<object class="MixerBusEffectChain" id="{41a6c688-6826-413d-8088-661e09471f98}">
 		<relationship name="effects">
+			<destination>{841e2394-5bee-4bb8-abc7-a34e6c6f4ec8}</destination>
 			<destination>{560d99c0-6c5e-4182-8b5e-f51ed19ba5ac}</destination>
 			<destination>{05493e4e-ee6f-4cb5-bca1-a8ce563fd57b}</destination>
 		</relationship>
@@ -121,6 +122,20 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{bf18a44d-81b0-4227-be86-443be4f6afe4}" />
+	<object class="ThreeEQEffect" id="{841e2394-5bee-4bb8-abc7-a34e6c6f4ec8}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="lowGain">
+			<value>-6</value>
+		</property>
+		<property name="lowCrossover">
+			<value>140</value>
+		</property>
+		<property name="crossoverSlope">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="SFXReverbEffect" id="{560d99c0-6c5e-4182-8b5e-f51ed19ba5ac}">
 		<property name="decayTime">
 			<value>4400</value>

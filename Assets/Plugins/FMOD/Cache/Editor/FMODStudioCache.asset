@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639129799569851567
+  lastModified: 639129879914308205
   FileSizes:
   - Name: Desktop
     Value: 3348
@@ -407,7 +407,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/gameplay_sfx.bank
   Name: gameplay_sfx
   StudioPath: bank:/gameplay_sfx
-  lastModified: 639129799570077989
+  lastModified: 639129879914537328
   FileSizes:
   - Name: Desktop
     Value: 4406688
@@ -497,7 +497,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -7992576702030954477}
   cacheVersion: 131859
-  cacheTime: 639129799570162292
+  cacheTime: 639129879914628349
   SerializableEventsDict:
   - key: event:/player/interact/teddy_bear/slice
     index: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/music.bank
   Name: music
   StudioPath: bank:/music
-  lastModified: 639129799570162292
+  lastModified: 639129879914608123
   FileSizes:
   - Name: Desktop
     Value: 1319616
@@ -623,7 +623,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639129799569824727
+  lastModified: 639129879914287747
   FileSizes:
   - Name: Desktop
     Value: 33696
@@ -752,7 +752,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/ui_sfx.bank
   Name: ui_sfx
   StudioPath: bank:/ui_sfx
-  lastModified: 639129799570162292
+  lastModified: 639129879914628349
   FileSizes:
   - Name: Desktop
     Value: 2816

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{2b8eff6b-1c01-46d3-8da5-283767c34acd}">
+		<property name="assetPath">
+			<value>music/mus_fakeout.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>28.004671201814059</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{badc7234-64ac-4026-b78a-657cf55b0c03}</destination>
+		</relationship>
+	</object>
+</objects>

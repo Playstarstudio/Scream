@@ -5,10 +5,13 @@
 			<value>flash</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{b1b45e57-85e5-4a6a-a6b8-f573416ae80e}</destination>
+		</relationship>
+		<relationship name="tags">
+			<destination>{e0252fdd-2004-4bb7-bc56-5ec8963ede11}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{0edc3ed4-2926-4faa-9190-b032b36645dd}</destination>
@@ -28,6 +31,12 @@
 		<relationship name="timeline">
 			<destination>{2e1f86b1-bd13-443d-9d9f-02aab670ca20}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{7c2926a7-d2d8-4c12-b4e4-0869b21c352f}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{3e8a2cfa-e3d0-4a84-ac9c-e39daaf918a1}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{0edc3ed4-2926-4faa-9190-b032b36645dd}">
 		<relationship name="masterBus">
@@ -35,6 +44,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{8591fb7b-ee30-4b93-b714-5ff8a7dfcf70}">
+		<relationship name="modules">
+			<destination>{6de49f30-528d-40a9-bb20-c36a0d225b7c}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{388c7a98-b28d-4cfe-961e-e5eeb0975dbf}</destination>
 		</relationship>
@@ -57,6 +69,11 @@
 			<value>false</value>
 		</property>
 	</object>
+	<object class="ActionSheet" id="{7c2926a7-d2d8-4c12-b4e4-0869b21c352f}">
+		<relationship name="modules">
+			<destination>{6de49f30-528d-40a9-bb20-c36a0d225b7c}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{388c7a98-b28d-4cfe-961e-e5eeb0975dbf}">
 		<relationship name="effectChain">
 			<destination>{c59407ca-35de-47dc-b8e3-d1ea42a26be8}</destination>
@@ -68,6 +85,11 @@
 			<destination>{0edc3ed4-2926-4faa-9190-b032b36645dd}</destination>
 		</relationship>
 	</object>
+	<object class="MultiSound" id="{6de49f30-528d-40a9-bb20-c36a0d225b7c}">
+		<relationship name="sounds">
+			<destination>{20e38ee8-2706-4511-8567-e74ec6c01ee6}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{75fb5f71-a91d-4260-808a-7297db5b628d}">
 		<relationship name="effects">
 			<destination>{80dee6f2-5132-46d2-afd3-73805e3e30aa}</destination>
@@ -76,10 +98,59 @@
 	<object class="MixerBusPanner" id="{dec1c8a6-62de-4895-979b-529956037be9}" />
 	<object class="MixerBusEffectChain" id="{c59407ca-35de-47dc-b8e3-d1ea42a26be8}">
 		<relationship name="effects">
+			<destination>{60b277a9-9e27-4334-986b-822d5904e0b9}</destination>
+			<destination>{0df44c8f-5d65-454b-b9b8-65f823fd0ab2}</destination>
 			<destination>{2c3d084d-024f-43e1-aa0d-d004706396a4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f25eb23e-745e-410e-897e-540f28d80671}" />
+	<object class="SingleSound" id="{20e38ee8-2706-4511-8567-e74ec6c01ee6}">
+		<property name="volume">
+			<value>3</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{17c77b7e-7320-4e6a-ae66-a06bb87aa67c}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{80dee6f2-5132-46d2-afd3-73805e3e30aa}" />
+	<object class="ThreeEQEffect" id="{60b277a9-9e27-4334-986b-822d5904e0b9}">
+		<property name="highGain">
+			<value>3</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{0df44c8f-5d65-454b-b9b8-65f823fd0ab2}">
+		<property name="decayTime">
+			<value>260</value>
+		</property>
+		<property name="diffusion">
+			<value>30</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{56e3efc3-1708-4c99-ba1c-880775d06d49}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{2c3d084d-024f-43e1-aa0d-d004706396a4}" />
+	<object class="ADSRModulator" id="{56e3efc3-1708-4c99-ba1c-880775d06d49}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>wetLevel</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>0</value>
+		</property>
+		<property name="holdTime">
+			<value>2650</value>
+		</property>
+		<property name="decayTime">
+			<value>0</value>
+		</property>
+		<property name="sustainValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 </objects>

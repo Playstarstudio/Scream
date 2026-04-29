@@ -5,7 +5,7 @@
 			<value>place_bloody</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>5</value>
 		</property>
 		<relationship name="folder">
 			<destination>{52f975db-1e90-42cc-ab47-372c1e4fab54}</destination>

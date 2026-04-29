@@ -5,7 +5,7 @@
 			<value>place</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{52f975db-1e90-42cc-ab47-372c1e4fab54}</destination>
@@ -99,6 +99,7 @@
 	<object class="MixerBusEffectChain" id="{a693b757-0644-4078-b32f-642f7a770d8d}">
 		<relationship name="effects">
 			<destination>{72a27b71-97d8-4f2a-bcc7-fa994c59b05c}</destination>
+			<destination>{e6426e82-0a25-4400-a4c8-c625a95cbaf6}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c011a43d-1153-4bb9-b7b8-3f92f4143cfc}" />
@@ -118,6 +119,20 @@
 	</object>
 	<object class="MixerBusFader" id="{400f4d67-cbae-4643-b432-5a7e62f40446}" />
 	<object class="MixerBusFader" id="{72a27b71-97d8-4f2a-bcc7-fa994c59b05c}" />
+	<object class="SpatialiserEffect" id="{e6426e82-0a25-4400-a4c8-c625a95cbaf6}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+		<property name="minimumDistance">
+			<value>3</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+		<property name="panBlend">
+			<value>0.899999976</value>
+		</property>
+	</object>
 	<object class="RandomizerModulator" id="{83772941-14e2-4ec5-b3ef-dca7e6b73e2a}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>

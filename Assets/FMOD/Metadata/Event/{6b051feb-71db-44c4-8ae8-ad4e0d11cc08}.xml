@@ -5,7 +5,7 @@
 			<value>locked</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{3f493e2a-dd70-402f-bde2-73740ff71f7f}</destination>
@@ -103,6 +103,7 @@
 		<relationship name="effects">
 			<destination>{5afee058-1bbd-4ac2-b9a3-fa47dd4b5f9c}</destination>
 			<destination>{9940e1cd-2224-4130-8599-a8c4de9a9e95}</destination>
+			<destination>{a44dd985-940b-49bd-a2e7-e234e4b5eecd}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1723179c-d995-4eef-a5aa-3851c5f46f7b}" />
@@ -116,6 +117,20 @@
 	<object class="MixerBusFader" id="{8c779a00-2a13-43f5-901b-2b2363a23a49}" />
 	<object class="ThreeEQEffect" id="{5afee058-1bbd-4ac2-b9a3-fa47dd4b5f9c}" />
 	<object class="MixerBusFader" id="{9940e1cd-2224-4130-8599-a8c4de9a9e95}" />
+	<object class="SpatialiserEffect" id="{a44dd985-940b-49bd-a2e7-e234e4b5eecd}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+		<property name="minimumDistance">
+			<value>3</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+		<property name="panBlend">
+			<value>0.899999976</value>
+		</property>
+	</object>
 	<object class="SingleSound" id="{eb4216ac-b5c2-49a2-8ff0-c40e16ae6783}">
 		<property name="volume">
 			<value>3</value>

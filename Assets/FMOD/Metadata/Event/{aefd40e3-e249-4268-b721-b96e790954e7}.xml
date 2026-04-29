@@ -10,6 +10,9 @@
 		<relationship name="folder">
 			<destination>{42981390-e643-49be-9841-cc67a33ce46a}</destination>
 		</relationship>
+		<relationship name="tags">
+			<destination>{e0252fdd-2004-4bb7-bc56-5ec8963ede11}</destination>
+		</relationship>
 		<relationship name="mixer">
 			<destination>{f76b6b44-e223-4cdb-9028-531dd9b11465}</destination>
 		</relationship>

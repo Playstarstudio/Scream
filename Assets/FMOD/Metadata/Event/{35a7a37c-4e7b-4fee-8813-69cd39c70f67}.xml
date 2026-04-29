@@ -8,10 +8,13 @@
 			<value>highlight</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{fd0ca434-4edf-4e66-9a8e-a1f5b04b61db}</destination>
+			<destination>{575cbac7-6e37-4afb-90aa-df709b05034b}</destination>
+		</relationship>
+		<relationship name="tags">
+			<destination>{e0252fdd-2004-4bb7-bc56-5ec8963ede11}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{f2fc305b-bec5-49fc-91bd-da590d508194}</destination>
@@ -31,6 +34,12 @@
 		<relationship name="timeline">
 			<destination>{5f4e1200-81ef-4686-b8c0-9f6963e168d9}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{7d56deac-0241-4e73-b462-1a91eb6c6ece}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{6b3399cb-4f94-4bdd-8fab-5e29f117ef1b}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{f2fc305b-bec5-49fc-91bd-da590d508194}">
 		<relationship name="masterBus">
@@ -38,6 +47,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{7f009ddb-59bc-4407-98e2-e0991e5df435}">
+		<relationship name="modules">
+			<destination>{d896fa9c-8156-435d-ab6a-795d884d6101}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{f5a94f9b-a544-42de-9c61-ff455d374ca7}</destination>
 		</relationship>
@@ -60,6 +72,11 @@
 			<value>false</value>
 		</property>
 	</object>
+	<object class="ActionSheet" id="{7d56deac-0241-4e73-b462-1a91eb6c6ece}">
+		<relationship name="modules">
+			<destination>{d896fa9c-8156-435d-ab6a-795d884d6101}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{f5a94f9b-a544-42de-9c61-ff455d374ca7}">
 		<relationship name="effectChain">
 			<destination>{a82d84d4-8af8-4703-b19a-e0065027e127}</destination>
@@ -71,6 +88,11 @@
 			<destination>{f2fc305b-bec5-49fc-91bd-da590d508194}</destination>
 		</relationship>
 	</object>
+	<object class="MultiSound" id="{d896fa9c-8156-435d-ab6a-795d884d6101}">
+		<relationship name="sounds">
+			<destination>{6e9bd2ca-cea1-492c-ab04-47bcc9fce3c0}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{d15c1a9e-f0f5-4810-9afb-a05ca8a7e3a4}">
 		<relationship name="effects">
 			<destination>{9892955e-ff69-44d0-94dd-2973fd1ad9c4}</destination>
@@ -79,10 +101,53 @@
 	<object class="MixerBusPanner" id="{7537df2d-53f9-40f9-a7b8-0235e2523839}" />
 	<object class="MixerBusEffectChain" id="{a82d84d4-8af8-4703-b19a-e0065027e127}">
 		<relationship name="effects">
+			<destination>{8916aeb7-c897-46a7-8ba6-fe1085e5444a}</destination>
 			<destination>{94f9ff8d-b7ec-4692-a581-bb77b3d65060}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7ffeeba6-fe10-4940-a5da-f052b24ed90b}" />
+	<object class="SingleSound" id="{6e9bd2ca-cea1-492c-ab04-47bcc9fce3c0}">
+		<property name="startOffset">
+			<value>8</value>
+		</property>
+		<property name="volume">
+			<value>1.5</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{fe2730aa-0828-462e-ad04-fcd4a06a4df2}</destination>
+		</relationship>
+		<relationship name="audioFile">
+			<destination>{df94b19b-b407-4909-b89b-af8c839727f9}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{9892955e-ff69-44d0-94dd-2973fd1ad9c4}" />
+	<object class="ThreeEQEffect" id="{8916aeb7-c897-46a7-8ba6-fe1085e5444a}">
+		<property name="lowGain">
+			<value>-18</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{94f9ff8d-b7ec-4692-a581-bb77b3d65060}" />
+	<object class="ADSRModulator" id="{fe2730aa-0828-462e-ad04-fcd4a06a4df2}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>0</value>
+		</property>
+		<property name="holdTime">
+			<value>0</value>
+		</property>
+		<property name="decayTime">
+			<value>282.051331</value>
+		</property>
+		<property name="sustainValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 </objects>

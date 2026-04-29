@@ -9,6 +9,7 @@
 			<destination>{e0252fdd-2004-4bb7-bc56-5ec8963ede11}</destination>
 			<destination>{40b81434-30e1-46bb-8bed-dfdc0925f2df}</destination>
 			<destination>{47fac0f1-923f-43e0-8258-690bd58dfbe6}</destination>
+			<destination>{1cd5d7df-fc3d-475a-859a-16f18a7b814d}</destination>
 		</relationship>
 	</object>
 	<object class="Tag" id="{5cf1edc2-4c4f-457e-8732-fc630fe3ce8f}">
@@ -29,6 +30,11 @@
 	<object class="Tag" id="{47fac0f1-923f-43e0-8258-690bd58dfbe6}">
 		<property name="name">
 			<value>complete</value>
+		</property>
+	</object>
+	<object class="Tag" id="{1cd5d7df-fc3d-475a-859a-16f18a7b814d}">
+		<property name="name">
+			<value>compelted</value>
 		</property>
 	</object>
 </objects>

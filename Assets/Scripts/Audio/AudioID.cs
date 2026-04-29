@@ -50,27 +50,15 @@ public sealed class AudioID
     #region SFX
     public static class SFX
     {
-        public static class Environment // spatial environment sfx
+        public static class Environment // non-spatial environment sfx
         {            
             public static class Stinger
             {
-                public static readonly AudioID cabin_shaking = new("event:/environment/ambience/cabin_shaking");
-                public static readonly AudioID flash = new("event:/environment/ambience/flash");
-                public static readonly AudioID ritual_powering_up = new("event:/environment/ambience/ritual_powering_up");
-                public static readonly AudioID scary_stinger = new("event:/environment/ambience/scary_stinger");
-            }
-            
-            public static class Objects
-            {
-                public static class Entity
-                {
-                    public static readonly AudioID idle = new("event:/environment/objects/entity/idle");
-                }
-                
-                public static class Tentacle
-                {
-                    public static readonly AudioID idle = new("event:/environment/objects/tentacle/slithering");
-                }
+                public static readonly AudioID cabin_shaking = new("event:/environment/stinger/cabin_shaking");
+                public static readonly AudioID flash = new("event:/environment/stinger/flash");
+                public static readonly AudioID ritual_powering_up = new("event:/environment/stinger/ritual_powering_up");
+                public static readonly AudioID scary_stinger = new("event:/environment/stinger/scary_stinger");
+                public static readonly AudioID game_over = new("event:/environment/stinger/game_over");
             }
         }
         
@@ -79,42 +67,35 @@ public sealed class AudioID
             public static readonly AudioID general = new("event:/ambience/general");
             public static readonly AudioID foyer = new("event:/ambience/foyer");
             public static readonly AudioID outdoors = new("event:/ambience/outdoors");
+            public static readonly AudioID tentacle = new("event:/ambience/tentacle");
         }
         
         public static class Interface // non-spatial interface sfx
         {
-            public static class HUD
+            public static class Inventory
             {
-                public static class Inventory
-                {
-                    public static readonly AudioID close = new("event:/ui/hud/inventory/close");
-                    public static readonly AudioID hover = new("event:/ui/hud/inventory/hover");
-                    public static readonly AudioID open = new("event:/ui/hud/inventory/open");
-                    public static readonly AudioID place = new("event:/ui/hud/inventory/place");
-                    public static readonly AudioID select = new("event:/ui/hud/inventory/select");
-                    public static readonly AudioID unselect = new("event:/ui/hud/inventory/unselect");
-                }
-                
-                public static readonly AudioID game_over = new("event:/ui/hud/game_over");
-                public static readonly AudioID room_transition = new("event:/ui/hud/room_transition");
+                public static readonly AudioID close = new("event:/ui/inventory/close");
+                public static readonly AudioID hover = new("event:/ui/inventory/hover");
+                public static readonly AudioID open = new("event:/ui/inventory/open");
+                public static readonly AudioID place = new("event:/ui/inventory/place");
+                public static readonly AudioID select = new("event:/ui/inventory/select");
+                public static readonly AudioID unselect = new("event:/ui/inventory/unselect");
             }
             
             public static class Settings
             {
-                public static readonly AudioID confirm = new("event:/ui/hud/settings/confirm");
-                public static readonly AudioID deny = new("event:/ui/hud/settings/deny");
+                public static readonly AudioID confirm = new("event:/ui/settings/confirm");
+                public static readonly AudioID deny = new("event:/ui/settings/deny");
             }
+            
+            public static readonly AudioID room_transition = new("event:/ui/room_transition");
+            public static readonly AudioID highlight = new("event:/ui/highlight");
         }
         
         public static class Player // spatial player sfx
         {
             public static class Interact
-            {
-                public static class Generic
-                {
-                    public static readonly AudioID highlight = new("event:/player/interact/generic/highlight");
-                }
-                
+            {   
                 public static class Amulet
                 {
                     public static readonly AudioID pick_up = new("event:/player/interact/amulet/pick_up");
@@ -146,11 +127,6 @@ public sealed class AudioID
                     public static readonly AudioID place = new("event:/player/interact/match/place");
                 }
                 
-                public static class Ritual_Circle
-                {
-                    public static readonly AudioID place_hand = new("event:/player/interact/ritual_circle/place_hand");
-                }
-                
                 public static class Teddy_Bear
                 {
                     public static readonly AudioID place = new("event:/player/interact/teddy_bear/hand_place");
@@ -166,7 +142,7 @@ public sealed class AudioID
                 
                 public static class Typewriter
                 {
-                    public static readonly AudioID pull = new("event:/player/interact/typewriter/type");
+                    public static readonly AudioID type = new("event:/player/interact/typewriter/type");
                 }
             }
             
@@ -190,6 +166,7 @@ public sealed class AudioID
     {
         public static readonly AudioID credits = new("event:/music/credits");
         public static readonly AudioID exploration = new("event:/music/exploration");
+        public static readonly AudioID eldritch = new("event:/music/eldritch");
         public static readonly AudioID fakeout = new("event:/music/fakeout");
         public static readonly AudioID title = new("event:/music/title");
     }

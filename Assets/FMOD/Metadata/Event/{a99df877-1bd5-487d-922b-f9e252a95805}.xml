@@ -5,7 +5,7 @@
 			<value>knob_turn</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{3f493e2a-dd70-402f-bde2-73740ff71f7f}</destination>
@@ -99,6 +99,7 @@
 	<object class="MixerBusEffectChain" id="{02f08960-8f5a-4f42-b0cf-b5b0f11e9b1f}">
 		<relationship name="effects">
 			<destination>{7fae8515-31f9-4c90-865e-f10c4a8f4f93}</destination>
+			<destination>{074f413a-00de-4322-a9bb-5be41a1a020d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1232b261-357b-478e-911c-f598cbdf25fa}" />
@@ -111,6 +112,20 @@
 	</object>
 	<object class="MixerBusFader" id="{cb5311c5-d1f6-4c75-97d5-3eca169af9b2}" />
 	<object class="MixerBusFader" id="{7fae8515-31f9-4c90-865e-f10c4a8f4f93}" />
+	<object class="SpatialiserEffect" id="{074f413a-00de-4322-a9bb-5be41a1a020d}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+		<property name="minimumDistance">
+			<value>3</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+		<property name="panBlend">
+			<value>0.899999976</value>
+		</property>
+	</object>
 	<object class="SingleSound" id="{dfeb2966-3422-4381-92bd-313a423b5bee}">
 		<relationship name="audioFile">
 			<destination>{ba063afa-baac-4de4-adec-c1d6cea04c98}</destination>

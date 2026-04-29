@@ -5,10 +5,13 @@
 			<value>light</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{a14d19cb-90cb-4db7-82ce-89560d5c351b}</destination>
+		</relationship>
+		<relationship name="tags">
+			<destination>{e0252fdd-2004-4bb7-bc56-5ec8963ede11}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{cd1465f6-86ed-4ed0-b592-db07032bbe4d}</destination>
@@ -96,6 +99,7 @@
 	<object class="MixerBusEffectChain" id="{3f315ed1-35a6-45db-a917-af0035cfd6c6}">
 		<relationship name="effects">
 			<destination>{c43709f3-fea5-4b75-a9da-c998dd9aab51}</destination>
+			<destination>{27fa6d96-b5da-43a5-9cfb-f57e4ba7050e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{06613eb0-e403-43cd-be95-98ed06c82038}" />
@@ -116,6 +120,20 @@
 	</object>
 	<object class="MixerBusFader" id="{45c4c84d-695c-41b5-9e00-3c974de196db}" />
 	<object class="MixerBusFader" id="{c43709f3-fea5-4b75-a9da-c998dd9aab51}" />
+	<object class="SpatialiserEffect" id="{27fa6d96-b5da-43a5-9cfb-f57e4ba7050e}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+		<property name="minimumDistance">
+			<value>3</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+		<property name="panBlend">
+			<value>0.899999976</value>
+		</property>
+	</object>
 	<object class="ADSRModulator" id="{68ce083b-eb0b-4a2a-a453-6692591a633a}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
