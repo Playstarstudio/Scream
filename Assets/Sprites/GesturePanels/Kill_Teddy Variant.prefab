@@ -8,9 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2142506460451291038, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: enabledDragDirections
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142506460451291038, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: startingDragDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 253.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.625
+      objectReference: {fileID: 0}
     - target: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Name
       value: Kill_Teddy Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505391448576955776, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Name
+      value: Teddy
       objectReference: {fileID: 0}
     - target: {fileID: 8743802675685575034, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Pivot.x
@@ -92,8 +112,102 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 8994891266656695744, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Name
+      value: Knife
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: openMatches
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: closedMatches
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: matchesLitStateKey
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: openMatchesDragGesture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: closeMatchesDragGesture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: lightMatchesDragGesture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_EditorClassIdentifier
+      value: Assembly-CSharp::UI.FirstAltarGestureScript
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2142506460451291038, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+    - {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 5615808922536348645, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 739483056056890209}
+    - targetCorrespondingSourceObject: {fileID: 8994891266656695744, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8854787903197505261}
   m_SourcePrefab: {fileID: 100100000, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+--- !u!1 &337847765698339565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8994891266656695744, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 8675062302095841069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8854787903197505261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337847765698339565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
+  moveTransformWithGesture: 1
+  persistTransformWithGesture: 1
+  dragDistance: 50
+  enabledDragDirections: 2
+  startingDragDirection: 1
+--- !u!1 &2460029988905484973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6505391448576955776, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 8675062302095841069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5175314088755144854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 8675062302095841069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &739483056056890209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175314088755144854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e8cc96e3a352c41aa9603d9664d60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  knifeDragGesture: {fileID: 8854787903197505261}
+  panel: {fileID: 5175314088755144854}
+  teddy: {fileID: 2460029988905484973}
+  knife: {fileID: 337847765698339565}
+  teddyKilledStateKey: {fileID: 11400000, guid: 0e118bb199e3844408fc3030fadc3658, type: 2}
