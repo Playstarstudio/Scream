@@ -3,20 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class SceneText : MonoBehaviour
 {
-    [SerializeField]
-    public string defaultSceneText;
+    // idgaf im hardcoding this shit i dont wanna re-enter SFs over and over
+    public string defaultSceneText = "";
 
-    [SerializeField]
-    public string frontCabinSceneText;
 
-    [SerializeField]
-    public string tentRoomSpawnSceneText;
+    public string frontCabinSceneText = "Another report of paranormal spectacle in a place of disrepair.";
 
-    [SerializeField]
-    public string tentRoomIntSceneText;
 
-    [SerializeField]
-    public string kitchenLayout3SceneText;
+    public string bedroomChangeSceneText = "Peculiar. This room was... different.";
+
+
+    public string tentRoomSpawnSceneText = "There was naught but a wall there a minute past...";
+
+    
+    public string tentRoomIntSceneText = "What the fuck.";
+
+    
+    public string kitchenLayout3SceneText = "My brain pounds against my skull...";
 
     private void Awake()
     {
@@ -27,7 +30,7 @@ public class SceneText : MonoBehaviour
     {
         string textToShow = defaultSceneText;
 
-        // Check which layout GameObject is active
+        // Check which layout is active
         if (GameObject.Find("FrontCabin") != null && GameObject.Find("FrontCabin").activeInHierarchy)
         {
             textToShow = frontCabinSceneText;
@@ -43,6 +46,10 @@ public class SceneText : MonoBehaviour
         else if (GameObject.Find("KitchenLayout3") != null && GameObject.Find("KitchenLayout3").activeInHierarchy)
         {
             textToShow = kitchenLayout3SceneText;
+        }
+        else if (GameObject.Find("BedroomLayout2") != null && GameObject.Find("BedroomLayout2").activeInHierarchy)
+        {
+            textToShow = bedroomChangeSceneText;
         }
 
         GameObject.Find("BillboardText").GetComponent<TypewriterScript>().SetText(textToShow);
