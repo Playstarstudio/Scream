@@ -109,6 +109,12 @@ namespace UI
             }
         }
 
+        public void ResetGesture()
+        {
+            _lastSuccessfulDragDirection = DragDirection.Nothing;
+            _rectTransform.anchoredPosition = _lastAnchoredPosition;
+        }
+
         private DragDirection DetectDragDirection(Vector2 delta)
         {
             if (enabledDragDirections.HasFlag(DragDirection.Up) && delta.y > dragDistance)
