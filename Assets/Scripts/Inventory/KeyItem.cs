@@ -12,6 +12,7 @@ public class KeyItem : MonoBehaviour, IInteractable
     private Canvas charCanvas;
     [SerializeField] public Sprite sprite;
     private IInventory _inventory;
+    public string textToRead;
 
     private void Awake()
     {
@@ -36,7 +37,7 @@ public class KeyItem : MonoBehaviour, IInteractable
         if (_inventory != null && _inventory.AddToInventory(this))
         {
             TypewriterScript type = charCanvas.GetComponentInChildren<TypewriterScript>();
-            type.SetText(this.gameObject.GetComponent<TextMeshProUGUI>().text);
+            type.SetText(textToRead);
             Destroy(gameObject);
         }
     }

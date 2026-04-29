@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyItem
   itemId: 0
   sprite: {fileID: 5251764759768217144, guid: 6372b2575f9e65843bd3e83d97b70ba4, type: 3}
+  textToRead: This is what I'm trying to read
 --- !u!212 &1753025402600952593
 SpriteRenderer:
   m_ObjectHideFlags: 0
