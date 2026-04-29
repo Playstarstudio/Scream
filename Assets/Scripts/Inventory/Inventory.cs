@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 namespace Inventory
 {
-
+    
     public class Inventory : MonoBehaviour, IInventory
     {
         //public List<int> items = new List<int>() { -1, -1, -1, -1, -1, -1, -1, -1 };
@@ -23,6 +23,11 @@ namespace Inventory
         }
 
         private int _size;
+
+        private void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+        }
         private void Start()
         {
             _size = invItems.Count;
