@@ -52,7 +52,7 @@ namespace Inventory
                 {
                     int index = invItems.IndexOf(item);
                     invItems[index] = Instantiate(itemID.gameObject);
-                    draggableItems[index].AddItem(invItems[index], index);
+                    //draggableItems[index].AddItem(invItems[index], index);
                     break;
                 }
             }

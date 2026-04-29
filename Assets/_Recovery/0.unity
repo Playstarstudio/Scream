@@ -212,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   openMatchesDragGesture: {fileID: 1849097053}
   closeMatchesDragGesture: {fileID: 974950672}
-  lightMatchesDragGesture: {fileID: 974950672}
+  lightMatchesDragGesture: {fileID: 1849097053}
   panel: {fileID: 30993599}
   closedMatches: {fileID: 1849097049}
   openMatches: {fileID: 974950668}
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   persistTransformWithGesture: 0
   dragDistance: 50
   enabledDragDirections: 12
-  startingDragDirection: 12
+  startingDragDirection: 8
 --- !u!1 &1178761205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,11 +1300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 1
+  moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 50
   enabledDragDirections: 8
-  startingDragDirection: 4
+  startingDragDirection: 8
 --- !u!1001 &3000740170253955151
 PrefabInstance:
   m_ObjectHideFlags: 0

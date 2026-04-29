@@ -35,11 +35,7 @@ public class GestureOpener : MonoBehaviour, IInteractable
     void Update()
     {
         PanelCheck();
-        if (GestureActivate)
-        {
-            MatchCheck();
-            CandleCheck();
-        }
+
     }
     private void CandleCheck()
     {
