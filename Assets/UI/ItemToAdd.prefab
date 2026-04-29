@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2041175600844860153}
   - component: {fileID: 5921948011574437582}
   m_Layer: 5
-  m_Name: TextFadeIn
+  m_Name: ItemToAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 7559105845877565441}
   - component: {fileID: 6986780353962110928}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: KeyItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
