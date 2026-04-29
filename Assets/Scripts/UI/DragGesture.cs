@@ -117,20 +117,25 @@ namespace UI
 
         private DragDirection DetectDragDirection(Vector2 delta)
         {
+            Debug.Log(delta);
             if (enabledDragDirections.HasFlag(DragDirection.Up) && delta.y > dragDistance)
             {
+                Debug.Log("UP");
                 return DragDirection.Up;
             }
             else if (enabledDragDirections.HasFlag(DragDirection.Down) && delta.y < -dragDistance)
             {
+                Debug.Log("DOWN");
                 return DragDirection.Down;
             }
             else if (enabledDragDirections.HasFlag(DragDirection.Left) && delta.x < -dragDistance)
             {
+                Debug.Log("LEFT");
                 return DragDirection.Left;
             }
             else if (enabledDragDirections.HasFlag(DragDirection.Right) && delta.x > dragDistance)
             {
+                Debug.Log("RIGHT");
                 return DragDirection.Right;
             }
 

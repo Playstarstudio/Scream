@@ -1,9 +1,5 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 namespace UI
 {
@@ -14,18 +10,18 @@ namespace UI
         public RectTransform inventory;
 
         private float _animationDuration = 0.4f;
-     
+
         [Tooltip("The easing curve for the animation")]
         private AnimationCurve _easeCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
         public Vector2 hiddenOffset;
         private Vector2 _closedPosition;
         private Vector2 _openPosition;
-     
+
         private bool _isOpen = false;
         private bool _isAnimating = false;
         private Coroutine _activeCoroutine;
-        
+
         public GameObject closedCanvas;
         public GameObject openCanvas;
 
@@ -58,7 +54,7 @@ namespace UI
         {
             Debug.Log("OnGesture: " + dragDirection);
             if (_isAnimating) return;
-     
+
             if (_isOpen && dragDirection == DragDirection.Down)
                 SlideDown();
             else if (dragDirection == DragDirection.Up)
@@ -88,7 +84,7 @@ namespace UI
         {
             _isAnimating = true;
             var elapsed = 0f;
-     
+
             while (elapsed < _animationDuration)
             {
                 elapsed += Time.deltaTime;
