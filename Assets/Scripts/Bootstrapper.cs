@@ -23,6 +23,7 @@ public static class Bootstrapper
         
         //Setup Services
         ServiceLocator.Instance.Register(new SceneTransitionManager());
+        ServiceLocator.Instance.Register(new GameStateManager());
         // ServiceLocator.Instance.Register(new ApplicationStateManager());
         // ServiceLocator.Instance.Register(new AudioManager());
         // ServiceLocator.Instance.Register(new MusicManager());
