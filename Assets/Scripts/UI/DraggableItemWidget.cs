@@ -9,7 +9,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     // Script used for drag & dropping Inventory Items!
 
-    public Image image;
+    public Image _image;
     public GameObject invItem;
     public int invItemIndex;
     public Transform parentAfterDrag;
@@ -20,7 +20,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     {
         canvasParent = GameObject.Find("OpenBackpackCanvas");
         rootTransform = canvasParent.GetComponent<Transform>();
-        image = transform.GetComponent<Image>();
+        // _image = GetComponent<Image>();
+        _image.enabled = false;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -31,7 +32,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         transform.SetParent(rootTransform); // set parent to canvas
         transform.SetAsLastSibling(); // move icon to top
 
-        image.raycastTarget = false;
+        _image.raycastTarget = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -43,20 +44,22 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.SetParent(parentAfterDrag);
-        image.raycastTarget = true;
+        _image.raycastTarget = true;
     }
 
     public void AddItem(GameObject item, int index)
     {
+        _image.enabled = true;
         invItem = item;
-        image.sprite = invItem.GetComponent<SpriteRenderer>().sprite;
+        _image.sprite = invItem.GetComponent<SpriteRenderer>().sprite;
         invItemIndex = index;
     }
 
     public void RemoveItem(GameObject item)
     {
+        _image.enabled = false;
         invItem = null;
-        image.sprite = null;
+        _image.sprite = null;
         invItemIndex = -1;
     }
 }

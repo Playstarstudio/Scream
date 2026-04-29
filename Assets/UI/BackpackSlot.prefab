@@ -287,7 +287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65a40c5898020843bc82ff60ff73dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  image: {fileID: 0}
+  _image: {fileID: 6664554950116195665}
+  invItem: {fileID: 0}
+  invItemIndex: 0
   parentAfterDrag: {fileID: 0}
   canvasParent: {fileID: 0}
 --- !u!1 &9190893444928718881
@@ -321,8 +323,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 274352798311529086}
   - {fileID: 1904960270811211203}
+  - {fileID: 274352798311529086}
   - {fileID: 8147064500471829882}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

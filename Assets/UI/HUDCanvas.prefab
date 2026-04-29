@@ -527,7 +527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3886766311759839070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2714704684901334987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,6 +854,7 @@ GameObject:
   - component: {fileID: 308501082381187226}
   - component: {fileID: 4367554073899119668}
   - component: {fileID: 6952873548078002919}
+  - component: {fileID: 720397608434586918}
   m_Layer: 5
   m_Name: HUDCanvas
   m_TagString: Untagged
@@ -958,6 +959,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09189d939ac366d46ac3dc611028e4c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &720397608434586918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148673022668592190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7049404669e0dc24bb2b7d44fa21ac87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
 --- !u!1 &3888876307243391465
@@ -1596,99 +1609,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
   m_ShowMaskGraphic: 1
---- !u!1 &6153898463590367325
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4768268316526881243}
-  - component: {fileID: 3283120520277353459}
-  - component: {fileID: 5564029018249954789}
-  - component: {fileID: 3766852797678932198}
-  m_Layer: 5
-  m_Name: BackpackItem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4768268316526881243
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6153898463590367325}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4205289057856342894}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3283120520277353459
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6153898463590367325}
-  m_CullTransparentMesh: 1
---- !u!114 &5564029018249954789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6153898463590367325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -5985137042180361696, guid: 63fcb84fe6b8036499bc5e82218b05e2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &3766852797678932198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6153898463590367325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c65a40c5898020843bc82ff60ff73dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  image: {fileID: 0}
-  invItem: {fileID: 0}
-  invItemIndex: 0
-  parentAfterDrag: {fileID: 0}
-  canvasParent: {fileID: 0}
 --- !u!1 &6176098715798322844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2379,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8970761337017909239, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Name
+      value: BackpackItem2
+      objectReference: {fileID: 0}
     - target: {fileID: 9190893444928718881, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_Name
       value: BackpackSlot (2)
@@ -2776,6 +2700,10 @@ PrefabInstance:
     - target: {fileID: 8147064500471829882, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970761337017909239, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Name
+      value: BackpackItem7
       objectReference: {fileID: 0}
     - target: {fileID: 9190893444928718881, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_Name
@@ -3095,6 +3023,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8970761337017909239, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Name
+      value: BackpackItem4
+      objectReference: {fileID: 0}
     - target: {fileID: 9190893444928718881, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_Name
       value: BackpackSlot (4)
@@ -3311,6 +3243,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8970761337017909239, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Name
+      value: BackpackItem1
+      objectReference: {fileID: 0}
     - target: {fileID: 9190893444928718881, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_Name
       value: BackpackSlot (1)
@@ -3526,6 +3462,10 @@ PrefabInstance:
     - target: {fileID: 8147064500471829882, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970761337017909239, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Name
+      value: BackpackItem3
       objectReference: {fileID: 0}
     - target: {fileID: 9190893444928718881, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_Name
@@ -4049,6 +3989,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8970761337017909239, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Name
+      value: BackpackItem6
+      objectReference: {fileID: 0}
     - target: {fileID: 9190893444928718881, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_Name
       value: BackpackSlot (6)
@@ -4265,6 +4209,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8970761337017909239, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Name
+      value: BackpackItem0
+      objectReference: {fileID: 0}
     - target: {fileID: 9190893444928718881, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_Name
       value: BackpackSlot
@@ -4272,10 +4220,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1035201273144269900, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 4768268316526881243}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
 --- !u!198 &2890602377261288767 stripped
@@ -4585,6 +4530,10 @@ PrefabInstance:
     - target: {fileID: 8147064500471829882, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970761337017909239, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Name
+      value: BackpackItem5
       objectReference: {fileID: 0}
     - target: {fileID: 9190893444928718881, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_Name
