@@ -1,0 +1,2301 @@
+fileFormatVersion: 2
+guid: c358649613aa7dc4abe08d225454e942
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2446798784863494607
+    second: alagard Outline Atlas_0
+  - first:
+      213: -7882517745710550430
+    second: alagard Outline Atlas_1
+  - first:
+      213: -7899204791723775720
+    second: alagard Outline Atlas_2
+  - first:
+      213: -6879517388665930965
+    second: alagard Outline Atlas_3
+  - first:
+      213: -6045541312820404719
+    second: alagard Outline Atlas_4
+  - first:
+      213: -6263521146819311895
+    second: alagard Outline Atlas_5
+  - first:
+      213: 1828928203406106619
+    second: alagard Outline Atlas_6
+  - first:
+      213: -5604825017224942064
+    second: alagard Outline Atlas_7
+  - first:
+      213: 5623887536747573797
+    second: alagard Outline Atlas_8
+  - first:
+      213: -1799775795169870072
+    second: alagard Outline Atlas_9
+  - first:
+      213: 1722372871331676086
+    second: alagard Outline Atlas_10
+  - first:
+      213: -3015053417885565058
+    second: alagard Outline Atlas_11
+  - first:
+      213: 2376236316797552336
+    second: alagard Outline Atlas_12
+  - first:
+      213: 4264710674390664717
+    second: alagard Outline Atlas_13
+  - first:
+      213: 4583262688198368852
+    second: alagard Outline Atlas_14
+  - first:
+      213: -9003394200198369172
+    second: alagard Outline Atlas_15
+  - first:
+      213: -6962818055045877253
+    second: alagard Outline Atlas_16
+  - first:
+      213: 8144259205025650542
+    second: alagard Outline Atlas_17
+  - first:
+      213: -8329956338142898169
+    second: alagard Outline Atlas_18
+  - first:
+      213: -4687306195686180557
+    second: alagard Outline Atlas_19
+  - first:
+      213: 6263466337401171698
+    second: alagard Outline Atlas_20
+  - first:
+      213: -2666631495462543193
+    second: alagard Outline Atlas_21
+  - first:
+      213: -2175228523878714863
+    second: alagard Outline Atlas_22
+  - first:
+      213: -2650422024872408556
+    second: alagard Outline Atlas_23
+  - first:
+      213: -7980431969442373206
+    second: alagard Outline Atlas_24
+  - first:
+      213: -5777943355949503876
+    second: alagard Outline Atlas_25
+  - first:
+      213: -2404472207957947223
+    second: alagard Outline Atlas_26
+  - first:
+      213: -2065957948138535280
+    second: alagard Outline Atlas_27
+  - first:
+      213: -2741777945912395074
+    second: alagard Outline Atlas_28
+  - first:
+      213: 9142252160528552797
+    second: alagard Outline Atlas_29
+  - first:
+      213: -8831749677363632150
+    second: alagard Outline Atlas_30
+  - first:
+      213: -1053203878141899250
+    second: alagard Outline Atlas_31
+  - first:
+      213: -4320121730017798011
+    second: alagard Outline Atlas_32
+  - first:
+      213: -7910211464836356615
+    second: alagard Outline Atlas_33
+  - first:
+      213: -7006625298892236046
+    second: alagard Outline Atlas_34
+  - first:
+      213: -4562099612968626948
+    second: alagard Outline Atlas_35
+  - first:
+      213: -2290221203705398475
+    second: alagard Outline Atlas_36
+  - first:
+      213: 756961081042613019
+    second: alagard Outline Atlas_37
+  - first:
+      213: 1474220658214186229
+    second: alagard Outline Atlas_38
+  - first:
+      213: 3952455097793659608
+    second: alagard Outline Atlas_39
+  - first:
+      213: 5279220629287063588
+    second: alagard Outline Atlas_40
+  - first:
+      213: -370797639253895000
+    second: alagard Outline Atlas_41
+  - first:
+      213: 6858649733106098754
+    second: alagard Outline Atlas_42
+  - first:
+      213: 8122069498010371743
+    second: alagard Outline Atlas_43
+  - first:
+      213: -1447620555730493467
+    second: alagard Outline Atlas_44
+  - first:
+      213: -3611818834094034423
+    second: alagard Outline Atlas_45
+  - first:
+      213: 41035617787230347
+    second: alagard Outline Atlas_46
+  - first:
+      213: -8351121389071567846
+    second: alagard Outline Atlas_47
+  - first:
+      213: 6626683204716618878
+    second: alagard Outline Atlas_48
+  - first:
+      213: -3412546813180066492
+    second: alagard Outline Atlas_49
+  - first:
+      213: 2654098261412294692
+    second: alagard Outline Atlas_50
+  - first:
+      213: -54617170053591404
+    second: alagard Outline Atlas_51
+  - first:
+      213: -5009112710806464278
+    second: alagard Outline Atlas_52
+  - first:
+      213: -8814912104791547202
+    second: alagard Outline Atlas_53
+  - first:
+      213: -4228146089149510724
+    second: alagard Outline Atlas_54
+  - first:
+      213: 1309612457644752858
+    second: alagard Outline Atlas_55
+  - first:
+      213: 2147993336313406976
+    second: alagard Outline Atlas_56
+  - first:
+      213: -21989828524039151
+    second: alagard Outline Atlas_57
+  - first:
+      213: -3459503383660861951
+    second: alagard Outline Atlas_58
+  - first:
+      213: 1239207182812135300
+    second: alagard Outline Atlas_59
+  - first:
+      213: 683594813555045216
+    second: alagard Outline Atlas_60
+  - first:
+      213: -7297959133856332567
+    second: alagard Outline Atlas_61
+  - first:
+      213: -4036239438146842200
+    second: alagard Outline Atlas_62
+  - first:
+      213: 5493167707751308406
+    second: alagard Outline Atlas_63
+  - first:
+      213: 50764179835980859
+    second: alagard Outline Atlas_64
+  - first:
+      213: 1143699303133194054
+    second: alagard Outline Atlas_65
+  - first:
+      213: 1383617590872917032
+    second: alagard Outline Atlas_66
+  - first:
+      213: 1464576800939824744
+    second: alagard Outline Atlas_67
+  - first:
+      213: 4347727157378499189
+    second: alagard Outline Atlas_68
+  - first:
+      213: 3644561871954070028
+    second: alagard Outline Atlas_69
+  - first:
+      213: -3480556592319665033
+    second: alagard Outline Atlas_70
+  - first:
+      213: -1070679562181702210
+    second: alagard Outline Atlas_71
+  - first:
+      213: 4908934727446655065
+    second: alagard Outline Atlas_72
+  - first:
+      213: -1073723116697903404
+    second: alagard Outline Atlas_73
+  - first:
+      213: -3232303118615279852
+    second: alagard Outline Atlas_74
+  - first:
+      213: -948655137449245746
+    second: alagard Outline Atlas_75
+  - first:
+      213: -8230482515869069158
+    second: alagard Outline Atlas_76
+  - first:
+      213: -3667656407747287504
+    second: alagard Outline Atlas_77
+  - first:
+      213: 7527691423920083253
+    second: alagard Outline Atlas_78
+  - first:
+      213: 8472561171514798613
+    second: alagard Outline Atlas_79
+  - first:
+      213: 4371028330446192683
+    second: alagard Outline Atlas_80
+  - first:
+      213: -2481537263870692757
+    second: alagard Outline Atlas_81
+  - first:
+      213: 5393004669117009902
+    second: alagard Outline Atlas_82
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: alagard Outline Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 482
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e9a5708793b0ed0800000000000000
+      internalID: -2446798784863494607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 482
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262b537afdbab9290800000000000000
+      internalID: -7882517745710550430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 482
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819ad3df713606290800000000000000
+      internalID: -7899204791723775720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 459
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2bb17e526b0780a0800000000000000
+      internalID: -6879517388665930965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 459
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e1466e43ce91ca0800000000000000
+      internalID: -6045541312820404719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 459
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e600b8d3b08319a0800000000000000
+      internalID: -6263521146819311895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 436
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bffd6bbc288a16910800000000000000
+      internalID: 1828928203406106619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 436
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ea51ca759a732b0800000000000000
+      internalID: -5604825017224942064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 436
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522f5940bef0c0e40800000000000000
+      internalID: 5623887536747573797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 413
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80fbd8d2379e507e0800000000000000
+      internalID: -1799775795169870072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 413
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf7e7e300917e710800000000000000
+      internalID: 1722372871331676086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 390
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f7a1014e06826d0800000000000000
+      internalID: -3015053417885565058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 390
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6c91d17561af020800000000000000
+      internalID: 2376236316797552336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 367
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d064fd053cb4f2b30800000000000000
+      internalID: 4264710674390664717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 367
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e9d5ab1250b9f30800000000000000
+      internalID: 4583262688198368852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 344
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c603d5c4da48d0380800000000000000
+      internalID: -9003394200198369172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 344
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf170599ed91f5f90800000000000000
+      internalID: -6962818055045877253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 321
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67524ac898360170800000000000000
+      internalID: 8144259205025650542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 321
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7089a7e28dc066c80800000000000000
+      internalID: -8329956338142898169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 298
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33933a479d753feb0800000000000000
+      internalID: -4687306195686180557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 298
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fee967d27d4ce650800000000000000
+      internalID: 6263466337401171698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 275
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0261688c83efad0800000000000000
+      internalID: -2666631495462543193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 275
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11279e0be2900d1e0800000000000000
+      internalID: -2175228523878714863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 275
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41acb9ef53fc73bd0800000000000000
+      internalID: -2650422024872408556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 252
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1673be76fcf3190800000000000000
+      internalID: -7980431969442373206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 252
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a2d40712f90dfa0800000000000000
+      internalID: -5777943355949503876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 252
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac0e5c244991aed0800000000000000
+      internalID: -2404472207957947223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 250
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096ce4c213e3453e0800000000000000
+      internalID: -2065957948138535280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 229
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba34e81c7f33f9d0800000000000000
+      internalID: -2741777945912395074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 229
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d531a5bf6edcfde70800000000000000
+      internalID: 9142252160528552797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 228
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7e19706725f6580800000000000000
+      internalID: -8831749677363632150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 233
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ec94727a44261f0800000000000000
+      internalID: -1053203878141899250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 206
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588d7dfec28db04c0800000000000000
+      internalID: -4320121730017798011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 206
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5e4343598493290800000000000000
+      internalID: -7910211464836356615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 206
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa5341d96773ce90800000000000000
+      internalID: -7006625298892236046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 214
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4de03b29a20b0c0800000000000000
+      internalID: -4562099612968626948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 183
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b721803ff7730e0800000000000000
+      internalID: -2290221203705398475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 183
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b133758b714418a00800000000000000
+      internalID: 756961081042613019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 183
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc266db0eb757410800000000000000
+      internalID: 1474220658214186229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 194
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d24cae68f0f9d630800000000000000
+      internalID: 3952455097793659608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 160
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420d19b113f834940800000000000000
+      internalID: 5279220629287063588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 160
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a8d7bcf289aadaf0800000000000000
+      internalID: -370797639253895000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 171
+        width: 27
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242ed94f791de2f50800000000000000
+      internalID: 6858649733106098754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 157
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9681f50d2367b070800000000000000
+      internalID: 8122069498010371743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 115
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef512e36c409ebe0800000000000000
+      internalID: -1447620555730493467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 135
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90272c818ed30edc0800000000000000
+      internalID: -3611818834094034423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 134
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88b85d4da9c19000800000000000000
+      internalID: 41035617787230347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 129
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14f830c75bda1c80800000000000000
+      internalID: -8351121389071567846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 109
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e746e28d345b6fb50800000000000000
+      internalID: 6626683204716618878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 121
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 445c20df0c234a0d0800000000000000
+      internalID: -3412546813180066492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 106
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42036768e4045d420800000000000000
+      internalID: 2654098261412294692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 100
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49e815429f5fd3ff0800000000000000
+      internalID: -54617170053591404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 100
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae89c78678e0c7ab0800000000000000
+      internalID: -5009112710806464278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 83
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2eb93e4242ba580800000000000000
+      internalID: -8814912104791547202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_54
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 77
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb49c9988b9255c0800000000000000
+      internalID: -4228146089149510724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_55
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 77
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf7753779dac2210800000000000000
+      internalID: 1309612457644752858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_56
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 90
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006edde0f843fcd10800000000000000
+      internalID: 2147993336313406976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_57
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 74
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11427221e50e1bff0800000000000000
+      internalID: -21989828524039151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_58
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106e1a570006dffc0800000000000000
+      internalID: -3459503383660861951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_59
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 57
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f31aefd5c823110800000000000000
+      internalID: 1239207182812135300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_60
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 56
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0637f307cdd9c7900800000000000000
+      internalID: 683594813555045216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_61
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 54
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e40d2185d078ba90800000000000000
+      internalID: -7297959133856332567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_62
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 54
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1d5dcad956cf7c0800000000000000
+      internalID: -4036239438146842200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_63
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 67
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cd9281de6ab3c40800000000000000
+      internalID: 5493167707751308406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_64
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 51
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c007aa0c954b000800000000000000
+      internalID: 50764179835980859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_65
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 50
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647ad15e47c3fdf00800000000000000
+      internalID: 1143699303133194054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_66
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 45
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82446f04ed8933310800000000000000
+      internalID: 1383617590872917032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_67
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 31
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866db4e37d8335410800000000000000
+      internalID: 1464576800939824744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_68
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 31
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5724ddb70da365c30800000000000000
+      internalID: 4347727157378499189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_69
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 36
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a41cb76b5149230800000000000000
+      internalID: 3644561871954070028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_70
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 31
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c6426583492bfc0800000000000000
+      internalID: -3480556592319665033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_71
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 30
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd83e36c9e2421f0800000000000000
+      internalID: -1070679562181702210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_72
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 28
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950790f302a002440800000000000000
+      internalID: 4908934727446655065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_73
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 28
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de9812a38e5911f0800000000000000
+      internalID: -1073723116697903404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_74
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 27
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4178c88607d8423d0800000000000000
+      internalID: -3232303118615279852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_75
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 25
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec30dfdbd23b5d2f0800000000000000
+      internalID: -948655137449245746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_76
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a909f8f32c377cd80800000000000000
+      internalID: -8230482515869069158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_77
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 5
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036a902ededd91dc0800000000000000
+      internalID: -3667656407747287504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_78
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 5
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531d285777bb77860800000000000000
+      internalID: 7527691423920083253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_79
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 5
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51238e5fe75949570800000000000000
+      internalID: 8472561171514798613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_80
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 5
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b200a6b9b1309ac30800000000000000
+      internalID: 4371028330446192683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_81
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 5
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62b71a910fcf8dd0800000000000000
+      internalID: -2481537263870692757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alagard Outline Atlas_82
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 5
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef0eb65c2dc7da40800000000000000
+      internalID: 5393004669117009902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      alagard Outline Atlas_0: -2446798784863494607
+      alagard Outline Atlas_1: -7882517745710550430
+      alagard Outline Atlas_10: 1722372871331676086
+      alagard Outline Atlas_11: -3015053417885565058
+      alagard Outline Atlas_12: 2376236316797552336
+      alagard Outline Atlas_13: 4264710674390664717
+      alagard Outline Atlas_14: 4583262688198368852
+      alagard Outline Atlas_15: -9003394200198369172
+      alagard Outline Atlas_16: -6962818055045877253
+      alagard Outline Atlas_17: 8144259205025650542
+      alagard Outline Atlas_18: -8329956338142898169
+      alagard Outline Atlas_19: -4687306195686180557
+      alagard Outline Atlas_2: -7899204791723775720
+      alagard Outline Atlas_20: 6263466337401171698
+      alagard Outline Atlas_21: -2666631495462543193
+      alagard Outline Atlas_22: -2175228523878714863
+      alagard Outline Atlas_23: -2650422024872408556
+      alagard Outline Atlas_24: -7980431969442373206
+      alagard Outline Atlas_25: -5777943355949503876
+      alagard Outline Atlas_26: -2404472207957947223
+      alagard Outline Atlas_27: -2065957948138535280
+      alagard Outline Atlas_28: -2741777945912395074
+      alagard Outline Atlas_29: 9142252160528552797
+      alagard Outline Atlas_3: -6879517388665930965
+      alagard Outline Atlas_30: -8831749677363632150
+      alagard Outline Atlas_31: -1053203878141899250
+      alagard Outline Atlas_32: -4320121730017798011
+      alagard Outline Atlas_33: -7910211464836356615
+      alagard Outline Atlas_34: -7006625298892236046
+      alagard Outline Atlas_35: -4562099612968626948
+      alagard Outline Atlas_36: -2290221203705398475
+      alagard Outline Atlas_37: 756961081042613019
+      alagard Outline Atlas_38: 1474220658214186229
+      alagard Outline Atlas_39: 3952455097793659608
+      alagard Outline Atlas_4: -6045541312820404719
+      alagard Outline Atlas_40: 5279220629287063588
+      alagard Outline Atlas_41: -370797639253895000
+      alagard Outline Atlas_42: 6858649733106098754
+      alagard Outline Atlas_43: 8122069498010371743
+      alagard Outline Atlas_44: -1447620555730493467
+      alagard Outline Atlas_45: -3611818834094034423
+      alagard Outline Atlas_46: 41035617787230347
+      alagard Outline Atlas_47: -8351121389071567846
+      alagard Outline Atlas_48: 6626683204716618878
+      alagard Outline Atlas_49: -3412546813180066492
+      alagard Outline Atlas_5: -6263521146819311895
+      alagard Outline Atlas_50: 2654098261412294692
+      alagard Outline Atlas_51: -54617170053591404
+      alagard Outline Atlas_52: -5009112710806464278
+      alagard Outline Atlas_53: -8814912104791547202
+      alagard Outline Atlas_54: -4228146089149510724
+      alagard Outline Atlas_55: 1309612457644752858
+      alagard Outline Atlas_56: 2147993336313406976
+      alagard Outline Atlas_57: -21989828524039151
+      alagard Outline Atlas_58: -3459503383660861951
+      alagard Outline Atlas_59: 1239207182812135300
+      alagard Outline Atlas_6: 1828928203406106619
+      alagard Outline Atlas_60: 683594813555045216
+      alagard Outline Atlas_61: -7297959133856332567
+      alagard Outline Atlas_62: -4036239438146842200
+      alagard Outline Atlas_63: 5493167707751308406
+      alagard Outline Atlas_64: 50764179835980859
+      alagard Outline Atlas_65: 1143699303133194054
+      alagard Outline Atlas_66: 1383617590872917032
+      alagard Outline Atlas_67: 1464576800939824744
+      alagard Outline Atlas_68: 4347727157378499189
+      alagard Outline Atlas_69: 3644561871954070028
+      alagard Outline Atlas_7: -5604825017224942064
+      alagard Outline Atlas_70: -3480556592319665033
+      alagard Outline Atlas_71: -1070679562181702210
+      alagard Outline Atlas_72: 4908934727446655065
+      alagard Outline Atlas_73: -1073723116697903404
+      alagard Outline Atlas_74: -3232303118615279852
+      alagard Outline Atlas_75: -948655137449245746
+      alagard Outline Atlas_76: -8230482515869069158
+      alagard Outline Atlas_77: -3667656407747287504
+      alagard Outline Atlas_78: 7527691423920083253
+      alagard Outline Atlas_79: 8472561171514798613
+      alagard Outline Atlas_8: 5623887536747573797
+      alagard Outline Atlas_80: 4371028330446192683
+      alagard Outline Atlas_81: -2481537263870692757
+      alagard Outline Atlas_82: 5393004669117009902
+      alagard Outline Atlas_9: -1799775795169870072
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
