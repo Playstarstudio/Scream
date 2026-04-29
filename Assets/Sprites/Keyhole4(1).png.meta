@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 092d017893315d5489359fddcfe3a4c2
+guid: cf386bb473e0eb646af84843040d9cf7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9148759009503459462
-    second: Alter_0
+      213: 6325082002630317591
+    second: Keyhole4(1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alter_0
+      name: Keyhole4(1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7744ee2724190180800000000000000
-      internalID: -9148759009503459462
+      spriteID: 7161ff5d19437c750800000000000000
+      internalID: 6325082002630317591
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Alter_0: -9148759009503459462
+      Keyhole4(1)_0: 6325082002630317591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

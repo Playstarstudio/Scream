@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 092d017893315d5489359fddcfe3a4c2
+guid: b24f6bbd2a68dca41a877547466a3805
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9148759009503459462
-    second: Alter_0
+      213: -2616803782299740232
+    second: S_Runes_4_Large_v1_0
+  - first:
+      213: -5426642848684109131
+    second: S_Runes_4_Large_v1_1
+  - first:
+      213: 4663748933840881503
+    second: S_Runes_4_Large_v1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alter_0
+      name: S_Runes_4_Large_v1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1370
-        height: 990
+        x: 9
+        y: 17
+        width: 23
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7744ee2724190180800000000000000
-      internalID: -9148759009503459462
+      spriteID: 8b7102d03de3fabd0800000000000000
+      internalID: -2616803782299740232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Runes_4_Large_v1_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b21549a411b0b4b0800000000000000
+      internalID: -5426642848684109131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Runes_4_Large_v1_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 37
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57413b12f6f8b040800000000000000
+      internalID: 4663748933840881503
       vertices: []
       indices: 
       edges: []
@@ -138,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Alter_0: -9148759009503459462
+      S_Runes_4_Large_v1_0: -2616803782299740232
+      S_Runes_4_Large_v1_1: -5426642848684109131
+      S_Runes_4_Large_v1_2: 4663748933840881503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

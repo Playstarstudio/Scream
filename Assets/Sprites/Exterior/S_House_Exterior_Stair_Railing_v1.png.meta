@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 092d017893315d5489359fddcfe3a4c2
+guid: 82a3571de9bad7e4d9750c89bd7867f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9148759009503459462
-    second: Alter_0
+      213: -6567172392407566579
+    second: S_House_Exterior_Stair_Railing_v1_0
+  - first:
+      213: -564822808325222044
+    second: S_House_Exterior_Stair_Railing_v1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,30 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alter_0
+      name: S_House_Exterior_Stair_Railing_v1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1370
-        height: 990
+        x: 242
+        y: 306
+        width: 15
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7744ee2724190180800000000000000
-      internalID: -9148759009503459462
+      spriteID: d077bc3e087bcd4a0800000000000000
+      internalID: -6567172392407566579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_House_Exterior_Stair_Railing_v1_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 300
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4619cbcf5a85928f0800000000000000
+      internalID: -564822808325222044
       vertices: []
       indices: 
       edges: []
@@ -138,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Alter_0: -9148759009503459462
+      S_House_Exterior_Stair_Railing_v1_0: -6567172392407566579
+      S_House_Exterior_Stair_Railing_v1_1: -564822808325222044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
