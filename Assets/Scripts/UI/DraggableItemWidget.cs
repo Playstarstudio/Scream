@@ -26,25 +26,44 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-
-        parentAfterDrag = transform.parent;
-
-        transform.SetParent(rootTransform); // set parent to canvas
-        transform.SetAsLastSibling(); // move icon to top
-
-        _image.raycastTarget = false;
+        // parentAfterDrag = transform.parent;
+        //
+        // transform.SetParent(rootTransform); // set parent to canvas
+        // transform.SetAsLastSibling(); // move icon to top
+        //
+        // _image.raycastTarget = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-
-        transform.position = eventData.position;
+        // transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.SetParent(parentAfterDrag);
-        _image.raycastTarget = true;
+        GameObject hitObject = eventData.pointerCurrentRaycast.gameObject;
+        if (hitObject != null)
+        {
+            var targetSlot = hitObject.GetComponent<DraggableItemWidget>()
+                                       ?? hitObject.transform.parent.GetComponentInChildren<DraggableItemWidget>();
+
+            if (targetSlot != null)
+            {
+                targetSlot.AddItem(invItem, invItemIndex);
+                
+                RemoveItem();
+            }
+        }
+        
+        // transform.SetParent(parentAfterDrag);
+        // _image.raycastTarget = true;
+        //
+        // var itemRect = GetComponent<RectTransform>();
+        // if (itemRect != null)
+        // {
+        //     itemRect.anchoredPosition = Vector2.zero;
+        // }
+
     }
 
     public void AddItem(GameObject item, int index)
@@ -55,7 +74,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         invItemIndex = index;
     }
 
-    public void RemoveItem(GameObject item)
+    public void RemoveItem()
     {
         _image.enabled = false;
         invItem = null;

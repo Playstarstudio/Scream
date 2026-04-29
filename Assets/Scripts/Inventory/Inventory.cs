@@ -87,7 +87,7 @@ namespace Inventory
         public void RemoveFromInventory(int itemId)
         {
             Debug.Log("Removed item with ID " + currentItems[itemId].name + " from inventory");
-            draggableItems[itemId].RemoveItem(currentItems[itemId].gameObject);
+            draggableItems[itemId].RemoveItem();
             currentItems[itemId] = null;
         }
     }
