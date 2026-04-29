@@ -5,7 +5,9 @@ using System.Collections;
 public class TypewriterScript : MonoBehaviour
 {
 
-    [SerializeField] private string testText;
+    [SerializeField] private string firstText;
+    [SerializeField] private string secondText;
+
 
     private TMP_Text textBox;
     private int currentVisibleCharacterIndex;
@@ -15,6 +17,10 @@ public class TypewriterScript : MonoBehaviour
 
     [SerializeField] private float characterPerSecond = 12;
     [SerializeField] private float floatinterpunctuationDelay = 0.5f;
+    [SerializeField] private float onScreenTime = 3f;
+    [SerializeField] private float betweenLineTime = 1f;
+
+
 
     private void Awake()
     {
@@ -26,9 +32,9 @@ public class TypewriterScript : MonoBehaviour
 
     private void Start()
     {
-        if (testText != "")
+        if (firstText != "")
         {
-            SetText(testText);
+            SetText(firstText);
         }
     }
 
@@ -64,6 +70,7 @@ public class TypewriterScript : MonoBehaviour
     private IEnumerator Typewriter()
     {
         textBox.ForceMeshUpdate();
+        textBox.alpha = 1f;
         TMP_TextInfo textInfo = textBox.textInfo;
         textBox.maxVisibleCharacters++;
         foreach (var charText in textInfo.characterInfo)
@@ -86,6 +93,9 @@ public class TypewriterScript : MonoBehaviour
 
             currentVisibleCharacterIndex++;
         }
+
+        yield return new WaitForSeconds(onScreenTime);
+        StartFadeOut(1f);
     }
 
     private IEnumerator EventTypewriter(int charPerSecondMod)
@@ -144,5 +154,34 @@ public class TypewriterScript : MonoBehaviour
         Debug.Log("3");
 
         return textInfo.characterInfo[index].character != 0;
+    }
+
+    public void StartFadeOut(float duration)
+    {
+        StartCoroutine(FadeOut(duration));
+    }
+
+    private IEnumerator FadeOut(float duration)
+    {
+        float startAlpha = textBox.alpha;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            // Linearly interpolates alpha from start to 0 over time
+            textBox.alpha = Mathf.Lerp(startAlpha, 0f, elapsedTime / duration);
+            yield return null; // Wait for next frame
+        }
+
+        textBox.alpha = 0f; // Ensure it ends exactly at 0
+
+        yield return new WaitForSeconds(betweenLineTime);
+        if (secondText != null)
+        {
+            SetText(secondText);
+            secondText = null;
+            StartCoroutine(routine: Typewriter());
+        }
     }
 }
