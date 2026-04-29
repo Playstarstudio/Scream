@@ -26,18 +26,23 @@ public class TypewriterScript : MonoBehaviour
 
     private void Start()
     {
-        SetText(testText);
+        if (testText != "")
+        {
+            SetText(testText);
+        }
     }
 
     public void SetText(string Text)
     {
+        Debug.Log(this.gameObject.name);
         textBox.text = Text;
         textBox.maxVisibleCharacters = 0;
         currentVisibleCharacterIndex = 0;
-        
+
         textBox.ForceMeshUpdate();
-        
+
         if (typewriterCoroutine != null)
+            //Debug.Log("is coroutine null");
             StopCoroutine(typewriterCoroutine);
 
         typewriterCoroutine = StartCoroutine(routine: Typewriter());
@@ -119,7 +124,7 @@ public class TypewriterScript : MonoBehaviour
             }
         }
 
-       
+
     }
 
     bool IsValidIndex(int index, TMP_TextInfo textInfo)
