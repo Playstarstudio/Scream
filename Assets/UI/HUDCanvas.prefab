@@ -37,10 +37,10 @@ RectTransform:
   m_Father: {fileID: 4608512859809472123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 286.1775, y: 326.7863}
+  m_Pivot: {x: 0, y: 0}
 --- !u!223 &4071915525156888769
 Canvas:
   m_ObjectHideFlags: 0
@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 2650654564336580140}
   - component: {fileID: 3596970244359845234}
   - component: {fileID: 6045463652365876692}
+  - component: {fileID: 5657388102633751329}
   m_Layer: 5
   m_Name: BackpackCanvas
   m_TagString: Untagged
@@ -297,12 +298,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e068f7bab2758844bbfc86992900e872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.BackpackInventoryScript
-  openDragGesture: {fileID: 0}
-  closeDragGesture: {fileID: 0}
+  openDragGesture: {fileID: 5287372193605492345}
+  closeDragGesture: {fileID: 1405565057870445696}
   inventory: {fileID: 1739522925635518731}
   hiddenOffset: {x: 0, y: -340}
   closedCanvas: {fileID: 8596334108041292941}
   openCanvas: {fileID: 3806884445842354}
+--- !u!114 &5657388102633751329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519040602206182077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3669af70c166d9549ba46fca3e66153e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  lantern: {fileID: 3672309559046987773}
+  inventoryParticles:
+  - {fileID: 2890602377261288767}
+  - {fileID: 9095404498079513159}
+  - {fileID: 6082363215704806292}
+  - {fileID: 175712384899602239}
+  - {fileID: 8876601342135770093}
+  - {fileID: 3911786471943009348}
+  - {fileID: 2793331097410903836}
+  - {fileID: 6977767463841148172}
+  lanternDistance: 2.5
 --- !u!1 &751444839659819458
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +414,7 @@ GameObject:
   - component: {fileID: 8391858139436675752}
   - component: {fileID: 6365301353979273107}
   - component: {fileID: 1504984132466134572}
+  - component: {fileID: 1405565057870445696}
   m_Layer: 5
   m_Name: ClosedBackpackImage
   m_TagString: Untagged
@@ -466,23 +491,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6045463652365876692}
-          m_TargetAssemblyTypeName: UI.BackpackInventoryScript, Assembly-CSharp
-          m_MethodName: OnGesture
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  m_Delegates: []
+--- !u!114 &1405565057870445696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108767078712371848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
+  moveTransformWithGesture: 1
+  persistTransformWithGesture: 0
+  dragDistance: 100
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &1365256403662319092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1152,7 @@ GameObject:
   - component: {fileID: 1883366147512327351}
   - component: {fileID: 1998009742083891781}
   - component: {fileID: 4968378962050008090}
+  - component: {fileID: 5287372193605492345}
   m_Layer: 5
   m_Name: OpenBackpackImage
   m_TagString: Untagged
@@ -1149,7 +1176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -816.91125, y: -376.60687}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 286.1775, y: 326.78625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1883366147512327351
@@ -1219,6 +1246,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &5287372193605492345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5184491575291873977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
+  moveTransformWithGesture: 1
+  persistTransformWithGesture: 0
+  dragDistance: 100
+  enabledDragDirections: 2
+  startingDragDirection: 3
 --- !u!1 &5550857078494690416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1685,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   image: {fileID: 0}
+  invItem: {fileID: 0}
+  invItemIndex: 0
   parentAfterDrag: {fileID: 0}
   canvasParent: {fileID: 0}
 --- !u!1 &6176098715798322844
@@ -1940,7 +1986,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 286.1775, y: 326.7863}
   m_Pivot: {x: 0, y: 0}
 --- !u!223 &4696828871093990421
@@ -2295,6 +2341,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
   m_PrefabInstance: {fileID: 1595972825680131849}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &6082363215704806292 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4778017707384366237, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+  m_PrefabInstance: {fileID: 1595972825680131849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2493005468762130833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2477,6 +2528,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+--- !u!198 &6977767463841148172 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4778017707384366237, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+  m_PrefabInstance: {fileID: 2493005468762130833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8257148825397226333 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
@@ -2669,6 +2725,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
   m_PrefabInstance: {fileID: 4143003973272076144}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &8876601342135770093 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4778017707384366237, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+  m_PrefabInstance: {fileID: 4143003973272076144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4357149049345744602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2856,6 +2917,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
   m_PrefabInstance: {fileID: 4357149049345744602}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &9095404498079513159 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4778017707384366237, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+  m_PrefabInstance: {fileID: 4357149049345744602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4629327345872286626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3038,6 +3104,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+--- !u!198 &175712384899602239 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4778017707384366237, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+  m_PrefabInstance: {fileID: 4629327345872286626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1166725777266413934 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
@@ -3225,6 +3296,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+--- !u!198 &2793331097410903836 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4778017707384366237, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+  m_PrefabInstance: {fileID: 7245458505548790657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3783776059060181325 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
@@ -3415,6 +3491,11 @@ PrefabInstance:
       addedObject: {fileID: 4768268316526881243}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+--- !u!198 &2890602377261288767 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4778017707384366237, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+  m_PrefabInstance: {fileID: 7661632619429554594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4205289057856342894 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
@@ -3605,5 +3686,10 @@ PrefabInstance:
 --- !u!224 &2596393904748442133 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5769012545377116876, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+  m_PrefabInstance: {fileID: 8360819287429779673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3911786471943009348 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4778017707384366237, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
   m_PrefabInstance: {fileID: 8360819287429779673}
   m_PrefabAsset: {fileID: 0}
