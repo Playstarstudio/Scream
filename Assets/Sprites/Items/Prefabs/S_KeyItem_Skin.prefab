@@ -301,7 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyItem
   itemId: 3
   sprite: {fileID: 21300000, guid: 623d944c2f784e34e91e571af57093fd, type: 3}
-  hiResSprite: {fileID: -3895882841371015260, guid: 287cc394058b9684eaaaefa315b24b19, type: 3}
+  hiResSprite: {fileID: 21300000, guid: dd3242fd655028f4f9d0453696cef147, type: 3}
   textToRead: Skin. Human skin. Peeled- Peeled like rind from an orange.
   isZoomItem: 1
   consumedStateKey: {fileID: 0}
