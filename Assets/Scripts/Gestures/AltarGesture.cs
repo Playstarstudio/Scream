@@ -83,7 +83,7 @@ namespace UI
             if (matchesConsumedStateKey != null)
             {
                 Debug.Log($"[AltarGesture] Setting consumed state '{matchesConsumedStateKey.name}' to true.");
-                _audio.PlayOneShot(AudioID.SFX.Player.Interact.Match.place, GameObject.Find("Character"));
+                _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Match.place, GameObject.Find("Character"));
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(matchesConsumedStateKey, true);
             }
 
@@ -103,7 +103,7 @@ namespace UI
             {
                 Debug.Log($"[AltarGesture] Setting consumed state '{candleConsumedStateKey.name}' to true.");
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(candleConsumedStateKey, true);
-                _audio.PlayOneShot(AudioID.SFX.Player.Interact.Candle.place, GameObject.Find("Character"));
+                _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Candle.place, GameObject.Find("Character"));
             }
 
             TryEnableGestures();
@@ -162,7 +162,7 @@ namespace UI
             {
                 Debug.Log($"[AltarGesture] Setting GameState '{matchesLitStateKey.name}' to true.");
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(matchesLitStateKey, true);
-                _audio.PlayOneShot(AudioID.SFX.Player.Interact.Match.light, GameObject.Find("Character"));
+                _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Match.light, GameObject.Find("Character"));
             }
             else
             {
@@ -178,6 +178,7 @@ namespace UI
             _matchesOpen = false;
             openMatches.SetActive(false);
             closedMatches.SetActive(true);
+            _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Match.place, GameObject.Find("Character"));
         }
 
 

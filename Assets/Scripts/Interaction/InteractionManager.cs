@@ -6,6 +6,8 @@ using UnityEngine;
 public class InteractionManager : MonoBehaviour
 {
     private readonly HashSet<IInteractable> _nearbyInteractables = new HashSet<IInteractable>();
+    
+    private new AudioManager _audio;
 
     private void Start()
     {
@@ -24,6 +26,11 @@ public class InteractionManager : MonoBehaviour
         {
             Debug.LogError("[InteractionManager] Could not find CharacterMovement! Interactions will not work.");
         }
+    }
+    
+    private void Awake()
+    {
+        _audio = AudioManager.Instance;
     }
 
     private void OnInteractPressed(object sender, EventArgs e)
@@ -75,6 +82,7 @@ public class InteractionManager : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable interactable))
         {
             _nearbyInteractables.Add(interactable);
+            _audio.PlayOneShot(AudioID.SFX.Interface.highlight);
             Debug.Log($"[InteractionManager] Entered range: {collision.gameObject.name} (Priority: {interactable.InteractionPriority}, CanInteract: {interactable.CanInteract})");
         }
     }
