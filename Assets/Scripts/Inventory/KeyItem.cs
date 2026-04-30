@@ -41,6 +41,7 @@ public class KeyItem : MonoBehaviour, IInteractable
         if ( sprite != null ) sr.sprite = sprite;
         _inventory = FindFirstObjectByType<Inventory.Inventory>();
         zoomScript = FindFirstObjectByType<NarrativeZoomScript>();
+        if (!zoomScript) Debug.Log("no zoom script");
     }
 
     private void Start()
@@ -67,7 +68,7 @@ public class KeyItem : MonoBehaviour, IInteractable
             if (isZoomItem)
                 zoomScript.OpenZoomCanvas(hiResSprite);
 
-            Destroy(gameObject);
+            Destroy(gameObject.transform.parent.gameObject);
         }
     }
 }
