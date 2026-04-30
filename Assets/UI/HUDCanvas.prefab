@@ -302,6 +302,7 @@ MonoBehaviour:
   openDragGesture: {fileID: 5287372193605492345}
   closeDragGesture: {fileID: 1405565057870445696}
   inventory: {fileID: 1739522925635518731}
+  audio: {fileID: 0}
   hiddenOffset: {x: 0, y: -340}
   closedCanvas: {fileID: 8596334108041292941}
   openCanvas: {fileID: 3806884445842354}
@@ -4509,6 +4510,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2007677340872245279, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: cursorImage
+      value: 
+      objectReference: {fileID: 8893376930413257067}
+    - target: {fileID: 2007677340872245279, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: parentCanvas
+      value: 
+      objectReference: {fileID: 1659544053718905340}
+    - target: {fileID: 2007677340872245279, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: cursorTransform
+      value: 
+      objectReference: {fileID: 6926946391034517516}
     - target: {fileID: 2264935673583942991, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_SortingLayer
       value: 0
