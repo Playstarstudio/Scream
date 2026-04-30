@@ -184,7 +184,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
             }
         }
         
-        _audio.PlayOneShot(AudioID.SFX.Interface.Inventory.unselect);
+        //_audio.PlayOneShot(AudioID.SFX.Interface.Inventory.unselect);
         
         // transform.SetParent(parentAfterDrag);
         // _image.raycastTarget = true;
