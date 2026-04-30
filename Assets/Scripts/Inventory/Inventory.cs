@@ -62,6 +62,7 @@ namespace Inventory
                 if (currentItems[i] == null)
                 {
                     currentItems[i] = Instantiate(itemID.gameObject);
+                    currentItems[i].SetActive(false);
                     currentItems[i].transform.parent = gameObject.transform;
                     draggableItems[i].AddItem(currentItems[i], i);
                     break;
