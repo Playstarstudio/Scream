@@ -22,7 +22,7 @@ namespace UI
         public int currentKey = 0;
         private bool reset = false;
 
-        private new readonly AudioManager audio;
+        private AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey amuletRetrievedStateKey;
@@ -52,6 +52,12 @@ namespace UI
             Tentacle_7_Gesture.OnGestureEnd -= OnTentacle_7_Gesture;
             Tentacle_8_Gesture.OnGestureEnd -= OnTentacle_8_Gesture;
         }
+        
+        private void Awake()
+        {
+            audio = AudioManager.Instance;
+        }
+        
         private void OnTentacle_1_Gesture(DragDirection dragDirection)
         {
             int index = 0;

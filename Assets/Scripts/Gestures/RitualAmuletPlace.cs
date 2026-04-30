@@ -9,10 +9,15 @@ namespace UI
         public GameObject panel;
         public GameObject amulet;
         
-        private new readonly AudioManager audio;
+        private AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey amuletPlaced;
+        
+        private void Awake()
+        {
+            audio = AudioManager.Instance;
+        }
 
         private void setState()
         {
