@@ -5,8 +5,8 @@ using System.Collections;
 public class TypewriterScript : MonoBehaviour
 {
 
-    [SerializeField] private string firstText;
-    [SerializeField] private string secondText;
+    public string firstText;
+    public string secondText;
 
 
     private TMP_Text textBox;
@@ -32,7 +32,7 @@ public class TypewriterScript : MonoBehaviour
 
     private void Start()
     {
-        if (firstText != "")
+        if (firstText != null)
         {
             SetText(firstText);
         }
@@ -40,7 +40,7 @@ public class TypewriterScript : MonoBehaviour
 
     public void SetText(string Text)
     {
-        Debug.Log(this.gameObject.name);
+        //Debug.Log(Text);
         textBox.text = Text;
         textBox.maxVisibleCharacters = 0;
         currentVisibleCharacterIndex = 0;
