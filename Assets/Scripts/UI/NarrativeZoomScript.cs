@@ -37,8 +37,8 @@ public class NarrativeZoomScript : MonoBehaviour
         if (zoomContainer != null)
         {
             zoomContainer.SetActive(true);
+            Time.timeScale = 0;
         }
-        Time.timeScale = 0;
     }
 
     public void CloseZoomCanvas()
