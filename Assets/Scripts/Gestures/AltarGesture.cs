@@ -21,6 +21,12 @@ namespace UI
         [Header("Game State")]
         public GameStateKey matchesLitStateKey;
 
+        [Header("Consumed States")]
+        [Tooltip("Set to true when matches are placed on the altar. Assign the same key to the matches KeyItem's consumedStateKey.")]
+        public GameStateKey matchesConsumedStateKey;
+        [Tooltip("Set to true when the candle is placed on the altar. Assign the same key to the candle KeyItem's consumedStateKey.")]
+        public GameStateKey candleConsumedStateKey;
+
         private bool _matchesPlaced;
         private bool _candlePlaced;
         private bool _matchesOpen;
@@ -68,6 +74,12 @@ namespace UI
             if (matchObject != null) matchObject.SetActive(true);
             Debug.Log("[AltarGesture] Matches placed. matchObject active.");
 
+            if (matchesConsumedStateKey != null)
+            {
+                Debug.Log($"[AltarGesture] Setting consumed state '{matchesConsumedStateKey.name}' to true.");
+                ServiceLocator.Instance.Get<GameStateManager>().SetState(matchesConsumedStateKey, true);
+            }
+
             TryEnableGestures();
         }
         
@@ -79,6 +91,12 @@ namespace UI
             _candlePlaced = true;
             if (candleObject != null) candleObject.SetActive(true);
             Debug.Log("[AltarGesture] Candle placed. candleObject active.");
+
+            if (candleConsumedStateKey != null)
+            {
+                Debug.Log($"[AltarGesture] Setting consumed state '{candleConsumedStateKey.name}' to true.");
+                ServiceLocator.Instance.Get<GameStateManager>().SetState(candleConsumedStateKey, true);
+            }
 
             TryEnableGestures();
         }
