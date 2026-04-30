@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8281142160340480907}
   - component: {fileID: 2858514486401440147}
   - component: {fileID: 6127434054644638543}
+  - component: {fileID: 4074749356349646984}
   m_Layer: 0
   m_Name: S_BR_Wardrobe_v1_0
   m_TagString: Untagged
@@ -231,6 +232,62 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+--- !u!60 &4074749356349646984
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498835496845253980}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.9375, y: 2.4375}
+    newSize: {x: 1.75, y: 2.375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.15625, y: -0.5}
+      - {x: -0.03125, y: -0.375}
+      - {x: -0.15625, y: -0.4375}
+      - {x: -0.5, y: -0.5625}
+      - {x: -0.71875, y: -0.6875}
+      - {x: 0.0625, y: -1.09375}
+      - {x: 0.71875, y: -0.8125}
+      - {x: 0.34375, y: -0.625}
+      - {x: 0.0625, y: -0.4375}
+  m_UseDelaunayMesh: 0
 --- !u!1 &9185649030901832744
 GameObject:
   m_ObjectHideFlags: 0
