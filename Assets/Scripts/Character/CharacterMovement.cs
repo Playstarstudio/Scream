@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using System;
 using UnityEngine.SceneManagement;
-using UnityEditor.Rendering.LookDev;
 
 public class CharacterMovement : MonoBehaviour
 {

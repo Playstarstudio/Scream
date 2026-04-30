@@ -15,6 +15,8 @@ namespace Inventory
         public GameObject[] currentItems;
         public DraggableItemWidget[] draggableItems;
 
+        public GameObject starterKey;
+
         public event EventHandler<EventArgs> InventoryFull;
         public void OnInventoryFull(EventArgs e)
         {
@@ -33,6 +35,17 @@ namespace Inventory
             DontDestroyOnLoad(gameObject);
             _size = draggableItems.Length;
             currentItems = new GameObject[_size];
+            currentItems[0] = starterKey;
+        }
+
+        private void Start()
+        {
+            AddKeyToInventory();
+        }
+
+        private void AddKeyToInventory()
+        {
+            draggableItems[0].AddItem(currentItems[0], 0);
         }
 
         public bool AddToInventory(KeyItem itemID)
