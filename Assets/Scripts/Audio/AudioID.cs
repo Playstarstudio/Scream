@@ -21,8 +21,9 @@ public sealed class AudioID
         { "Foyer",          new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.foyer}} },
         { "Kitchen",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.kitchen}} },
         { "TentacleRoom",   new(){{"music", Music.eldritch},    {"ambience", SFX.Ambience.tentacle}} },
-        { "Title",          new(){{"music", Music.title},       {"ambience", new("")}} },
-        { "Outside",        new(){{"music", new("")},           {"ambience", SFX.Ambience.outdoors}} },
+        { "MainMenu",       new(){{"music", Music.title},       {"ambience", new("")}} },
+        { "CreditsScene",   new(){{"music", Music.credits},     {"ambience", new("")}} },
+        { "Outside",        new(){{"music", new("")},           {"ambience", SFX.Ambience.outdoors}} }
     };
     
     public static readonly Dictionary<string, string> SceneToRoomMap = new()
