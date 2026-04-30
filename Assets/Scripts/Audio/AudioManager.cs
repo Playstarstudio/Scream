@@ -328,8 +328,8 @@ public class AudioManager : MonoBehaviour
             AudioID.CurrentAmbienceProgress[oldAmbience] = oldAmbienceProgress;
         }
         
-        if (newMusic.ToString() != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic.Path}", null, AudioID.CurrentMusicProgress[newMusic]); }
-        if (newAmbience.ToString() != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience.Path}", null, AudioID.CurrentAmbienceProgress[newAmbience]); }
+        if (newMusic.Path != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic.Path}", null, AudioID.CurrentMusicProgress[newMusic]); }
+        if (newAmbience.Path != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience.Path}", null, AudioID.CurrentAmbienceProgress[newAmbience]); }
         
         // TODO: This doesn't work because the old scene does not save between audio manager instances
         oldScene = newScene;
