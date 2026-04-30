@@ -1,5 +1,6 @@
 using Services;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace UI
 {
@@ -30,14 +31,14 @@ namespace UI
 
         private void OnDoorOpenGesture(DragDirection dragDirection)
         {
-            if (dragDirection == DragDirection.Down)
+            //
+            if ( dragDirection == DragDirection.Right || dragDirection == DragDirection.Left)
                 setState();
         }
         private void setState()
         {
             Debug.Log("success!");
             panel.SetActive(false);
-
             if (doorOpenedStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(doorOpenedStateKey, true);
