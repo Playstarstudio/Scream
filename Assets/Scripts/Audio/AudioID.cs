@@ -16,10 +16,10 @@ public sealed class AudioID
     
     public static readonly Dictionary<string, Dictionary<string, AudioID>> SceneToMusicAmbienceMap = new()
     {
-        { "AltarRoom",      new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.general}} },
-        { "Bedroom",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.general}} },
+        { "AltarRoom",      new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.altar}} },
+        { "Bedroom",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.bedroom}} },
         { "Foyer",          new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.foyer}} },
-        { "Kitchen",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.general}} },
+        { "Kitchen",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.kitchen}} },
         { "TentacleRoom",   new(){{"music", Music.eldritch},    {"ambience", SFX.Ambience.tentacle}} },
         { "Title",          new(){{"music", Music.title},       {"ambience", new("")}} }
     };
@@ -32,6 +32,23 @@ public sealed class AudioID
         {"Kitchen", "kitchen"},
         {"AltarRoom", "altar"},
         {"TentacleRoom", "tentacle"}
+    };
+    
+    public static readonly Dictionary<AudioID, int> CurrentMusicProgress = new()
+    {
+        {Music.exploration, 0},
+        {Music.eldritch, 0},
+        {Music.title, 0}
+    };
+    
+    public static readonly Dictionary<AudioID, int> CurrentAmbienceProgress = new()
+    {
+        {SFX.Ambience.altar, 0},
+        {SFX.Ambience.bedroom, 0},
+        {SFX.Ambience.foyer, 0},
+        {SFX.Ambience.tentacle, 0},
+        {SFX.Ambience.kitchen, 0},
+        {SFX.Ambience.outdoors, 0}
     };
     
     #region Busses

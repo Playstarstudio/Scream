@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     private static Dictionary<string, EventInstance> registry;
+    private static Scene oldScene;
 
     private static AudioManager _instance;
     public static AudioManager Instance { get { return _instance; } }
@@ -44,6 +45,8 @@ public class AudioManager : MonoBehaviour
     void OnSceneChange(Scene oldScene, Scene newScene)
     {
         KillAllBusInstances(AudioID.Bus.Master);
+        Debug.Log($"AudioManager: Scene Change from {oldScene.name} to {newScene.name}");
+        HandleMusicAmbienceChange(newScene);
     }
 
     /// <summary>
@@ -310,8 +313,25 @@ public class AudioManager : MonoBehaviour
         AudioID newMusic = AudioID.SceneToMusicAmbienceMap[newScene.name]["music"];
         AudioID newAmbience = AudioID.SceneToMusicAmbienceMap[newScene.name]["ambience"];
         
-        if (newMusic.ToString() != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic}", null, -1); }
-        if (newAmbience.ToString() != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience}", null, -1); }
+        if (oldScene.name != null) {
+            string oldSceneName = oldScene.name;
+            
+            AudioID oldMusic = AudioID.SceneToMusicAmbienceMap[oldSceneName]["music"];
+            AudioID oldAmbience = AudioID.SceneToMusicAmbienceMap[oldSceneName]["ambience"];
+            int oldMusicProgress;
+            int oldAmbienceProgress;
+            
+            registry[$"mus_{oldMusic}"].getTimelinePosition(out oldMusicProgress);
+            registry[$"amb_{oldAmbience}"].getTimelinePosition(out oldAmbienceProgress);
+            AudioID.CurrentMusicProgress[oldMusic] = oldMusicProgress;
+            AudioID.CurrentAmbienceProgress[oldAmbience] = oldAmbienceProgress;
+        }
+        
+        if (newMusic.ToString() != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic.Path}", null, AudioID.CurrentMusicProgress[newMusic]); }
+        if (newAmbience.ToString() != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience.Path}", null, AudioID.CurrentAmbienceProgress[newAmbience]); }
+        
+        // TODO: This doesn't work because the old scene does not save between audio manager instances
+        oldScene = newScene;
     }
 
     /// <summary>
