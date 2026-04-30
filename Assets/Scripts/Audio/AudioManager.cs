@@ -2,16 +2,17 @@
     AudioManager developed by mawkeezy (https://github.com/marcus-ochoa) and jazzberryfields (https://github.com/jazzberry-jam).
 */
 
-using System.Collections.Generic;
 using FMOD.Studio;
 using FMODUnity;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] public Scene oldScene;
+
     private static Dictionary<string, EventInstance> registry;
-    private static Scene oldScene;
 
     private static AudioManager _instance;
     public static AudioManager Instance { get { return _instance; } }
@@ -28,7 +29,7 @@ public class AudioManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        
+        oldScene = SceneManager.GetActiveScene();
         registry = new Dictionary<string, EventInstance>();
     }
 
@@ -80,13 +81,13 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("[AudioManager] Volume value out of range, val: " + val);
             return;
         }
-        
+
         Bus bus = RuntimeManager.GetBus(id.Path);
         bus.setVolume(val);
-        
+
         return;
     }
-    
+
     /// <summary>
     /// Check to see if a certain instance exists in the registry
     /// </summary>
@@ -95,7 +96,7 @@ public class AudioManager : MonoBehaviour
     {
         return registry.ContainsKey(key);
     }
-    
+
     /// <summary>
     /// Return an audio instance based on the key
     /// </summary>
@@ -107,7 +108,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("[AudioManager] Key not registered: " + key);
             return default;
         }
-        
+
         return registry[key];
     }
 
@@ -163,19 +164,19 @@ public class AudioManager : MonoBehaviour
     /// <param name="key">String key that references this instance (ex. "grappleLoop")</param>
     /// <param name="obj">Game object to attach audio to if 3D</param>
     public void GenerateAudioInstance(AudioID id, string key, GameObject obj = null)
-    {   
+    {
         // Debug.Log(registry);
-        
+
         if (registry.ContainsKey(key))
         {
             Debug.LogWarning("[AudioManager] Killing and replacing already registered key: " + key);
             KillAudioInstance(key);
             return;
         }
-        
+
         if (!CreateEventInstance(id.Path, out EventInstance instance)) return;
         if (obj != null) RuntimeManager.AttachInstanceToGameObject(instance, obj);
-        
+
         registry.Add(key, instance);
         return;
     }
@@ -225,7 +226,7 @@ public class AudioManager : MonoBehaviour
         registry.Add(key, instance);
         return;
     }
-    
+
     /// <summary>
     /// Generate a newly created FMOD event instance assigned to passed in key and start playing the instance
     /// </summary>
@@ -240,7 +241,7 @@ public class AudioManager : MonoBehaviour
         Debug.Log(key);
         return;
     }
-    
+
     /// <summary>
     /// Generate a newly created FMOD event instance assigned to passed in key and start playing the instance
     /// </summary>
@@ -288,7 +289,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
         EventInstance instance = registry[key];
-        if (timelinePos != -1) {instance.setTimelinePosition(timelinePos);}
+        if (timelinePos != -1) { instance.setTimelinePosition(timelinePos); }
         instance.start();
     }
 
@@ -304,35 +305,38 @@ public class AudioManager : MonoBehaviour
             return;
         }
         EventInstance instance = registry[key];
-        
+
         instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         instance.release();
     }
-    
+
     public void HandleMusicAmbienceChange(Scene newScene)
     {
         AudioID newMusic = AudioID.SceneToMusicAmbienceMap[newScene.name]?["music"];
         AudioID newAmbience = AudioID.SceneToMusicAmbienceMap[newScene.name]?["ambience"];
-        
         // Debug.Log($"{newAmbience.Path}");
-        
-        if (oldScene.name != null) {
+        if (oldScene.name == null)
+        {
+            Debug.Log("idk");
+        }
+        if (oldScene.name != null)
+        {
             string oldSceneName = oldScene.name;
-            
+
             AudioID oldMusic = AudioID.SceneToMusicAmbienceMap[oldSceneName]["music"];
             AudioID oldAmbience = AudioID.SceneToMusicAmbienceMap[oldSceneName]["ambience"];
             int oldMusicProgress;
             int oldAmbienceProgress;
-            
+
             registry[$"mus_{oldMusic}"].getTimelinePosition(out oldMusicProgress);
             registry[$"amb_{oldAmbience}"].getTimelinePosition(out oldAmbienceProgress);
             AudioID.CurrentMusicProgress[oldMusic] = oldMusicProgress;
             AudioID.CurrentAmbienceProgress[oldAmbience] = oldAmbienceProgress;
         }
-        
+
         if (newMusic.Path != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic.Path}", null, AudioID.CurrentMusicProgress[newMusic]); }
         if (newAmbience.Path != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience.Path}", GameObject.Find("Character"), AudioID.CurrentAmbienceProgress[newAmbience]); }
-        
+
         // TODO: This doesn't work because the old scene does not save between audio manager instances
         oldScene = newScene;
     }
@@ -352,7 +356,7 @@ public class AudioManager : MonoBehaviour
         instance.release();
         registry.Remove(key);
     }
-    
+
     /// <summary>
     /// Stop playing and kill an FMOD event instance identified by key and remove it from registry
     /// </summary>
@@ -372,22 +376,22 @@ public class AudioManager : MonoBehaviour
         Bus bus = RuntimeManager.GetBus(id.Path);
         bus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
-    
+
     /// <summary>
     /// Pause and resume a given audio bus (this currently does not work :P)
     /// </summary>
     /// <param name="id">Audio ID of the bus to pause it</param>
     public void ToggleBusPause(AudioID id)
     {
-        
+
         if (id.GetType() != typeof(AudioID.Bus))
         {
             Debug.LogWarning("[AudioManager] AudioID given is not a bus. You passed in: " + id.GetType());
             return;
         }
-        
+
         Bus bus = RuntimeManager.GetBus(id.Path);
-        
+
         if (bus.getPaused(out _) == FMOD.RESULT.OK)
         {
             bus.setPaused(true);
@@ -399,7 +403,7 @@ public class AudioManager : MonoBehaviour
             Debug.Log($"[AudioManager] {id.Path} now resumed");
         }
     }
-    
+
     /// <summary>
     /// Pause an FMOD event instance identified by key
     /// </summary>
@@ -412,7 +416,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
         EventInstance instance = registry[key];
-        
+
         if (instance.getPaused(out _) == FMOD.RESULT.OK)
         {
             instance.setPaused(true);
@@ -481,7 +485,7 @@ public class AudioManager : MonoBehaviour
     {
         RuntimeManager.StudioSystem.setParameterByName(paramName, paramVal);
     }
-    
+
     public void SetGlobalParameter(string paramName, string paramVal)
     {
         RuntimeManager.StudioSystem.setParameterByNameWithLabel(paramName, paramVal);
