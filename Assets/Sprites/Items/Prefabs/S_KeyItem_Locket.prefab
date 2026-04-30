@@ -381,6 +381,7 @@ MonoBehaviour:
   - {fileID: 8066891870745271260}
   _fadeInSpeed: 2
   _fadeOutSpeed: 1
+  outlineMaterial: {fileID: 2100000, guid: 723fdfe5b1ec85b479043c4f63036050, type: 2}
 --- !u!61 &7559105845877565441
 BoxCollider2D:
   m_ObjectHideFlags: 0
