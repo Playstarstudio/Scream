@@ -29,16 +29,17 @@ public class NarrativeZoomScript : MonoBehaviour
     public void OpenZoomCanvas(Sprite sprite)
     {
         zoomOpen = true;
-        if (zoomImage != null)
-        {
-            zoomImage.sprite = sprite;
-        }
 
         if (zoomContainer != null)
         {
             zoomContainer.SetActive(true);
+        }
+        if (zoomImage != null)
+        {
+            zoomImage.sprite = sprite;
             Time.timeScale = 0;
         }
+
     }
 
     public void CloseZoomCanvas()

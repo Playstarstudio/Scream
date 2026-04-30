@@ -37,11 +37,9 @@ public class KeyItem : MonoBehaviour, IInteractable
     private void Awake()
     {
         sr = this.gameObject.GetComponent<SpriteRenderer>();
-        if (sr == null ) sr = this.gameObject.AddComponent<SpriteRenderer>();
-        if ( sprite != null ) sr.sprite = sprite;
+        if (sr == null) sr = this.gameObject.AddComponent<SpriteRenderer>();
+        if (sprite != null) sr.sprite = sprite;
         _inventory = FindFirstObjectByType<Inventory.Inventory>();
-        zoomScript = FindFirstObjectByType<NarrativeZoomScript>();
-        if (!zoomScript) Debug.Log("no zoom script");
     }
 
     private void Start()
@@ -66,7 +64,10 @@ public class KeyItem : MonoBehaviour, IInteractable
             }
 
             if (isZoomItem)
+            {
+                zoomScript = FindFirstObjectByType<NarrativeZoomScript>();
                 zoomScript.OpenZoomCanvas(hiResSprite);
+            }
 
             Destroy(gameObject.transform.parent.gameObject);
         }
