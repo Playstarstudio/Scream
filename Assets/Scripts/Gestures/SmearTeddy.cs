@@ -1,5 +1,6 @@
 using Services;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -100,6 +101,7 @@ namespace UI
             {
                 Debug.Log($"[SmearTeddy] Setting GameState '{teddyDraggedStateKey.name}' to true.");
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(teddyDraggedStateKey, true);
+                SceneManager.LoadScene("CreditsScene");
             }
             else
             {
