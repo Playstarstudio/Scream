@@ -85,11 +85,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 202706661069432704, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 202706661069432704, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 202706661069432704, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -105,11 +105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202706661069432704, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -137.21875
+      value: -153.25
       objectReference: {fileID: 0}
     - target: {fileID: 202706661069432704, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -159.21875
+      value: -143.1875
       objectReference: {fileID: 0}
     - target: {fileID: 202706661069432704, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -125,11 +125,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7e27a1ea536125a4b9c67234d3fc39fd, type: 3}
     - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -198,6 +198,22 @@ PrefabInstance:
     - target: {fileID: 7821706818191984920, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: startingDragDirection
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192053744094595512, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1383382560315938918, guid: 340e9420ba4ad4548b0df5b1f31c1fc6, type: 3}
+    - target: {fileID: 8510814603445857496, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510814603445857496, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510814603445857496, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 38.21875
       objectReference: {fileID: 0}
     - target: {fileID: 8743802675685575034, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Pivot.x
@@ -339,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710f39faa4e3aae4e85769c801c8f23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.FirstAltarGestureScript
-  openMatchesDragGesture: {fileID: 0}
+  openMatchesDragGesture: {fileID: 8637054388973074282}
   closeMatchesDragGesture: {fileID: 498498344412234220}
   lightMatchesDragGesture: {fileID: 498498344412234220}
   panel: {fileID: 6183766642125141839}
@@ -350,3 +366,14 @@ MonoBehaviour:
   matchesLitStateKey: {fileID: 11400000, guid: 0031ce4e6edd9a747aacdf495ddb10cf, type: 2}
   matchesConsumedStateKey: {fileID: 11400000, guid: 9c51fd79a388d884280c1ed22f144b7f, type: 2}
   candleConsumedStateKey: {fileID: 11400000, guid: c477358be6dd03444884d805819f30d3, type: 2}
+--- !u!114 &8637054388973074282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2142506460451291038, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 7667182045065005300}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3467919582911618420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture

@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ritual_Die Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8192053744094595512, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1383382560315938918, guid: 340e9420ba4ad4548b0df5b1f31c1fc6, type: 3}
+    - target: {fileID: 8510814603445857496, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510814603445857496, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8743802675685575034, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
