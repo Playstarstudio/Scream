@@ -1,0 +1,1378 @@
+fileFormatVersion: 2
+guid: de7922705e0930e4b94f8fb623715198
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3521684173263830025
+    second: S_Background_Ritual_Circle_Broken_v1_0
+  - first:
+      213: -7271554528336899532
+    second: S_Background_Ritual_Circle_Broken_v1_1
+  - first:
+      213: -2273052413261376556
+    second: S_Background_Ritual_Circle_Broken_v1_2
+  - first:
+      213: -5006775594466597456
+    second: S_Background_Ritual_Circle_Broken_v1_3
+  - first:
+      213: -5832646498442477577
+    second: S_Background_Ritual_Circle_Broken_v1_4
+  - first:
+      213: 9020550729502685108
+    second: S_Background_Ritual_Circle_Broken_v1_5
+  - first:
+      213: 228117877485147591
+    second: S_Background_Ritual_Circle_Broken_v1_6
+  - first:
+      213: -4338638526590014953
+    second: S_Background_Ritual_Circle_Broken_v1_7
+  - first:
+      213: -8396708076554452327
+    second: S_Background_Ritual_Circle_Broken_v1_8
+  - first:
+      213: -6919531702519097116
+    second: S_Background_Ritual_Circle_Broken_v1_9
+  - first:
+      213: 782861675796376328
+    second: S_Background_Ritual_Circle_Broken_v1_10
+  - first:
+      213: -4498495829999523801
+    second: S_Background_Ritual_Circle_Broken_v1_11
+  - first:
+      213: -3860110617100489317
+    second: S_Background_Ritual_Circle_Broken_v1_12
+  - first:
+      213: -7183639013234835588
+    second: S_Background_Ritual_Circle_Broken_v1_13
+  - first:
+      213: 11925630775946464
+    second: S_Background_Ritual_Circle_Broken_v1_14
+  - first:
+      213: 2030593519010825214
+    second: S_Background_Ritual_Circle_Broken_v1_15
+  - first:
+      213: 2863241954059899220
+    second: S_Background_Ritual_Circle_Broken_v1_16
+  - first:
+      213: 3038186659042223821
+    second: S_Background_Ritual_Circle_Broken_v1_17
+  - first:
+      213: 2919913365538213648
+    second: S_Background_Ritual_Circle_Broken_v1_18
+  - first:
+      213: -3627998170868789350
+    second: S_Background_Ritual_Circle_Broken_v1_19
+  - first:
+      213: -4317054276490000306
+    second: S_Background_Ritual_Circle_Broken_v1_20
+  - first:
+      213: -2579751850448803073
+    second: S_Background_Ritual_Circle_Broken_v1_21
+  - first:
+      213: -115878377919967102
+    second: S_Background_Ritual_Circle_Broken_v1_22
+  - first:
+      213: 6725333952352363561
+    second: S_Background_Ritual_Circle_Broken_v1_23
+  - first:
+      213: 8163467333065671838
+    second: S_Background_Ritual_Circle_Broken_v1_24
+  - first:
+      213: -1113603242014104829
+    second: S_Background_Ritual_Circle_Broken_v1_25
+  - first:
+      213: -6890811305161779207
+    second: S_Background_Ritual_Circle_Broken_v1_26
+  - first:
+      213: 880103065979692132
+    second: S_Background_Ritual_Circle_Broken_v1_27
+  - first:
+      213: -2302712112492845002
+    second: S_Background_Ritual_Circle_Broken_v1_28
+  - first:
+      213: -7211940662389634752
+    second: S_Background_Ritual_Circle_Broken_v1_29
+  - first:
+      213: -5089122301527108886
+    second: S_Background_Ritual_Circle_Broken_v1_30
+  - first:
+      213: 1763342579871094130
+    second: S_Background_Ritual_Circle_Broken_v1_31
+  - first:
+      213: -6215741816372573764
+    second: S_Background_Ritual_Circle_Broken_v1_32
+  - first:
+      213: 6315320944027844379
+    second: S_Background_Ritual_Circle_Broken_v1_33
+  - first:
+      213: -1771052130918602082
+    second: S_Background_Ritual_Circle_Broken_v1_34
+  - first:
+      213: -6549520284296970843
+    second: S_Background_Ritual_Circle_Broken_v1_35
+  - first:
+      213: 7705619382172077075
+    second: S_Background_Ritual_Circle_Broken_v1_36
+  - first:
+      213: -6204522477736300932
+    second: S_Background_Ritual_Circle_Broken_v1_37
+  - first:
+      213: 3068587585449862181
+    second: S_Background_Ritual_Circle_Broken_v1_38
+  - first:
+      213: -7967316472483128308
+    second: S_Background_Ritual_Circle_Broken_v1_39
+  - first:
+      213: -8436191416388037150
+    second: S_Background_Ritual_Circle_Broken_v1_40
+  - first:
+      213: 8247155689026618240
+    second: S_Background_Ritual_Circle_Broken_v1_41
+  - first:
+      213: 6192879475653309645
+    second: S_Background_Ritual_Circle_Broken_v1_42
+  - first:
+      213: 5138276937303402854
+    second: S_Background_Ritual_Circle_Broken_v1_43
+  - first:
+      213: 2258468851188453115
+    second: S_Background_Ritual_Circle_Broken_v1_44
+  - first:
+      213: -6861543444768465675
+    second: S_Background_Ritual_Circle_Broken_v1_45
+  - first:
+      213: -3949599779787146565
+    second: S_Background_Ritual_Circle_Broken_v1_46
+  - first:
+      213: -7742276603250712571
+    second: S_Background_Ritual_Circle_Broken_v1_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 133
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c718ec8198fd030800000000000000
+      internalID: 3521684173263830025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 138
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 432989dceaf361b90800000000000000
+      internalID: -7271554528336899532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 124
+        width: 84
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d316bf8fde7470e0800000000000000
+      internalID: -2273052413261376556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 136
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b529b5bf1c548ab0800000000000000
+      internalID: -5006775594466597456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_4
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 133
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fff8ef89e64e0fa0800000000000000
+      internalID: -5832646498442477577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 127
+        width: 51
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b7f566781f6f2d70800000000000000
+      internalID: 9020550729502685108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 118
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c51b6e30007a2300800000000000000
+      internalID: 228117877485147591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 111
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a27c54f3f0ac3c0800000000000000
+      internalID: -4338638526590014953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_8
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9928156fd76e87b80800000000000000
+      internalID: -8396708076554452327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 107
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e89b4be392e8ff90800000000000000
+      internalID: -6919531702519097116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_10
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 122
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b2c1edb884dda00800000000000000
+      internalID: 782861675796376328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 124
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7286d4d60e12291c0800000000000000
+      internalID: -4498495829999523801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_12
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 108
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9de20278d12e6ac0800000000000000
+      internalID: -3860110617100489317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_13
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 114
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7fff75c0669e4c90800000000000000
+      internalID: -7183639013234835588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_14
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 109
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec6f1a4c4e5a2000800000000000000
+      internalID: 11925630775946464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_15
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 118
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef3c9d70c0e1e2c10800000000000000
+      internalID: 2030593519010825214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 25
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4515cb913674cb720800000000000000
+      internalID: 2863241954059899220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_17
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 54
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6ea8d5baec92a20800000000000000
+      internalID: 3038186659042223821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_18
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 106
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f02df4cbd958820800000000000000
+      internalID: 2919913365538213648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 60
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f4993b2e2c6adc0800000000000000
+      internalID: -3627998170868789350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_20
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 112
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e488bbd120eb614c0800000000000000
+      internalID: -4317054276490000306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_21
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 106
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffaa7513c51e23cd0800000000000000
+      internalID: -2579751850448803073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_22
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 105
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2809eeeaa31546ef0800000000000000
+      internalID: -115878377919967102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_23
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 89
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92426d9e89f255d50800000000000000
+      internalID: 6725333952352363561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 92
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9482ea99467a4170800000000000000
+      internalID: 8163467333065671838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_25
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 101
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303a60360cfab80f0800000000000000
+      internalID: -1113603242014104829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_26
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 92
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7169580abee50a0800000000000000
+      internalID: -6890811305161779207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_27
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 83
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464a3755311c63c00800000000000000
+      internalID: 880103065979692132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_28
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 82
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638efd2b88f1b00e0800000000000000
+      internalID: -2302712112492845002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_29
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 83
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04902159d2a0aeb90800000000000000
+      internalID: -7211940662389634752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_30
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 61
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae255f6ea3ecf59b0800000000000000
+      internalID: -5089122301527108886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_31
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 51
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 275998adbb6a87810800000000000000
+      internalID: 1763342579871094130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_32
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 66
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb9429b10cf3db9a0800000000000000
+      internalID: -6215741816372573764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_33
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 54
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f3d5740f684a750800000000000000
+      internalID: 6315320944027844379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_34
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 31
+        width: 88
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ae5e96875fb67e0800000000000000
+      internalID: -1771052130918602082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_35
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 49
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad7345900e6b15a0800000000000000
+      internalID: -6549520284296970843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_36
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 36
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c4bb0800cdfea60800000000000000
+      internalID: 7705619382172077075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_37
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 18
+        width: 46
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ee991fdab15e9a0800000000000000
+      internalID: -6204522477736300932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_38
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 34
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524a9e0a620d59a20800000000000000
+      internalID: 3068587585449862181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_39
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 45
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c568481e76e6190800000000000000
+      internalID: -7967316472483128308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5ddf88a90acea80800000000000000
+      internalID: -8436191416388037150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_41
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 0
+        width: 132
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08306c36768c37270800000000000000
+      internalID: 8247155689026618240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_42
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 22
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc47f13621781f550800000000000000
+      internalID: 6192879475653309645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_43
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 17
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6692d8596a3de4740800000000000000
+      internalID: 5138276937303402854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_44
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe4f5b4471b75f10800000000000000
+      internalID: 2258468851188453115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc5aab4796e6c0a0800000000000000
+      internalID: -6861543444768465675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_46
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba73d81de33039c0800000000000000
+      internalID: -3949599779787146565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Background_Ritual_Circle_Broken_v1_47
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5006c6e1378ed8490800000000000000
+      internalID: -7742276603250712571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      S_Background_Ritual_Circle_Broken_v1_0: 3521684173263830025
+      S_Background_Ritual_Circle_Broken_v1_1: -7271554528336899532
+      S_Background_Ritual_Circle_Broken_v1_10: 782861675796376328
+      S_Background_Ritual_Circle_Broken_v1_11: -4498495829999523801
+      S_Background_Ritual_Circle_Broken_v1_12: -3860110617100489317
+      S_Background_Ritual_Circle_Broken_v1_13: -7183639013234835588
+      S_Background_Ritual_Circle_Broken_v1_14: 11925630775946464
+      S_Background_Ritual_Circle_Broken_v1_15: 2030593519010825214
+      S_Background_Ritual_Circle_Broken_v1_16: 2863241954059899220
+      S_Background_Ritual_Circle_Broken_v1_17: 3038186659042223821
+      S_Background_Ritual_Circle_Broken_v1_18: 2919913365538213648
+      S_Background_Ritual_Circle_Broken_v1_19: -3627998170868789350
+      S_Background_Ritual_Circle_Broken_v1_2: -2273052413261376556
+      S_Background_Ritual_Circle_Broken_v1_20: -4317054276490000306
+      S_Background_Ritual_Circle_Broken_v1_21: -2579751850448803073
+      S_Background_Ritual_Circle_Broken_v1_22: -115878377919967102
+      S_Background_Ritual_Circle_Broken_v1_23: 6725333952352363561
+      S_Background_Ritual_Circle_Broken_v1_24: 8163467333065671838
+      S_Background_Ritual_Circle_Broken_v1_25: -1113603242014104829
+      S_Background_Ritual_Circle_Broken_v1_26: -6890811305161779207
+      S_Background_Ritual_Circle_Broken_v1_27: 880103065979692132
+      S_Background_Ritual_Circle_Broken_v1_28: -2302712112492845002
+      S_Background_Ritual_Circle_Broken_v1_29: -7211940662389634752
+      S_Background_Ritual_Circle_Broken_v1_3: -5006775594466597456
+      S_Background_Ritual_Circle_Broken_v1_30: -5089122301527108886
+      S_Background_Ritual_Circle_Broken_v1_31: 1763342579871094130
+      S_Background_Ritual_Circle_Broken_v1_32: -6215741816372573764
+      S_Background_Ritual_Circle_Broken_v1_33: 6315320944027844379
+      S_Background_Ritual_Circle_Broken_v1_34: -1771052130918602082
+      S_Background_Ritual_Circle_Broken_v1_35: -6549520284296970843
+      S_Background_Ritual_Circle_Broken_v1_36: 7705619382172077075
+      S_Background_Ritual_Circle_Broken_v1_37: -6204522477736300932
+      S_Background_Ritual_Circle_Broken_v1_38: 3068587585449862181
+      S_Background_Ritual_Circle_Broken_v1_39: -7967316472483128308
+      S_Background_Ritual_Circle_Broken_v1_4: -5832646498442477577
+      S_Background_Ritual_Circle_Broken_v1_40: -8436191416388037150
+      S_Background_Ritual_Circle_Broken_v1_41: 8247155689026618240
+      S_Background_Ritual_Circle_Broken_v1_42: 6192879475653309645
+      S_Background_Ritual_Circle_Broken_v1_43: 5138276937303402854
+      S_Background_Ritual_Circle_Broken_v1_44: 2258468851188453115
+      S_Background_Ritual_Circle_Broken_v1_45: -6861543444768465675
+      S_Background_Ritual_Circle_Broken_v1_46: -3949599779787146565
+      S_Background_Ritual_Circle_Broken_v1_47: -7742276603250712571
+      S_Background_Ritual_Circle_Broken_v1_5: 9020550729502685108
+      S_Background_Ritual_Circle_Broken_v1_6: 228117877485147591
+      S_Background_Ritual_Circle_Broken_v1_7: -4338638526590014953
+      S_Background_Ritual_Circle_Broken_v1_8: -8396708076554452327
+      S_Background_Ritual_Circle_Broken_v1_9: -6919531702519097116
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

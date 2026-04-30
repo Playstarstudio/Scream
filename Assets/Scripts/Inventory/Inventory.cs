@@ -100,6 +100,5 @@ namespace Inventory
             worldItem.transform.parent = null;
             RemoveFromInventory(itemId);
         }
-
     }
 }

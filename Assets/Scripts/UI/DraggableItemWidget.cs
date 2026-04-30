@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
     // Script used for drag & dropping Inventory Items!
@@ -15,8 +15,12 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     public Canvas parentCanvas;
 
     public Image _image;
+    public Sprite hiResSprite;
     public GameObject invItem;
     public int invItemIndex;
+    public bool isZoomItem;
+    public bool isHovered;
+    public GameObject buttonPromptContainer;
     public Transform parentAfterDrag;
     Transform rootTransform;
     public GameObject canvasParent;
@@ -25,9 +29,25 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     {
         canvasParent = GameObject.Find("OpenBackpackCanvas");
         rootTransform = canvasParent.GetComponent<Transform>();
+
+        buttonPromptContainer = transform.parent.Find("ButtonPromptContainer").gameObject;
+        isHovered = false;
+        buttonPromptContainer.SetActive(false);
+
         // _image = GetComponent<Image>();
         _image.enabled = false;
     }
+
+    private void Update()
+    {
+        if (Keyboard.current.eKey.wasPressedThisFrame && isHovered)
+        {
+            NarrativeZoomScript zoomScript = FindFirstObjectByType<NarrativeZoomScript>();
+            zoomScript.OpenZoomCanvas(hiResSprite);
+        }
+    }
+
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -95,6 +115,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         invItem = item;
         _image.sprite = invItem.GetComponent<SpriteRenderer>().sprite;
         invItemIndex = index;
+        isZoomItem = item.GetComponent<KeyItem>().isZoomItem;
+        hiResSprite = item.GetComponent<KeyItem>().hiResSprite;
     }
 
     public void RemoveItem()
@@ -103,5 +125,21 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         invItem = null;
         _image.sprite = null;
         invItemIndex = -1;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (isZoomItem)
+        {
+            isHovered = true;
+            buttonPromptContainer.SetActive(true);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isHovered = false;
+        buttonPromptContainer.SetActive(false);
+
     }
 }

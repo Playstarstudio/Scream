@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -9,7 +10,8 @@ namespace UI
         public DragGesture closeDragGesture;
         public RectTransform inventory;
         
-        private AudioManager audio;
+        [SerializeField]
+        public new AudioManager audio;
 
         private float _animationDuration = 0.4f;
 
@@ -39,19 +41,21 @@ namespace UI
             closeDragGesture.OnGestureEnd -= OnGesture;
         }
 
-
         private void Awake()
         {
             _openPosition = inventory.anchoredPosition;
             _closedPosition = _openPosition + hiddenOffset;
 
-            closedCanvas.SetActive(true);
-            openCanvas.SetActive(false);
-
             inventory.anchoredPosition = _closedPosition;
-            inventory.gameObject.SetActive(false);
             
             audio = AudioManager.Instance;
+        }
+
+        private void Start()
+        {
+            inventory.gameObject.SetActive(false);
+            closedCanvas.SetActive(true);
+            openCanvas.SetActive(false);
         }
 
         private void OnGesture(DragDirection dragDirection)

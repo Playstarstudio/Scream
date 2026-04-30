@@ -24,6 +24,16 @@ public sealed class AudioID
         { "Title",          new(){{"music", Music.title},       {"ambience", new("")}} }
     };
     
+    public static readonly Dictionary<string, string> SceneToRoomMap = new()
+    {
+        {"", "outdoors"},
+        {"Bedroom", "bedroom"},
+        {"Foyer", "foyer"},
+        {"Kitchen", "kitchen"},
+        {"AltarRoom", "altar"},
+        {"TentacleRoom", "tentacle"}
+    };
+    
     #region Busses
     public static class Bus
     {
@@ -76,9 +86,12 @@ public sealed class AudioID
         public static class Ambience
         {
             public static readonly AudioID general = new("event:/ambience/general");
+            public static readonly AudioID altar = new("event:/ambience/altar");
             public static readonly AudioID foyer = new("event:/ambience/foyer");
             public static readonly AudioID outdoors = new("event:/ambience/outdoors");
             public static readonly AudioID tentacle = new("event:/ambience/tentacle");
+            public static readonly AudioID bedroom = new("event:/ambience/bedroom");
+            public static readonly AudioID kitchen = new("event:/ambience/kitchen");
         }
         
         public static class Interface // non-spatial interface sfx

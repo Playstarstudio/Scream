@@ -12,6 +12,7 @@ public class KeyItem : MonoBehaviour, IInteractable
     private CharacterMovement character;
     private Canvas charCanvas;
     [SerializeField] public Sprite sprite;
+    [SerializeField] public Sprite hiResSprite;
     private IInventory _inventory;
     public string textToRead;
     public bool isZoomItem;
@@ -64,7 +65,7 @@ public class KeyItem : MonoBehaviour, IInteractable
             }
 
             if (isZoomItem)
-                zoomScript.OpenZoomCanvas(sprite);
+                zoomScript.OpenZoomCanvas(hiResSprite);
 
             Destroy(gameObject);
         }
