@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -321,7 +321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 256ae8cd074501e4983be135a1f5961e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  amuletPlaceGesture: {fileID: 0}
   panel: {fileID: 7752994257858897225}
   amuletObject: {fileID: 8886662455971943971}
   amuletPlacedStateKey: {fileID: 11400000, guid: e8ce793a5ae34a140a2ffd791077526a, type: 2}
