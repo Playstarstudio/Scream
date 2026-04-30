@@ -83,7 +83,7 @@ namespace UI
             if (matchesConsumedStateKey != null)
             {
                 Debug.Log($"[AltarGesture] Setting consumed state '{matchesConsumedStateKey.name}' to true.");
-                _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Match.place, GameObject.Find("Character"));
+                _audio.PlayOneShot(AudioID.SFX.Player.Interact.Match.place, GameObject.Find("Character"));
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(matchesConsumedStateKey, true);
             }
 
@@ -103,7 +103,7 @@ namespace UI
             {
                 Debug.Log($"[AltarGesture] Setting consumed state '{candleConsumedStateKey.name}' to true.");
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(candleConsumedStateKey, true);
-                _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Candle.place, GameObject.Find("Character"));
+                _audio.PlayOneShot(AudioID.SFX.Player.Interact.Candle.place, GameObject.Find("Character"));
             }
 
             TryEnableGestures();
@@ -118,8 +118,14 @@ namespace UI
             Debug.Log($"[AltarGesture] TryEnableGestures() — matchesPlaced={_matchesPlaced}, candlePlaced={_candlePlaced}");
             if (_matchesPlaced && _candlePlaced)
             {
-                Debug.Log("[AltarGesture] Both items placed — enabling gestures.");
-                SetGesturesEnabled(true);
+                Debug.Log("[AltarGesture] Both items placed — enabling open matches gesture only.");
+                // Start with matchbox closed — only the open gesture is available
+                if (closedMatches != null) closedMatches.SetActive(true);
+                if (openMatches != null) openMatches.SetActive(false);
+
+                if (openMatchesDragGesture != null) openMatchesDragGesture.gameObject.SetActive(true);
+                if (closeMatchesDragGesture != null) closeMatchesDragGesture.gameObject.SetActive(false);
+                if (lightMatchesDragGesture != null) lightMatchesDragGesture.gameObject.SetActive(false);
             }
         }
 
@@ -162,7 +168,7 @@ namespace UI
             {
                 Debug.Log($"[AltarGesture] Setting GameState '{matchesLitStateKey.name}' to true.");
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(matchesLitStateKey, true);
-                _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Match.light, GameObject.Find("Character"));
+                _audio.PlayOneShot(AudioID.SFX.Player.Interact.Match.light, GameObject.Find("Character"));
             }
             else
             {
@@ -178,7 +184,11 @@ namespace UI
             _matchesOpen = false;
             openMatches.SetActive(false);
             closedMatches.SetActive(true);
-            _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Match.place, GameObject.Find("Character"));
+
+            // Switch gestures: only open is available
+            if (openMatchesDragGesture != null) openMatchesDragGesture.gameObject.SetActive(true);
+            if (closeMatchesDragGesture != null) closeMatchesDragGesture.gameObject.SetActive(false);
+            if (lightMatchesDragGesture != null) lightMatchesDragGesture.gameObject.SetActive(false);
         }
 
 
@@ -188,6 +198,11 @@ namespace UI
             _matchesOpen = true;
             closedMatches.SetActive(false);
             openMatches.SetActive(true);
+
+            // Switch gestures: close and light are now available, open is not
+            if (openMatchesDragGesture != null) openMatchesDragGesture.gameObject.SetActive(false);
+            if (closeMatchesDragGesture != null) closeMatchesDragGesture.gameObject.SetActive(true);
+            if (lightMatchesDragGesture != null) lightMatchesDragGesture.gameObject.SetActive(true);
         }
 
         private void UpdateWorldObjects()

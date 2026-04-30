@@ -79,20 +79,22 @@ public class InteractionManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IInteractable interactable))
+        IInteractable[] interactables = collision.GetComponents<IInteractable>();
+        foreach (var interactable in interactables)
         {
             _nearbyInteractables.Add(interactable);
             _audio.PlayOneShot(AudioID.SFX.Interface.highlight);
-            Debug.Log($"[InteractionManager] Entered range: {collision.gameObject.name} (Priority: {interactable.InteractionPriority}, CanInteract: {interactable.CanInteract})");
+            Debug.Log($"[InteractionManager] Entered range: {collision.gameObject.name} ({interactable.GetType().Name}, Priority: {interactable.InteractionPriority}, CanInteract: {interactable.CanInteract})");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IInteractable interactable))
+        IInteractable[] interactables = collision.GetComponents<IInteractable>();
+        foreach (var interactable in interactables)
         {
             _nearbyInteractables.Remove(interactable);
-            Debug.Log($"[InteractionManager] Exited range: {collision.gameObject.name}");
+            Debug.Log($"[InteractionManager] Exited range: {collision.gameObject.name} ({interactable.GetType().Name})");
         }
     }
 }

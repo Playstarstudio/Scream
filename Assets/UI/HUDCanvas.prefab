@@ -306,6 +306,7 @@ MonoBehaviour:
   hiddenOffset: {x: 0, y: -340}
   closedCanvas: {fileID: 8596334108041292941}
   openCanvas: {fileID: 3806884445842354}
+  lantern: {fileID: 0}
 --- !u!114 &5657388102633751329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,8 +972,8 @@ RectTransform:
   - {fileID: 3459081168098741712}
   - {fileID: 4580564265787792839}
   - {fileID: 787835855089680756}
-  - {fileID: 4608512859809472123}
   - {fileID: 3886766311759839070}
+  - {fileID: 4608512859809472123}
   - {fileID: 2553120566847989017}
   - {fileID: 4023539752835167473}
   m_Father: {fileID: 0}

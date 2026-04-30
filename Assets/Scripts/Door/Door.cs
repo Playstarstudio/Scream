@@ -47,29 +47,27 @@ public class Door : MonoBehaviour, IInteractable
     
     public int InteractionPriority => 0; // Low priority — items should be picked up before doors are used
 
-    public bool CanInteract => !string.IsNullOrEmpty(targetSceneName);
+    public bool CanInteract
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(targetSceneName)) return false;
+            if (!AreStateRequirementsMet()) return false;
+            if (!HasRequiredItem()) return false;
+            return true;
+        }
+    }
 
     public void Interact()
     {
-        // Optional key / item check
-        if (requiredItemId >= 0)
-        {
-            var inventory = FindFirstObjectByType<Inventory.Inventory>() as Inventory.IInventory;
-            if (inventory == null || !inventory.HasItem(requiredItemId))
-            {
-                Debug.Log($"[Door] Player does not have required item {requiredItemId}.");
-                return;
-            }
-        }
-
-        // State condition check
-        if (!AreStateRequirementsMet())
-        {
-            Debug.Log($"[Door] State requirements not met for '{gameObject.name}'.");
-            return;
-        }
-
         ServiceLocator.Instance.Get<SceneTransitionManager>().TransitionToScene(targetSceneName);
+    }
+
+    private bool HasRequiredItem()
+    {
+        if (requiredItemId < 0) return true;
+        var inventory = FindFirstObjectByType<Inventory.Inventory>() as Inventory.IInventory;
+        return inventory != null && inventory.HasItem(requiredItemId);
     }
 
     private bool AreStateRequirementsMet()
