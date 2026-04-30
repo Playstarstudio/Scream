@@ -118,8 +118,14 @@ namespace UI
             Debug.Log($"[AltarGesture] TryEnableGestures() — matchesPlaced={_matchesPlaced}, candlePlaced={_candlePlaced}");
             if (_matchesPlaced && _candlePlaced)
             {
-                Debug.Log("[AltarGesture] Both items placed — enabling gestures.");
-                SetGesturesEnabled(true);
+                Debug.Log("[AltarGesture] Both items placed — enabling open matches gesture only.");
+                // Start with matchbox closed — only the open gesture is available
+                if (closedMatches != null) closedMatches.SetActive(true);
+                if (openMatches != null) openMatches.SetActive(false);
+
+                if (openMatchesDragGesture != null) openMatchesDragGesture.gameObject.SetActive(true);
+                if (closeMatchesDragGesture != null) closeMatchesDragGesture.gameObject.SetActive(false);
+                if (lightMatchesDragGesture != null) lightMatchesDragGesture.gameObject.SetActive(false);
             }
         }
 
@@ -178,6 +184,11 @@ namespace UI
             _matchesOpen = false;
             openMatches.SetActive(false);
             closedMatches.SetActive(true);
+
+            // Switch gestures: only open is available
+            if (openMatchesDragGesture != null) openMatchesDragGesture.gameObject.SetActive(true);
+            if (closeMatchesDragGesture != null) closeMatchesDragGesture.gameObject.SetActive(false);
+            if (lightMatchesDragGesture != null) lightMatchesDragGesture.gameObject.SetActive(false);
         }
 
 
@@ -187,6 +198,11 @@ namespace UI
             _matchesOpen = true;
             closedMatches.SetActive(false);
             openMatches.SetActive(true);
+
+            // Switch gestures: close and light are now available, open is not
+            if (openMatchesDragGesture != null) openMatchesDragGesture.gameObject.SetActive(false);
+            if (closeMatchesDragGesture != null) closeMatchesDragGesture.gameObject.SetActive(true);
+            if (lightMatchesDragGesture != null) lightMatchesDragGesture.gameObject.SetActive(true);
         }
 
         private void UpdateWorldObjects()

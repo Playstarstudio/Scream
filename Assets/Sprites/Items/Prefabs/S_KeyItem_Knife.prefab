@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4786373343661438305}
   - component: {fileID: 2041175600844860153}
   - component: {fileID: 5921948011574437582}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: S_KeyItem_Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 1753025402600952593}
   - component: {fileID: 6595246104436644268}
   - component: {fileID: 7559105845877565441}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: KeyItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ca971cdbd69569941a00358511208b09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 6771773274073559155}
   - component: {fileID: 4545387302832616265}
   - component: {fileID: 5999188489284789462}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InteractTextOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 147368959390958538}
   - component: {fileID: 3631749209168903193}
   - component: {fileID: 3134175684041586203}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InteractTextFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
