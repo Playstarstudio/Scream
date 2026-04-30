@@ -26,7 +26,6 @@ namespace UI
         [Header("Game State")]
         public GameStateKey amuletRetrievedStateKey;
 
-        // 1 4 5 8 3
         // 1 4 5 8 3 - or 0 3 4 7 2
         private void OnEnable()
         {
@@ -79,7 +78,6 @@ namespace UI
 
         private void OnTentacle_4_Gesture(DragDirection dragDirection)
         {
-            throw new NotImplementedException();
             int index = 3;
             CheckTentacles(index, dragDirection);
         }
@@ -113,6 +111,7 @@ namespace UI
             {
                 case 0:
                     if (currentKey == 0 && dragDirection == DragDirection.Up)
+                    {
                         TentacleSuccess(index);
                         currentKey = 3;
                     }
@@ -184,8 +183,12 @@ namespace UI
             Open_Tentacles[index].SetActive(true);
         }
         private void TentacleFail()
+        {
             int index = 0;
             foreach(var tindex in Closed_Tentacles)
+            {
+                Closed_Tentacles[index].SetActive(true);
+                Open_Tentacles[index].SetActive(true);
                 index++;
             }
         }
