@@ -22,7 +22,7 @@ public sealed class AudioID
         { "Kitchen",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.kitchen}} },
         { "TentacleRoom",   new(){{"music", Music.eldritch},    {"ambience", SFX.Ambience.tentacle}} },
         { "MainMenu",       new(){{"music", Music.title},       {"ambience", new("")}} },
-        { "CreditsScene",   new(){{"music", Music.credits},     {"ambience", new("")}} },
+        { "CreditsScreen",  new(){{"music", Music.credits},     {"ambience", new("")}} },
         { "Outside",        new(){{"music", new("")},           {"ambience", SFX.Ambience.outdoors}} }
     };
     
