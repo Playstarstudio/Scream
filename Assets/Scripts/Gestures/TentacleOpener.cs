@@ -62,6 +62,7 @@ namespace UI
         private void Awake()
         {
             _audio = AudioManager.Instance;
+            currentKey = 0;
         }
         
         private void OnTentacle_1_Gesture(DragDirection dragDirection)
