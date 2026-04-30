@@ -25,6 +25,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     public Transform parentAfterDrag;
     Transform rootTransform;
     public GameObject canvasParent;
+    
+    private AudioManager _audio;
 
     private KeyItem invKeyItem;
 
@@ -82,6 +84,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
             
         cursorTransform.anchoredPosition = position;
         // transform.position = eventData.position;
+        
+        _audio.PlayOneShot(AudioID.SFX.Interface.Inventory.select);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -176,6 +180,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
                 }
             }
         }
+        
+        _audio.PlayOneShot(AudioID.SFX.Interface.Inventory.unselect);
         
         // transform.SetParent(parentAfterDrag);
         // _image.raycastTarget = true;

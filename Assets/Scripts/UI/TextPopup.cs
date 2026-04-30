@@ -6,7 +6,7 @@ public class TextPopup : MonoBehaviour
 {
     [Tooltip("Text box for text to appear in")]
     [SerializeField]
-    private TMP_Text _textBox;
+    public TMP_Text[] _textBoxes;
 
     [Tooltip("Fade in speed")]
     [SerializeField]
@@ -21,20 +21,38 @@ public class TextPopup : MonoBehaviour
     private float _targetAlpha = 0f;
     bool _fading = false;
 
+    private SpriteRenderer sr;
+    private Material startMaterial;
+    public Material outlineMaterial;
+
+
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
+        startMaterial = sr.material;
+
         _fading = false;
-        _textBox.alpha = _invisibleAlpha;
+
+        foreach (TMP_Text _textBox in _textBoxes)
+            _textBox.alpha = _invisibleAlpha;
+
     }
 
     IEnumerator FadeCoroutine()
     {
         _fading = true;
-        while (!Mathf.Approximately(_textBox.alpha, _targetAlpha))
+
+        foreach (TMP_Text _textBox in _textBoxes)
         {
-            float fadeSpeed = _targetAlpha == _visibleAlpha ? _fadeInSpeed : _fadeOutSpeed;
-           _textBox.alpha = Mathf.MoveTowards(_textBox.alpha, _targetAlpha, fadeSpeed * Time.deltaTime);
-            yield return new WaitForSeconds(.001f);
+            while (!Mathf.Approximately(_textBox.alpha, _targetAlpha))
+            {
+                float fadeSpeed = _targetAlpha == _visibleAlpha ? _fadeInSpeed : _fadeOutSpeed;
+
+
+                _textBox.alpha = Mathf.MoveTowards(_textBox.alpha, _targetAlpha, fadeSpeed * Time.deltaTime);
+
+                yield return new WaitForSeconds(.001f);
+            }
         }
 
         _fading = false;
@@ -53,6 +71,7 @@ public class TextPopup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _targetAlpha = _visibleAlpha;
+            sr.material = outlineMaterial;
             FadeInText();
         }
     }
@@ -64,6 +83,7 @@ public class TextPopup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _targetAlpha = _invisibleAlpha;
+            sr.material = startMaterial;
             FadeInText();
         }
     }
