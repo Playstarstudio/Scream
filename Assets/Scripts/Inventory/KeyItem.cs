@@ -36,8 +36,13 @@ public class KeyItem : MonoBehaviour, IInteractable
     {
         if (_inventory != null && _inventory.AddToInventory(this))
         {
-            TypewriterScript type = charCanvas.GetComponentInChildren<TypewriterScript>();
-            type.SetText(textToRead);
+            TypewriterScript[] typewriterArray = charCanvas.GetComponentsInChildren<TypewriterScript>();
+
+            foreach (TypewriterScript typewriterScript in typewriterArray)
+            {
+                typewriterScript.SetText(textToRead);
+            }
+
             Destroy(gameObject);
         }
     }

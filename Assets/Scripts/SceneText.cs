@@ -44,13 +44,19 @@ public class SceneText : MonoBehaviour
 
     private void Start()
     {
+
         typewriterScript = GameObject.FindWithTag("Player").GetComponentInChildren<TypewriterScript>();
 
         DoSceneText();
 
-        typewriterScript.firstText = firstLine;
-        typewriterScript.secondText = secondLine;
-        typewriterScript.SetText(typewriterScript.firstText);
+        TypewriterScript[] typewriterArray = GameObject.FindWithTag("Player").GetComponentsInChildren<TypewriterScript>();
+
+        foreach (TypewriterScript typewriterScript in typewriterArray)
+        {
+            typewriterScript.firstText = firstLine;
+            typewriterScript.secondText = secondLine;
+            typewriterScript.SetText(typewriterScript.firstText);
+        }
     }
 
     private void DoSceneText()
