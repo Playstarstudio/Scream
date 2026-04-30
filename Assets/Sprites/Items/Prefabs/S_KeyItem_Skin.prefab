@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5921948011574437582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   itemId: 3
   sprite: {fileID: 21300000, guid: 623d944c2f784e34e91e571af57093fd, type: 3}
   textToRead: Skin. Human skin. Peeled- Peeled like rind from an orange.
+  isZoomItem: 0
+  consumedStateKey: {fileID: 0}
 --- !u!212 &1753025402600952593
 SpriteRenderer:
   m_ObjectHideFlags: 0

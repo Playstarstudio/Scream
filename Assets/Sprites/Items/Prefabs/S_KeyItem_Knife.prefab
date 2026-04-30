@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5921948011574437582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   itemId: 5
   sprite: {fileID: 21300000, guid: ca971cdbd69569941a00358511208b09, type: 3}
   textToRead: At least I am armed against any human threat.
+  isZoomItem: 0
+  consumedStateKey: {fileID: 11400000, guid: b6e5c0e03e4a7434087e72653d90195e, type: 2}
 --- !u!212 &1753025402600952593
 SpriteRenderer:
   m_ObjectHideFlags: 0
