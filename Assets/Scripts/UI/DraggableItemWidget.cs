@@ -84,8 +84,11 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
             
         cursorTransform.anchoredPosition = position;
         // transform.position = eventData.position;
-        
-        _audio.PlayOneShot(AudioID.SFX.Interface.Inventory.select);
+
+        if (_audio != null)
+        {
+            _audio.PlayOneShot(AudioID.SFX.Interface.Inventory.select);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)

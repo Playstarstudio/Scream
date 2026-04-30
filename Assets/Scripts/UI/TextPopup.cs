@@ -34,7 +34,10 @@ public class TextPopup : MonoBehaviour
         _fading = false;
 
         foreach (TMP_Text _textBox in _textBoxes)
-            _textBox.alpha = _invisibleAlpha;
+            if (_textBox != null)
+            {
+                _textBox.alpha = _invisibleAlpha;
+            }
 
     }
 
