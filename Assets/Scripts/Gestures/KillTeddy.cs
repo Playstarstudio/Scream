@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace UI
 {
-
-
     public class KillTeddy : MonoBehaviour
     {
         public DragGesture knifeDragGesture;
         public GameObject panel;
         public GameObject teddy;
         public GameObject knife;
+        
+        private new readonly AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey teddyKilledStateKey;
@@ -19,7 +19,6 @@ namespace UI
         {
             knifeDragGesture.OnGestureEnd += OnKnifeGesture;
         }
-
 
         private void OnDisable()
         {
@@ -39,6 +38,7 @@ namespace UI
             if (teddyKilledStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(teddyKilledStateKey, true);
+                audio.PlayOneShot(AudioID.SFX.Player.Interact.Teddy_Bear.slice, GameObject.Find("Character"));
             }
         }
     }

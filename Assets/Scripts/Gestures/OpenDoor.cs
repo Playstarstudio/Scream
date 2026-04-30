@@ -11,6 +11,8 @@ namespace UI
         public GameObject panel;
         public GameObject key;
         public GameObject door;
+        
+        private new readonly AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey doorOpenedStateKey;
@@ -39,6 +41,7 @@ namespace UI
             if (doorOpenedStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(doorOpenedStateKey, true);
+                audio.PlayOneShot(AudioID.SFX.Player.Interact.Door.open, GameObject.Find("Character"));
             }
         }
     }

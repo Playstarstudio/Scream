@@ -10,6 +10,8 @@ namespace UI
         public DragGesture TeddyDrag;
         public GameObject panel;
         public GameObject teddy;
+        
+        private new readonly AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey teddyDraggedStateKey;
@@ -38,6 +40,7 @@ namespace UI
             if (teddyDraggedStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(teddyDraggedStateKey, true);
+                audio.PlayOneShot(AudioID.SFX.Player.Interact.Teddy_Bear.smear, GameObject.Find("Character"));
             }
         }
     }

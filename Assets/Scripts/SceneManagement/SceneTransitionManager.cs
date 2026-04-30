@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : IService
 {
+    private readonly AudioManager audio;
+    
     private readonly float _fadeDuration;
     private readonly CanvasGroup _fadeCanvasGroup;
 
@@ -53,6 +55,8 @@ public class SceneTransitionManager : IService
                 break;
             }
         }
+        
+        audio.HandleMusicAmbienceChange(scene);
 
         // Clear so we don't re-teleport if the scene is reloaded
         _originSceneName = null;

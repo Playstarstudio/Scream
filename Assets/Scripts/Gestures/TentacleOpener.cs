@@ -20,6 +20,8 @@ namespace UI
         public GameObject[] Closed_Tentacles;
         public GameObject[] Open_Tentacles;
         public int currentKey = 1;
+        
+        private new readonly AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey amuletRetrievedStateKey;
@@ -57,6 +59,9 @@ namespace UI
                 Closed_Tentacles[0].SetActive(false);
                 Open_Tentacles[0].SetActive(true);
             }
+            
+            // TODO: Add tentacle sounds once this is implemented
+            // audio.PlayOneShot(AudioID.SFX.Player.Interact.Tentacle.pull, GameObject.Find("Character"));
         }
 
         private void OnTentacle_2_Gesture(DragDirection dragDirection)
@@ -109,6 +114,7 @@ namespace UI
             if (amuletRetrievedStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(amuletRetrievedStateKey, true);
+                audio.PlayOneShot(AudioID.SFX.Player.Interact.Amulet.pick_up, GameObject.Find("Character"));
             }
         }
     }
