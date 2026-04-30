@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4dbc8ef7630634408775dbeba02703c, type: 3}
   m_Name: AmuletPlaced
   m_EditorClassIdentifier: Assembly-CSharp::Services.GameStateKey
-  defaultValue: 0
+  defaultValue: 1
   currentValue: 0
