@@ -29,7 +29,7 @@
 	<object class="MixerBusPanner" id="{0d176d57-76c3-47ca-973b-d99e0bbc50fd}" />
 	<object class="CompressorEffect" id="{cfe9ce26-9e98-4745-b6b1-fbb9f7e3c71c}">
 		<property name="threshold">
-			<value>-30</value>
+			<value>-27</value>
 		</property>
 		<property name="ratio">
 			<value>2</value>
@@ -43,7 +43,7 @@
 		<relationship name="sidechains">
 			<destination>{d78bd73d-a856-4859-8ea1-b0aeeebcc2a2}</destination>
 			<destination>{47134749-cd0f-42dd-9087-1a318a4f8e92}</destination>
-			<destination>{3aa8dad3-c694-4aa8-97ac-ef2323317c0c}</destination>
+			<destination>{c9d6a362-4dad-44d5-8564-b95444ff5701}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{aa44b89c-2979-4496-81fa-1cc753cd97ce}" />

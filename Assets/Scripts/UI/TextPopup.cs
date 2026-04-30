@@ -21,8 +21,16 @@ public class TextPopup : MonoBehaviour
     private float _targetAlpha = 0f;
     bool _fading = false;
 
+    private SpriteRenderer sr;
+    private Material startMaterial;
+    public Material outlineMaterial;
+
+
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
+        startMaterial = sr.material;
+
         _fading = false;
 
         foreach (TMP_Text _textBox in _textBoxes)
@@ -63,6 +71,7 @@ public class TextPopup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _targetAlpha = _visibleAlpha;
+            sr.material = outlineMaterial;
             FadeInText();
         }
     }
@@ -74,6 +83,7 @@ public class TextPopup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _targetAlpha = _invisibleAlpha;
+            sr.material = startMaterial;
             FadeInText();
         }
     }
