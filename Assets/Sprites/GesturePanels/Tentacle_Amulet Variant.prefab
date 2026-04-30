@@ -119,13 +119,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811433296861245260}
-  m_LocalRotation: {x: -0, y: -0, z: 0.86602443, w: 0.5000018}
+  m_LocalRotation: {x: -0, y: -0, z: 0.70710576, w: 0.7071079}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2758603184418079791}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 135.71875, y: 113.4375}
@@ -287,13 +287,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406512926781595860}
-  m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2758603184418079791}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 148.75, y: -115.59375}
@@ -352,8 +352,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 2
-  startingDragDirection: 1
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &2540711963468238462
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,13 +454,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2799588417720985282}
-  m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2758603184418079791}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 193.25, y: -162.5625}
@@ -530,13 +530,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3621387574975383550}
-  m_LocalRotation: {x: -0, y: -0, z: -0.49999917, w: 0.8660259}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2758603184418079791}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -116.25, y: -114.75}
@@ -595,8 +595,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 2
-  startingDragDirection: 1
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &3673435582359126465
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,13 +697,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4569819247801432521}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9659267, w: -0.25881574}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.0000029504295}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2758603184418079791}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -196.75, y: 189.03125}
@@ -922,13 +922,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4846656564427647704}
-  m_LocalRotation: {x: -0, y: -0, z: -0.49999917, w: 0.8660259}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2758603184418079791}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -168.1875, y: -166.6875}
@@ -998,13 +998,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6191129413066853329}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9659267, w: -0.25881574}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.0000029504295}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2758603184418079791}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -210}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -134.9375, y: 142.0625}
@@ -1156,8 +1156,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 8
-  startingDragDirection: 4
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &7912854203117341158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,8 +1249,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 2
-  startingDragDirection: 1
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &8317655538442704532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,13 +1276,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8317655538442704532}
-  m_LocalRotation: {x: -0, y: -0, z: 0.86602443, w: 0.5000018}
+  m_LocalRotation: {x: -0, y: -0, z: 0.70710576, w: 0.7071079}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2758603184418079791}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 197.53125, y: 153}
@@ -1417,8 +1417,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 4
-  startingDragDirection: 8
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &9053754996038558596
 GameObject:
   m_ObjectHideFlags: 0

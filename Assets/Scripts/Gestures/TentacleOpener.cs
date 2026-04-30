@@ -131,8 +131,9 @@ namespace UI
                     TentacleFail();
                     break;
                 case 2:
-                    if (currentKey == 2 && dragDirection == DragDirection.Right)
+                    if (currentKey == 2 && dragDirection == DragDirection.Up)
                     {
+                        setState();
                     }
                     else
                     {
@@ -140,7 +141,7 @@ namespace UI
                     }
                     break;
                 case 3:
-                    if (currentKey == 3 && dragDirection == DragDirection.Down)
+                    if (currentKey == 3 && dragDirection == DragDirection.Up)
                     {
                         TentacleSuccess(index);
                         currentKey = 4;
@@ -151,7 +152,7 @@ namespace UI
                     }
                     break;
                 case 4:
-                    if (currentKey == 4 && dragDirection == DragDirection.Down)
+                    if (currentKey == 4 && dragDirection == DragDirection.Up)
                     {
                         TentacleSuccess(index);
                         currentKey = 7;
@@ -171,7 +172,7 @@ namespace UI
                     if (currentKey == 7 && dragDirection == DragDirection.Up)
                     {
                         TentacleSuccess(index);
-                        SetState();
+                        currentKey = 2;
                     }
                     else
                     {
@@ -196,7 +197,7 @@ namespace UI
         }
 
 
-        private void SetState()
+        private void setState()
         {
             Debug.Log("success!");
             GestureHelper.CloseGestureUI(panel);
