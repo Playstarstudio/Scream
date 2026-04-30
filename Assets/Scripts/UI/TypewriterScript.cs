@@ -8,6 +8,8 @@ public class TypewriterScript : MonoBehaviour
     public string firstText;
     public string secondText;
 
+    public bool fadeOutText = true;
+
 
     private TMP_Text textBox;
     private int currentVisibleCharacterIndex;
@@ -100,7 +102,9 @@ public class TypewriterScript : MonoBehaviour
         }
 
         yield return new WaitForSeconds(onScreenTime);
-        StartFadeOut(1f);
+
+        if (fadeOutText)
+            StartFadeOut(1f);
     }
 
     private IEnumerator EventTypewriter(int charPerSecondMod)

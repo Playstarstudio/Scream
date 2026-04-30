@@ -13,6 +13,9 @@ public class KeyItem : MonoBehaviour, IInteractable
     [SerializeField] public Sprite sprite;
     private IInventory _inventory;
     public string textToRead;
+    public bool isZoomItem;
+
+    private NarrativeZoomScript zoomScript;
 
     private void Awake()
     {
@@ -20,6 +23,7 @@ public class KeyItem : MonoBehaviour, IInteractable
         if (sr == null ) sr = this.gameObject.AddComponent<SpriteRenderer>();
         if ( sprite != null ) sr.sprite = sprite;
         _inventory = FindFirstObjectByType<Inventory.Inventory>();
+        zoomScript = FindFirstObjectByType<NarrativeZoomScript>();
     }
 
     private void Start()
@@ -42,6 +46,9 @@ public class KeyItem : MonoBehaviour, IInteractable
             {
                 typewriterScript.SetText(textToRead);
             }
+
+            if (isZoomItem)
+                zoomScript.OpenZoomCanvas(sprite);
 
             Destroy(gameObject);
         }
