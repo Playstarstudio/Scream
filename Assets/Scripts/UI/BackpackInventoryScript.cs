@@ -8,6 +8,8 @@ namespace UI
         public DragGesture openDragGesture;
         public DragGesture closeDragGesture;
         public RectTransform inventory;
+        
+        private AudioManager audio;
 
         private float _animationDuration = 0.4f;
 
@@ -48,6 +50,8 @@ namespace UI
 
             inventory.anchoredPosition = _closedPosition;
             inventory.gameObject.SetActive(false);
+            
+            audio = AudioManager.Instance;
         }
 
         private void OnGesture(DragDirection dragDirection)
@@ -55,9 +59,10 @@ namespace UI
             Debug.Log("OnGesture: " + dragDirection);
             if (_isAnimating) return;
 
-            if (_isOpen && dragDirection == DragDirection.Down)
+            if (_isOpen && dragDirection == DragDirection.Down) 
                 SlideDown();
-            else if (dragDirection == DragDirection.Up)
+                
+            else if (dragDirection == DragDirection.Up) 
                 SlideUp();
         }
 
@@ -69,6 +74,7 @@ namespace UI
             inventory.gameObject.SetActive(true);
             if (_activeCoroutine != null) StopCoroutine(_activeCoroutine);
             _activeCoroutine = StartCoroutine(AnimateBackpack(_closedPosition, _openPosition));
+            audio.PlayOneShot(AudioID.SFX.Interface.Inventory.open);
         }
 
         private void SlideDown()
@@ -78,6 +84,7 @@ namespace UI
             closedCanvas.SetActive(true);
             if (_activeCoroutine != null) StopCoroutine(_activeCoroutine);
             _activeCoroutine = StartCoroutine(AnimateBackpack(_openPosition, _closedPosition));
+            audio.PlayOneShot(AudioID.SFX.Interface.Inventory.close);
         }
 
         private IEnumerator AnimateBackpack(Vector2 from, Vector2 to)

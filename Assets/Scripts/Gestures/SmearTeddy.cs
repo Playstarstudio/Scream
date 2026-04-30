@@ -11,7 +11,7 @@ namespace UI
         public GameObject panel;
         public GameObject teddy;
         
-        private new readonly AudioManager audio;
+        private AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey teddyDraggedStateKey;
@@ -25,6 +25,11 @@ namespace UI
         private void OnDisable()
         {
             TeddyDrag.OnGestureEnd -= OnTeddyDragGesture;
+        }
+        
+        private void Awake()
+        {
+            audio = AudioManager.Instance;
         }
 
         private void OnTeddyDragGesture(DragDirection dragDirection)
