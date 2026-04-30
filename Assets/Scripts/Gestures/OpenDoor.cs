@@ -38,7 +38,7 @@ namespace UI
         private void setState()
         {
             Debug.Log("success!");
-            panel.SetActive(false);
+            GestureHelper.CloseGestureUI(panel);
             if (doorOpenedStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(doorOpenedStateKey, true);

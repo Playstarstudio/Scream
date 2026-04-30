@@ -194,7 +194,7 @@ namespace UI
         private void setState()
         {
             Debug.Log("success!");
-            panel.SetActive(false);
+            GestureHelper.CloseGestureUI(panel);
 
             if (amuletRetrievedStateKey != null)
             {

@@ -154,13 +154,18 @@ public class CharacterMovement : MonoBehaviour
     }
 
 
+    private bool IsInputBlocked =>
+        HUDSingleton.Instance != null && HUDSingleton.Instance.IsGestureScreenOpen;
+
     private void Update()
     {
+        if (IsInputBlocked) return;
         ApplyDirection(_movementInput);
     }
 
     private void FixedUpdate()
     {
+        if (IsInputBlocked) return;
         Vector2 targetPosition = _rb.position + _movementInput * (_speed * Time.fixedDeltaTime);
         _rb.MovePosition(targetPosition);
     }

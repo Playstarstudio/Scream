@@ -1,60 +1,33 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GestureOpener : MonoBehaviour, IInteractable
 {
     public int InteractionPriority => 3;
     public bool CanInteract => true;
 
-    [Tooltip("The name of the UI panel GameObject to toggle when the player interacts.")]
+    [Tooltip("The name of the UI panel to toggle when the player interacts.")]
     public string uiPanelName;
-
-    private GameObject _uiPanel;
-
-    private void Start()
-    {
-        if (!string.IsNullOrEmpty(uiPanelName))
-        {
-            _uiPanel = FindInScene(uiPanelName);
-            if (_uiPanel == null)
-            {
-                Debug.LogWarning($"[GestureOpener] Could not find GameObject named '{uiPanelName}'.");
-            }
-        }
-    }
 
     public void Interact()
     {
-        if (_uiPanel == null) return;
+        Debug.Log($"[GestureOpener] Interact() called on {gameObject.name}, uiPanelName='{uiPanelName}'");
 
-        bool isActive = _uiPanel.activeInHierarchy;
-        _uiPanel.SetActive(!isActive);
-    }
-    
-    private static GameObject FindInScene(string objectName)
-    {
-        foreach (GameObject root in SceneManager.GetActiveScene().GetRootGameObjects())
+        var hud = HUDSingleton.Instance;
+        if (hud == null)
         {
-            if (root.name == objectName) return root;
-
-            Transform found = FindChildRecursive(root.transform, objectName);
-            if (found != null) return found.gameObject;
+            Debug.LogError("[GestureOpener] HUDSingleton.Instance is null!");
+            return;
         }
 
-        return null;
-    }
-
-    private static Transform FindChildRecursive(Transform parent, string objectName)
-    {
-        for (int i = 0; i < parent.childCount; i++)
+        if (hud.IsGestureScreenOpen)
         {
-            Transform child = parent.GetChild(i);
-            if (child.name == objectName) return child;
-
-            Transform found = FindChildRecursive(child, objectName);
-            if (found != null) return found;
+            Debug.Log("[GestureOpener] Gesture screen is open — closing.");
+            hud.CloseGestureScreen();
         }
-
-        return null;
+        else
+        {
+            Debug.Log($"[GestureOpener] Opening gesture screen: '{uiPanelName}'");
+            hud.OpenGestureScreen(uiPanelName);
+        }
     }
 }
