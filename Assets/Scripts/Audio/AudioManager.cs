@@ -47,6 +47,7 @@ public class AudioManager : MonoBehaviour
         KillAllBusInstances(AudioID.Bus.Master);
         Debug.Log($"AudioManager: Scene Change from {oldScene.name} to {newScene.name}");
         HandleMusicAmbienceChange(newScene);
+        PlayOneShot(AudioID.SFX.Interface.room_transition);
     }
 
     /// <summary>
