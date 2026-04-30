@@ -15,6 +15,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     public Canvas parentCanvas;
 
     public Image _image;
+    public Sprite hiResSprite;
     public GameObject invItem;
     public int invItemIndex;
     public bool isZoomItem;
@@ -42,7 +43,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (Keyboard.current.eKey.wasPressedThisFrame && isHovered)
         {
             NarrativeZoomScript zoomScript = FindFirstObjectByType<NarrativeZoomScript>();
-            zoomScript.OpenZoomCanvas(_image.sprite);
+            zoomScript.OpenZoomCanvas(hiResSprite);
         }
     }
 
@@ -114,6 +115,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         invItem = item;
         _image.sprite = invItem.GetComponent<SpriteRenderer>().sprite;
         invItemIndex = index;
+        isZoomItem = item.GetComponent<KeyItem>().isZoomItem;
+        hiResSprite = item.GetComponent<KeyItem>().hiResSprite;
     }
 
     public void RemoveItem()
