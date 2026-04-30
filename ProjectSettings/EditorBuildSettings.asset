@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 89b8895072e525d46a49266ae6696b6d
+  - enabled: 1
     path: Assets/Scenes/Outside.unity
     guid: 4a404dbf88c5172488b0a3a3af5a1d35
   - enabled: 1
@@ -26,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TentacleRoom.unity
     guid: 82002b633ea60f44084e5d71246ffaa8
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 05e3f018f50867e48b2868213c3e0556
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
