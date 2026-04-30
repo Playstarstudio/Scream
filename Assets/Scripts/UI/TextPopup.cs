@@ -21,6 +21,7 @@ public class TextPopup : MonoBehaviour
     private float _targetAlpha = 0f;
     bool _fading = false;
 
+    [SerializeField]
     private SpriteRenderer sr;
     private Material startMaterial;
     public Material outlineMaterial;
@@ -28,7 +29,7 @@ public class TextPopup : MonoBehaviour
 
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        if (!sr) sr = GetComponent<SpriteRenderer>();
         startMaterial = sr.material;
 
         _fading = false;
