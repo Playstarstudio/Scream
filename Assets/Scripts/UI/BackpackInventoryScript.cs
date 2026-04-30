@@ -28,6 +28,7 @@ namespace UI
 
         public GameObject closedCanvas;
         public GameObject openCanvas;
+        public RectTransform lantern;
 
         private void OnEnable()
         {
@@ -83,6 +84,7 @@ namespace UI
 
         private void SlideDown()
         {
+            lantern.anchoredPosition = new Vector2(0,0);
             _isOpen = false;
             openCanvas.SetActive(false);
             closedCanvas.SetActive(true);
