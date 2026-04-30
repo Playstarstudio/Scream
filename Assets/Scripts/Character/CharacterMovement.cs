@@ -181,7 +181,7 @@ public class CharacterMovement : MonoBehaviour
     // TODO: Implement footsteps
     private void HandleFootstepSound(Vector2 direction)
     {
-        Debug.Log(_stepTimer);
+        // Debug.Log(_stepTimer);
         
         if (Time.timeScale > 0 && direction.magnitude > 0 && _stepTimer < 0)
         {

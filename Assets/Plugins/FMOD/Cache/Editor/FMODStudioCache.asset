@@ -405,10 +405,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/gameplay_sfx.bank
   Name: gameplay_sfx
   StudioPath: bank:/gameplay_sfx
-  lastModified: 639130809805921698
+  lastModified: 639130982776447066
   FileSizes:
   - Name: Desktop
-    Value: 10247392
+    Value: 10253408
   Exists: 1
 --- !u!114 &-4106128480164914531
 MonoBehaviour:
@@ -679,6 +679,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16000
+--- !u!114 &-386124711155837506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/bedroom
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/bedroom
+  Guid:
+    Data1: -1037030200
+    Data2: 1276866835
+    Data3: -698894424
+    Data4: -2048480823
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1999
 --- !u!114 &-173443437999085184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +747,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639130809806321762
+  lastModified: 639130981609853630
   FileSizes:
   - Name: Desktop
     Value: 33408
@@ -793,6 +820,9 @@ MonoBehaviour:
   - {fileID: 1063368023655550436}
   - {fileID: 1786754176438467588}
   - {fileID: 803219373563793165}
+  - {fileID: 4423274715772498580}
+  - {fileID: 4431370400086539657}
+  - {fileID: -386124711155837506}
   EditorParameters:
   - {fileID: 8545453521984738752}
   - {fileID: -173443437999085184}
@@ -801,7 +831,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8099864925913319225}
   cacheVersion: 131859
-  cacheTime: 639130809806341766
+  cacheTime: 639130982776447066
   SerializableEventsDict:
   - key: event:/player/interact/match/place
     index: 0
@@ -901,6 +931,12 @@ MonoBehaviour:
     index: 47
   - key: event:/ui/room_transition
     index: 48
+  - key: event:/ambience/kitchen
+    index: 49
+  - key: event:/ambience/altar
+    index: 50
+  - key: event:/ambience/bedroom
+    index: 51
 --- !u!114 &177375763224750830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,6 +1398,60 @@ MonoBehaviour:
   - altar
   - tentacle
   Exists: 1
+--- !u!114 &4423274715772498580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/kitchen
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/kitchen
+  Guid:
+    Data1: -555936393
+    Data2: 1332693302
+    Data3: -2107186248
+    Data4: -1406617902
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1999
+--- !u!114 &4431370400086539657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/altar
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/altar
+  Guid:
+    Data1: 667060625
+    Data2: 1325460779
+    Data3: -382245459
+    Data4: -9684132
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1999
 --- !u!114 &4795824668272670850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,10 +1815,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639130809806341766
+  lastModified: 639130981609873627
   FileSizes:
   - Name: Desktop
-    Value: 4108
+    Value: 4220
   Exists: 1
 --- !u!114 &8545453521984738752
 MonoBehaviour:
