@@ -16,21 +16,61 @@ PrefabInstance:
       propertyPath: startingDragDirection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2646990853426224349, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1762600211799945471, guid: 68943b53c4cd7fc4f93779a8b2f5046a, type: 3}
+    - target: {fileID: 2646990853426224349, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 253.39
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.625
       objectReference: {fileID: 0}
+    - target: {fileID: 4543798089781892089, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.75
+      objectReference: {fileID: 0}
     - target: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Name
       value: Kill_Teddy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5109943187926198655, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109943187926198655, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9148759009503459462, guid: 092d017893315d5489359fddcfe3a4c2, type: 3}
     - target: {fileID: 6505391448576955776, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Name
       value: Teddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192053744094595512, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6764707825347140516, guid: 333687eddb9704245add7c3ada46fab2, type: 3}
+    - target: {fileID: 8510814603445857496, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510814603445857496, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510814603445857496, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 366.5625
       objectReference: {fileID: 0}
     - target: {fileID: 8743802675685575034, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Pivot.x
