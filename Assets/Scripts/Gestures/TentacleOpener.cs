@@ -186,6 +186,7 @@ namespace UI
         private void TentacleSuccess(int index)
         {
             //One tentacle opens
+            _audio.PlayOneShot(AudioID.SFX.Player.Interact.Tentacle.pull, GameObject.Find("Character"));
             Closed_Tentacles[index].SetActive(false);
             Open_Tentacles[index].SetActive(true);
         }
@@ -234,6 +235,8 @@ namespace UI
                 if (Closed_Tentacles[index].activeInHierarchy == false)
                 {
                     //each tentacle closes HERE
+
+                    //several individual sounds
                     Closed_Tentacles[index].SetActive(true);
                     Open_Tentacles[index].SetActive(false);
                     yield return new WaitForSeconds(.03f);
