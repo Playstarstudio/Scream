@@ -211,4 +211,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb67fc3856886394292a649abb962a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GestureOpener
-  uiPanelName: 
+  uiPanelName: Tentacle_Amulet
