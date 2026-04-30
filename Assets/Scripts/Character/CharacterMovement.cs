@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEditor.Rendering.LookDev;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 _movementInput;
     private Transform _transform;
     private Rigidbody2D _rb;
+    private Animator animator;
 
     public event EventHandler<EventArgs> InteractPressed;
     public void OnInteractPressed(EventArgs e)
@@ -66,6 +68,7 @@ public class CharacterMovement : MonoBehaviour
         if (InteractPressed != null)
         {
             InteractPressed(this, e);
+
         }
     }
 
@@ -127,6 +130,7 @@ public class CharacterMovement : MonoBehaviour
         _lanternTransform = transform.Find("Lantern");
         _lanternLightTransform = _lanternTransform.Find("LanternDirectionalLight");
         audio = AudioManager.Instance;
+        animator = GetComponent<Animator>();
 
         looks = new Dictionary<Vector2, DirectionInfo>()
         {
@@ -159,7 +163,25 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
+        /*
+        if (context.canceled)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetFloat("LastInputX", _movementInput.x);
+            animator.SetFloat("LastInputY", _movementInput.y);
+        }
+        */
+
+        if (_movementInput.magnitude > 0.01f)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+            animator.SetBool("isWalking", false);
+
         ApplyDirection(_movementInput);
+        animator.SetFloat("InputX", _movementInput.x);
+        animator.SetFloat("InputY", _movementInput.y);
     }
 
     private void FixedUpdate()
