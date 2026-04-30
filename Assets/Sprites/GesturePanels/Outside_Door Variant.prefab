@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside_Door Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6505391448576955776, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Name
       value: Key
@@ -184,16 +188,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   doorOpenGesture: {fileID: 1514223291099452342}
   panel: {fileID: 3967187230328066963}
-  key: {fileID: 5980753124615109032}
-  door: {fileID: 8389196455866489320}
+  keyObject: {fileID: 5980753124615109032}
   doorOpenedStateKey: {fileID: 11400000, guid: 8c1873b3e876e7141995fb6b6d66cb35, type: 2}
+  keyConsumedStateKey: {fileID: 11400000, guid: 223544906db771f4c86b7cae3385f938, type: 2}
 --- !u!1 &5980753124615109032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6505391448576955776, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
-  m_PrefabInstance: {fileID: 628300843161398312}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8389196455866489320 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8994891266656695744, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
   m_PrefabInstance: {fileID: 628300843161398312}
   m_PrefabAsset: {fileID: 0}

@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5921948011574437582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   itemId: 2
   sprite: {fileID: 21300000, guid: ed0aaaf0b9ef4f544a53b0b2cb0c62f5, type: 3}
   textToRead: A ritual candle. Always found at scenes such as these.
+  isZoomItem: 0
+  consumedStateKey: {fileID: 11400000, guid: c477358be6dd03444884d805819f30d3, type: 2}
 --- !u!212 &1753025402600952593
 SpriteRenderer:
   m_ObjectHideFlags: 0

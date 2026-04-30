@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ritual_Match_Candle Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821706818191984920, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: enabledDragDirections
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821706818191984920, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: startingDragDirection
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8743802675685575034, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -96,5 +108,62 @@ PrefabInstance:
     - {fileID: 9047078946721549661, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2970479954222767334}
   m_SourcePrefab: {fileID: 100100000, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+--- !u!114 &498498344412234220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7821706818191984920, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 7667182045065005300}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2848545475377087249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
+--- !u!1 &1635660442595474740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8994891266656695744, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 7667182045065005300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2848545475377087249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5615808922536348645, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 7667182045065005300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3467919582911618420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6505391448576955776, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 7667182045065005300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6183766642125141839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+  m_PrefabInstance: {fileID: 7667182045065005300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2970479954222767334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183766642125141839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710f39faa4e3aae4e85769c801c8f23f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.FirstAltarGestureScript
+  openMatchesDragGesture: {fileID: 0}
+  closeMatchesDragGesture: {fileID: 498498344412234220}
+  lightMatchesDragGesture: {fileID: 498498344412234220}
+  panel: {fileID: 6183766642125141839}
+  closedMatches: {fileID: 3467919582911618420}
+  openMatches: {fileID: 2848545475377087249}
+  matchObject: {fileID: 3467919582911618420}
+  candleObject: {fileID: 1635660442595474740}
+  matchesLitStateKey: {fileID: 11400000, guid: 0031ce4e6edd9a747aacdf495ddb10cf, type: 2}
+  matchesConsumedStateKey: {fileID: 11400000, guid: 9c51fd79a388d884280c1ed22f144b7f, type: 2}
+  candleConsumedStateKey: {fileID: 11400000, guid: c477358be6dd03444884d805819f30d3, type: 2}

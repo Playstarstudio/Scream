@@ -201,11 +201,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8948000371097111609}
   m_SourcePrefab: {fileID: 100100000, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
---- !u!1 &2952678336492105522 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8994891266656695744, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
-  m_PrefabInstance: {fileID: 6065856935600560882}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3275940513535415176 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8743802675685575034, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
@@ -228,7 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 256ae8cd074501e4983be135a1f5961e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  amuletPlaceGesture: {fileID: 0}
   panel: {fileID: 7752994257858897225}
-  candle: {fileID: 2952678336492105522}
-  amulet: {fileID: 8886662455971943971}
-  amuletPlaced: {fileID: 11400000, guid: e8ce793a5ae34a140a2ffd791077526a, type: 2}
+  amuletObject: {fileID: 8886662455971943971}
+  amuletPlacedStateKey: {fileID: 11400000, guid: e8ce793a5ae34a140a2ffd791077526a, type: 2}
+  amuletConsumedStateKey: {fileID: 11400000, guid: b4671cec671dc734e8e1d50bd6243b6a, type: 2}
