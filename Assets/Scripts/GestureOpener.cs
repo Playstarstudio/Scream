@@ -6,7 +6,7 @@ using UnityEngine;
 public class GestureOpener : MonoBehaviour, IInteractable
 {
     public int InteractionPriority => 3;
-    public bool CanInteract => true;
+    public bool CanInteract => !string.IsNullOrEmpty(EvaluatePanels());
 
     [Serializable]
     public struct StateCondition
