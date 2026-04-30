@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1316339476567672014}
   - component: {fileID: 5150892533671843748}
   - component: {fileID: 5814282816456885090}
+  - component: {fileID: 3237354401508811751}
   m_Layer: 0
   m_Name: S_TR_Tentacle_Mound_v1
   m_TagString: Untagged
@@ -176,7 +177,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -198,3 +199,16 @@ PolygonCollider2D:
       - {x: -0.796875, y: 0.515625}
       - {x: 0.171875, y: 0.453125}
   m_UseDelaunayMesh: 0
+--- !u!114 &3237354401508811751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6199253786853826793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb67fc3856886394292a649abb962a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestureOpener
+  uiPanelName: 

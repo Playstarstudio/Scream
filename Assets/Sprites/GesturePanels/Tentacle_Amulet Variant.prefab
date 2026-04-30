@@ -91,8 +91,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 0
-  startingDragDirection: 0
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &811433296861245260
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,8 +184,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 0
-  startingDragDirection: 0
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &913403829912208856
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -171.375, y: 6.71875}
+  m_AnchoredPosition: {x: -277.6875, y: 6.71875}
   m_SizeDelta: {x: 100, y: 93.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6502871546563154285
@@ -352,8 +352,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 0
-  startingDragDirection: 0
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &2540711963468238462
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.59375, y: -165.03125}
+  m_AnchoredPosition: {x: 5.59375, y: -216.96875}
   m_SizeDelta: {x: 100, y: 93.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3714808596597907789
@@ -463,7 +463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 148.75, y: -115.59375}
+  m_AnchoredPosition: {x: 193.25, y: -162.5625}
   m_SizeDelta: {x: 100, y: 93.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1448901823406900351
@@ -595,8 +595,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 0
-  startingDragDirection: 0
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &4569819247801432521
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.9375, y: 142.0625}
+  m_AnchoredPosition: {x: -196.75, y: 189.03125}
   m_SizeDelta: {x: 100, y: 93.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9016590214530228059
@@ -706,7 +706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.8125, y: 173.28125}
+  m_AnchoredPosition: {x: 10.8125, y: 227.6875}
   m_SizeDelta: {x: 100, y: 93.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9138212284543961406
@@ -781,7 +781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.3125, y: -97.375}
+  m_AnchoredPosition: {x: -158.25, y: -149.3125}
   m_SizeDelta: {x: 100, y: 93.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7475579970164256485
@@ -913,8 +913,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 0
-  startingDragDirection: 0
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &6775274431598570619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,8 +1006,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 0
-  startingDragDirection: 0
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &7912854203117341158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,8 +1099,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 0
-  startingDragDirection: 0
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &8317655538442704532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.71875, y: 113.4375}
+  m_AnchoredPosition: {x: 197.53125, y: 153}
   m_SizeDelta: {x: 100, y: 93.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2826645759540766098
@@ -1267,8 +1267,8 @@ MonoBehaviour:
   moveTransformWithGesture: 0
   persistTransformWithGesture: 0
   dragDistance: 100
-  enabledDragDirections: 0
-  startingDragDirection: 0
+  enabledDragDirections: 1
+  startingDragDirection: 2
 --- !u!1 &9053754996038558596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 229.4375, y: 6.71875}
+  m_AnchoredPosition: {x: 293.71875, y: 6.71875}
   m_SizeDelta: {x: 100, y: 93.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2642659467615935514
