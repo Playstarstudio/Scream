@@ -1,5 +1,5 @@
 using Services;
-using System;
+using System.Collections;
 using UnityEngine;
 
 namespace UI
@@ -19,8 +19,9 @@ namespace UI
         public DragGesture Tentacle_8_Gesture;
         public GameObject[] Closed_Tentacles;
         public GameObject[] Open_Tentacles;
-        public int currentKey = 1;
-        
+        public int currentKey = 0;
+        private bool reset = false;
+
         private new readonly AudioManager audio;
 
         [Header("Game State")]
@@ -54,12 +55,6 @@ namespace UI
         private void OnTentacle_1_Gesture(DragDirection dragDirection)
         {
             int index = 0;
-            if (currentKey == 1 && dragDirection == DragDirection.Up)
-            {
-                Closed_Tentacles[0].SetActive(false);
-                Open_Tentacles[0].SetActive(true);
-            }
-            
             // TODO: Add tentacle sounds once this is implemented
             // audio.PlayOneShot(AudioID.SFX.Player.Interact.Tentacle.pull, GameObject.Find("Character"));
             CheckTentacles(index, dragDirection);
@@ -124,10 +119,9 @@ namespace UI
                     TentacleFail();
                     break;
                 case 2:
-                    if (currentKey == 0 && dragDirection == DragDirection.Up)
+                    if (currentKey == 2 && dragDirection == DragDirection.Up)
                     {
-                        TentacleSuccess(index);
-                        currentKey = 3;
+                        setState();
                     }
                     else
                     {
@@ -179,18 +173,15 @@ namespace UI
 
         private void TentacleSuccess(int index)
         {
+            //One tentacle opens
             Closed_Tentacles[index].SetActive(false);
             Open_Tentacles[index].SetActive(true);
         }
         private void TentacleFail()
         {
-            int index = 0;
-            foreach(var tindex in Closed_Tentacles)
-            {
-                Closed_Tentacles[index].SetActive(true);
-                Open_Tentacles[index].SetActive(true);
-                index++;
-            }
+            //all tentacles snap shut together
+            currentKey = 0;
+            StartCoroutine(TentacleResetter());
         }
 
 
@@ -204,6 +195,23 @@ namespace UI
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(amuletRetrievedStateKey, true);
                 audio.PlayOneShot(AudioID.SFX.Player.Interact.Amulet.pick_up, GameObject.Find("Character"));
             }
+        }
+
+        IEnumerator TentacleResetter()
+        {
+            int index = 0;
+            foreach (var tindex in Closed_Tentacles)
+            {
+                if (Closed_Tentacles[index].activeInHierarchy == false)
+                {
+                    //each tentacle closes HERE
+                    Closed_Tentacles[index].SetActive(true);
+                    Open_Tentacles[index].SetActive(false);
+                    yield return new WaitForSeconds(.03f);
+                }
+                index++;
+            }
+            reset = true;
         }
     }
 }
