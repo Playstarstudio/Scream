@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4786373343661438305}
   - component: {fileID: 2041175600844860153}
   - component: {fileID: 5921948011574437582}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: S_KeyItem_RedCandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 1753025402600952593}
   - component: {fileID: 6595246104436644268}
   - component: {fileID: 7559105845877565441}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: KeyItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ed0aaaf0b9ef4f544a53b0b2cb0c62f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 895418524236254423}
   - component: {fileID: 2526773862881393299}
   - component: {fileID: 4112434618388115518}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InteractTextFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 5236432251264821962}
   - component: {fileID: 321424414361965785}
   - component: {fileID: 6650336896236470485}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InteractTextOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
