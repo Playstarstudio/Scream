@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{13bc5c54-ba2b-4c2b-92a2-f38f0b04fc74}">
 		<property name="assetPath">
-			<value>player/interact/sfx_p_act_typewriter_type_7.wav</value>
+			<value>ui/sfx_ui_typewriter_type_7.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

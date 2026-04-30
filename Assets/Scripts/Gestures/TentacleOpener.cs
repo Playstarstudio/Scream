@@ -1,5 +1,5 @@
 using Services;
-using System;
+using System.Collections;
 using UnityEngine;
 
 namespace UI
@@ -19,12 +19,15 @@ namespace UI
         public DragGesture Tentacle_8_Gesture;
         public GameObject[] Closed_Tentacles;
         public GameObject[] Open_Tentacles;
-        public int currentKey = 1;
+        public int currentKey = 0;
+        private bool reset = false;
+
+        private AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey amuletRetrievedStateKey;
 
-        // 1 4 5 8 3
+        // 1 4 5 8 3 - or 0 3 4 7 2
         private void OnEnable()
         {
             Tentacle_1_Gesture.OnGestureEnd += OnTentacle_1_Gesture;
@@ -49,58 +52,145 @@ namespace UI
             Tentacle_7_Gesture.OnGestureEnd -= OnTentacle_7_Gesture;
             Tentacle_8_Gesture.OnGestureEnd -= OnTentacle_8_Gesture;
         }
+        
+        private void Awake()
+        {
+            audio = AudioManager.Instance;
+        }
+        
         private void OnTentacle_1_Gesture(DragDirection dragDirection)
         {
             int index = 0;
-            if (currentKey == 1 && dragDirection == DragDirection.Up)
-            {
-                Closed_Tentacles[0].SetActive(false);
-                Open_Tentacles[0].SetActive(true);
-            }
+            // TODO: Add tentacle sounds once this is implemented
+            // audio.PlayOneShot(AudioID.SFX.Player.Interact.Tentacle.pull, GameObject.Find("Character"));
+            CheckTentacles(index, dragDirection);
         }
 
         private void OnTentacle_2_Gesture(DragDirection dragDirection)
         {
-            throw new NotImplementedException();
+            int index = 1;
+            CheckTentacles(index, dragDirection);
         }
-
         private void OnTentacle_3_Gesture(DragDirection dragDirection)
         {
-            throw new NotImplementedException();
+            int index = 2;
+            CheckTentacles(index, dragDirection);
         }
 
         private void OnTentacle_4_Gesture(DragDirection dragDirection)
         {
-            throw new NotImplementedException();
+            int index = 3;
+            CheckTentacles(index, dragDirection);
         }
 
         private void OnTentacle_5_Gesture(DragDirection dragDirection)
         {
-            throw new NotImplementedException();
+            int index = 4;
+            CheckTentacles(index, dragDirection);
         }
 
         private void OnTentacle_6_Gesture(DragDirection dragDirection)
         {
-            throw new NotImplementedException();
+            int index = 5;
+            CheckTentacles(index, dragDirection);
         }
 
         private void OnTentacle_7_Gesture(DragDirection dragDirection)
         {
-            throw new NotImplementedException();
+            int index = 6;
+            CheckTentacles(index, dragDirection);
         }
 
         private void OnTentacle_8_Gesture(DragDirection dragDirection)
         {
-            throw new NotImplementedException();
+            int index = 7;
+            CheckTentacles(index, dragDirection);
         }
-
-
-        private void OnDoorOpenGesture(DragDirection dragDirection)
+        private void CheckTentacles(int index, DragDirection dragDirection)
         {
-            if (dragDirection == DragDirection.Down)
-                setState();
-            
+            switch (index)
+            {
+                case 0:
+                    if (currentKey == 0 && dragDirection == DragDirection.Up)
+                    {
+                        TentacleSuccess(index);
+                        currentKey = 3;
+                    }
+                    else
+                    {
+                        TentacleFail();
+                    }
+                    break;
+                case 1:
+                    TentacleFail();
+                    break;
+                case 2:
+                    if (currentKey == 2 && dragDirection == DragDirection.Up)
+                    {
+                        setState();
+                    }
+                    else
+                    {
+                        TentacleFail();
+                    }
+                    break;
+                case 3:
+                    if (currentKey == 3 && dragDirection == DragDirection.Up)
+                    {
+                        TentacleSuccess(index);
+                        currentKey = 4;
+                    }
+                    else
+                    {
+                        TentacleFail();
+                    }
+                    break;
+                case 4:
+                    if (currentKey == 4 && dragDirection == DragDirection.Up)
+                    {
+                        TentacleSuccess(index);
+                        currentKey = 7;
+                    }
+                    else
+                    {
+                        TentacleFail();
+                    }
+                    break;
+                case 5:
+                    TentacleFail();
+                    break;
+                case 6:
+                    TentacleFail();
+                    break;
+                case 7:
+                    if (currentKey == 7 && dragDirection == DragDirection.Up)
+                    {
+                        TentacleSuccess(index);
+                        currentKey = 2;
+                    }
+                    else
+                    {
+                        TentacleFail();
+                    }
+                    break;
+
+            }
         }
+
+        private void TentacleSuccess(int index)
+        {
+            //One tentacle opens
+            Closed_Tentacles[index].SetActive(false);
+            Open_Tentacles[index].SetActive(true);
+        }
+        private void TentacleFail()
+        {
+            //all tentacles snap shut together
+            currentKey = 0;
+            StartCoroutine(TentacleResetter());
+        }
+
+
         private void setState()
         {
             Debug.Log("success!");
@@ -109,7 +199,25 @@ namespace UI
             if (amuletRetrievedStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(amuletRetrievedStateKey, true);
+                audio.PlayOneShot(AudioID.SFX.Player.Interact.Amulet.pick_up, GameObject.Find("Character"));
             }
+        }
+
+        IEnumerator TentacleResetter()
+        {
+            int index = 0;
+            foreach (var tindex in Closed_Tentacles)
+            {
+                if (Closed_Tentacles[index].activeInHierarchy == false)
+                {
+                    //each tentacle closes HERE
+                    Closed_Tentacles[index].SetActive(true);
+                    Open_Tentacles[index].SetActive(false);
+                    yield return new WaitForSeconds(.03f);
+                }
+                index++;
+            }
+            reset = true;
         }
     }
 }

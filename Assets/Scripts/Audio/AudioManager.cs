@@ -29,6 +29,11 @@ public class AudioManager : MonoBehaviour
         }
         
         registry = new Dictionary<string, EventInstance>();
+        // RuntimeManager.LoadBank("Master.strings");
+        // RuntimeManager.LoadBank("Master");
+        // RuntimeManager.LoadBank("gameplay_sfx");
+        // RuntimeManager.LoadBank("ui_sfx");
+        // RuntimeManager.LoadBank("music");
     }
 
     void OnEnable()
@@ -44,7 +49,6 @@ public class AudioManager : MonoBehaviour
     void OnSceneChange(Scene oldScene, Scene newScene)
     {
         KillAllBusInstances(AudioID.Bus.Master);
-        registry.Clear();
     }
 
     /// <summary>
@@ -305,6 +309,15 @@ public class AudioManager : MonoBehaviour
         instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         instance.release();
     }
+    
+    public void HandleMusicAmbienceChange(Scene newScene)
+    {
+        AudioID newMusic = AudioID.SceneToMusicAmbienceMap[newScene.name]["music"];
+        AudioID newAmbience = AudioID.SceneToMusicAmbienceMap[newScene.name]["ambience"];
+        
+        if (newMusic.ToString() != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic}", null, -1); }
+        if (newAmbience.ToString() != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience}", null, -1); }
+    }
 
     /// <summary>
     /// Kill an FMOD event instance identified by key and remove it from registry
@@ -339,7 +352,7 @@ public class AudioManager : MonoBehaviour
     public void KillAllBusInstances(AudioID id)
     {
         Bus bus = RuntimeManager.GetBus(id.Path);
-        bus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        bus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
     
     /// <summary>

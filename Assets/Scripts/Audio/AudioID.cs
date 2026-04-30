@@ -3,6 +3,8 @@
     Categorizes FMOD event paths with simple static classes for organization and x.y.z type reference.
 */
 
+using System.Collections.Generic;
+
 public sealed class AudioID
 {
     public string Path { get; } // Read only
@@ -11,6 +13,16 @@ public sealed class AudioID
     {
         Path = path;
     }
+    
+    public static readonly Dictionary<string, Dictionary<string, AudioID>> SceneToMusicAmbienceMap = new()
+    {
+        { "AltarRoom",      new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.general}} },
+        { "Bedroom",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.general}} },
+        { "Foyer",          new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.foyer}} },
+        { "Kitchen",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.general}} },
+        { "TentacleRoom",   new(){{"music", Music.eldritch},    {"ambience", SFX.Ambience.tentacle}} },
+        { "Title",          new(){{"music", Music.title},       {"ambience", new("")}} }
+    };
     
     #region Busses
     public static class Bus
@@ -58,7 +70,6 @@ public sealed class AudioID
                 public static readonly AudioID flash = new("event:/environment/stinger/flash");
                 public static readonly AudioID ritual_powering_up = new("event:/environment/stinger/ritual_powering_up");
                 public static readonly AudioID scary_stinger = new("event:/environment/stinger/scary_stinger");
-                public static readonly AudioID game_over = new("event:/environment/stinger/game_over");
             }
         }
         
@@ -90,6 +101,7 @@ public sealed class AudioID
             
             public static readonly AudioID room_transition = new("event:/ui/room_transition");
             public static readonly AudioID highlight = new("event:/ui/highlight");
+            public static readonly AudioID typewriter = new("event:/ui/typewriter");
         }
         
         public static class Player // spatial player sfx
@@ -139,17 +151,14 @@ public sealed class AudioID
                 {
                     public static readonly AudioID pull = new("event:/player/interact/tentacle/pull");
                 }
-                
-                public static class Typewriter
-                {
-                    public static readonly AudioID type = new("event:/player/interact/typewriter/type");
-                }
             }
             
             public static class Movement
             {
                 public static readonly AudioID footsteps = new("event:/player/movement/footsteps");
             }
+            
+            public static readonly AudioID death = new("event:/player/death");
         }
         
         public static class Test

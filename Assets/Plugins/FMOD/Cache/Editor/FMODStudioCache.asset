@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9118175162008524722
+--- !u!114 &-9135514349995658961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,24 +10,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/candle/place
+  m_Name: event:/player/interact/tentacle/pull
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/candle/place
+  Path: event:/player/interact/tentacle/pull
   Guid:
-    Data1: 366077405
-    Data2: 1225457521
-    Data3: -98031438
-    Data4: -2019313671
+    Data1: 696334708
+    Data2: 1099707002
+    Data3: -1122708816
+    Data4: -793311680
   Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -4215851267012118431}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7992576702030954477
+--- !u!114 &-8524125900425080112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/environment/stinger/cabin_shaking
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/environment/stinger/cabin_shaking
+  Guid:
+    Data1: -371785328
+    Data2: 1329832802
+    Data3: -13959759
+    Data4: -926788307
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3959
+--- !u!114 &-7719053334681461590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,17 +64,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/ui_sfx.bank
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639129879914308205
+  Path: Assets/FMOD/Build/Desktop/ui_sfx.bank
+  Name: ui_sfx
+  StudioPath: bank:/ui_sfx
+  lastModified: 639130808703138493
   FileSizes:
   - Name: Desktop
-    Value: 3348
+    Value: 155648
   Exists: 1
---- !u!114 &-7038509203256346063
+--- !u!114 &-7489200436987320499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,24 +84,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/domestic_room_verb
+  m_Name: event:/tests/testOneShotSpatialized
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: snapshot:/domestic_room_verb
+  Path: event:/tests/testOneShotSpatialized
   Guid:
-    Data1: -506262642
-    Data2: 1319890519
-    Data3: 427500974
-    Data4: -888006609
+    Data1: -1757740878
+    Data2: 1188877735
+    Data3: 1440622508
+    Data4: 203042031
   Banks:
-  - {fileID: 1320257542277578049}
+  - {fileID: -147046140891050852}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-7008966877105472836
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 761
+--- !u!114 &-7295536977005985741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,16 +111,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/amulet/pick_up
+  m_Name: event:/music/fakeout
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/amulet/pick_up
+  Path: event:/music/fakeout
   Guid:
-    Data1: 1097328340
-    Data2: 1335499550
-    Data3: -813476171
-    Data4: -164988651
+    Data1: -1355225714
+    Data2: 1157434218
+    Data3: -1899630202
+    Data4: 940062336
   Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -6156853020608586322}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28004
+--- !u!114 &-6484257690408981902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/inventory/unselect
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/inventory/unselect
+  Guid:
+    Data1: 1091973450
+    Data2: 1140117480
+    Data3: 541636253
+    Data4: -1983888995
+  Banks:
+  - {fileID: -7719053334681461590}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -101,7 +155,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6745520005360636124
+--- !u!114 &-6478898576755418053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,24 +165,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/door/locked
+  m_Name: event:/player/interact/door/open
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/door/locked
+  Path: event:/player/interact/door/open
   Guid:
-    Data1: 1795497963
-    Data2: 1153724891
-    Data3: 1320020106
-    Data4: 147591437
+    Data1: 939048141
+    Data2: 1209725169
+    Data3: 826912388
+    Data4: -884613399
   Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -4215851267012118431}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6557916460637585189
+--- !u!114 &-6156853020608586322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,25 +191,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/lantern/turn_knob_down
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/lantern/turn_knob_down
-  Guid:
-    Data1: 749369146
-    Data2: 1123564246
-    Data3: 95684796
-    Data4: 1188401057
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6135750646737928947
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/music.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/FMOD/Build/Desktop/music.bank
+  Name: music
+  StudioPath: bank:/music
+  lastModified: 639130244463506154
+  FileSizes:
+  - Name: Desktop
+    Value: 2649888
+  Exists: 1
+--- !u!114 &-5605925291393245317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/exploration/inDomestic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: inDomestic
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1199168207
+    data2: 3100102243
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - false
+  - true
+  Exists: 1
+--- !u!114 &-5365931073016018129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +247,7 @@ MonoBehaviour:
     Data3: 1857626551
     Data4: -413922951
   Banks:
-  - {fileID: 1052751905146328578}
+  - {fileID: -6156853020608586322}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -182,7 +255,351 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 62000
---- !u!114 &-5708801035332211661
+--- !u!114 &-4876892329913557170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/outdoors
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/outdoors
+  Guid:
+    Data1: -2134509062
+    Data2: 1322044970
+    Data3: -1354139751
+    Data4: 678273457
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 55000
+--- !u!114 &-4580649676220220434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/inventory/open
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/inventory/open
+  Guid:
+    Data1: -2030527408
+    Data2: 1138822020
+    Data3: -1319108931
+    Data4: 534671044
+  Banks:
+  - {fileID: -7719053334681461590}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4536935121969129804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/teddy_bear/smear
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/teddy_bear/smear
+  Guid:
+    Data1: 84282227
+    Data2: 1277046010
+    Data3: 190543290
+    Data4: -2066306003
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-4317159977951265805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/amulet/place
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/amulet/place
+  Guid:
+    Data1: 1691515042
+    Data2: 1305146501
+    Data3: -916791417
+    Data4: 1651582239
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 750
+--- !u!114 &-4232531772848116865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/environment/stinger/jumpscare
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/environment/stinger/jumpscare
+  Guid:
+    Data1: -1625778180
+    Data2: 1329123063
+    Data3: 1031785866
+    Data4: -212194060
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4215851267012118431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/gameplay_sfx.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/FMOD/Build/Desktop/gameplay_sfx.bank
+  Name: gameplay_sfx
+  StudioPath: bank:/gameplay_sfx
+  lastModified: 639130809805921698
+  FileSizes:
+  - Name: Desktop
+    Value: 10247392
+  Exists: 1
+--- !u!114 &-4106128480164914531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/environment/stinger/flash
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/environment/stinger/flash
+  Guid:
+    Data1: 1575320515
+    Data2: 1228417278
+    Data3: 1308397972
+    Data4: 1664741825
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3993052864216116687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/door/knob_turn
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/door/knob_turn
+  Guid:
+    Data1: -1449265033
+    Data2: 1216158677
+    Data3: -486986862
+    Data4: 89696594
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3709079369469449856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/inventory/close
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/inventory/close
+  Guid:
+    Data1: -1355638663
+    Data2: 1161577084
+    Data3: -892155245
+    Data4: 1827970369
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3393673390290080006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/candle/place
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/candle/place
+  Guid:
+    Data1: 366077405
+    Data2: 1225457521
+    Data3: -98031438
+    Data4: -2019313671
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3007980452022365085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/typewriter
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/typewriter
+  Guid:
+    Data1: -1985383536
+    Data2: 1207787135
+    Data3: 182502824
+    Data4: 1259096555
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2908979437726716598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/lantern/turn_knob_up
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/lantern/turn_knob_up
+  Guid:
+    Data1: -1302861974
+    Data2: 1222101707
+    Data3: 1131719856
+    Data4: -1192745945
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2795491724507892824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/foyer
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/foyer
+  Guid:
+    Data1: -1586114271
+    Data2: 1321135649
+    Data3: -1118099836
+    Data4: 1912750453
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 85000
+--- !u!114 &-797333438252874776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,7 +623,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-3822292273723686251
+--- !u!114 &-553670793498576476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,24 +633,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/door/knob_turn
+  m_Name: event:/tests/testLoop
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/door/knob_turn
+  Path: event:/tests/testLoop
   Guid:
-    Data1: -1449265033
-    Data2: 1216158677
-    Data3: -486986862
-    Data4: 89696594
+    Data1: 1645687247
+    Data2: 1224608913
+    Data3: -1377736540
+    Data4: -1412844153
   Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -147046140891050852}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4795824668272670850}
+  - {fileID: 7735772612131661972}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-3485226494548827572
+  Length: 562
+--- !u!114 &-481121427779791352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,78 +662,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/teddy_bear/smear
+  m_Name: event:/ambience/tentacle
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/teddy_bear/smear
+  Path: event:/ambience/tentacle
   Guid:
-    Data1: 84282227
-    Data2: 1277046010
-    Data3: 190543290
-    Data4: -2066306003
+    Data1: 524519654
+    Data2: 1165095327
+    Data3: -1852277368
+    Data4: -1594972661
   Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -4215851267012118431}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4000
---- !u!114 &-2424605907633601799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/altar_room_verb
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: snapshot:/altar_room_verb
-  Guid:
-    Data1: -1186797693
-    Data2: 1260121077
-    Data3: -1804406345
-    Data4: 1346756902
-  Banks:
-  - {fileID: 1320257542277578049}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-1755200490359866878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/amulet/place
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/amulet/place
-  Guid:
-    Data1: 1691515042
-    Data2: 1305146501
-    Data3: -916791417
-    Data4: 1651582239
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 750
---- !u!114 &-1517977157064813386
+  Length: 16000
+--- !u!114 &-173443437999085184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,75 +689,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/testLoop/testParamFloatLoop
+  m_Name: parameter:/testParamStringGlobal
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: testParamFloatLoop
-  StudioPath: 
+  Name: testParamStringGlobal
+  StudioPath: parameter:/tests/testParamStringGlobal
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 271373262
-    data2: 2162168445
-  Type: 1
-  IsGlobal: 0
-  Labels: []
+    data1: 3408103620
+    data2: 2468747246
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - false
+  - true
   Exists: 1
---- !u!114 &-1272839595315943177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/teddy_bear/place_bloody
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/teddy_bear/place_bloody
-  Guid:
-    Data1: 1329532288
-    Data2: 1146482046
-    Data3: -50773316
-    Data4: -1529931962
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-670506650000646390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/lantern/fill
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/lantern/fill
-  Guid:
-    Data1: 2042220536
-    Data2: 1151206298
-    Data3: -839571793
-    Data4: -330721898
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-493475792637971138
+--- !u!114 &-147046140891050852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,17 +715,328 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/gameplay_sfx.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD/Build/Desktop/gameplay_sfx.bank
-  Name: gameplay_sfx
-  StudioPath: bank:/gameplay_sfx
-  lastModified: 639129879914537328
+  Path: Assets/FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639130809806321762
   FileSizes:
   - Name: Desktop
-    Value: 4406688
+    Value: 33408
   Exists: 1
---- !u!114 &-34767036757984732
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
+  EditorBanks:
+  - {fileID: 8099864925913319225}
+  - {fileID: -4215851267012118431}
+  - {fileID: -147046140891050852}
+  - {fileID: -6156853020608586322}
+  - {fileID: -7719053334681461590}
+  EditorEvents:
+  - {fileID: 2967333513563502752}
+  - {fileID: 4893829881171706684}
+  - {fileID: 177375763224750830}
+  - {fileID: 8828164256762953845}
+  - {fileID: -2795491724507892824}
+  - {fileID: 1171187618117683390}
+  - {fileID: 2349682167977958114}
+  - {fileID: -2908979437726716598}
+  - {fileID: 3002863847416468056}
+  - {fileID: -4536935121969129804}
+  - {fileID: -9135514349995658961}
+  - {fileID: -3993052864216116687}
+  - {fileID: -3709079369469449856}
+  - {fileID: 6473934034911562287}
+  - {fileID: 2168231591161122500}
+  - {fileID: -8524125900425080112}
+  - {fileID: -3007980452022365085}
+  - {fileID: -4317159977951265805}
+  - {fileID: 5355790340276476552}
+  - {fileID: 5293693349148949066}
+  - {fileID: -4106128480164914531}
+  - {fileID: -6478898576755418053}
+  - {fileID: 1484946870692048970}
+  - {fileID: -3393673390290080006}
+  - {fileID: -481121427779791352}
+  - {fileID: 2463640090316180033}
+  - {fileID: 4875489348972131027}
+  - {fileID: 4945475507852068734}
+  - {fileID: -4876892329913557170}
+  - {fileID: -4232531772848116865}
+  - {fileID: 1670377614927225092}
+  - {fileID: 8028558853758011459}
+  - {fileID: 7380816800897976895}
+  - {fileID: 3974489054635582701}
+  - {fileID: -7489200436987320499}
+  - {fileID: -553670793498576476}
+  - {fileID: 8858837775715330746}
+  - {fileID: -7295536977005985741}
+  - {fileID: 2479975491388625695}
+  - {fileID: -5365931073016018129}
+  - {fileID: 7105378867385577490}
+  - {fileID: 6333127973299103605}
+  - {fileID: 2277590766508754415}
+  - {fileID: 5710985601218907375}
+  - {fileID: -6484257690408981902}
+  - {fileID: -4580649676220220434}
+  - {fileID: 1063368023655550436}
+  - {fileID: 1786754176438467588}
+  - {fileID: 803219373563793165}
+  EditorParameters:
+  - {fileID: 8545453521984738752}
+  - {fileID: -173443437999085184}
+  MasterBanks:
+  - {fileID: -147046140891050852}
+  StringsBanks:
+  - {fileID: 8099864925913319225}
+  cacheVersion: 131859
+  cacheTime: 639130809806341766
+  SerializableEventsDict:
+  - key: event:/player/interact/match/place
+    index: 0
+  - key: event:/player/interact/teddy_bear/slice
+    index: 1
+  - key: event:/ambience/general
+    index: 2
+  - key: event:/player/movement/footsteps
+    index: 3
+  - key: event:/ambience/foyer
+    index: 4
+  - key: event:/player/interact/lantern/turn_knob_down
+    index: 5
+  - key: event:/player/interact/match/light
+    index: 6
+  - key: event:/player/interact/lantern/turn_knob_up
+    index: 7
+  - key: event:/player/death
+    index: 8
+  - key: event:/player/interact/teddy_bear/smear
+    index: 9
+  - key: event:/player/interact/tentacle/pull
+    index: 10
+  - key: event:/player/interact/door/knob_turn
+    index: 11
+  - key: event:/ui/inventory/close
+    index: 12
+  - key: event:/player/interact/teddy_bear/place_bloody
+    index: 13
+  - key: event:/environment/stinger/ritual_powering_up
+    index: 14
+  - key: event:/environment/stinger/cabin_shaking
+    index: 15
+  - key: event:/ui/typewriter
+    index: 16
+  - key: event:/player/interact/amulet/place
+    index: 17
+  - key: event:/music/exploration
+    index: 18
+  - key: event:/player/interact/teddy_bear/place
+    index: 19
+  - key: event:/environment/stinger/flash
+    index: 20
+  - key: event:/player/interact/door/open
+    index: 21
+  - key: event:/player/interact/amulet/pick_up
+    index: 22
+  - key: event:/player/interact/candle/place
+    index: 23
+  - key: event:/ambience/tentacle
+    index: 24
+  - key: event:/ui/inventory/place
+    index: 25
+  - key: event:/player/interact/door/locked
+    index: 26
+  - key: event:/player/interact/lantern/fill
+    index: 27
+  - key: event:/ambience/outdoors
+    index: 28
+  - key: event:/environment/stinger/jumpscare
+    index: 29
+  - key: snapshot:/outdoors verb
+    index: 30
+  - key: snapshot:/altar_room_verb
+    index: 31
+  - key: snapshot:/domestic_room_verb
+    index: 32
+  - key: snapshot:/tentacle_room verb
+    index: 33
+  - key: event:/tests/testOneShotSpatialized
+    index: 34
+  - key: event:/tests/testLoop
+    index: 35
+  - key: event:/tests/testOneShot
+    index: 36
+  - key: event:/music/fakeout
+    index: 37
+  - key: event:/music/credits
+    index: 38
+  - key: event:/music/eldritch
+    index: 39
+  - key: event:/music/title
+    index: 40
+  - key: event:/ui/settings/deny
+    index: 41
+  - key: event:/ui/inventory/hover
+    index: 42
+  - key: event:/ui/inventory/select
+    index: 43
+  - key: event:/ui/inventory/unselect
+    index: 44
+  - key: event:/ui/inventory/open
+    index: 45
+  - key: event:/ui/highlight
+    index: 46
+  - key: event:/ui/settings/confirm
+    index: 47
+  - key: event:/ui/room_transition
+    index: 48
+--- !u!114 &177375763224750830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/general
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ambience/general
+  Guid:
+    Data1: -826155501
+    Data2: 1079282811
+    Data3: -68780903
+    Data4: -1684786308
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1999
+--- !u!114 &803219373563793165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/room_transition
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/room_transition
+  Guid:
+    Data1: -1236117568
+    Data2: 1118678755
+    Data3: 679255200
+    Data4: -1659654130
+  Banks:
+  - {fileID: -7719053334681461590}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1063368023655550436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/highlight
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/highlight
+  Guid:
+    Data1: 900178812
+    Data2: 1341017723
+    Data3: -848751736
+    Data4: 1729087289
+  Banks:
+  - {fileID: -7719053334681461590}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1171187618117683390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/lantern/turn_knob_down
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/lantern/turn_knob_down
+  Guid:
+    Data1: 749369146
+    Data2: 1123564246
+    Data3: 95684796
+    Data4: 1188401057
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1484946870692048970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/amulet/pick_up
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/amulet/pick_up
+  Guid:
+    Data1: 1097328340
+    Data2: 1335499550
+    Data3: -813476171
+    Data4: -164988651
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1670377614927225092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -431,7 +1055,7 @@ MonoBehaviour:
     Data3: 749609620
     Data4: 1060092436
   Banks:
-  - {fileID: 1320257542277578049}
+  - {fileID: -147046140891050852}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -439,149 +1063,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
-  EditorBanks:
-  - {fileID: -7992576702030954477}
-  - {fileID: -493475792637971138}
-  - {fileID: 1320257542277578049}
-  - {fileID: 1052751905146328578}
-  - {fileID: 1664864747495127293}
-  EditorEvents:
-  - {fileID: 4423160131972090501}
-  - {fileID: 1531447099899765651}
-  - {fileID: 7950955429084770514}
-  - {fileID: 8441225755352028791}
-  - {fileID: -6557916460637585189}
-  - {fileID: 9010816762568279510}
-  - {fileID: 7666200219430839752}
-  - {fileID: -3485226494548827572}
-  - {fileID: -3822292273723686251}
-  - {fileID: -1272839595315943177}
-  - {fileID: 5497026704479683304}
-  - {fileID: 9174342033850673061}
-  - {fileID: -1755200490359866878}
-  - {fileID: 5187117066113463621}
-  - {fileID: 9154560494412045123}
-  - {fileID: -7008966877105472836}
-  - {fileID: -9118175162008524722}
-  - {fileID: -6745520005360636124}
-  - {fileID: -670506650000646390}
-  - {fileID: 7163222778214105391}
-  - {fileID: 3686959476226574319}
-  - {fileID: -34767036757984732}
-  - {fileID: -2424605907633601799}
-  - {fileID: -7038509203256346063}
-  - {fileID: 6351811595182812573}
-  - {fileID: 1379159937558768012}
-  - {fileID: 1572655977778022837}
-  - {fileID: 7207191471046557343}
-  - {fileID: -6135750646737928947}
-  - {fileID: 5701495667676508228}
-  - {fileID: 1294810954301900373}
-  EditorParameters:
-  - {fileID: 6055312465933138617}
-  - {fileID: 6544433774690476980}
-  MasterBanks:
-  - {fileID: 1320257542277578049}
-  StringsBanks:
-  - {fileID: -7992576702030954477}
-  cacheVersion: 131859
-  cacheTime: 639129879914628349
-  SerializableEventsDict:
-  - key: event:/player/interact/teddy_bear/slice
-    index: 0
-  - key: event:/ambience/general
-    index: 1
-  - key: event:/player/movement/footsteps
-    index: 2
-  - key: event:/ambience/foyer
-    index: 3
-  - key: event:/player/interact/lantern/turn_knob_down
-    index: 4
-  - key: event:/player/interact/match/light
-    index: 5
-  - key: event:/player/interact/lantern/turn_knob_up
-    index: 6
-  - key: event:/player/interact/teddy_bear/smear
-    index: 7
-  - key: event:/player/interact/door/knob_turn
-    index: 8
-  - key: event:/player/interact/teddy_bear/place_bloody
-    index: 9
-  - key: event:/environment/stinger/cabin_shaking
-    index: 10
-  - key: event:/player/interact/typewriter/type
-    index: 11
-  - key: event:/player/interact/amulet/place
-    index: 12
-  - key: event:/player/interact/teddy_bear/place
-    index: 13
-  - key: event:/player/interact/door/open
-    index: 14
-  - key: event:/player/interact/amulet/pick_up
-    index: 15
-  - key: event:/player/interact/candle/place
-    index: 16
-  - key: event:/player/interact/door/locked
-    index: 17
-  - key: event:/player/interact/lantern/fill
-    index: 18
-  - key: event:/ambience/outdoors
-    index: 19
-  - key: event:/environment/stinger/jumpscare
-    index: 20
-  - key: snapshot:/outdoors verb
-    index: 21
-  - key: snapshot:/altar_room_verb
-    index: 22
-  - key: snapshot:/domestic_room_verb
-    index: 23
-  - key: snapshot:/tentacle_room verb
-    index: 24
-  - key: event:/tests/testOneShotSpatialized
-    index: 25
-  - key: event:/tests/testLoop
-    index: 26
-  - key: event:/tests/testOneShot
-    index: 27
-  - key: event:/music/eldritch
-    index: 28
-  - key: event:/music/title
-    index: 29
-  - key: event:/ui/hud/inventory/hover
-    index: 30
---- !u!114 &1052751905146328578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/music.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD/Build/Desktop/music.bank
-  Name: music
-  StudioPath: bank:/music
-  lastModified: 639129879914608123
-  FileSizes:
-  - Name: Desktop
-    Value: 1319616
-  Exists: 1
---- !u!114 &1294810954301900373
+--- !u!114 &1786754176438467588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -591,16 +1073,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ui/hud/inventory/hover
+  m_Name: event:/ui/settings/confirm
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/ui/hud/inventory/hover
+  Path: event:/ui/settings/confirm
   Guid:
-    Data1: 1163767852
-    Data2: 1321082951
-    Data3: -1528707165
-    Data4: 1966285377
+    Data1: 941948851
+    Data2: 1268446524
+    Data3: 520207027
+    Data4: 1707189263
   Banks:
-  - {fileID: 1664864747495127293}
+  - {fileID: -7719053334681461590}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -608,54 +1090,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1320257542277578049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639129879914287747
-  FileSizes:
-  - Name: Desktop
-    Value: 33696
-  Exists: 1
---- !u!114 &1379159937558768012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/tests/testOneShotSpatialized
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/tests/testOneShotSpatialized
-  Guid:
-    Data1: -1757740878
-    Data2: 1188877735
-    Data3: 1440622508
-    Data4: 203042031
-  Banks:
-  - {fileID: 1320257542277578049}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 761
---- !u!114 &1482096393332406818
+--- !u!114 &1909098228523731181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -681,7 +1116,7 @@ MonoBehaviour:
   - false
   - true
   Exists: 1
---- !u!114 &1531447099899765651
+--- !u!114 &2168231591161122500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -691,24 +1126,78 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ambience/general
+  m_Name: event:/environment/stinger/ritual_powering_up
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/ambience/general
+  Path: event:/environment/stinger/ritual_powering_up
   Guid:
-    Data1: -826155501
-    Data2: 1079282811
-    Data3: -68780903
-    Data4: -1684786308
+    Data1: -1574285942
+    Data2: 1301485100
+    Data3: 1859454603
+    Data4: 1703544468
   Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2277590766508754415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/inventory/hover
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/inventory/hover
+  Guid:
+    Data1: 1163767852
+    Data2: 1321082951
+    Data3: -1528707165
+    Data4: 1966285377
+  Banks:
+  - {fileID: -7719053334681461590}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2349682167977958114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/match/light
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/match/light
+  Guid:
+    Data1: -1338109356
+    Data2: 1340146656
+    Data3: 970895748
+    Data4: 1892908888
+  Banks:
+  - {fileID: -4215851267012118431}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1999
---- !u!114 &1572655977778022837
+  Length: 0
+--- !u!114 &2463640090316180033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -718,91 +1207,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/tests/testLoop
+  m_Name: event:/ui/inventory/place
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/tests/testLoop
+  Path: event:/ui/inventory/place
   Guid:
-    Data1: 1645687247
-    Data2: 1224608913
-    Data3: -1377736540
-    Data4: -1412844153
+    Data1: 692120038
+    Data2: 1075915410
+    Data3: -1553484357
+    Data4: -1257873368
   Banks:
-  - {fileID: 1320257542277578049}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -1517977157064813386}
-  - {fileID: 3338586644169688103}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 562
---- !u!114 &1664864747495127293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/ui_sfx.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: Assets/FMOD/Build/Desktop/ui_sfx.bank
-  Name: ui_sfx
-  StudioPath: bank:/ui_sfx
-  lastModified: 639129879914628349
-  FileSizes:
-  - Name: Desktop
-    Value: 2816
-  Exists: 1
---- !u!114 &3338586644169688103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/testLoop/testParamStringLoop
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: testParamStringLoop
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 180585119
-    data2: 3612246781
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - false
-  - true
-  Exists: 1
---- !u!114 &3686959476226574319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/environment/stinger/jumpscare
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/environment/stinger/jumpscare
-  Guid:
-    Data1: -1625778180
-    Data2: 1329123063
-    Data3: 1031785866
-    Data4: -212194060
-  Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -4215851267012118431}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -810,7 +1224,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4423160131972090501
+--- !u!114 &2479975491388625695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -820,105 +1234,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/teddy_bear/slice
+  m_Name: event:/music/credits
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/teddy_bear/slice
+  Path: event:/music/credits
   Guid:
-    Data1: 2096415756
-    Data2: 1113973707
-    Data3: -1588665959
-    Data4: 1775900021
+    Data1: -525546851
+    Data2: 1332712718
+    Data3: -1505504124
+    Data4: -891247580
   Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5187117066113463621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/teddy_bear/place
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/teddy_bear/place
-  Guid:
-    Data1: 614176944
-    Data2: 1183565054
-    Data3: 1584417418
-    Data4: -488215091
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5497026704479683304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/environment/stinger/cabin_shaking
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/environment/stinger/cabin_shaking
-  Guid:
-    Data1: -371785328
-    Data2: 1329832802
-    Data3: -13959759
-    Data4: -926788307
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3959
---- !u!114 &5701495667676508228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/music/title
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/music/title
-  Guid:
-    Data1: 333914357
-    Data2: 1288219706
-    Data3: 1615749287
-    Data4: 1407279691
-  Banks:
-  - {fileID: 1052751905146328578}
+  - {fileID: -6156853020608586322}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 48473
---- !u!114 &6055312465933138617
+  Length: 88000
+--- !u!114 &2967333513563502752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -927,22 +1260,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/testParamFloatGlobal
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: testParamFloatGlobal
-  StudioPath: parameter:/tests/testParamFloatGlobal
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1615927319
-    data2: 3386815931
-  Type: 1
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &6351811595182812573
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/match/place
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/match/place
+  Guid:
+    Data1: -277370872
+    Data2: 1124068075
+    Data3: -809864802
+    Data4: -2022326200
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3002863847416468056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/death
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/death
+  Guid:
+    Data1: 385953648
+    Data2: 1218065439
+    Data3: -1713720394
+    Data4: -1605469610
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3974489054635582701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -961,7 +1324,7 @@ MonoBehaviour:
     Data3: 1736172695
     Data4: -764643062
   Banks:
-  - {fileID: 1320257542277578049}
+  - {fileID: -147046140891050852}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -969,7 +1332,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &6367605073467048431
+--- !u!114 &4320707638431587967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -999,7 +1362,7 @@ MonoBehaviour:
   - altar
   - tentacle
   Exists: 1
---- !u!114 &6544433774690476980
+--- !u!114 &4795824668272670850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1009,23 +1372,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/testParamStringGlobal
+  m_Name: parameter:/testLoop/testParamFloatLoop
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: testParamStringGlobal
-  StudioPath: parameter:/tests/testParamStringGlobal
+  Name: testParamFloatLoop
+  StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 3408103620
-    data2: 2468747246
-  Type: 2
-  IsGlobal: 1
-  Labels:
-  - false
-  - true
+    data1: 271373262
+    data2: 2162168445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
---- !u!114 &7163222778214105391
+--- !u!114 &4875489348972131027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1035,24 +1396,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ambience/outdoors
+  m_Name: event:/player/interact/door/locked
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/ambience/outdoors
+  Path: event:/player/interact/door/locked
   Guid:
-    Data1: -2134509062
-    Data2: 1322044970
-    Data3: -1354139751
-    Data4: 678273457
+    Data1: 1795497963
+    Data2: 1153724891
+    Data3: 1320020106
+    Data4: 147591437
   Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 55000
---- !u!114 &7207191471046557343
+  Length: 0
+--- !u!114 &4893829881171706684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1062,26 +1423,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/tests/testOneShot
+  m_Name: event:/player/interact/teddy_bear/slice
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/tests/testOneShot
+  Path: event:/player/interact/teddy_bear/slice
   Guid:
-    Data1: 1158942672
-    Data2: 1265572899
-    Data3: 729476271
-    Data4: 1391834606
+    Data1: 2096415756
+    Data2: 1113973707
+    Data3: -1588665959
+    Data4: 1775900021
   Banks:
-  - {fileID: 1320257542277578049}
+  - {fileID: -4215851267012118431}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
-  Parameters:
-  - {fileID: 1482096393332406818}
-  - {fileID: -5708801035332211661}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 761
---- !u!114 &7666200219430839752
+  Length: 0
+--- !u!114 &4945475507852068734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1091,16 +1450,98 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/lantern/turn_knob_up
+  m_Name: event:/player/interact/lantern/fill
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/lantern/turn_knob_up
+  Path: event:/player/interact/lantern/fill
   Guid:
-    Data1: -1302861974
-    Data2: 1222101707
-    Data3: 1131719856
-    Data4: -1192745945
+    Data1: 2042220536
+    Data2: 1151206298
+    Data3: -839571793
+    Data4: -330721898
   Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5293693349148949066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/teddy_bear/place
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/teddy_bear/place
+  Guid:
+    Data1: 614176944
+    Data2: 1183565054
+    Data3: 1584417418
+    Data4: -488215091
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5355790340276476552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/exploration
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/music/exploration
+  Guid:
+    Data1: -225459025
+    Data2: 1129578648
+    Data3: 1860194473
+    Data4: -46336033
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5605925291393245317}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 192000
+--- !u!114 &5710985601218907375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/inventory/select
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/inventory/select
+  Guid:
+    Data1: -554658252
+    Data2: 1271524689
+    Data3: 532789383
+    Data4: -859567117
+  Banks:
+  - {fileID: -7719053334681461590}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1108,7 +1549,212 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &7950955429084770514
+--- !u!114 &6333127973299103605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/settings/deny
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/settings/deny
+  Guid:
+    Data1: 40501517
+    Data2: 1317234801
+    Data3: -1774484322
+    Data4: -2080900888
+  Banks:
+  - {fileID: -7719053334681461590}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6473934034911562287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/player/interact/teddy_bear/place_bloody
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/player/interact/teddy_bear/place_bloody
+  Guid:
+    Data1: 1329532288
+    Data2: 1146482046
+    Data3: -50773316
+    Data4: -1529931962
+  Banks:
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7105378867385577490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/title
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/music/title
+  Guid:
+    Data1: 333914357
+    Data2: 1288219706
+    Data3: 1615749287
+    Data4: 1407279691
+  Banks:
+  - {fileID: -6156853020608586322}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 48473
+--- !u!114 &7380816800897976895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/domestic_room_verb
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/domestic_room_verb
+  Guid:
+    Data1: -506262642
+    Data2: 1319890519
+    Data3: 427500974
+    Data4: -888006609
+  Banks:
+  - {fileID: -147046140891050852}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7735772612131661972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/testLoop/testParamStringLoop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: testParamStringLoop
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 180585119
+    data2: 3612246781
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - false
+  - true
+  Exists: 1
+--- !u!114 &8028558853758011459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/altar_room_verb
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/altar_room_verb
+  Guid:
+    Data1: -1186797693
+    Data2: 1260121077
+    Data3: -1804406345
+    Data4: 1346756902
+  Banks:
+  - {fileID: -147046140891050852}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8099864925913319225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: Assets/FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639130809806341766
+  FileSizes:
+  - Name: Desktop
+    Value: 4108
+  Exists: 1
+--- !u!114 &8545453521984738752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/testParamFloatGlobal
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: testParamFloatGlobal
+  StudioPath: parameter:/tests/testParamFloatGlobal
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1615927319
+    data2: 3386815931
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8828164256762953845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1127,120 +1773,41 @@ MonoBehaviour:
     Data3: 813227137
     Data4: 738591886
   Banks:
-  - {fileID: -493475792637971138}
+  - {fileID: -4215851267012118431}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4320707638431587967}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8858837775715330746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/tests/testOneShot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/tests/testOneShot
+  Guid:
+    Data1: 1158942672
+    Data2: 1265572899
+    Data3: 729476271
+    Data4: 1391834606
+  Banks:
+  - {fileID: -147046140891050852}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 6367605073467048431}
+  - {fileID: 1909098228523731181}
+  - {fileID: -797333438252874776}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &8441225755352028791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ambience/foyer
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/ambience/foyer
-  Guid:
-    Data1: -1586114271
-    Data2: 1321135649
-    Data3: -1118099836
-    Data4: 1912750453
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 85000
---- !u!114 &9010816762568279510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/match/light
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/match/light
-  Guid:
-    Data1: -1338109356
-    Data2: 1340146656
-    Data3: 970895748
-    Data4: 1892908888
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &9154560494412045123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/door/open
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/door/open
-  Guid:
-    Data1: 939048141
-    Data2: 1209725169
-    Data3: 826912388
-    Data4: -884613399
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &9174342033850673061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/player/interact/typewriter/type
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/player/interact/typewriter/type
-  Guid:
-    Data1: -1985383536
-    Data2: 1207787135
-    Data3: 182502824
-    Data4: 1259096555
-  Banks:
-  - {fileID: -493475792637971138}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 500
+  Length: 761

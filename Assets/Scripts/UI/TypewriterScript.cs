@@ -80,7 +80,12 @@ public class TypewriterScript : MonoBehaviour
             //Debug.Log(currentVisibleCharacterIndex + " " + textInfo.characterCount);
             char character = charText.character;
             //char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
-
+            
+            // TODO: See if this works
+            // if (textBox.maxVisibleCharacters % 2 == 0) 
+            // { 
+            //     audio.PlayOneShot(AudioID.SFX.Interface.typewriter); 
+            // }
 
             if (character == '?' || character == '!' || character == ',' || character == '.' || character == ';' || character == ':' || character == '-')
             {

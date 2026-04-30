@@ -5,7 +5,7 @@
 			<value>slice</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{52f975db-1e90-42cc-ab47-372c1e4fab54}</destination>
@@ -99,6 +99,7 @@
 	<object class="MixerBusEffectChain" id="{496367e5-e7e5-4335-a083-e45792278cc6}">
 		<relationship name="effects">
 			<destination>{c5aed147-bdc9-4c4f-9fe1-49b04c3a32fa}</destination>
+			<destination>{86e76d31-5e07-407b-b673-30633298d33e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{cfbd0a79-d12f-4f48-9bb7-f040852e73a1}" />
@@ -112,4 +113,18 @@
 	</object>
 	<object class="MixerBusFader" id="{1287cd91-b426-477a-8737-f29b44555a46}" />
 	<object class="MixerBusFader" id="{c5aed147-bdc9-4c4f-9fe1-49b04c3a32fa}" />
+	<object class="SpatialiserEffect" id="{86e76d31-5e07-407b-b673-30633298d33e}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+		<property name="panBlend">
+			<value>0.899999976</value>
+		</property>
+	</object>
 </objects>

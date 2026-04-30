@@ -8,9 +8,16 @@ namespace UI
     {
         public GameObject panel;
         public GameObject amulet;
+        
+        private AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey amuletPlaced;
+        
+        private void Awake()
+        {
+            audio = AudioManager.Instance;
+        }
 
         private void setState()
         {
@@ -20,6 +27,7 @@ namespace UI
             if (amuletPlaced != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(amuletPlaced, true);
+                audio.PlayOneShot(AudioID.SFX.Player.Interact.Amulet.place, GameObject.Find("Character"));
             }
         }
 
