@@ -1,4 +1,5 @@
 using Inventory;
+using Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,21 @@ public class KeyItem : MonoBehaviour, IInteractable
     public bool isZoomItem;
 
     private NarrativeZoomScript zoomScript;
+
+    [Header("Game State")]
+    [Tooltip("Optional: When this state is true, the item is considered consumed and should not spawn.")]
+    public GameStateKey consumedStateKey;
+
+    /// Returns true if this item has been consumed (used in a gesture screen).
+    public bool IsConsumed
+    {
+        get
+        {
+            if (consumedStateKey == null) return false;
+            var gsm = ServiceLocator.Instance?.Get<GameStateManager>();
+            return gsm != null && gsm.GetState(consumedStateKey);
+        }
+    }
 
     private void Awake()
     {
