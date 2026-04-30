@@ -315,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
   moveTransformWithGesture: 1
   persistTransformWithGesture: 1
-  dragDistance: 400
+  dragDistance: 200
   enabledDragDirections: 8
   startingDragDirection: 4
 --- !u!1001 &7651363252648250494
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d63e497db971854ba0bb60381004ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  teddyDragGesture: {fileID: 0}
+  teddyDragGesture: {fileID: 8118819917182984358}
   panel: {fileID: 6168086350543107013}
   teddyObject: {fileID: 8652062474641945808}
   teddyDraggedStateKey: {fileID: 11400000, guid: 86a5edaddb5420040b5bce12fbaceafd, type: 2}
