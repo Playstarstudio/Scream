@@ -895,7 +895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1051, y: -198}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7849075909360955660
@@ -4505,6 +4505,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8893376930413257067}
     - target: {fileID: 2007677340872245279, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: hiResSprite
+      value: 
+      objectReference: {fileID: 5455544842248710529, guid: d78515cffa36f0140bb5c75dc8f4270b, type: 3}
+    - target: {fileID: 2007677340872245279, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: parentCanvas
       value: 
       objectReference: {fileID: 1659544053718905340}
@@ -4596,6 +4600,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6664554950116195665, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5455544842248710529, guid: d78515cffa36f0140bb5c75dc8f4270b, type: 3}
     - target: {fileID: 8147064500471829882, guid: c5e50b63ea633ae4e99c9b20c62b2052, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
