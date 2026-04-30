@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355269639896213396}
   - component: {fileID: 3792482629087085580}
+  - component: {fileID: 3646262404739359251}
   m_Layer: 0
   m_Name: InteractionTrigger
   m_TagString: Untagged
@@ -79,11 +80,24 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.33500686, y: 0.98236805}
-      - {x: -1.8502853, y: -0.108272165}
+      - {x: -2.0065353, y: -0.13952217}
       - {x: 0.26442516, y: -1.2439383}
       - {x: 1.8866717, y: -0.3329547}
       - {x: 0.8922834, y: 0.24436668}
   m_UseDelaunayMesh: 0
+--- !u!114 &3646262404739359251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184477934212693755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb67fc3856886394292a649abb962a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestureOpener
+  uiPanelName: Kill_Teddy
 --- !u!1 &6805073062028278329
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +110,6 @@ GameObject:
   - component: {fileID: 8831552716423516349}
   - component: {fileID: 3366951913996364139}
   - component: {fileID: 4883280180756604175}
-  - component: {fileID: 759704764344159215}
   m_Layer: 0
   m_Name: S_AR_Altar_v1_0
   m_TagString: Untagged
@@ -260,7 +273,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -281,16 +294,3 @@ PolygonCollider2D:
       - {x: 0.31802392, y: -0.8476715}
       - {x: 1.3082483, y: -0.3206851}
   m_UseDelaunayMesh: 0
---- !u!114 &759704764344159215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6805073062028278329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb67fc3856886394292a649abb962a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GestureOpener
-  uiPanelName: Kill_Teddy

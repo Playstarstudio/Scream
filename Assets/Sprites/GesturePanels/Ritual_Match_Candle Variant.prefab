@@ -14,8 +14,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4590975127471865787, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109943187926198655, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5109943187926198655, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9148759009503459462, guid: 092d017893315d5489359fddcfe3a4c2, type: 3}
     - target: {fileID: 7821706818191984920, guid: e286db4b1b1d8334ba599fd73603ef0d, type: 3}
       propertyPath: enabledDragDirections
       value: 8

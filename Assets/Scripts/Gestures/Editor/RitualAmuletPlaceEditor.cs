@@ -23,14 +23,13 @@ namespace Editor
             }
 
             // Status
-            EditorGUILayout.LabelField("Amulet Placed", ritual.IsAmuletPlaced ? "✓ Yes" : "✗ No");
-            EditorGUILayout.LabelField("Ritual Complete", ritual.IsRitualComplete ? "✓ Yes" : "✗ No");
+            EditorGUILayout.LabelField("Ritual Complete", ritual.IsRitualComplete ? "Yes" : "No");
 
             EditorGUILayout.Space(4);
 
-            // Buttons
-            EditorGUI.BeginDisabledGroup(ritual.IsAmuletPlaced);
-            if (GUILayout.Button("Place Amulet", GUILayout.Height(28)))
+            // Button
+            EditorGUI.BeginDisabledGroup(ritual.IsRitualComplete);
+            if (GUILayout.Button("Place Amulet (Complete Ritual)", GUILayout.Height(28)))
             {
                 ritual.PlaceAmulet();
             }
@@ -40,4 +39,3 @@ namespace Editor
         }
     }
 }
-
