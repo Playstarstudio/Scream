@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5921948011574437582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   sprite: {fileID: -533613115718132423, guid: a811a802a9436ec40a57df94c22ea0b1, type: 3}
   textToRead: Forgive me. I shan't die in this God-forsaken place!
   isZoomItem: 0
+  consumedStateKey: {fileID: 11400000, guid: 81f9aa15a360f3646b0b9fce0b30c183, type: 2}
 --- !u!212 &1753025402600952593
 SpriteRenderer:
   m_ObjectHideFlags: 0

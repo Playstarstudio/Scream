@@ -64,18 +64,20 @@ namespace RoomLayout
         // ReSharper disable Unity.PerformanceAnalysis
         private void FilterKeyItemsForInventory(Transform layout, IInventory inventory = null)
         {
-            if (inventory == null)
-            {
-                // TODO: pmoffett Update this once the inventory system is hooked up to the scene.
-                DebugEditor.LogError($"[RoomLayoutSwitcher] No inventory provided to filter key items in layout '{layout.name}'. All key items will be active.", this);
-                return;
-            }
-
             KeyItem[] keyItems = layout.GetComponentsInChildren<KeyItem>(includeInactive: true);
 
             foreach (KeyItem item in keyItems)
             {
-                if (inventory.HasItem(item.itemId))
+                // Disable if the item was consumed by a gesture screen
+                if (item.IsConsumed)
+                {
+                    item.gameObject.SetActive(false);
+                    DebugEditor.Log($"[RoomLayoutSwitcher] Disabled consumed key item '{item.itemId}' in layout '{layout.name}'.", this);
+                    continue;
+                }
+
+                // Disable if the player already has it in inventory
+                if (inventory != null && inventory.HasItem(item.itemId))
                 {
                     item.gameObject.SetActive(false);
                     DebugEditor.Log($"[RoomLayoutSwitcher] Disabled already-owned key item '{item.itemId}' in layout '{layout.name}'.", this);

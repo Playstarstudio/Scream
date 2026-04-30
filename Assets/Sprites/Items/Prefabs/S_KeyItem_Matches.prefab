@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5921948011574437582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   itemId: 1
   sprite: {fileID: 21300000, guid: 106c276f51245944ba1a22f42a5e3708, type: 3}
   textToRead: Thank God, more matches. Pray these last.
+  isZoomItem: 0
+  consumedStateKey: {fileID: 11400000, guid: 9c51fd79a388d884280c1ed22f144b7f, type: 2}
 --- !u!212 &1753025402600952593
 SpriteRenderer:
   m_ObjectHideFlags: 0

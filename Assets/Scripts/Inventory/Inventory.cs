@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using static AudioID.SFX.Interface;
 using Object = UnityEngine.Object;
 
 namespace Inventory
@@ -90,5 +92,14 @@ namespace Inventory
             draggableItems[itemId].RemoveItem();
             currentItems[itemId] = null;
         }
+        public void OnDrop(int itemId)
+        {
+            KeyItem keyItem = currentItems[itemId].GetComponentInChildren<KeyItem>();
+            Vector3 spawnPos = FindFirstObjectByType<CharacterMovement>().transform.position;
+            GameObject worldItem = Instantiate(keyItem.gameObject, spawnPos, Quaternion.identity);
+            worldItem.transform.parent = null;
+            RemoveFromInventory(itemId);
+        }
+
     }
 }

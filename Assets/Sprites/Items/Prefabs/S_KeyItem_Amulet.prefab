@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5921948011574437582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   itemId: 4
   sprite: {fileID: 21300000, guid: 63c1cb791873c9346b9f7631bccf6ff1, type: 3}
   textToRead: It whispers wisdom that tears at the fabric of my soul.
+  isZoomItem: 0
+  consumedStateKey: {fileID: 11400000, guid: b4671cec671dc734e8e1d50bd6243b6a, type: 2}
 --- !u!212 &1753025402600952593
 SpriteRenderer:
   m_ObjectHideFlags: 0

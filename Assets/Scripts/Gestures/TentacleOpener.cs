@@ -27,6 +27,12 @@ namespace UI
         [Header("Game State")]
         public GameStateKey amuletRetrievedStateKey;
 
+        [Header("Reward")]
+        [Tooltip("The prefab to spawn when the puzzle is completed.")]
+        public GameObject amuletPrefab;
+        [Tooltip("Where to spawn the amulet. If not set, spawns at this object's position.")]
+        public Transform amuletSpawnPoint;
+
         // 1 4 5 8 3 - or 0 3 4 7 2
         private void OnEnable()
         {
@@ -196,11 +202,28 @@ namespace UI
             Debug.Log("success!");
             GestureHelper.CloseGestureUI(panel);
 
+            SpawnReward();
+
             if (amuletRetrievedStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(amuletRetrievedStateKey, true);
                 audio.PlayOneShot(AudioID.SFX.Player.Interact.Amulet.pick_up, GameObject.Find("Character"));
             }
+        }
+
+        private void SpawnReward()
+        {
+            if (amuletPrefab == null)
+            {
+                Debug.LogWarning("[TentacleOpener] No rewardPrefab assigned — nothing to spawn.");
+                return;
+            }
+
+            Vector3 spawnPos = amuletSpawnPoint != null ? amuletSpawnPoint.position : transform.position;
+            Quaternion spawnRot = amuletSpawnPoint != null ? amuletSpawnPoint.rotation : Quaternion.identity;
+
+            GameObject reward = Instantiate(amuletPrefab, spawnPos, spawnRot);
+            Debug.Log($"[TentacleOpener] Spawned reward '{reward.name}' at {spawnPos}");
         }
 
         IEnumerator TentacleResetter()
@@ -218,6 +241,21 @@ namespace UI
                 index++;
             }
             reset = true;
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Vector3 pos = amuletSpawnPoint != null ? amuletSpawnPoint.position : transform.position;
+
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(pos, 0.3f);
+            Gizmos.DrawIcon(pos, "d_Prefab Icon", true);
+
+            if (amuletSpawnPoint != null)
+            {
+                Gizmos.color = Color.cyan;
+                Gizmos.DrawLine(transform.position, amuletSpawnPoint.position);
+            }
         }
     }
 }

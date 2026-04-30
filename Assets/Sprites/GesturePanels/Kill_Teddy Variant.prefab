@@ -208,6 +208,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   knifeDragGesture: {fileID: 8854787903197505261}
   panel: {fileID: 5175314088755144854}
-  teddy: {fileID: 2460029988905484973}
-  knife: {fileID: 337847765698339565}
+  teddyObject: {fileID: 2460029988905484973}
+  knifeObject: {fileID: 337847765698339565}
   teddyKilledStateKey: {fileID: 11400000, guid: 0e118bb199e3844408fc3030fadc3658, type: 2}
+  teddyConsumedStateKey: {fileID: 11400000, guid: d936f7735fe299c489d569bd7f8030e7, type: 2}
+  knifeConsumedStateKey: {fileID: 11400000, guid: b6e5c0e03e4a7434087e72653d90195e, type: 2}
+  teddySpawnPrefab: {fileID: 3479690027798089497, guid: 8e19568fb6ad2f54f80fa8968f368d50, type: 3}
+  teddySpawnPoint: {fileID: 0}
