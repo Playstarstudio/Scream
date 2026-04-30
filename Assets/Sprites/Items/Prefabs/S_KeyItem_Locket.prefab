@@ -165,8 +165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyItem
   itemId: 6
   sprite: {fileID: 21300000, guid: 1d4521882fe5d1b4187a2090f17e8e31, type: 3}
+  hiResSprite: {fileID: 215135712098838283, guid: cb58583f96cad204499de67dbc95044f, type: 3}
   textToRead: Curious. For what purpose is this accessory?
-  isZoomItem: 0
+  isZoomItem: 1
   consumedStateKey: {fileID: 0}
 --- !u!212 &1753025402600952593
 SpriteRenderer:

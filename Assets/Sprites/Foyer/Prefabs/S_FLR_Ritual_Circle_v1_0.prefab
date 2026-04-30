@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3097419122700117774}
   - component: {fileID: 2737439849740121932}
   - component: {fileID: 6054225870879347793}
+  - component: {fileID: 7257753636657551280}
   m_Layer: 0
   m_Name: S_FLR_Ritual_Circle_v1_0
   m_TagString: Untagged
@@ -144,3 +145,36 @@ PolygonCollider2D:
       - {x: 1.5259358, y: -0.7974348}
       - {x: 1.4143407, y: 0.6101518}
   m_UseDelaunayMesh: 0
+--- !u!114 &7257753636657551280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390197180553106234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb67fc3856886394292a649abb962a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestureOpener
+  gesturePanels:
+  - panelName: Ritual_Match_Candle
+    conditions:
+    - key: {fileID: 11400000, guid: 0031ce4e6edd9a747aacdf495ddb10cf, type: 2}
+      requiredValue: 0
+  - panelName: Ritual_Place_Amulet
+    conditions:
+    - key: {fileID: 11400000, guid: 0031ce4e6edd9a747aacdf495ddb10cf, type: 2}
+      requiredValue: 1
+    - key: {fileID: 11400000, guid: e8ce793a5ae34a140a2ffd791077526a, type: 2}
+      requiredValue: 0
+  - panelName: Ritual_Smear_Teddy
+    conditions:
+    - key: {fileID: 11400000, guid: e8ce793a5ae34a140a2ffd791077526a, type: 2}
+      requiredValue: 1
+    - key: {fileID: 11400000, guid: 86a5edaddb5420040b5bce12fbaceafd, type: 2}
+      requiredValue: 0
+  - panelName: Ritual_Die
+    conditions:
+    - key: {fileID: 11400000, guid: 86a5edaddb5420040b5bce12fbaceafd, type: 2}
+      requiredValue: 1

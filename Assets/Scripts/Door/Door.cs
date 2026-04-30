@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using Services;
 
 
@@ -18,6 +20,18 @@ public class Door : MonoBehaviour, IInteractable
     [Header("Requirements (optional)")]
     [Tooltip("Item ID the player must have to use this door. Set to -1 for no requirement.")]
     [SerializeField] private int requiredItemId = -1;
+
+    [Tooltip("All state conditions must be met to use this door. If empty, no state requirements.")]
+    [SerializeField] private List<StateCondition> stateRequirements = new List<StateCondition>();
+
+    [Serializable]
+    public struct StateCondition
+    {
+        [Tooltip("The game state key to check.")]
+        public GameStateKey key;
+        [Tooltip("The required value for this key.")]
+        public bool requiredValue;
+    }
 
     public string TargetSceneName => targetSceneName;
     
@@ -48,7 +62,41 @@ public class Door : MonoBehaviour, IInteractable
             }
         }
 
+        // State condition check
+        if (!AreStateRequirementsMet())
+        {
+            Debug.Log($"[Door] State requirements not met for '{gameObject.name}'.");
+            return;
+        }
+
         ServiceLocator.Instance.Get<SceneTransitionManager>().TransitionToScene(targetSceneName);
+    }
+
+    private bool AreStateRequirementsMet()
+    {
+        if (stateRequirements == null || stateRequirements.Count == 0)
+            return true;
+
+        var gsm = ServiceLocator.Instance?.Get<GameStateManager>();
+        if (gsm == null)
+        {
+            Debug.LogWarning("[Door] GameStateManager not available — skipping state check.");
+            return true;
+        }
+
+        foreach (var condition in stateRequirements)
+        {
+            if (condition.key == null) continue;
+
+            bool currentValue = gsm.GetState(condition.key);
+            if (currentValue != condition.requiredValue)
+            {
+                Debug.Log($"[Door] Requirement failed: '{condition.key.name}' is {currentValue}, required {condition.requiredValue}");
+                return false;
+            }
+        }
+
+        return true;
     }
 
 #if UNITY_EDITOR

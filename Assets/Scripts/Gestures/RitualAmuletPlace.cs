@@ -5,7 +5,6 @@ namespace UI
 {
     public class RitualAmuletPlace : MonoBehaviour
     {
-        public DragGesture amuletPlaceGesture;
         public GameObject panel;
 
         [Header("World Objects")]
@@ -20,10 +19,8 @@ namespace UI
         public GameStateKey amuletConsumedStateKey;
 
         private AudioManager _audio;
-        private bool _amuletPlaced;
         private bool _ritualComplete;
 
-        public bool IsAmuletPlaced => _amuletPlaced;
         public bool IsRitualComplete => _ritualComplete;
 
         private void Awake()
@@ -34,33 +31,18 @@ namespace UI
         private void Start()
         {
             Debug.Log($"[RitualAmuletPlace] Start() — panel={panel?.name ?? "null"}, " +
-                      $"amuletObject={amuletObject?.name ?? "null"}, " +
-                      $"gesture={amuletPlaceGesture?.name ?? "null"}");
+                      $"amuletObject={amuletObject?.name ?? "null"}");
 
             if (amuletObject != null) amuletObject.SetActive(false);
-
-            SetGesturesEnabled(false);
-        }
-
-        private void OnEnable()
-        {
-            Debug.Log("[RitualAmuletPlace] OnEnable() — subscribing to gesture events.");
-            if (amuletPlaceGesture == null) Debug.LogError("[RitualAmuletPlace] amuletPlaceGesture is null!");
-            if (amuletPlaceGesture != null) amuletPlaceGesture.OnGestureEnd += OnAmuletPlaceGesture;
-        }
-
-        private void OnDisable()
-        {
-            Debug.Log("[RitualAmuletPlace] OnDisable() — unsubscribing from gesture events.");
-            if (amuletPlaceGesture != null) amuletPlaceGesture.OnGestureEnd -= OnAmuletPlaceGesture;
         }
 
         public void PlaceAmulet()
         {
-            Debug.Log($"[RitualAmuletPlace] PlaceAmulet() called. Already placed: {_amuletPlaced}");
-            if (_amuletPlaced) return;
+            Debug.Log($"[RitualAmuletPlace] PlaceAmulet() called. Already complete: {_ritualComplete}");
+            if (_ritualComplete) return;
 
-            _amuletPlaced = true;
+            _ritualComplete = true;
+
             if (amuletObject != null) amuletObject.SetActive(true);
             Debug.Log("[RitualAmuletPlace] Amulet placed. amuletObject active.");
 
@@ -70,27 +52,8 @@ namespace UI
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(amuletConsumedStateKey, true);
             }
 
-            Debug.Log("[RitualAmuletPlace] Amulet placed — enabling gestures.");
-            SetGesturesEnabled(true);
-        }
-
-        private void SetGesturesEnabled(bool isEnabled)
-        {
-            Debug.Log($"[RitualAmuletPlace] SetGesturesEnabled({isEnabled})");
-            if (amuletPlaceGesture != null) amuletPlaceGesture.gameObject.SetActive(isEnabled);
-        }
-
-        private void OnAmuletPlaceGesture(DragDirection dragDirection)
-        {
-            Debug.Log($"[RitualAmuletPlace] OnAmuletPlaceGesture — direction={dragDirection}");
-            if (dragDirection == DragDirection.Down)
-                CompleteRitual();
-        }
-
-        private void CompleteRitual()
-        {
-            Debug.Log("[RitualAmuletPlace] CompleteRitual() — closing gesture UI and setting state.");
-            _ritualComplete = true;
+            // Placing the amulet completes the ritual
+            Debug.Log("[RitualAmuletPlace] Ritual complete — closing gesture UI and setting state.");
             GestureHelper.CloseGestureUI(panel);
 
             if (amuletPlacedStateKey != null)

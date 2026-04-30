@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyItem
   itemId: 7
   sprite: {fileID: 21300000, guid: 257258e8ca6f5a647998229411c9fef0, type: 3}
+  hiResSprite: {fileID: 0}
   textToRead: It has charmed me. Unto my satchel.
   isZoomItem: 0
   consumedStateKey: {fileID: 11400000, guid: d936f7735fe299c489d569bd7f8030e7, type: 2}
