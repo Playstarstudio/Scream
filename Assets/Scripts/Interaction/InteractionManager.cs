@@ -6,6 +6,8 @@ using UnityEngine;
 public class InteractionManager : MonoBehaviour
 {
     private readonly HashSet<IInteractable> _nearbyInteractables = new HashSet<IInteractable>();
+    
+    private new AudioManager _audio;
 
     private void Start()
     {
@@ -24,6 +26,11 @@ public class InteractionManager : MonoBehaviour
         {
             Debug.LogError("[InteractionManager] Could not find CharacterMovement! Interactions will not work.");
         }
+    }
+    
+    private void Awake()
+    {
+        _audio = AudioManager.Instance;
     }
 
     private void OnInteractPressed(object sender, EventArgs e)
@@ -72,19 +79,22 @@ public class InteractionManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IInteractable interactable))
+        IInteractable[] interactables = collision.GetComponents<IInteractable>();
+        foreach (var interactable in interactables)
         {
             _nearbyInteractables.Add(interactable);
-            Debug.Log($"[InteractionManager] Entered range: {collision.gameObject.name} (Priority: {interactable.InteractionPriority}, CanInteract: {interactable.CanInteract})");
+            _audio.PlayOneShot(AudioID.SFX.Interface.highlight);
+            Debug.Log($"[InteractionManager] Entered range: {collision.gameObject.name} ({interactable.GetType().Name}, Priority: {interactable.InteractionPriority}, CanInteract: {interactable.CanInteract})");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out IInteractable interactable))
+        IInteractable[] interactables = collision.GetComponents<IInteractable>();
+        foreach (var interactable in interactables)
         {
             _nearbyInteractables.Remove(interactable);
-            Debug.Log($"[InteractionManager] Exited range: {collision.gameObject.name}");
+            Debug.Log($"[InteractionManager] Exited range: {collision.gameObject.name} ({interactable.GetType().Name})");
         }
     }
 }

@@ -71,6 +71,7 @@ namespace UI
             }
 
             Debug.Log("[SmearTeddy] Teddy placed — enabling gestures.");
+            _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Teddy_Bear.place_bloody, GameObject.Find("Character"));
             SetGesturesEnabled(true);
         }
 
@@ -85,6 +86,8 @@ namespace UI
             Debug.Log($"[SmearTeddy] OnTeddyDragGesture — direction={dragDirection}");
             if (dragDirection == DragDirection.Right)
                 SmearTheTeddy();
+                // TODO: Why doesn't this play
+                // _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Teddy_Bear.smear, GameObject.Find("Character"));
         }
 
         private void SmearTheTeddy()
@@ -97,7 +100,6 @@ namespace UI
             {
                 Debug.Log($"[SmearTeddy] Setting GameState '{teddyDraggedStateKey.name}' to true.");
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(teddyDraggedStateKey, true);
-                _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Teddy_Bear.smear, GameObject.Find("Character"));
             }
             else
             {

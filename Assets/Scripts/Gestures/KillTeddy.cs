@@ -73,6 +73,7 @@ namespace UI
             Debug.Log($"[KillTeddy] PlaceTeddy() called. Already placed: {_teddyPlaced}");
             if (_teddyPlaced) return;
 
+            _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Teddy_Bear.place, GameObject.Find("Character"));
             _teddyPlaced = true;
             if (teddyObject != null) teddyObject.SetActive(true);
             Debug.Log("[KillTeddy] Teddy placed. teddyObject active.");

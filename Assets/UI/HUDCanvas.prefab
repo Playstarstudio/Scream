@@ -306,6 +306,7 @@ MonoBehaviour:
   hiddenOffset: {x: 0, y: -340}
   closedCanvas: {fileID: 8596334108041292941}
   openCanvas: {fileID: 3806884445842354}
+  lantern: {fileID: 3672309559046987773}
 --- !u!114 &5657388102633751329
 MonoBehaviour:
   m_ObjectHideFlags: 0

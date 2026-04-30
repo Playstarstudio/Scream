@@ -147,6 +147,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b5dec9cd-b80c-4e1a-97d5-c6bdc8cbbc0b}">
+		<property name="volume">
+			<value>-9</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -257,8 +260,8 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{3fe92a7f-18e5-41d5-8f9a-c060d7936496}">
 		<relationship name="effects">
-			<destination>{f54634bd-41dc-4614-ac98-f0bd4defe2e2}</destination>
 			<destination>{b4698251-998e-4990-b77f-74f15a6ec75a}</destination>
+			<destination>{f54634bd-41dc-4614-ac98-f0bd4defe2e2}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1bd36dbf-139c-444e-8d77-4d2b6ac5c67d}" />
@@ -320,10 +323,9 @@
 			<destination>{827e50fe-0699-4897-9bb7-069fcd461df9}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusFader" id="{f54634bd-41dc-4614-ac98-f0bd4defe2e2}" />
 	<object class="MixerSend" id="{b4698251-998e-4990-b77f-74f15a6ec75a}">
 		<property name="level">
-			<value>0</value>
+			<value>6</value>
 		</property>
 		<property name="inputFormat">
 			<value>5</value>
@@ -335,6 +337,7 @@
 			<destination>{4343fc1f-1348-4668-834f-126f72b82056}</destination>
 		</relationship>
 	</object>
+	<object class="MixerBusFader" id="{f54634bd-41dc-4614-ac98-f0bd4defe2e2}" />
 	<object class="MixerBusFader" id="{a20f696c-c948-49f8-9486-9017f5017fcc}" />
 	<object class="MixerBusFader" id="{e91e86dd-c7aa-42b8-a724-45c27e2c3d0a}" />
 	<object class="ADSRModulator" id="{e77a70c3-3ccb-4fcc-aa4d-a25ea84f535d}">
