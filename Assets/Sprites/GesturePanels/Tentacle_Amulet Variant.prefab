@@ -1746,6 +1746,6 @@ MonoBehaviour:
   - {fileID: 913403829912208856}
   - {fileID: 4569819247801432521}
   currentKey: 1
-  amuletRetrievedStateKey: {fileID: 0}
-  amuletPrefab: {fileID: 0}
+  amuletRetrievedStateKey: {fileID: 11400000, guid: 00899d43ce535dd4c84635a42dd7d044, type: 2}
+  amuletPrefab: {fileID: 3479690027798089497, guid: 7efe23fa97deed34da49ceaab4fff347, type: 3}
   amuletSpawnPoint: {fileID: 0}
