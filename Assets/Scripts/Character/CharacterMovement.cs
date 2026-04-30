@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using System;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -48,10 +49,10 @@ public class CharacterMovement : MonoBehaviour
     [Header("Player Sounds")]
 
     [SerializeField]
-    private float stepInterval = 0.3f;
+    private float stepInterval = 5f;
     private float _stepTimer = 0f;
 
-    private AudioManager audioManager;
+    private new AudioManager audio;
 
     private Transform _lanternLightTransform;
     private Transform _lanternTransform;
@@ -110,6 +111,8 @@ public class CharacterMovement : MonoBehaviour
             }
         }
 
+        HandleFootstepSound(direction);
+        
         var info = looks[bestKey];
         _lanternLightTransform.rotation = Quaternion.Euler(0, 0, info.lookRotation);
         _lanternTransform.localPosition = info.relativePosition;
@@ -123,7 +126,7 @@ public class CharacterMovement : MonoBehaviour
         _rb.gravityScale = 0f;
         _lanternTransform = transform.Find("Lantern");
         _lanternLightTransform = _lanternTransform.Find("LanternDirectionalLight");
-
+        audio = AudioManager.Instance;
 
         looks = new Dictionary<Vector2, DirectionInfo>()
         {
@@ -154,18 +157,13 @@ public class CharacterMovement : MonoBehaviour
     }
 
 
-    private bool IsInputBlocked =>
-        HUDSingleton.Instance != null && HUDSingleton.Instance.IsGestureScreenOpen;
-
     private void Update()
     {
-        if (IsInputBlocked) return;
         ApplyDirection(_movementInput);
     }
 
     private void FixedUpdate()
     {
-        if (IsInputBlocked) return;
         Vector2 targetPosition = _rb.position + _movementInput * (_speed * Time.fixedDeltaTime);
         _rb.MovePosition(targetPosition);
     }
@@ -181,13 +179,22 @@ public class CharacterMovement : MonoBehaviour
     }
 
     // TODO: Implement footsteps
-    // private void HandleFootstepSound()
-    // {
-    //     if (Time.timeScale > 0 && isGrounded && characterVelocity.magnitude > 0 && _stepTimer <= 0)
-    //     {
-    //         audioManager.PlayOneShot(AudioID.SFX.Player.Movement.footsteps, new string[] {"surfaceType"}, new string[] {"Sand"}, null);
-    //         _stepTimer = stepInterval;
-    //     }
-    //     _stepTimer -= Time.deltaTime;
-    // }
+    private void HandleFootstepSound(Vector2 direction)
+    {
+        Debug.Log(_stepTimer);
+        
+        if (Time.timeScale > 0 && direction.magnitude > 0 && _stepTimer < 0)
+        {
+            string roomType = AudioID.SceneToRoomMap[SceneManager.GetActiveScene().name];
+            
+            audio.PlayOneShot(AudioID.SFX.Player.Movement.footsteps, 
+                new string[] {"roomType"}, 
+                new string[] {roomType}, 
+                GameObject.Find("Character"));
+                
+            _stepTimer = stepInterval;
+        }
+        // Debug.Log($"{_stepTimer} - {Time.deltaTime} = {_stepTimer - Time.deltaTime}");
+        _stepTimer -= Time.deltaTime;
+    }
 }

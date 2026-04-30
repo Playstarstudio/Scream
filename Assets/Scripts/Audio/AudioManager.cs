@@ -29,11 +29,6 @@ public class AudioManager : MonoBehaviour
         }
         
         registry = new Dictionary<string, EventInstance>();
-        // RuntimeManager.LoadBank("Master.strings");
-        // RuntimeManager.LoadBank("Master");
-        // RuntimeManager.LoadBank("gameplay_sfx");
-        // RuntimeManager.LoadBank("ui_sfx");
-        // RuntimeManager.LoadBank("music");
     }
 
     void OnEnable()

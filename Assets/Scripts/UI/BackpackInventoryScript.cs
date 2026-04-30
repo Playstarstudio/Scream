@@ -9,7 +9,8 @@ namespace UI
         public DragGesture closeDragGesture;
         public RectTransform inventory;
         
-        private AudioManager audio;
+        [SerializeField]
+        public new AudioManager audio;
 
         private float _animationDuration = 0.4f;
 
@@ -38,7 +39,6 @@ namespace UI
             openDragGesture.OnGestureEnd -= OnGesture;
             closeDragGesture.OnGestureEnd -= OnGesture;
         }
-
 
         private void Awake()
         {

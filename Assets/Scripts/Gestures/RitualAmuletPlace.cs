@@ -9,7 +9,7 @@ namespace UI
         public GameObject panel;
         public GameObject amulet;
         
-        private AudioManager audio;
+        private new AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey amuletPlaced;

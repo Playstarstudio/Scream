@@ -11,7 +11,7 @@ namespace UI
         public GameObject panel;
         public GameObject teddy;
         
-        private AudioManager audio;
+        private new AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey teddyDraggedStateKey;

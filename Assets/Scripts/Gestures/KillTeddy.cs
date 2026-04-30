@@ -10,7 +10,7 @@ namespace UI
         public GameObject teddy;
         public GameObject knife;
         
-        private new readonly AudioManager audio;
+        private new AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey teddyKilledStateKey;
@@ -23,6 +23,11 @@ namespace UI
         private void OnDisable()
         {
             knifeDragGesture.OnGestureEnd -= OnKnifeGesture;
+        }
+        
+        private void Awake()
+        {
+            audio = AudioManager.Instance;
         }
 
         private void OnKnifeGesture(DragDirection dragDirection)

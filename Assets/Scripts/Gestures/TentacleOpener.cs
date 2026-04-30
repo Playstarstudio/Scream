@@ -22,7 +22,7 @@ namespace UI
         public int currentKey = 0;
         private bool reset = false;
 
-        private AudioManager audio;
+        private new AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey amuletRetrievedStateKey;

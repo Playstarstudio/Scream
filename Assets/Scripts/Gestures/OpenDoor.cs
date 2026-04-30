@@ -13,7 +13,7 @@ namespace UI
         public GameObject key;
         public GameObject door;
         
-        private new readonly AudioManager audio;
+        private new AudioManager audio;
 
         [Header("Game State")]
         public GameStateKey doorOpenedStateKey;
@@ -23,10 +23,14 @@ namespace UI
             doorOpenGesture.OnGestureEnd += OnDoorOpenGesture;
         }
 
-
         private void OnDisable()
         {
             doorOpenGesture.OnGestureEnd -= OnDoorOpenGesture;
+        }
+        
+        private void Awake()
+        {
+            audio = AudioManager.Instance;
         }
 
         private void OnDoorOpenGesture(DragDirection dragDirection)
