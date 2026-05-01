@@ -226,7 +226,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
                 }
                 else if (smearTeddy != null)
                 {
-                    if (invKeyItem.itemId == 7)
+                    if (invKeyItem.itemId == 8)
                     {
                         smearTeddy.PlaceTeddy();
                         RemoveItem();
