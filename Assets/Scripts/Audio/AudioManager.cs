@@ -36,20 +36,19 @@ public class AudioManager : MonoBehaviour
 
     void OnEnable()
     {
-        SceneManager.activeSceneChanged += OnSceneChange;
+
+        SceneManager.sceneLoaded += OnSceneLoad;
     }
 
     void OnDisable()
     {
-        SceneManager.activeSceneChanged -= OnSceneChange;
+        SceneManager.sceneLoaded -= OnSceneLoad;
     }
 
-    void OnSceneChange(Scene oldScene, Scene newScene)
+    void OnSceneLoad(Scene newScene, LoadSceneMode _)
     {
         KillAllBusInstances(AudioID.Bus.Master);
-        // Debug.Log($"AudioManager: Scene Change from {oldScene.name} to {newScene.name}");
         HandleMusicAmbienceChange(newScene);
-        // PlayOneShot(AudioID.SFX.Interface.room_transition);
     }
     
     public void HandleMusicAmbienceChange(Scene newScene)
@@ -83,8 +82,8 @@ public class AudioManager : MonoBehaviour
             }
         }
         
-        Debug.Log($"{newMusic.Path}");
-        Debug.Log($"{newAmbience.Path}");
+        // Debug.Log($"{newMusic.Path}");
+        // Debug.Log($"{newAmbience.Path}");
 
         if (newMusic.Path != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic.Path}", null, AudioID.CurrentMusicProgress[newMusic]); }
         if (newAmbience.Path != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience.Path}", GameObject.Find("Character"), AudioID.CurrentAmbienceProgress[newAmbience]); }
