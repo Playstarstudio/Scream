@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Inventory
 {
     [CustomEditor(typeof(Inventory))]
-    public class InventoryEditor : Editor
+    public class InventoryEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
@@ -162,4 +162,3 @@ namespace Inventory
         }
     }
 }
-

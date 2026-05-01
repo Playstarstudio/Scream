@@ -130,13 +130,23 @@ namespace Inventory
             currentItems[slotIndex] = null;
         }
         
-        public void OnDrop(int itemId)
+        public void OnDrop(int slotIndex)
         {
-            KeyItem keyItem = currentItems[itemId].GetComponentInChildren<KeyItem>();
+            if (currentItems[slotIndex] == null) return;
+            
+            KeyItem keyItem = currentItems[slotIndex].GetComponentInChildren<KeyItem>();
             Vector3 spawnPos = FindFirstObjectByType<CharacterMovement>().transform.position;
             GameObject worldItem = Instantiate(keyItem.gameObject, spawnPos, Quaternion.identity);
             worldItem.transform.parent = null;
-            draggableItems[itemId].RemoveItem();
+            
+            // Clear inventory data
+            RemoveFromInventory(slotIndex);
+            
+            // Clear widget visual
+            if (draggableItems != null && slotIndex < draggableItems.Length)
+            {
+                draggableItems[slotIndex].ClearSlotVisual();
+            }
         }
     }
 }

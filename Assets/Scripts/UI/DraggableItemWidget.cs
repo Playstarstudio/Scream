@@ -30,6 +30,9 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     private KeyItem invKeyItem;
     private Inventory.IInventory _inventory;
+    private Inventory.Inventory _inventoryConcrete;
+    
+    public int slotIndex { get; private set; } = -1;
 
     private void Awake()
     {
@@ -40,10 +43,49 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         isHovered = false;
         buttonPromptContainer.SetActive(false);
 
-        // _image = GetComponent<Image>();
         _image.enabled = false;
         
-        _inventory = GetComponentInParent<Inventory.Inventory>();
+        FindInventoryAndSlot();
+    }
+    
+    private void Start()
+    {
+        // Second chance in case Awake order didn't have Inventory ready
+        if (slotIndex < 0)
+        {
+            FindInventoryAndSlot();
+        }
+        
+        if (slotIndex < 0)
+        {
+            Debug.LogWarning($"[DraggableItemWidget] '{gameObject.name}' could not determine its slotIndex!");
+        }
+    }
+    
+    private void FindInventoryAndSlot()
+    {
+        if (_inventoryConcrete == null)
+        {
+            _inventoryConcrete = GetComponentInParent<Inventory.Inventory>();
+            if (_inventoryConcrete == null)
+            {
+                _inventoryConcrete = FindFirstObjectByType<Inventory.Inventory>();
+            }
+            _inventory = _inventoryConcrete;
+        }
+        
+        if (_inventoryConcrete != null && _inventoryConcrete.draggableItems != null && slotIndex < 0)
+        {
+            for (int i = 0; i < _inventoryConcrete.draggableItems.Length; i++)
+            {
+                if (_inventoryConcrete.draggableItems[i] == this)
+                {
+                    slotIndex = i;
+                    Debug.Log($"[DraggableItemWidget] '{gameObject.name}' assigned slotIndex={i}");
+                    break;
+                }
+            }
+        }
     }
 
     private void Update()
@@ -103,11 +145,25 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
             var targetSlot = hitObject.GetComponent<DraggableItemWidget>()
                                        ?? hitObject.transform.parent.GetComponentInChildren<DraggableItemWidget>();
 
-            if (targetSlot != null)
+            if (targetSlot != null && targetSlot != this)
             {
-                targetSlot.AddItem(invItem, invItemIndex);
+                // Move item in the inventory array: source slot -> target slot
+                int srcSlot = slotIndex;
+                int dstSlot = targetSlot.slotIndex;
                 
-                RemoveItem();
+                if (_inventoryConcrete != null && srcSlot >= 0 && dstSlot >= 0)
+                {
+                    // Move the GameObject reference in the inventory array
+                    _inventoryConcrete.currentItems[dstSlot] = _inventoryConcrete.currentItems[srcSlot];
+                    _inventoryConcrete.currentItems[srcSlot] = null;
+                    
+                    Debug.Log($"[DraggableItemWidget] Moved item from slot {srcSlot} to slot {dstSlot}");
+                }
+                
+                // Update target widget with the item, using the TARGET's slot index
+                targetSlot.SetItem(invItem, invKeyItem);
+                
+                ClearSlotVisual();
                 return;
             }
 
@@ -180,6 +236,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
                 {
                     if (invKeyItem.itemId == 9)
                     {
+                        Debug.Log($"[DraggableItemWidget] Placing key on door from widget slotIndex={slotIndex}, invItemIndex={invItemIndex}, invItem={invItem?.name ?? "null"}");
                         door.PlaceKey();
                         RemoveItem();
                     }
@@ -210,35 +267,66 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         isZoomItem = item.GetComponent<KeyItem>().isZoomItem;
         hiResSprite = item.GetComponent<KeyItem>().hiResSprite;
     }
-
-    public void RemoveItem()
+    
+    /// <summary>
+    /// Sets item on this widget using its own fixed slotIndex.
+    /// Used for slot-to-slot moves where the inventory array is updated separately.
+    /// </summary>
+    public void SetItem(GameObject item, KeyItem keyItem)
     {
-        // Lazy-find inventory if not set
-        if (_inventory == null)
-        {
-            _inventory = GetComponentInParent<Inventory.Inventory>();
-            if (_inventory == null)
-            {
-                _inventory = FindFirstObjectByType<Inventory.Inventory>();
-            }
-        }
+        _image.enabled = true;
+        invItem = item;
+        invKeyItem = keyItem;
+        _image.sprite = item.GetComponent<SpriteRenderer>().sprite;
+        invItemIndex = slotIndex; // Always use this widget's own slot
+        isZoomItem = keyItem != null && keyItem.isZoomItem;
+        hiResSprite = keyItem != null ? keyItem.hiResSprite : null;
+    }
 
-        // Tell the Inventory to free this slot
-        if (_inventory != null && invItemIndex >= 0)
-        {
-            Debug.Log($"[DraggableItemWidget] RemoveItem() — calling RemoveFromInventory(slot {invItemIndex})");
-            _inventory.RemoveFromInventory(invItemIndex);
-        }
-        else
-        {
-            Debug.LogWarning($"[DraggableItemWidget] RemoveItem() — inventory={(_inventory != null ? "found" : "NULL")}, invItemIndex={invItemIndex}. Slot NOT freed!");
-        }
-        
+    /// <summary>
+    /// Clears the widget visual only — used when moving items between slots.
+    /// Does NOT destroy the inventory clone.
+    /// </summary>
+    public void ClearSlotVisual()
+    {
         _image.enabled = false;
         invItem = null;
         invKeyItem = null;
         _image.sprite = null;
         invItemIndex = -1;
+    }
+
+    /// <summary>
+    /// Removes the item and destroys it from inventory — used when consuming items (gesture placement, dropping).
+    /// </summary>
+    public void RemoveItem()
+    {
+        // Lazy-find inventory if not set
+        if (_inventory == null)
+        {
+            _inventoryConcrete = GetComponentInParent<Inventory.Inventory>();
+            _inventory = _inventoryConcrete;
+            if (_inventory == null)
+            {
+                _inventoryConcrete = FindFirstObjectByType<Inventory.Inventory>();
+                _inventory = _inventoryConcrete;
+            }
+        }
+
+        // Use slotIndex (fixed) for inventory removal
+        int removeSlot = slotIndex >= 0 ? slotIndex : invItemIndex;
+
+        if (_inventory != null && removeSlot >= 0)
+        {
+            Debug.Log($"[DraggableItemWidget] RemoveItem() — calling RemoveFromInventory(slot {removeSlot})");
+            _inventory.RemoveFromInventory(removeSlot);
+        }
+        else
+        {
+            Debug.LogWarning($"[DraggableItemWidget] RemoveItem() — inventory={(_inventory != null ? "found" : "NULL")}, slotIndex={slotIndex}, invItemIndex={invItemIndex}. Slot NOT freed!");
+        }
+        
+        ClearSlotVisual();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
