@@ -679,4 +679,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71118cfe6e52b2b48b16d0232fd7608f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TheZoomer
-  hiResSprite: {fileID: 0}
+  hiResSprite: {fileID: 21300000, guid: 6823373fa5a51364694f3166dd37c5a7, type: 3}
