@@ -40,7 +40,9 @@ public sealed class AudioID
     {
         {Music.exploration, 0},
         {Music.eldritch, 0},
-        {Music.title, 0}
+        {Music.title, 0},
+        {Music.credits, 0},
+        {Music.fakeout, 0}
     };
     
     public static readonly Dictionary<AudioID, int> CurrentAmbienceProgress = new()
@@ -123,6 +125,7 @@ public sealed class AudioID
                 public static readonly AudioID place = new("event:/ui/inventory/place");
                 public static readonly AudioID select = new("event:/ui/inventory/select");
                 public static readonly AudioID unselect = new("event:/ui/inventory/unselect");
+                public static readonly AudioID reveal = new("event:/ui/inventory/reveal");
             }
             
             public static class Settings

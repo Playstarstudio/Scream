@@ -42,6 +42,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         buttonPromptContainer = transform.parent.Find("ButtonPromptContainer").gameObject;
         isHovered = false;
         buttonPromptContainer.SetActive(false);
+        
+        _audio = AudioManager.Instance;
 
         _image.enabled = false;
         
@@ -97,8 +99,6 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         }
     }
 
-
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         var clickedSprite = _image.sprite;
@@ -108,6 +108,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
             cursorImage.gameObject.SetActive(true);
         }
         
+        _audio?.PlayOneShot(AudioID.SFX.Interface.Inventory.select);
         
         // parentAfterDrag = transform.parent;
         //
@@ -129,11 +130,6 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
             
         cursorTransform.anchoredPosition = position;
         // transform.position = eventData.position;
-
-        if (_audio != null)
-        {
-            _audio.PlayOneShot(AudioID.SFX.Interface.Inventory.select);
-        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -142,9 +138,11 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
         GameObject hitObject = eventData.pointerCurrentRaycast.gameObject;
         if (hitObject != null)
         {
+            _audio?.PlayOneShot(AudioID.SFX.Interface.Inventory.unselect);
+            
             var targetSlot = hitObject.GetComponent<DraggableItemWidget>()
                                        ?? hitObject.transform.parent.GetComponentInChildren<DraggableItemWidget>();
-
+            
             if (targetSlot != null && targetSlot != this)
             {
                 // Move item in the inventory array: source slot -> target slot
@@ -244,8 +242,6 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
             }
         }
         
-        //_audio.PlayOneShot(AudioID.SFX.Interface.Inventory.unselect);
-        
         // transform.SetParent(parentAfterDrag);
         // _image.raycastTarget = true;
         //
@@ -342,6 +338,5 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     {
         isHovered = false;
         buttonPromptContainer.SetActive(false);
-
     }
 }

@@ -69,10 +69,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/ui_sfx.bank
   Name: ui_sfx
   StudioPath: bank:/ui_sfx
-  lastModified: 639130964984324107
+  lastModified: 639131675833013573
   FileSizes:
   - Name: Desktop
-    Value: 155648
+    Value: 179360
   Exists: 1
 --- !u!114 &-7489200436987320499
 MonoBehaviour:
@@ -197,7 +197,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/music.bank
   Name: music
   StudioPath: bank:/music
-  lastModified: 639130915711291600
+  lastModified: 639130244463506154
   FileSizes:
   - Name: Desktop
     Value: 2649888
@@ -405,10 +405,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/gameplay_sfx.bank
   Name: gameplay_sfx
   StudioPath: bank:/gameplay_sfx
-  lastModified: 639131198424648819
+  lastModified: 639131663522190286
   FileSizes:
   - Name: Desktop
-    Value: 10253408
+    Value: 10254368
   Exists: 1
 --- !u!114 &-4106128480164914531
 MonoBehaviour:
@@ -595,10 +595,38 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 7836266218349097105}
   MinDistance: 1
   MaxDistance: 20
   Length: 85000
+--- !u!114 &-2147449399397073065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ui/inventory/reveal
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ui/inventory/reveal
+  Guid:
+    Data1: 1287834864
+    Data2: 1102846040
+    Data3: -1128913263
+    Data4: 650818430
+  Banks:
+  - {fileID: -7719053334681461590}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-797333438252874776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,7 +775,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639131157967077862
+  lastModified: 639131663522588526
   FileSizes:
   - Name: Desktop
     Value: 33408
@@ -823,6 +851,7 @@ MonoBehaviour:
   - {fileID: 4423274715772498580}
   - {fileID: 4431370400086539657}
   - {fileID: -386124711155837506}
+  - {fileID: -2147449399397073065}
   EditorParameters:
   - {fileID: 8545453521984738752}
   - {fileID: -173443437999085184}
@@ -831,7 +860,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8099864925913319225}
   cacheVersion: 131859
-  cacheTime: 639131198424648819
+  cacheTime: 639131675833013573
   SerializableEventsDict:
   - key: event:/player/interact/match/place
     index: 0
@@ -937,6 +966,8 @@ MonoBehaviour:
     index: 50
   - key: event:/ambience/bedroom
     index: 51
+  - key: event:/ui/inventory/reveal
+    index: 52
 --- !u!114 &177375763224750830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,6 +1804,32 @@ MonoBehaviour:
   - false
   - true
   Exists: 1
+--- !u!114 &7836266218349097105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/foyer/isFireplaceLit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: isFireplaceLit
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3182887904
+    data2: 2694897699
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - false
+  - true
+  Exists: 1
 --- !u!114 &8028558853758011459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1815,10 +1872,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639131110758965206
+  lastModified: 639131663522613658
   FileSizes:
   - Name: Desktop
-    Value: 4220
+    Value: 4320
   Exists: 1
 --- !u!114 &8545453521984738752
 MonoBehaviour:

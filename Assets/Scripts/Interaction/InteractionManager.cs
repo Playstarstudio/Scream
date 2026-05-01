@@ -7,7 +7,7 @@ public class InteractionManager : MonoBehaviour
 {
     private readonly HashSet<IInteractable> _nearbyInteractables = new HashSet<IInteractable>();
     
-    private new AudioManager _audio;
+    private AudioManager _audio;
 
     private void Start()
     {
@@ -83,7 +83,7 @@ public class InteractionManager : MonoBehaviour
         foreach (var interactable in interactables)
         {
             _nearbyInteractables.Add(interactable);
-            _audio.PlayOneShot(AudioID.SFX.Interface.highlight);
+            _audio?.PlayOneShot(AudioID.SFX.Interface.highlight);
             Debug.Log($"[InteractionManager] Entered range: {collision.gameObject.name} ({interactable.GetType().Name}, Priority: {interactable.InteractionPriority}, CanInteract: {interactable.CanInteract})");
         }
     }

@@ -41,9 +41,9 @@
 			<value>20</value>
 		</property>
 		<relationship name="sidechains">
-			<destination>{d78bd73d-a856-4859-8ea1-b0aeeebcc2a2}</destination>
 			<destination>{47134749-cd0f-42dd-9087-1a318a4f8e92}</destination>
 			<destination>{c9d6a362-4dad-44d5-8564-b95444ff5701}</destination>
+			<destination>{77fc3ed7-0579-44a0-954d-d36568bb41d9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{aa44b89c-2979-4496-81fa-1cc753cd97ce}" />

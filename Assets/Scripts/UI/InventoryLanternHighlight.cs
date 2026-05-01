@@ -5,6 +5,9 @@ public class InventoryLanternHighlight : MonoBehaviour
     [SerializeField] private RectTransform lantern;
     [SerializeField] private ParticleSystem[] inventoryParticles;
     private RectTransform[] _particleTransforms;
+    
+    private AudioManager _audio;
+    private bool isRevealed;
 
     [SerializeField] private float lanternDistance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,6 +18,11 @@ public class InventoryLanternHighlight : MonoBehaviour
         {
             _particleTransforms[i] = inventoryParticles[i].GetComponent<RectTransform>();
         }
+    }
+    
+    void Awake()
+    {
+        _audio = AudioManager.Instance;
     }
 
     // Update is called once per frame
@@ -31,6 +39,19 @@ public class InventoryLanternHighlight : MonoBehaviour
             else if (!inventoryParticles[i].isPlaying)
             {
                 inventoryParticles[i].Play();
+            }
+            
+            // TODO: This doesn't work since isRevealed keeps getting set to false despite distanceToLantern distance not changing
+            if (!isRevealed && distanceToLantern <= lanternDistance) {
+                _audio?.PlayOneShot(AudioID.SFX.Interface.Inventory.reveal);
+                isRevealed = true;
+            }
+            
+            if (isRevealed && (distanceToLantern - 4) > lanternDistance)
+            {
+                isRevealed = false;
+                // Debug.Log($"isRevealed: {isRevealed}");
+                // Debug.Log($"{distanceToLantern - 4} > {lanternDistance}: {(distanceToLantern- 4) > lanternDistance}");
             }
         }
     }

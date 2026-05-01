@@ -22,10 +22,12 @@ public class TypewriterScript : MonoBehaviour
     [SerializeField] private float onScreenTime = 3f;
     [SerializeField] private float betweenLineTime = 1f;
 
-
+    private AudioManager _audio;
 
     private void Awake()
     {
+        _audio = AudioManager.Instance;
+        
         textBox = GetComponent<TMP_Text>();
 
         simpleDelay = new WaitForSeconds(1 / characterPerSecond);
@@ -75,6 +77,9 @@ public class TypewriterScript : MonoBehaviour
         textBox.alpha = 1f;
         TMP_TextInfo textInfo = textBox.textInfo;
         textBox.maxVisibleCharacters++;
+        
+        // Debug.Log($"textInfo.characterCount: {textInfo.characterCount}");
+        
         foreach (var charText in textInfo.characterInfo)
         //while (currentVisibleCharacterIndex < textInfo.characterCount + 1)
         {
@@ -83,10 +88,11 @@ public class TypewriterScript : MonoBehaviour
             char character = charText.character;
             //char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
             
-            // TODO: See if this works
-            // if (textBox.maxVisibleCharacters % 2 == 0) 
+            // // TODO: This works, but for some reason the script continues to update in the bg with nothing updating on screen
+            // if (textBox.maxVisibleCharacters < textInfo.characterCount || textBox.maxVisibleCharacters % 2 == 0) 
             // { 
-            //     audio.PlayOneShot(AudioID.SFX.Interface.typewriter); 
+            //     // Debug.Log($"textBox.maxVisibleCharacters: {textBox.maxVisibleCharacters}");
+            //     _audio?.PlayOneShot(AudioID.SFX.Interface.typewriter); 
             // }
 
             if (character == '?' || character == '!' || character == ',' || character == '.' || character == ';' || character == ':' || character == '-')
@@ -120,7 +126,7 @@ public class TypewriterScript : MonoBehaviour
 
                 char character = charText.character;
                 textBox.maxVisibleCharacters++;
-
+                
                 if (character == '?' || character == '!' || character == ',' || character == '.' || character == ';' || character == ':' || character == '-')
                 {
                     yield return interpunctuationDelay;

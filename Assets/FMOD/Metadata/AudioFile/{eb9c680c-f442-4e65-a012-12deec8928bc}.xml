@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{eb9c680c-f442-4e65-a012-12deec8928bc}">
+		<property name="assetPath">
+			<value>SFX_Unobscure_Inventory_V3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.25</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{badc7234-64ac-4026-b78a-657cf55b0c03}</destination>
+		</relationship>
+	</object>
+</objects>

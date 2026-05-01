@@ -48,8 +48,7 @@ public class CharacterMovement : MonoBehaviour
 
     [Header("Player Sounds")]
 
-    [SerializeField]
-    private float stepInterval = 5f;
+    private float stepInterval = 0.5f;
     private float _stepTimer = 0f;
 
     private new AudioManager audio;
@@ -202,8 +201,6 @@ public class CharacterMovement : MonoBehaviour
     // TODO: Implement footsteps
     private void HandleFootstepSound(Vector2 direction)
     {
-        // Debug.Log(_stepTimer);
-        
         if (Time.timeScale > 0 && direction.magnitude > 0 && _stepTimer < 0)
         {
             string roomType = AudioID.SceneToRoomMap[SceneManager.GetActiveScene().name];
@@ -214,8 +211,10 @@ public class CharacterMovement : MonoBehaviour
                 GameObject.Find("Character"));
                 
             _stepTimer = stepInterval;
+            Debug.Log($"_stepTimer: {_stepTimer}");
         }
-        // Debug.Log($"{_stepTimer} - {Time.deltaTime} = {_stepTimer - Time.deltaTime}");
+        
+        // Debug.Log($"_stepTimer - Time.deltaTime = _stepTimer - Time.deltaTime: {_stepTimer} - {Time.deltaTime} = {_stepTimer - Time.deltaTime}");
         _stepTimer -= Time.deltaTime;
     }
 }

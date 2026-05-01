@@ -29,7 +29,8 @@ public class AudioManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        oldScene = SceneManager.GetActiveScene();
+        
+        // oldScene = SceneManager.GetActiveScene();
         registry = new Dictionary<string, EventInstance>();
     }
 
@@ -46,9 +47,49 @@ public class AudioManager : MonoBehaviour
     void OnSceneChange(Scene oldScene, Scene newScene)
     {
         KillAllBusInstances(AudioID.Bus.Master);
-        Debug.Log($"AudioManager: Scene Change from {oldScene.name} to {newScene.name}");
+        // Debug.Log($"AudioManager: Scene Change from {oldScene.name} to {newScene.name}");
         HandleMusicAmbienceChange(newScene);
-        PlayOneShot(AudioID.SFX.Interface.room_transition);
+        // PlayOneShot(AudioID.SFX.Interface.room_transition);
+    }
+    
+    public void HandleMusicAmbienceChange(Scene newScene)
+    {
+        AudioID newMusic = AudioID.SceneToMusicAmbienceMap[newScene.name]?["music"];
+        AudioID newAmbience = AudioID.SceneToMusicAmbienceMap[newScene.name]?["ambience"];
+        
+        
+        if (oldScene.name != null && oldScene.name != newScene.name)
+        {
+            Debug.Log($"Old scene name: {oldScene.name}");
+            Debug.Log($"New scene name: {newScene.name}");
+            
+            string oldSceneName = oldScene.name;
+
+            AudioID oldMusic = AudioID.SceneToMusicAmbienceMap[oldSceneName]["music"];
+            AudioID oldAmbience = AudioID.SceneToMusicAmbienceMap[oldSceneName]["ambience"];
+            
+            if (oldMusic.Path == newMusic.Path)
+            {
+                int oldMusicProgress;
+                registry[$"mus_{oldMusic}"].getTimelinePosition(out oldMusicProgress);
+                AudioID.CurrentMusicProgress[oldMusic] = oldMusicProgress;
+            }
+
+            if (oldAmbience.Path == newAmbience.Path) 
+            {
+                int oldAmbienceProgress;
+                registry[$"amb_{oldAmbience}"].getTimelinePosition(out oldAmbienceProgress);
+                AudioID.CurrentAmbienceProgress[oldAmbience] = oldAmbienceProgress;
+            }
+        }
+        
+        Debug.Log($"{newMusic.Path}");
+        Debug.Log($"{newAmbience.Path}");
+
+        if (newMusic.Path != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic.Path}", null, AudioID.CurrentMusicProgress[newMusic]); }
+        if (newAmbience.Path != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience.Path}", GameObject.Find("Character"), AudioID.CurrentAmbienceProgress[newAmbience]); }
+
+        oldScene = newScene;
     }
 
     /// <summary>
@@ -308,37 +349,6 @@ public class AudioManager : MonoBehaviour
 
         instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         instance.release();
-    }
-
-    public void HandleMusicAmbienceChange(Scene newScene)
-    {
-        AudioID newMusic = AudioID.SceneToMusicAmbienceMap[newScene.name]?["music"];
-        AudioID newAmbience = AudioID.SceneToMusicAmbienceMap[newScene.name]?["ambience"];
-        // Debug.Log($"{newAmbience.Path}");
-        if (oldScene.name == null)
-        {
-            Debug.Log("idk");
-        }
-        if (oldScene.name != null)
-        {
-            string oldSceneName = oldScene.name;
-
-            AudioID oldMusic = AudioID.SceneToMusicAmbienceMap[oldSceneName]["music"];
-            AudioID oldAmbience = AudioID.SceneToMusicAmbienceMap[oldSceneName]["ambience"];
-            int oldMusicProgress;
-            int oldAmbienceProgress;
-
-            registry[$"mus_{oldMusic}"].getTimelinePosition(out oldMusicProgress);
-            registry[$"amb_{oldAmbience}"].getTimelinePosition(out oldAmbienceProgress);
-            AudioID.CurrentMusicProgress[oldMusic] = oldMusicProgress;
-            AudioID.CurrentAmbienceProgress[oldAmbience] = oldAmbienceProgress;
-        }
-
-        if (newMusic.Path != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic.Path}", null, AudioID.CurrentMusicProgress[newMusic]); }
-        if (newAmbience.Path != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience.Path}", GameObject.Find("Character"), AudioID.CurrentAmbienceProgress[newAmbience]); }
-
-        // TODO: This doesn't work because the old scene does not save between audio manager instances
-        oldScene = newScene;
     }
 
     /// <summary>
