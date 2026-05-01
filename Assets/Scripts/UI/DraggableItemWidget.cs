@@ -29,6 +29,7 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
     private AudioManager _audio;
 
     private KeyItem invKeyItem;
+    private Inventory.IInventory _inventory;
 
     private void Awake()
     {
@@ -41,6 +42,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
 
         // _image = GetComponent<Image>();
         _image.enabled = false;
+        
+        _inventory = GetComponentInParent<Inventory.Inventory>();
     }
 
     private void Update()
@@ -210,6 +213,27 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void RemoveItem()
     {
+        // Lazy-find inventory if not set
+        if (_inventory == null)
+        {
+            _inventory = GetComponentInParent<Inventory.Inventory>();
+            if (_inventory == null)
+            {
+                _inventory = FindFirstObjectByType<Inventory.Inventory>();
+            }
+        }
+
+        // Tell the Inventory to free this slot
+        if (_inventory != null && invItemIndex >= 0)
+        {
+            Debug.Log($"[DraggableItemWidget] RemoveItem() — calling RemoveFromInventory(slot {invItemIndex})");
+            _inventory.RemoveFromInventory(invItemIndex);
+        }
+        else
+        {
+            Debug.LogWarning($"[DraggableItemWidget] RemoveItem() — inventory={(_inventory != null ? "found" : "NULL")}, invItemIndex={invItemIndex}. Slot NOT freed!");
+        }
+        
         _image.enabled = false;
         invItem = null;
         invKeyItem = null;

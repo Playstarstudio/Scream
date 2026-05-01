@@ -52,8 +52,18 @@ public class Door : MonoBehaviour, IInteractable
         get
         {
             if (string.IsNullOrEmpty(targetSceneName)) return false;
-            if (!AreStateRequirementsMet()) return false;
-            if (!HasRequiredItem()) return false;
+            if (!AreStateRequirementsMet())
+            {
+                Debug.Log($"[Door] {gameObject.name}: CanInteract=false — state requirements not met.");
+                return false;
+            }
+            // If state requirements ARE met, skip item check — the puzzle is already complete
+            // Only check for required item when there are no state requirements
+            if ((stateRequirements == null || stateRequirements.Count == 0) && !HasRequiredItem())
+            {
+                Debug.Log($"[Door] {gameObject.name}: CanInteract=false — missing required item {requiredItemId}.");
+                return false;
+            }
             return true;
         }
     }

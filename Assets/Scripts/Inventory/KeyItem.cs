@@ -39,7 +39,6 @@ public class KeyItem : MonoBehaviour, IInteractable
         sr = this.gameObject.GetComponent<SpriteRenderer>();
         if (sr == null) sr = this.gameObject.AddComponent<SpriteRenderer>();
         if (sprite != null) sr.sprite = sprite;
-        _inventory = FindFirstObjectByType<Inventory.Inventory>();
     }
 
     private void Start()
@@ -54,8 +53,23 @@ public class KeyItem : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (_inventory != null && _inventory.AddToInventory(this))
+        // Lazy-find inventory every time — handles DontDestroyOnLoad and runtime-spawned items
+        if (_inventory == null)
         {
+            _inventory = FindFirstObjectByType<Inventory.Inventory>();
+            if (_inventory == null)
+            {
+                Debug.LogWarning("[KeyItem] Could not find Inventory — item not picked up.");
+                return;
+            }
+        }
+
+        Debug.Log($"[KeyItem] Interact() on '{gameObject.name}' (itemId={itemId}). Inventory found: {_inventory != null}");
+
+        if (_inventory.AddToInventory(this))
+        {
+            Debug.Log($"[KeyItem] Added to inventory successfully.");
+
             TypewriterScript[] typewriterArray = charCanvas.GetComponentsInChildren<TypewriterScript>();
 
             foreach (TypewriterScript typewriterScript in typewriterArray)
@@ -69,7 +83,14 @@ public class KeyItem : MonoBehaviour, IInteractable
                 zoomScript.OpenZoomCanvas(hiResSprite);
             }
 
-            Destroy(gameObject.transform.parent.gameObject);
+            // Destroy the root object — if we have a parent, destroy the parent; otherwise destroy ourselves
+            GameObject toDestroy = transform.parent != null ? transform.parent.gameObject : gameObject;
+            Debug.Log($"[KeyItem] Destroying '{toDestroy.name}'");
+            Destroy(toDestroy);
+        }
+        else
+        {
+            Debug.Log($"[KeyItem] AddToInventory returned false — inventory may be full.");
         }
     }
 }

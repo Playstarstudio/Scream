@@ -35,12 +35,18 @@ namespace Inventory
             DontDestroyOnLoad(gameObject);
             _size = draggableItems.Length;
             currentItems = new GameObject[_size];
-            currentItems[0] = starterKey;
         }
 
         private void Start()
         {
-            AddKeyToInventory();
+            if (starterKey != null)
+            {
+                KeyItem starterKeyItem = starterKey.GetComponentInChildren<KeyItem>();
+                if (starterKeyItem != null)
+                {
+                    AddToInventory(starterKeyItem);
+                }
+            }
         }
 
         private void AddKeyToInventory()
@@ -61,6 +67,7 @@ namespace Inventory
             {
                 if (currentItems[i] == null)
                 {
+                    Debug.Log($"[Inventory] Adding '{itemID.gameObject.name}' (itemId={itemID.itemId}) to slot {i}");
                     currentItems[i] = Instantiate(itemID.gameObject);
                     currentItems[i].SetActive(false);
                     currentItems[i].transform.parent = gameObject.transform;
@@ -74,13 +81,26 @@ namespace Inventory
         {
             for (int i = 0; i < currentItems.Length; i++)
             {
+                // Unity destroyed objects are == null but not 'is null'
+                // Force-clean any destroyed references
+                if (currentItems[i] != null && currentItems[i].Equals(null))
+                {
+                    Debug.Log($"[Inventory] Slot {i} had a destroyed reference — cleaning up.");
+                    currentItems[i] = null;
+                }
+                
                 if (currentItems[i] == null)
                 {
-                    // if there's an empty slot, we got room
                     return false;
                 }
             }
             
+            // Log what's occupying each slot
+            for (int i = 0; i < currentItems.Length; i++)
+            {
+                Debug.Log($"[Inventory] Slot {i}: '{currentItems[i]?.name ?? "null"}' (active={currentItems[i]?.activeSelf})");
+            }
+            Debug.Log("[Inventory] Checked inventory space: no empty slots found.");
             return true;
         }
 
@@ -100,19 +120,23 @@ namespace Inventory
             return foundItem;
         }
 
-        public void RemoveFromInventory(int itemId)
+        public void RemoveFromInventory(int slotIndex)
         {
-            Debug.Log("Removed item with ID " + currentItems[itemId].name + " from inventory");
-            draggableItems[itemId].RemoveItem();
-            currentItems[itemId] = null;
+            Debug.Log($"[Inventory] Removing slot {slotIndex}: '{currentItems[slotIndex]?.name ?? "null"}'");
+            if (currentItems[slotIndex] != null)
+            {
+                Destroy(currentItems[slotIndex]);
+            }
+            currentItems[slotIndex] = null;
         }
+        
         public void OnDrop(int itemId)
         {
             KeyItem keyItem = currentItems[itemId].GetComponentInChildren<KeyItem>();
             Vector3 spawnPos = FindFirstObjectByType<CharacterMovement>().transform.position;
             GameObject worldItem = Instantiate(keyItem.gameObject, spawnPos, Quaternion.identity);
             worldItem.transform.parent = null;
-            RemoveFromInventory(itemId);
+            draggableItems[itemId].RemoveItem();
         }
     }
 }
