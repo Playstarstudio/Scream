@@ -580,7 +580,7 @@ MonoBehaviour:
   firstText: 
   secondText: 
   fadeOutText: 1
-  characterPerSecond: 12
+  characterPerSecond: 15
   floatinterpunctuationDelay: 0.5
   onScreenTime: 3
   betweenLineTime: 1
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   firstText: 
   secondText: 
   fadeOutText: 1
-  characterPerSecond: 12
+  characterPerSecond: 15
   floatinterpunctuationDelay: 0.5
   onScreenTime: 3
   betweenLineTime: 1
