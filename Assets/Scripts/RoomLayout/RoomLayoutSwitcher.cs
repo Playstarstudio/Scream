@@ -1,4 +1,5 @@
 using Inventory;
+using System;
 using UnityEngine;
 
 namespace RoomLayout
@@ -6,6 +7,9 @@ namespace RoomLayout
     public class RoomLayoutSwitcher : MonoBehaviour
     {
         [SerializeField] private int currentLayoutIndex = -1;
+
+        // Static event fired after layout is activated and items are filtered
+        public static event Action OnLayoutReady;
 
         // Total number of layout children
         public int LayoutCount => transform.childCount;
@@ -17,6 +21,9 @@ namespace RoomLayout
         {
             var inventory = FindFirstObjectByType<Inventory.Inventory>() as IInventory;
             SelectRandomLayout(inventory);
+
+            Debug.Log($"[RoomLayoutSwitcher] Layout ready. Active layout index: {currentLayoutIndex}");
+            OnLayoutReady?.Invoke();
         }
 
         // Activates a random layout, deactivating all others.
@@ -28,7 +35,7 @@ namespace RoomLayout
                 return;
             }
 
-            int index = Random.Range(0, LayoutCount);
+            int index = UnityEngine.Random.Range(0, LayoutCount);
             ActivateLayout(index, inventoryOverride);
         }
 
