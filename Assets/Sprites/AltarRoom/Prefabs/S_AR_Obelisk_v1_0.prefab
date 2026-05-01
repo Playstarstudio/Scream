@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 941237903354709514}
   - component: {fileID: 6211653762600937037}
   - component: {fileID: 1298938554707915257}
+  - component: {fileID: 1651482139281985163}
   m_Layer: 0
   m_Name: InteractionTrigger
   m_TagString: Untagged
@@ -666,3 +667,16 @@ MonoBehaviour:
   _fadeOutSpeed: 1
   sr: {fileID: 0}
   outlineMaterial: {fileID: 2100000, guid: 723fdfe5b1ec85b479043c4f63036050, type: 2}
+--- !u!114 &1651482139281985163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8975274642382140399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71118cfe6e52b2b48b16d0232fd7608f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TheZoomer
+  hiResSprite: {fileID: 0}

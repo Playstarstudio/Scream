@@ -11,7 +11,7 @@ public class InspectText : MonoBehaviour, IInteractable
     private CharacterMovement character;
     private Canvas charCanvas;
     public string textToRead;
-    public int InteractionPriority => 10;
+    public int InteractionPriority => 9;
 
     public bool CanInteract => true;
 
