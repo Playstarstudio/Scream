@@ -15,7 +15,8 @@ namespace RoomLayout
 
         private void Start()
         {
-            SelectRandomLayout();
+            var inventory = FindFirstObjectByType<Inventory.Inventory>() as IInventory;
+            SelectRandomLayout(inventory);
         }
 
         // Activates a random layout, deactivating all others.
@@ -64,6 +65,12 @@ namespace RoomLayout
         // ReSharper disable Unity.PerformanceAnalysis
         private void FilterKeyItemsForInventory(Transform layout, IInventory inventory = null)
         {
+            // Auto-find inventory if not provided
+            if (inventory == null)
+            {
+                inventory = FindFirstObjectByType<Inventory.Inventory>() as IInventory;
+            }
+
             KeyItem[] keyItems = layout.GetComponentsInChildren<KeyItem>(includeInactive: true);
 
             foreach (KeyItem item in keyItems)
