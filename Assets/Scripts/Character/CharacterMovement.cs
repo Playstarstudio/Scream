@@ -211,7 +211,7 @@ public class CharacterMovement : MonoBehaviour
                 GameObject.Find("Character"));
                 
             _stepTimer = stepInterval;
-            Debug.Log($"_stepTimer: {_stepTimer}");
+            // Debug.Log($"_stepTimer: {_stepTimer}");
         }
         
         // Debug.Log($"_stepTimer - Time.deltaTime = _stepTimer - Time.deltaTime: {_stepTimer} - {Time.deltaTime} = {_stepTimer - Time.deltaTime}");
