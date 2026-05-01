@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c4307e4b3478b49b522d5156f46bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectText
-  textToRead: What a nice bookshelf!
+  textToRead: The fate of those that brought this entity forth. Poor souls.
 --- !u!114 &668292664464978318
 MonoBehaviour:
   m_ObjectHideFlags: 0

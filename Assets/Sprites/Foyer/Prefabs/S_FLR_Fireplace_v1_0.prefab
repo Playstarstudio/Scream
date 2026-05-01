@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c4307e4b3478b49b522d5156f46bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectText
-  textToRead: What a nice fireplace!
+  textToRead: I won't fret over catching cold tonight, at least.
 --- !u!114 &5790614731265908617
 MonoBehaviour:
   m_ObjectHideFlags: 0
