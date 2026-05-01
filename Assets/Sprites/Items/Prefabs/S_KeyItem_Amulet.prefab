@@ -488,7 +488,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 63c1cb791873c9346b9f7631bccf6ff1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -517,6 +517,7 @@ MonoBehaviour:
   - {fileID: 4521381205646174646}
   _fadeInSpeed: 2
   _fadeOutSpeed: 1
+  sr: {fileID: 0}
   outlineMaterial: {fileID: 2100000, guid: 723fdfe5b1ec85b479043c4f63036050, type: 2}
 --- !u!61 &7559105845877565441
 BoxCollider2D:

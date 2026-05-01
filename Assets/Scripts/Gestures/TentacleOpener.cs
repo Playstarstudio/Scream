@@ -236,7 +236,7 @@ namespace UI
                 if (Closed_Tentacles[index].activeInHierarchy == false)
                 {
                     //each tentacle closes HERE
-
+                    _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Tentacle.pull, GameObject.Find("Character"));
                     //several individual sounds
                     Closed_Tentacles[index].SetActive(true);
                     Open_Tentacles[index].SetActive(false);

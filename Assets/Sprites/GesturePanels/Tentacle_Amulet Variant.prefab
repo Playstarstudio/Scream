@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 0
+  moveTransformWithGesture: 1
   persistTransformWithGesture: 0
   dragDistance: 100
   enabledDragDirections: 1
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 0
+  moveTransformWithGesture: 1
   persistTransformWithGesture: 0
   dragDistance: 100
   enabledDragDirections: 1
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 0
+  moveTransformWithGesture: 1
   persistTransformWithGesture: 0
   dragDistance: 100
   enabledDragDirections: 2
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 0
+  moveTransformWithGesture: 1
   persistTransformWithGesture: 0
   dragDistance: 100
   enabledDragDirections: 2
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 0
+  moveTransformWithGesture: 1
   persistTransformWithGesture: 0
   dragDistance: 100
   enabledDragDirections: 1
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 0
+  moveTransformWithGesture: 1
   persistTransformWithGesture: 0
   dragDistance: 100
   enabledDragDirections: 8
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 0
+  moveTransformWithGesture: 1
   persistTransformWithGesture: 0
   dragDistance: 100
   enabledDragDirections: 2
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c4ffe17cef3dd4d99ea7b72860706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DragGesture
-  moveTransformWithGesture: 0
+  moveTransformWithGesture: 1
   persistTransformWithGesture: 0
   dragDistance: 100
   enabledDragDirections: 4
