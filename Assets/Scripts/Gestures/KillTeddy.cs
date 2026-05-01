@@ -155,10 +155,12 @@ namespace UI
                 Debug.LogWarning("[KillTeddy] No teddySpawnPrefab assigned — nothing to spawn.");
                 return;
             }
-
+            /*
             Vector3 spawnPos = teddySpawnPoint != null ? teddySpawnPoint.position : transform.position;
             Quaternion spawnRot = teddySpawnPoint != null ? teddySpawnPoint.rotation : Quaternion.identity;
-
+             */
+            Vector3 spawnPos = FindFirstObjectByType<CharacterMovement>().transform.position;
+            Quaternion spawnRot = FindFirstObjectByType<CharacterMovement>().transform.rotation;
             GameObject reward = Instantiate(teddySpawnPrefab, spawnPos, spawnRot);
             Debug.Log($"[KillTeddy] Spawned reward '{reward.name}' at {spawnPos}");
         }

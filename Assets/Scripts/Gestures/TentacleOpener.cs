@@ -219,10 +219,12 @@ namespace UI
                 Debug.LogWarning("[TentacleOpener] No rewardPrefab assigned — nothing to spawn.");
                 return;
             }
-
+            /*
             Vector3 spawnPos = amuletSpawnPoint != null ? amuletSpawnPoint.position : transform.position;
             Quaternion spawnRot = amuletSpawnPoint != null ? amuletSpawnPoint.rotation : Quaternion.identity;
-
+             */
+            Vector3 spawnPos = FindFirstObjectByType<CharacterMovement>().transform.position;
+            Quaternion spawnRot = FindFirstObjectByType<CharacterMovement>().transform.rotation;
             GameObject reward = Instantiate(amuletPrefab, spawnPos, spawnRot);
             Debug.Log($"[TentacleOpener] Spawned reward '{reward.name}' at {spawnPos}");
         }
