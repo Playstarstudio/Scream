@@ -10,12 +10,44 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] public Scene oldScene;
-
-    private static Dictionary<string, EventInstance> registry;
-
+    public static AudioManager Instance => _instance;
     private static AudioManager _instance;
-    public static AudioManager Instance { get { return _instance; } }
+    
+    private static Dictionary<string, EventInstance> registry;
+    private Scene oldScene;
+    
+    private bool isInitialized = false;
+    
+    private static Dictionary<AudioID, int> CurrentMusicProgress = new()
+    {
+        {AudioID.Music.exploration, -1},
+        {AudioID.Music.eldritch, -1},
+        {AudioID.Music.title, -1},
+        {AudioID.Music.credits, -1},
+        {AudioID.Music.fakeout, -1}
+    };
+    
+    private static Dictionary<AudioID, int> CurrentAmbienceProgress = new()
+    {
+        {AudioID.Ambience.altar, -1},
+        {AudioID.Ambience.bedroom, -1},
+        {AudioID.Ambience.foyer, -1},
+        {AudioID.Ambience.tentacle, -1},
+        {AudioID.Ambience.kitchen, -1},
+        {AudioID.Ambience.outdoors, -1}
+    };
+    
+    public static readonly Dictionary<string, Dictionary<string, AudioID>> SceneToMusicAmbienceMap = new()
+    {
+        { "AltarRoom",      new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.altar}} },
+        { "Bedroom",        new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.bedroom}} },
+        { "Foyer",          new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.foyer}} },
+        { "Kitchen",        new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.kitchen}} },
+        { "TentacleRoom",   new(){{"music", AudioID.Music.eldritch},    {"ambience", AudioID.Ambience.tentacle}} },
+        { "MainMenu",       new(){{"music", AudioID.Music.title},       {"ambience", AudioID.empty}} },
+        { "CreditsScene",   new(){{"music", AudioID.Music.credits},     {"ambience", AudioID.empty}} },
+        { "Outside",        new(){{"music", AudioID.empty},             {"ambience", AudioID.Ambience.outdoors}} }
+    };
 
     private void Awake()
     {
@@ -23,20 +55,21 @@ public class AudioManager : MonoBehaviour
         if (_instance != null && _instance != this)
         {
             Destroy(gameObject);
-        }
-        else
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
+            return;
         }
         
+        _instance = this;
+        DontDestroyOnLoad(gameObject);
+        
         // oldScene = SceneManager.GetActiveScene();
-        registry = new Dictionary<string, EventInstance>();
+        if (!isInitialized) {
+            registry = new Dictionary<string, EventInstance>();
+            isInitialized = true;
+        }
     }
 
     void OnEnable()
     {
-
         SceneManager.sceneLoaded += OnSceneLoad;
     }
 
@@ -47,46 +80,83 @@ public class AudioManager : MonoBehaviour
 
     void OnSceneLoad(Scene newScene, LoadSceneMode _)
     {
-        KillAllBusInstances(AudioID.Bus.Master);
+        KillAllBusInstances(AudioID.Bus.gameplaySFX);
+        KillAllBusInstances(AudioID.Bus.interfaceSFX);
         HandleMusicAmbienceChange(newScene);
     }
     
     public void HandleMusicAmbienceChange(Scene newScene)
     {
-        AudioID newMusic = AudioID.SceneToMusicAmbienceMap[newScene.name]?["music"];
-        AudioID newAmbience = AudioID.SceneToMusicAmbienceMap[newScene.name]?["ambience"];
+        Debug.Log($"Instance ID: {GetInstanceID()} | oldScene.IsValid(): {oldScene.IsValid()}");
         
+        // oldScene = newScene;
         
-        if (oldScene.name != null && oldScene.name != newScene.name)
+        AudioID oldMusic = AudioID.empty;
+        AudioID oldAmbience = AudioID.empty;
+        AudioID newMusic = SceneToMusicAmbienceMap[newScene.name]["music"];
+        AudioID newAmbience = SceneToMusicAmbienceMap[newScene.name]["ambience"];
+        
+        // && oldScene.name != newScene.name
+        
+        if (oldScene.IsValid())
         {
-            Debug.Log($"Old scene name: {oldScene.name}");
-            Debug.Log($"New scene name: {newScene.name}");
+            Debug.Log($"trigger");
             
-            string oldSceneName = oldScene.name;
-
-            AudioID oldMusic = AudioID.SceneToMusicAmbienceMap[oldSceneName]["music"];
-            AudioID oldAmbience = AudioID.SceneToMusicAmbienceMap[oldSceneName]["ambience"];
+            oldMusic = SceneToMusicAmbienceMap[oldScene.name]["music"];
+            oldAmbience = SceneToMusicAmbienceMap[oldScene.name]["ambience"];
             
             if (oldMusic.Path == newMusic.Path)
             {
-                int oldMusicProgress;
-                registry[$"mus_{oldMusic}"].getTimelinePosition(out oldMusicProgress);
-                AudioID.CurrentMusicProgress[oldMusic] = oldMusicProgress;
+                registry[$"{oldMusic.Path}"].getTimelinePosition(out int oldMusicProgress);
+                CurrentMusicProgress[oldMusic] = oldMusicProgress;
             }
 
             if (oldAmbience.Path == newAmbience.Path) 
             {
-                int oldAmbienceProgress;
-                registry[$"amb_{oldAmbience}"].getTimelinePosition(out oldAmbienceProgress);
-                AudioID.CurrentAmbienceProgress[oldAmbience] = oldAmbienceProgress;
+                registry[$"amb_{oldAmbience.Path}"].getTimelinePosition(out int oldAmbienceProgress);
+                CurrentAmbienceProgress[oldAmbience] = oldAmbienceProgress;
             }
         }
         
-        // Debug.Log($"{newMusic.Path}");
-        // Debug.Log($"{newAmbience.Path}");
-
-        if (newMusic.Path != "") { PlayGenerateAudioInstance(newMusic, $"mus_{newMusic.Path}", null, AudioID.CurrentMusicProgress[newMusic]); }
-        if (newAmbience.Path != "") { PlayGenerateAudioInstance(newAmbience, $"amb_{newAmbience.Path}", GameObject.Find("Character"), AudioID.CurrentAmbienceProgress[newAmbience]); }
+        Debug.Log($"oldMusic: {oldMusic.Path} | newMusic: {newMusic.Path}");
+        
+        if (oldMusic != newMusic) 
+        { 
+            KillAllBusInstances(AudioID.Bus.music);
+            
+            if (oldMusic != AudioID.empty) 
+                registry.Remove($"{oldMusic.Path}");
+            
+            if (newMusic != AudioID.empty) 
+            {
+                PlayGenerateAudioInstance(
+                    newMusic, 
+                    $"{newMusic.Path}", 
+                    null, 
+                    CurrentMusicProgress[newMusic]
+                ); 
+            }
+        
+            // Debug.Log("trigger");
+        }
+        
+        if (oldAmbience != newAmbience) 
+        { 
+            KillAllBusInstances(AudioID.Bus.ambience);
+            
+            if (oldAmbience != AudioID.empty) 
+                registry.Remove($"{oldAmbience.Path}");
+            
+            if (newAmbience != AudioID.empty)
+            {
+                PlayGenerateAudioInstance(
+                    newAmbience, 
+                    $"{newAmbience.Path}", 
+                    GameObject.Find("Character"), 
+                    CurrentAmbienceProgress[newAmbience]
+                ); 
+            }
+        }
 
         oldScene = newScene;
     }

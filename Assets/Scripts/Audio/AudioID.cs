@@ -7,24 +7,14 @@ using System.Collections.Generic;
 
 public sealed class AudioID
 {
-    public string Path { get; } // Read only
+    public string Path { get; set; }
 
     private AudioID(string path)
     {
         Path = path;
     }
     
-    public static readonly Dictionary<string, Dictionary<string, AudioID>> SceneToMusicAmbienceMap = new()
-    {
-        { "AltarRoom",      new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.altar}} },
-        { "Bedroom",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.bedroom}} },
-        { "Foyer",          new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.foyer}} },
-        { "Kitchen",        new(){{"music", Music.exploration}, {"ambience", SFX.Ambience.kitchen}} },
-        { "TentacleRoom",   new(){{"music", Music.eldritch},    {"ambience", SFX.Ambience.tentacle}} },
-        { "MainMenu",       new(){{"music", Music.title},       {"ambience", new("")}} },
-        { "CreditsScene",   new(){{"music", Music.credits},     {"ambience", new("")}} },
-        { "Outside",        new(){{"music", new("")},           {"ambience", SFX.Ambience.outdoors}} }
-    };
+    public static readonly AudioID empty = new("");
     
     public static readonly Dictionary<string, string> SceneToRoomMap = new()
     {
@@ -36,25 +26,6 @@ public sealed class AudioID
         {"TentacleRoom", "tentacle"}
     };
     
-    public static readonly Dictionary<AudioID, int> CurrentMusicProgress = new()
-    {
-        {Music.exploration, 0},
-        {Music.eldritch, 0},
-        {Music.title, 0},
-        {Music.credits, 0},
-        {Music.fakeout, 0}
-    };
-    
-    public static readonly Dictionary<AudioID, int> CurrentAmbienceProgress = new()
-    {
-        {SFX.Ambience.altar, 0},
-        {SFX.Ambience.bedroom, 0},
-        {SFX.Ambience.foyer, 0},
-        {SFX.Ambience.tentacle, 0},
-        {SFX.Ambience.kitchen, 0},
-        {SFX.Ambience.outdoors, 0}
-    };
-    
     #region Busses
     public static class Bus
     {
@@ -62,11 +33,11 @@ public sealed class AudioID
         
         public static readonly AudioID gameplaySFX = new("bus:/gameplay_sfx");
         public static readonly AudioID interfaceSFX = new("bus:/ui_sfx");
+        public static readonly AudioID ambience = new("bus:/ambience");
         public static readonly AudioID music = new("bus:/music");
         
         public static class GameplaySFX
         {
-            public static readonly AudioID ambience = new("bus:/gameplay_sfx/ambience");
             public static readonly AudioID stinger = new("bus:/gameplay_sfx/stinger");
             public static readonly AudioID objects = new("bus:/gameplay_sfx/objects");
             public static readonly AudioID player = new("bus:/gameplay_sfx/player");
@@ -102,17 +73,6 @@ public sealed class AudioID
                 public static readonly AudioID ritual_powering_up = new("event:/environment/stinger/ritual_powering_up");
                 public static readonly AudioID scary_stinger = new("event:/environment/stinger/scary_stinger");
             }
-        }
-        
-        public static class Ambience
-        {
-            public static readonly AudioID general = new("event:/ambience/general");
-            public static readonly AudioID altar = new("event:/ambience/altar");
-            public static readonly AudioID foyer = new("event:/ambience/foyer");
-            public static readonly AudioID outdoors = new("event:/ambience/outdoors");
-            public static readonly AudioID tentacle = new("event:/ambience/tentacle");
-            public static readonly AudioID bedroom = new("event:/ambience/bedroom");
-            public static readonly AudioID kitchen = new("event:/ambience/kitchen");
         }
         
         public static class Interface // non-spatial interface sfx
@@ -159,6 +119,7 @@ public sealed class AudioID
                     public static readonly AudioID knob_turn = new("event:/player/interact/door/knob_turn");
                     public static readonly AudioID locked = new("event:/player/interact/door/locked");
                     public static readonly AudioID open = new("event:/player/interact/door/open");
+                    public static readonly AudioID close = new("event:/player/interact/door/close");
                 }
                 
                 public static class Lantern
@@ -166,6 +127,7 @@ public sealed class AudioID
                     public static readonly AudioID fill = new("event:/player/interact/lantern/fill");
                     public static readonly AudioID turn_knob_down = new("event:/player/interact/lantern/turn_knob_down");
                     public static readonly AudioID turn_knob_up = new("event:/player/interact/lantern/turn_knob_up");
+                    public static readonly AudioID handle = new("event:/player/interact/lantern/handle");
                 }
                 
                 public static class Match
@@ -213,6 +175,19 @@ public sealed class AudioID
         public static readonly AudioID eldritch = new("event:/music/eldritch");
         public static readonly AudioID fakeout = new("event:/music/fakeout");
         public static readonly AudioID title = new("event:/music/title");
+    }
+    #endregion
+    
+    #region Ambience
+    public static class Ambience
+    {
+        public static readonly AudioID general = new("event:/ambience/general");
+        public static readonly AudioID altar = new("event:/ambience/altar");
+        public static readonly AudioID foyer = new("event:/ambience/foyer");
+        public static readonly AudioID outdoors = new("event:/ambience/outdoors");
+        public static readonly AudioID tentacle = new("event:/ambience/tentacle");
+        public static readonly AudioID bedroom = new("event:/ambience/bedroom");
+        public static readonly AudioID kitchen = new("event:/ambience/kitchen");
     }
     #endregion
 }
