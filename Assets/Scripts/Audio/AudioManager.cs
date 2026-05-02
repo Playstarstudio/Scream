@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
     private static AudioManager _instance;
     
     private static Dictionary<string, EventInstance> registry;
-    private Scene oldScene;
+    private string oldSceneName;
     
     private bool isInitialized = false;
     
@@ -39,14 +39,14 @@ public class AudioManager : MonoBehaviour
     
     public static readonly Dictionary<string, Dictionary<string, AudioID>> SceneToMusicAmbienceMap = new()
     {
-        { "AltarRoom",      new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.altar}} },
+        { "AltarRoom",      new(){{"music", AudioID.Music.eldritch},    {"ambience", AudioID.Ambience.altar}} },
         { "Bedroom",        new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.bedroom}} },
         { "Foyer",          new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.foyer}} },
         { "Kitchen",        new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.kitchen}} },
+        { "Outside",        new(){{"music", AudioID.Music.exploration}, {"ambience", AudioID.Ambience.outdoors}} },
         { "TentacleRoom",   new(){{"music", AudioID.Music.eldritch},    {"ambience", AudioID.Ambience.tentacle}} },
         { "MainMenu",       new(){{"music", AudioID.Music.title},       {"ambience", AudioID.empty}} },
-        { "CreditsScene",   new(){{"music", AudioID.Music.credits},     {"ambience", AudioID.empty}} },
-        { "Outside",        new(){{"music", AudioID.empty},             {"ambience", AudioID.Ambience.outdoors}} }
+        { "CreditsScene",   new(){{"music", AudioID.Music.credits},     {"ambience", AudioID.empty}} }
     };
 
     private void Awake()
@@ -54,12 +54,12 @@ public class AudioManager : MonoBehaviour
         // Singleton Setup
         if (_instance != null && _instance != this)
         {
-            Destroy(gameObject);
+            Destroy(GameObject.Find("AudioManager"));
             return;
         }
         
         _instance = this;
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(GameObject.Find("AudioManager"));
         
         // oldScene = SceneManager.GetActiveScene();
         if (!isInitialized) {
@@ -87,23 +87,19 @@ public class AudioManager : MonoBehaviour
     
     public void HandleMusicAmbienceChange(Scene newScene)
     {
-        Debug.Log($"Instance ID: {GetInstanceID()} | oldScene.IsValid(): {oldScene.IsValid()}");
-        
-        // oldScene = newScene;
+        Debug.Log($"Instance ID: {GetInstanceID()} | oldSceneName: {oldSceneName}");
         
         AudioID oldMusic = AudioID.empty;
         AudioID oldAmbience = AudioID.empty;
         AudioID newMusic = SceneToMusicAmbienceMap[newScene.name]["music"];
         AudioID newAmbience = SceneToMusicAmbienceMap[newScene.name]["ambience"];
         
-        // && oldScene.name != newScene.name
-        
-        if (oldScene.IsValid())
+        if (oldSceneName != null)
         {
-            Debug.Log($"trigger");
+            // Debug.Log($"trigger");
             
-            oldMusic = SceneToMusicAmbienceMap[oldScene.name]["music"];
-            oldAmbience = SceneToMusicAmbienceMap[oldScene.name]["ambience"];
+            oldMusic = SceneToMusicAmbienceMap[oldSceneName]["music"];
+            oldAmbience = SceneToMusicAmbienceMap[oldSceneName]["ambience"];
             
             if (oldMusic.Path == newMusic.Path)
             {
@@ -119,8 +115,9 @@ public class AudioManager : MonoBehaviour
         }
         
         Debug.Log($"oldMusic: {oldMusic.Path} | newMusic: {newMusic.Path}");
+        Debug.Log($"oldSceneName: {oldSceneName} | newScene.name: {newScene.name}");
         
-        if (oldMusic != newMusic) 
+        if (oldMusic.Path != newMusic.Path) 
         { 
             KillAllBusInstances(AudioID.Bus.music);
             
@@ -136,11 +133,9 @@ public class AudioManager : MonoBehaviour
                     CurrentMusicProgress[newMusic]
                 ); 
             }
-        
-            // Debug.Log("trigger");
         }
         
-        if (oldAmbience != newAmbience) 
+        if (oldAmbience.Path != newAmbience.Path) 
         { 
             KillAllBusInstances(AudioID.Bus.ambience);
             
@@ -157,8 +152,17 @@ public class AudioManager : MonoBehaviour
                 ); 
             }
         }
-
-        oldScene = newScene;
+        
+        if (newScene.name == "Kitchen" || newScene.name == "Bedroom")
+        {
+            SetGlobalParameter("inDomestic", "true");
+        }
+        else
+        {
+            SetGlobalParameter("inDomestic", "false");
+        }
+        
+        oldSceneName = newScene.name;
     }
 
     /// <summary>

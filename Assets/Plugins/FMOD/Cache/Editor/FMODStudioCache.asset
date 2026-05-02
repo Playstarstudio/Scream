@@ -223,7 +223,33 @@ MonoBehaviour:
     data1: 1199168207
     data2: 3100102243
   Type: 2
-  IsGlobal: 0
+  IsGlobal: 1
+  Labels:
+  - false
+  - true
+  Exists: 1
+--- !u!114 &-5411792610184708584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/inDomestic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: inDomestic
+  StudioPath: parameter:/inDomestic
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1199168207
+    data2: 3100102243
+  Type: 2
+  IsGlobal: 1
   Labels:
   - false
   - true
@@ -405,10 +431,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/gameplay_sfx.bank
   Name: gameplay_sfx
   StudioPath: bank:/gameplay_sfx
-  lastModified: 639132002269885643
+  lastModified: 639132686541436219
   FileSizes:
   - Name: Desktop
-    Value: 10277376
+    Value: 10277440
   Exists: 1
 --- !u!114 &-4106128480164914531
 MonoBehaviour:
@@ -802,10 +828,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639132509592872877
+  lastModified: 639132697200360633
   FileSizes:
   - Name: Desktop
-    Value: 33408
+    Value: 33600
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -884,12 +910,13 @@ MonoBehaviour:
   EditorParameters:
   - {fileID: 8545453521984738752}
   - {fileID: -173443437999085184}
+  - {fileID: -5411792610184708584}
   MasterBanks:
   - {fileID: -147046140891050852}
   StringsBanks:
   - {fileID: 8099864925913319225}
   cacheVersion: 131859
-  cacheTime: 639132509592903727
+  cacheTime: 639132697200380642
   SerializableEventsDict:
   - key: event:/player/interact/match/place
     index: 0
@@ -1932,7 +1959,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639132509592903727
+  lastModified: 639132697200380642
   FileSizes:
   - Name: Desktop
     Value: 4392

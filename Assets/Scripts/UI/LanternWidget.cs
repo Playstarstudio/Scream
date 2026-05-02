@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(RectTransform))]
-public class LanternWidget : MonoBehaviour, IBeginDragHandler, IDragHandler
+public class LanternWidget : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Tooltip("How much padding to add around the screen to restrict the draggable area")]
     public Vector2 screenPadding = Vector2.zero;
@@ -11,6 +11,7 @@ public class LanternWidget : MonoBehaviour, IBeginDragHandler, IDragHandler
     private RectTransform _parentRect;
     private Canvas _canvas;
     private Vector2 _dragOffset;
+    private AudioManager _audio;
 
     private void Awake()
     {
@@ -20,6 +21,8 @@ public class LanternWidget : MonoBehaviour, IBeginDragHandler, IDragHandler
 
         if (_canvas == null)
             Debug.LogWarning($"[DraggableHUDWidget] No Canvas found above {name}. Dragging won't work.");
+            
+        _audio = AudioManager.Instance;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -32,6 +35,13 @@ public class LanternWidget : MonoBehaviour, IBeginDragHandler, IDragHandler
         );
 
         _dragOffset = _rect.anchoredPosition - localPointer;
+        
+        _audio.PlayOneShot(AudioID.SFX.Interface.Inventory.select);
+    }
+    
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        _audio.PlayOneShot(AudioID.SFX.Interface.Inventory.unselect);
     }
 
     public void OnDrag(PointerEventData eventData)

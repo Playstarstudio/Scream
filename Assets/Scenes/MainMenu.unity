@@ -148,8 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe52979fcd70dfe4cbdfc0ff79b426ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  oldScene:
-    m_Handle: 0
 --- !u!4 &229778470
 Transform:
   m_ObjectHideFlags: 0

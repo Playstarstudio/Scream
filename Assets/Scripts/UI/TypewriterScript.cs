@@ -88,7 +88,7 @@ public class TypewriterScript : MonoBehaviour
             char character = charText.character;
             //char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
             
-            // // TODO: This works, but for some reason the script continues to update in the bg with nothing updating on screen
+            // TODO: This works, but for some reason the script continues to update in the bg with nothing updating on screen
             // if (textBox.maxVisibleCharacters < textInfo.characterCount || textBox.maxVisibleCharacters % 2 == 0) 
             // { 
             //     // Debug.Log($"textBox.maxVisibleCharacters: {textBox.maxVisibleCharacters}");

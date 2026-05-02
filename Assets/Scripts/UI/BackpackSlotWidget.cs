@@ -1,8 +1,15 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class BackpackSlotWidget : MonoBehaviour, IDropHandler
+public class BackpackSlotWidget : MonoBehaviour, IDropHandler, IPointerEnterHandler
 {
+    private AudioManager _audio;
+    
+    void Awake()
+    {
+        _audio = AudioManager.Instance;
+    }
+    
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
@@ -12,5 +19,9 @@ public class BackpackSlotWidget : MonoBehaviour, IDropHandler
         if (draggableItem == null) return;
         draggableItem.parentAfterDrag = transform;
     }
-
+    
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (eventData.pointerDrag == null) _audio?.PlayOneShot(AudioID.SFX.Interface.Inventory.hover);
+    }
 }

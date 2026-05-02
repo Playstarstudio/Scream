@@ -45,6 +45,8 @@ public class Door : MonoBehaviour, IInteractable
         return new Vector3(local.x * s.x, local.y * s.y, 0f);
     }
     
+    private AudioManager _audio;
+    
     public int InteractionPriority => 0; // Low priority — items should be picked up before doors are used
 
     public bool CanInteract
@@ -67,10 +69,16 @@ public class Door : MonoBehaviour, IInteractable
             return true;
         }
     }
+    
+    private void Awake()
+    {
+        _audio = AudioManager.Instance;
+    }
 
     public void Interact()
     {
         ServiceLocator.Instance.Get<SceneTransitionManager>().TransitionToScene(targetSceneName);
+        _audio.PlayOneShot(AudioID.SFX.Player.Interact.Door.close, GameObject.Find("Character"));
     }
 
     private bool HasRequiredItem()
