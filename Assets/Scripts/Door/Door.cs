@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
+using System.Net.Sockets;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
-using Services;
 
 
 [RequireComponent(typeof(Collider2D))]
@@ -56,6 +58,8 @@ public class Door : MonoBehaviour, IInteractable
             if (string.IsNullOrEmpty(targetSceneName)) return false;
             if (!AreStateRequirementsMet())
             {
+
+
                 Debug.Log($"[Door] {gameObject.name}: CanInteract=false — state requirements not met.");
                 return false;
             }
@@ -63,6 +67,8 @@ public class Door : MonoBehaviour, IInteractable
             // Only check for required item when there are no state requirements
             if ((stateRequirements == null || stateRequirements.Count == 0) && !HasRequiredItem())
             {
+                
+
                 Debug.Log($"[Door] {gameObject.name}: CanInteract=false — missing required item {requiredItemId}.");
                 return false;
             }
@@ -107,11 +113,25 @@ public class Door : MonoBehaviour, IInteractable
             bool currentValue = gsm.GetState(condition.key);
             if (currentValue != condition.requiredValue)
             {
+                TypewriterScript[] typewriterArray = GameObject.FindWithTag("Player").GetComponentsInChildren<TypewriterScript>();
+
+                foreach (TypewriterScript typewriterScript in typewriterArray)
+                {
+                    typewriterScript.firstText = "Locked. Perchance there is a solution elsewhere.";
+                    typewriterScript.secondText = null;
+                    typewriterScript.SetText(typewriterScript.firstText);
+                }
+/*
+                var typewriterScript = GameObject.FindWithTag("Player").GetComponentInChildren<TypewriterScript>();
+                if (typewriterScript != null)
+                {
+                    typewriterScript.SetText("Locked. Perchance there is a solution elsewhere.");
+                }
+ */
                 Debug.Log($"[Door] Requirement failed: '{condition.key.name}' is {currentValue}, required {condition.requiredValue}");
                 return false;
             }
         }
-
         return true;
     }
 

@@ -133,6 +133,14 @@ namespace UI
             Debug.Log("[KillTeddy] KillTheTeddy() — closing gesture UI and setting state.");
             _teddyKilled = true;
             GestureHelper.CloseGestureUI(panel);
+            TypewriterScript[] typewriterArray = GameObject.FindWithTag("Player").GetComponentsInChildren<TypewriterScript>();
+
+            foreach (TypewriterScript typewriterScript in typewriterArray)
+            {
+                typewriterScript.firstText = "Blood does not cease pouring from this poor bear.";
+                typewriterScript.secondText = "It is markedly similar in color to the ritual circle... Oh, God.";
+                typewriterScript.SetText(typewriterScript.firstText);
+            }
 
             SpawnReward();
 

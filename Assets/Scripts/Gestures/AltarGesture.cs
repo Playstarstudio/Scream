@@ -169,6 +169,15 @@ namespace UI
                 Debug.Log($"[AltarGesture] Setting GameState '{matchesLitStateKey.name}' to true.");
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(matchesLitStateKey, true);
                 _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Match.light, GameObject.Find("Character"));
+                TypewriterScript[] typewriterArray = GameObject.FindWithTag("Player").GetComponentsInChildren<TypewriterScript>();
+
+                foreach (TypewriterScript typewriterScript in typewriterArray)
+                {
+                    typewriterScript.firstText = "I recognize this ritual as one of binding. Failed, I'm afraid.";
+                    typewriterScript.secondText = "Perhaps I can bind this spirit to a new vessel.";
+                    typewriterScript.SetText(typewriterScript.firstText);
+                }
+
             }
             else
             {
@@ -217,6 +226,7 @@ namespace UI
 
             if (candleObject != null)
             {
+
                 candleObject.SetActive(_matchesLit);
                 Debug.Log($"[AltarGesture] candleObject active={_matchesLit}");
             }

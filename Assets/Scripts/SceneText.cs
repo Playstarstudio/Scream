@@ -1,3 +1,4 @@
+using Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,10 +21,12 @@ public class SceneText : MonoBehaviour
     public string tentRoomIntFirstLine = "What the fuck.";
     public string tentRoomIntSecondLine = "This is no work of the demonic or paranormal... Worse. Far worse.";
 
+    public string foyerFirstLine= "Something lurks after all. The door--it vanished the front door.";
+    public string foyerSecondLine = "Recreating the ritual will inform me of what I'm dealing with.";
+    public GameStateKey doorDisappearedStateKey;
 
     private void Start()
     {
-
         typewriterScript = GameObject.FindWithTag("Player").GetComponentInChildren<TypewriterScript>();
 
         DoSceneText();
@@ -40,7 +43,7 @@ public class SceneText : MonoBehaviour
 
     private void DoSceneText()
     {
-        
+
         //Check which layout is active
         if (GameObject.Find("FrontCabin") != null && GameObject.Find("FrontCabin").activeInHierarchy)
         {
@@ -54,7 +57,31 @@ public class SceneText : MonoBehaviour
             secondLine = tentRoomIntSecondLine;
 
         }
-        
+        else if (GameObject.Find("TentRoomInt (1)") != null && GameObject.Find("TentRoomInt (1)").activeInHierarchy)
+        {
+            firstLine = tentRoomIntFirstLine;
+            secondLine = tentRoomIntSecondLine;
+
+        }
+
+        else if (GameObject.Find("Foyer1") != null && GameObject.Find("Foyer1").activeInHierarchy)
+        {
+            if(doorDisappearedStateKey.currentValue == false)
+            {
+            firstLine = foyerFirstLine;
+            secondLine = foyerSecondLine;
+            ServiceLocator.Instance.Get<GameStateManager>().SetState(doorDisappearedStateKey, true);
+            }
+        }
+        else if (GameObject.Find("Foyer2") != null && GameObject.Find("Foyer2").activeInHierarchy)
+        {
+            if (doorDisappearedStateKey.currentValue == false)
+            {
+                firstLine = foyerFirstLine;
+                secondLine = foyerSecondLine;
+                ServiceLocator.Instance.Get<GameStateManager>().SetState(doorDisappearedStateKey, true);
+            }
+        }
     }
 
     //private void OnDisable()

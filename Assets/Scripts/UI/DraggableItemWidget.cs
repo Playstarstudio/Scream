@@ -148,7 +148,8 @@ public class DraggableItemWidget : MonoBehaviour, IBeginDragHandler, IDragHandle
                 // Move item in the inventory array: source slot -> target slot
                 int srcSlot = slotIndex;
                 int dstSlot = targetSlot.slotIndex;
-                
+                if (targetSlot.invItem != null)
+                    return;
                 if (_inventoryConcrete != null && srcSlot >= 0 && dstSlot >= 0)
                 {
                     // Move the GameObject reference in the inventory array

@@ -207,6 +207,15 @@ namespace UI
             if (amuletRetrievedStateKey != null)
             {
                 ServiceLocator.Instance.Get<GameStateManager>().SetState(amuletRetrievedStateKey, true);
+                TypewriterScript[] typewriterArray = GameObject.FindWithTag("Player").GetComponentsInChildren<TypewriterScript>();
+
+                foreach (TypewriterScript typewriterScript in typewriterArray)
+                {
+                    typewriterScript.firstText = "A suitable vessel... At what cost? My hands have gone numb.";
+                    typewriterScript.secondText = null;
+                    typewriterScript.SetText(typewriterScript.firstText);
+                }
+
                 _audio?.PlayOneShot(AudioID.SFX.Player.Interact.Amulet.pick_up, GameObject.Find("Character"));
             }
         }

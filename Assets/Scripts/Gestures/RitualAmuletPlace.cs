@@ -54,6 +54,14 @@ namespace UI
 
             // Placing the amulet completes the ritual
             Debug.Log("[RitualAmuletPlace] Ritual complete — closing gesture UI and setting state.");
+            TypewriterScript[] typewriterArray = GameObject.FindWithTag("Player").GetComponentsInChildren<TypewriterScript>();
+
+            foreach (TypewriterScript typewriterScript in typewriterArray)
+            {
+                typewriterScript.firstText = "I don't... I know not what manner of being I am facing.";
+                typewriterScript.secondText = "I feel its presence beyond the bedroom...";
+                typewriterScript.SetText(typewriterScript.firstText);
+            }
             GestureHelper.CloseGestureUI(panel);
 
             if (amuletPlacedStateKey != null)
